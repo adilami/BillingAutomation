@@ -1,0 +1,122 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_masters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_master",
+    "MaxGetRowsCount": 500,
+    "Name": "Masters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_bank": "Bank",
+      "cr69c_cashadvance": "Cash Advance",
+      "cr69c_id": "Id",
+      "cr69c_master_AsyncOperations": "System Jobs",
+      "cr69c_master_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_master_DuplicateBaseRecord": "Duplicate Records (cr69c_master_DuplicateBaseRecord)",
+      "cr69c_master_DuplicateMatchingRecord": "Duplicate Records (cr69c_master_DuplicateMatchingRecord)",
+      "cr69c_master_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_master_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_master_ProcessSession": "Process Sessions",
+      "cr69c_master_SyncErrors": "Sync Errors",
+      "cr69c_masterid": "Master",
+      "cr69c_property": "Property",
+      "cr69c_rate": "Rate",
+      "cr69c_terminaltype": "Terminal Type",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Masters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Masters (Views)",
+    "Name": "_cr69c_master_views",
+    "RelatedEntityName": "Masters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1ed4d42d-069e-44ed-a600-ce05c53836e2": "Master Lookup View",
+      "245dd379-4fe3-4c67-af02-974265549308": "Master Associated View",
+      "aae234c9-0e67-4c84-9433-0674331a7f4a": "Active Masters",
+      "aaea0a9a-a310-4786-b667-4889ac39ec91": "Master Advanced Find View",
+      "ce2b37cc-320c-407a-86ee-671b9a51501e": "Inactive Masters"
+    }
+  },
+  {
+    "DisplayName": "Cash Advance (Masters)",
+    "Name": "cr69c_master_cr69c_cashadvance",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr69c_cashadvance",
+        "OptionSetReferenceEntityName": "Masters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cr69c_cashadvance",
+    "RelatedEntityName": "Masters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Masters)",
+    "Name": "cr69c_master_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Masters"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Masters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Masters)",
+    "Name": "cr69c_master_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Masters"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Masters",
+    "Type": "OptionSetInfo"
+  }
+]

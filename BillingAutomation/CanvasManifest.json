@@ -95,7 +95,7 @@
       "useguiddatatypes": true,
       "usenonblockingonstartrule": true,
       "webbarcodescanner": false,
-      "zeroalltabindexes": true
+      "zeroalltabindexes": false
     },
     "Author": "",
     "BindingErrorCount": 0,
@@ -113,8 +113,7 @@
     "FileID": "2d5bdb02-d3da-402f-a51b-cedc899d0f41",
     "Id": "2d5bdb02-d3da-402f-a51b-cedc899d0f41",
     "InstrumentationKey": "",
-    "LocalDatabaseReferences": "{}",
-    "ManualOfflineProfileId": null,
+    "ManualOfflineProfileId": "",
     "Name": "BillingAutomation",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,

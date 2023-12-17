@@ -8,7 +8,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/14/2023 05:46:45",
+  "HeaderLastSavedDateTimeUTC": "12/17/2023 04:17:57",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -16,7 +16,13 @@
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
-  "OrderDataSource": {},
+  "OrderDataSource": {
+    "Masters": 4,
+    "Masters\\cr69c_master_cr69c_cashadvance": 2,
+    "Masters\\cr69c_master_statecode": 0,
+    "Masters\\cr69c_master_statuscode": 1,
+    "Masters\\default.cds_cr69c_master_views": 3
+  },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
@@ -37,8 +43,11 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0203416,
-    "ControlCount": {}
+    "AnalysisLoadTime": 0.035554,
+    "ControlCount": {
+      "screen": 1
+    },
+    "DeserializationLoadTime": 1.7040175
   },
-  "WasLocalDatabaseReferencesEmpty": true
+  "WasLocalDatabaseReferencesEmpty": false
 }
