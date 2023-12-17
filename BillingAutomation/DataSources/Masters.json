@@ -10,7 +10,7 @@
     "Name": "Masters",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
-      "cr69c_bank": "Bank",
+      "cr69c_BankName": "BankName",
       "cr69c_cashadvance": "Cash Advance",
       "cr69c_id": "Id",
       "cr69c_master_AsyncOperations": "System Jobs",

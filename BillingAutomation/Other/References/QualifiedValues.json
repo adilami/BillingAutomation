@@ -6,6 +6,13 @@
       "Values": {
         "Information": "98bbc520-0803-43fc-8daf-fb0cac3f73c4"
       }
+    },
+    {
+      "Kind": "default.cds_cr69c_bank_forms",
+      "Namespace": "Banks (Forms)",
+      "Values": {
+        "Information": "9a0393e2-8aea-412f-9a0a-d2a1988ea085"
+      }
     }
   ]
 }
