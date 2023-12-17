@@ -20,6 +20,13 @@
       "Values": {
         "Information": "9ee73e08-c6a4-46d8-9cf5-7c104f1a7654"
       }
+    },
+    {
+      "Kind": "default.cds_cr69c_property_forms",
+      "Namespace": "Properties (Forms)",
+      "Values": {
+        "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
+      }
     }
   ]
 }

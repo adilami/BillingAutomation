@@ -8,7 +8,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/17/2023 05:03:34",
+  "HeaderLastSavedDateTimeUTC": "12/17/2023 05:05:38",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -17,19 +17,23 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "Banks": 11,
+    "Banks": 14,
     "Banks\\cr69c_bank_statecode": 3,
     "Banks\\cr69c_bank_statuscode": 4,
-    "Banks\\default.cds_cr69c_bank_views": 8,
-    "Masters": 10,
+    "Banks\\default.cds_cr69c_bank_views": 10,
+    "Masters": 13,
     "Masters\\cr69c_master_cr69c_cashadvance": 0,
     "Masters\\cr69c_master_statecode": 1,
     "Masters\\cr69c_master_statuscode": 2,
-    "Masters\\default.cds_cr69c_master_views": 7,
-    "TerminalTypes": 12,
+    "Masters\\default.cds_cr69c_master_views": 9,
+    "Properties": 16,
+    "Properties\\cr69c_property_statecode": 7,
+    "Properties\\cr69c_property_statuscode": 8,
+    "Properties\\default.cds_cr69c_property_views": 12,
+    "TerminalTypes": 15,
     "TerminalTypes\\cr69c_terminaltype_statecode": 5,
     "TerminalTypes\\cr69c_terminaltype_statuscode": 6,
-    "TerminalTypes\\default.cds_cr69c_terminaltype_views": 9
+    "TerminalTypes\\default.cds_cr69c_terminaltype_views": 11
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
@@ -51,11 +55,11 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0405882,
+    "AnalysisLoadTime": 0.0380981,
     "ControlCount": {
       "screen": 1
     },
-    "DeserializationLoadTime": 0.8188639
+    "DeserializationLoadTime": 1.0229672
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

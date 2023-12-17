@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_properties",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_property",
+    "Name": "Properties",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_id": "Id",
+      "cr69c_property": "Property (cr69c_property)",
+      "cr69c_property_AsyncOperations": "System Jobs",
+      "cr69c_property_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_property_DuplicateBaseRecord": "Duplicate Records (cr69c_property_DuplicateBaseRecord)",
+      "cr69c_property_DuplicateMatchingRecord": "Duplicate Records (cr69c_property_DuplicateMatchingRecord)",
+      "cr69c_property_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_property_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_property_ProcessSession": "Process Sessions",
+      "cr69c_property_SyncErrors": "Sync Errors",
+      "cr69c_propertyid": "Property (cr69c_propertyid)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Properties",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Properties (Views)",
+    "Name": "_cr69c_property_views",
+    "RelatedEntityName": "Properties",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0836ef75-8c7a-48ff-82bd-cc64f1cc9f22": "Inactive Properties",
+      "28e52ec4-90f8-49cd-be91-88bcbc8d1802": "Active Properties",
+      "436c95f2-2278-4675-8708-9ea64eb61ef8": "Property Advanced Find View",
+      "52d27121-df12-4104-9400-6f1ed300a13b": "Property Lookup View",
+      "c9919273-bbf6-42e7-a78e-afe426b577db": "Property Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Properties)",
+    "Name": "cr69c_property_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Properties"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Properties",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Properties)",
+    "Name": "cr69c_property_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Properties"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Properties",
+    "Type": "OptionSetInfo"
+  }
+]
