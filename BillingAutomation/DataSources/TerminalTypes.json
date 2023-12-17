@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_terminaltype",
+    "MaxGetRowsCount": 500,
     "Name": "TerminalTypes",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
