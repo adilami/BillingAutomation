@@ -1,0 +1,97 @@
+[
+  {
+    "DisplayName": "tbl_TerminalTypes (Views)",
+    "Name": "_cr69c_terminaltype_views",
+    "RelatedEntityName": "tbl_TerminalTypes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "092cdc5a-00cc-4b69-9780-52ece20ab53c": "Inactive TerminalTypes",
+      "4822d7a5-5797-44e5-8a28-9c802edae2e5": "Active TerminalTypes",
+      "534d53a1-a621-4eda-99e1-42ea96e2d95b": "TerminalType Lookup View",
+      "83dbba88-ac03-4b09-94fb-3d4e3f969519": "TerminalType Associated View",
+      "88742b65-6575-432d-a6a0-b2696471be28": "TerminalType Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (tbl_TerminalTypes)",
+    "Name": "cr69c_terminaltype_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tbl_TerminalTypes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tbl_TerminalTypes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tbl_TerminalTypes)",
+    "Name": "cr69c_terminaltype_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tbl_TerminalTypes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tbl_TerminalTypes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_terminaltypes",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_terminaltype",
+    "Name": "tbl_TerminalTypes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_id": "Id",
+      "cr69c_terminaltype": "TerminalType (cr69c_terminaltype)",
+      "cr69c_terminaltype_AsyncOperations": "System Jobs",
+      "cr69c_terminaltype_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_terminaltype_DuplicateBaseRecord": "Duplicate Records (cr69c_terminaltype_DuplicateBaseRecord)",
+      "cr69c_terminaltype_DuplicateMatchingRecord": "Duplicate Records (cr69c_terminaltype_DuplicateMatchingRecord)",
+      "cr69c_terminaltype_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_terminaltype_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_terminaltype_ProcessSession": "Process Sessions",
+      "cr69c_terminaltype_SyncErrors": "Sync Errors",
+      "cr69c_terminaltypeid": "TerminalType (cr69c_terminaltypeid)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tbl_TerminalTypes",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

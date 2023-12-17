@@ -1,6 +1,6 @@
 {
   "DatasetName": "default.cds",
-  "EntityName": "Masters",
+  "EntityName": "tbl_Masters",
   "environmentVariableName": "",
   "InstanceUrl": "https://org9daec322.crm5.dynamics.com/",
   "LocalReferenceDSJson": {

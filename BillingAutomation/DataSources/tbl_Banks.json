@@ -1,0 +1,97 @@
+[
+  {
+    "DisplayName": "tbl_Banks (Views)",
+    "Name": "_cr69c_bank_views",
+    "RelatedEntityName": "tbl_Banks",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3b4daefc-db92-40d2-a1e2-a696f5a67bf9": "Bank Associated View",
+      "b848407c-ccca-4255-8750-29e61d69e7fb": "Inactive Banks",
+      "cceffb80-ec11-45ef-b5e3-5fa08213fabb": "Bank Advanced Find View",
+      "fe3b9a7e-4b05-42c6-b931-f09b5acccada": "Active Banks",
+      "fe55e57e-d055-41a3-9952-b1f83c43884f": "Bank Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (tbl_Banks)",
+    "Name": "cr69c_bank_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tbl_Banks"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tbl_Banks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tbl_Banks)",
+    "Name": "cr69c_bank_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tbl_Banks"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tbl_Banks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_banks",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_bank",
+    "Name": "tbl_Banks",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_bank_AsyncOperations": "System Jobs",
+      "cr69c_bank_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_bank_DuplicateBaseRecord": "Duplicate Records (cr69c_bank_DuplicateBaseRecord)",
+      "cr69c_bank_DuplicateMatchingRecord": "Duplicate Records (cr69c_bank_DuplicateMatchingRecord)",
+      "cr69c_bank_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_bank_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_bank_ProcessSession": "Process Sessions",
+      "cr69c_bank_SyncErrors": "Sync Errors",
+      "cr69c_bankid": "Bank",
+      "cr69c_bankname": "BankName",
+      "cr69c_id": "Id",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tbl_Banks",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]
