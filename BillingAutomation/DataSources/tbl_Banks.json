@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_bank",
+    "MaxGetRowsCount": 500,
     "Name": "tbl_Banks",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -74,6 +75,7 @@
       "cr69c_bankid": "Bank",
       "cr69c_bankname": "BankName",
       "cr69c_id": "Id",
+      "cr69c_master_BankName_cr69c_bank": "tbl_Masters",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",

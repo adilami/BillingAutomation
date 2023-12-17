@@ -60,10 +60,12 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_property",
+    "MaxGetRowsCount": 500,
     "Name": "tbl_Properties",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr69c_id": "Id",
+      "cr69c_master_Property_cr69c_property": "tbl_Masters",
       "cr69c_property": "Property (cr69c_property)",
       "cr69c_property_AsyncOperations": "System Jobs",
       "cr69c_property_BulkDeleteFailures": "Bulk Delete Failures",

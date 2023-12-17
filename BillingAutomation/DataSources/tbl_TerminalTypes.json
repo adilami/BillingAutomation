@@ -60,10 +60,12 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_terminaltype",
+    "MaxGetRowsCount": 500,
     "Name": "tbl_TerminalTypes",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr69c_id": "Id",
+      "cr69c_master_TerminalType_cr69c_terminaltype": "tbl_Masters",
       "cr69c_terminaltype": "TerminalType (cr69c_terminaltype)",
       "cr69c_terminaltype_AsyncOperations": "System Jobs",
       "cr69c_terminaltype_BulkDeleteFailures": "Bulk Delete Failures",
