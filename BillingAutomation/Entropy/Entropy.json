@@ -3,20 +3,21 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Button1": 9,
+    "Button1": 10,
     "Gallery2": 5,
     "galleryTemplate2": 6,
     "Host": 3,
-    "Label1": 10,
+    "Label1": 9,
     "Label2": 7,
     "Label2_1": 8,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/18/2023 10:56:16",
+  "HeaderLastSavedDateTimeUTC": "12/18/2023 12:09:13",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
+    "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -25,25 +26,26 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "CustomGallerySample": 18,
+    "BankWisePOSReportsFlow": 1,
+    "CustomGallerySample": 19,
     "RetriveTerminal": 0,
-    "tbl_Banks": 15,
-    "tbl_Banks\\cr69c_bank_statecode": 4,
-    "tbl_Banks\\cr69c_bank_statuscode": 5,
-    "tbl_Banks\\default.cds_cr69c_bank_views": 11,
-    "tbl_Masters": 14,
-    "tbl_Masters\\cr69c_master_cr69c_cashadvance": 1,
-    "tbl_Masters\\cr69c_master_statecode": 2,
-    "tbl_Masters\\cr69c_master_statuscode": 3,
-    "tbl_Masters\\default.cds_cr69c_master_views": 10,
-    "tbl_Properties": 16,
-    "tbl_Properties\\cr69c_property_statecode": 6,
-    "tbl_Properties\\cr69c_property_statuscode": 7,
-    "tbl_Properties\\default.cds_cr69c_property_views": 12,
-    "tbl_TerminalTypes": 17,
-    "tbl_TerminalTypes\\cr69c_terminaltype_statecode": 8,
-    "tbl_TerminalTypes\\cr69c_terminaltype_statuscode": 9,
-    "tbl_TerminalTypes\\default.cds_cr69c_terminaltype_views": 13
+    "tbl_Banks": 16,
+    "tbl_Banks\\cr69c_bank_statecode": 5,
+    "tbl_Banks\\cr69c_bank_statuscode": 6,
+    "tbl_Banks\\default.cds_cr69c_bank_views": 12,
+    "tbl_Masters": 15,
+    "tbl_Masters\\cr69c_master_cr69c_cashadvance": 2,
+    "tbl_Masters\\cr69c_master_statecode": 3,
+    "tbl_Masters\\cr69c_master_statuscode": 4,
+    "tbl_Masters\\default.cds_cr69c_master_views": 11,
+    "tbl_Properties": 17,
+    "tbl_Properties\\cr69c_property_statecode": 7,
+    "tbl_Properties\\cr69c_property_statuscode": 8,
+    "tbl_Properties\\default.cds_cr69c_property_views": 13,
+    "tbl_TerminalTypes": 18,
+    "tbl_TerminalTypes\\cr69c_terminaltype_statecode": 9,
+    "tbl_TerminalTypes\\cr69c_terminaltype_statuscode": 10,
+    "tbl_TerminalTypes\\default.cds_cr69c_terminaltype_views": 14
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
@@ -81,15 +83,15 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1136137,
+    "AnalysisLoadTime": 0.1053865,
     "ControlCount": {
       "button": 1,
       "gallery": 1,
       "galleryTemplate": 1,
-      "label": 2,
+      "label": 3,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.3435204
+    "DeserializationLoadTime": 1.0928339
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

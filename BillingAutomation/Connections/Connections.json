@@ -1,4 +1,30 @@
 {
+  "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "BankWisePOSReportsFlow"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3"
+  },
   "d5c4ed7c-16ea-4130-8103-e051ea9e738b": {
     "connectionRef": {
       "displayName": "RetrieveBankWiseReport",

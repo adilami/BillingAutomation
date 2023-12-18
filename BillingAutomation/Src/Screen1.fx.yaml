@@ -11,22 +11,24 @@ Screen1 As screen:
         ZIndex: =1
 
         Label2 As label:
+            Height: =102
             OnSelect: =Select(Parent)
-            Text: =ThisItem.bankName
-            X: =28
-            Y: =32
+            Text: =ThisItem.bankname
+            Width: =1027
+            X: =329
+            Y: =11
             ZIndex: =1
 
         Label2_1 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.bankId
+            Text: =ThisItem.terminalid
             X: =200
             Y: =32
             ZIndex: =2
 
     Button1 As button:
         OnSelect: |-
-            =UpdateContext({BankData: RetriveTerminal.GetBankWiseReport()});
+            =UpdateContext({BankData: BankWisePOSReportsFlow.Run()});
         Text: ="Button"
         X: =682
         Y: =671
