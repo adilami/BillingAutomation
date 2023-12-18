@@ -6,12 +6,12 @@ Screen1 As screen:
         Items: =BankData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =113
+        TemplateSize: =353
         Width: =1366
         ZIndex: =1
 
         Label2 As label:
-            Height: =102
+            Height: =342
             OnSelect: =Select(Parent)
             Text: =ThisItem.bankname
             Width: =1027
