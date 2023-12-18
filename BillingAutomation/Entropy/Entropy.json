@@ -3,17 +3,18 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Button1": 11,
-    "Gallery2": 8,
-    "galleryTemplate2": 9,
+    "Button1": 9,
+    "Gallery2": 5,
+    "galleryTemplate2": 6,
     "Host": 3,
-    "Label2": 10,
-    "Label2_1": 12,
+    "Label1": 10,
+    "Label2": 7,
+    "Label2_1": 8,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/18/2023 07:02:06",
+  "HeaderLastSavedDateTimeUTC": "12/18/2023 07:13:26",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
@@ -58,6 +59,7 @@
     "Gallery2": {},
     "galleryTemplate2": {},
     "Host": {},
+    "Label1": {},
     "Label2": {},
     "Label2_1": {},
     "Screen1": {}
@@ -70,6 +72,7 @@
     "Gallery2": 0,
     "galleryTemplate2": 1,
     "Host": 0,
+    "Label1": 0,
     "Label2": 2,
     "Label2_1": 2,
     "Screen1": 0
@@ -78,12 +81,15 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0453926,
+    "AnalysisLoadTime": 0.1136137,
     "ControlCount": {
-      "label": 1,
+      "button": 1,
+      "gallery": 1,
+      "galleryTemplate": 1,
+      "label": 2,
       "screen": 1
     },
-    "DeserializationLoadTime": 0.9574977
+    "DeserializationLoadTime": 1.3435204
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
