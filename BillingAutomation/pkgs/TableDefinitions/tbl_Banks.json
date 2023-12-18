@@ -3,10 +3,6 @@
   "EntityName": "tbl_Banks",
   "environmentVariableName": "",
   "InstanceUrl": "https://org9daec322.crm5.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "cr69c_banks",
-    "logicalName": "cr69c_bank"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org9daec322.crm5.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('cr69c_bank')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",

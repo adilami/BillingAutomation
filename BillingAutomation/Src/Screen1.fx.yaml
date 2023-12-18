@@ -1,2 +1,34 @@
 Screen1 As screen:
 
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =546
+        Items: =BankData
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =113
+        Width: =1366
+        ZIndex: =1
+
+        Label2 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.bankName
+            X: =28
+            Y: =32
+            ZIndex: =1
+
+        Label2_1 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.bankId
+            X: =200
+            Y: =32
+            ZIndex: =2
+
+    Button1 As button:
+        OnSelect: |-
+            =UpdateContext({BankData: RetriveTerminal.GetBankWiseReport()});
+        Text: ="Button"
+        X: =682
+        Y: =671
+        ZIndex: =2
+

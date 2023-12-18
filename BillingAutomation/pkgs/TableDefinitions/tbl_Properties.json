@@ -3,10 +3,6 @@
   "EntityName": "tbl_Properties",
   "environmentVariableName": "",
   "InstanceUrl": "https://org9daec322.crm5.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "cr69c_properties",
-    "logicalName": "cr69c_property"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org9daec322.crm5.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('cr69c_property')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
