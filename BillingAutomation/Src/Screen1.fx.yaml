@@ -13,7 +13,7 @@ Screen1 As screen:
         Label2 As label:
             Height: =342
             OnSelect: =Select(Parent)
-            Text: =ThisItem.terminalid
+            Text: =ThisItem.bankname
             Width: =1027
             X: =329
             Y: =11
@@ -21,7 +21,7 @@ Screen1 As screen:
 
         Label2_1 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.bankname
+            Text: =ThisItem.terminalid
             X: =200
             Y: =32
             ZIndex: =2
