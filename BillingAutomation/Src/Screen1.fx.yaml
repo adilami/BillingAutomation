@@ -31,7 +31,7 @@ Screen1 As screen:
 
     Button1 As button:
         OnSelect: |-
-            =UpdateContext({BankData: BankWisePOSReportsFlow.Run()});
+            =UpdateContext({BankData: ParseJSON(BankWisePOSReportsFlow.Run())})
         Text: ="Button"
         X: =682
         Y: =671

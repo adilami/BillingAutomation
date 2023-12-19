@@ -13,7 +13,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 04:43:23",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 07:57:20",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -68,12 +68,12 @@
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 3,
+    "Button1": 4,
     "Gallery2": 0,
     "galleryTemplate2": 1,
     "Host": 0,
     "Label2": 2,
-    "Label2_1": 2,
+    "Label2_1": 3,
     "Screen1": 0
   },
   "ResourcesJsonIndices": {},
