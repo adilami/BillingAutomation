@@ -19,11 +19,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 10:54:06",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 11:15:40",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\"",
-    "edd3496c-7291-445c-bfb7-ff2ffb374b00": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\""
+    "edd3496c-7291-445c-bfb7-ff2ffb374b00": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -83,18 +83,18 @@
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 9,
-    "DatePicker1": 6,
-    "DatePicker1_1": 7,
+    "Button1": 10,
+    "DatePicker1": 7,
+    "DatePicker1_1": 8,
     "Gallery3": 0,
     "galleryTemplate3": 1,
     "Host": 0,
-    "Label4": 8,
+    "Label4": 9,
     "Label5": 3,
     "Label5_1": 2,
-    "Label7": 4,
-    "Label7_1": 5,
-    "Label8": 0,
+    "Label7": 5,
+    "Label7_1": 6,
+    "Label8": 4,
     "Screen1": 0
   },
   "ResourcesJsonIndices": {

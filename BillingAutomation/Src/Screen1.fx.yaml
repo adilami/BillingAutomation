@@ -1,7 +1,7 @@
 Screen1 As screen:
 
     Button1 As button:
-        OnSelect: |
+        OnSelect: |+
             =Set(BankData,BankWisePOSReportsFlow.Run());
             Set(parsedData, ParseJSON(BankData.output));
             ClearCollect(
@@ -14,7 +14,8 @@ Screen1 As screen:
                         POSType:Text(Value.shortName)
                     }
                 )
-            )
+            );
+            
         Text: ="Button"
         X: =868
         Y: =672
@@ -34,7 +35,8 @@ Screen1 As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =95
         Width: =1136
-        Y: =55
+        X: =48
+        Y: =40
         ZIndex: =6
 
         Label5 As label:
@@ -53,8 +55,9 @@ Screen1 As screen:
         Label8 As label:
             OnSelect: =Select(Parent)
             Text: =ThisItem.POSType
-            X: =873
-            Y: =33
+            Width: =125
+            X: =366
+            Y: =20
             ZIndex: =3
 
     DatePicker1 As datepicker:
