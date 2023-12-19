@@ -51,3 +51,27 @@ Screen1 As screen:
             Y: =40
             ZIndex: =2
 
+    DatePicker1 As datepicker:
+        X: =92
+        Y: =572
+        ZIndex: =7
+
+    DatePicker1_1 As datepicker:
+        X: =471
+        Y: =572
+        ZIndex: =8
+
+    Label7 As label:
+        Text: ="Date from"
+        X: =92
+        Y: =532
+        ZIndex: =9
+
+    Label7_1 As label:
+        Text: |-
+            ="Date to
+            "
+        X: =471
+        Y: =532
+        ZIndex: =10
+

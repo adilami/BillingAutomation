@@ -4,17 +4,21 @@
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 9,
+    "DatePicker1": 30,
+    "DatePicker1_1": 31,
     "Gallery3": 24,
     "galleryTemplate3": 25,
     "Host": 3,
     "Label4": 15,
     "Label5": 26,
     "Label5_1": 27,
+    "Label7": 32,
+    "Label7_1": 33,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 09:05:18",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 09:23:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a134c393-a405-41de-945a-a46b7be1857d": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
@@ -53,19 +57,24 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "button": 2,
+    "button": 3,
+    "datepicker": 2,
     "gallery": 0,
     "label": 1
   },
   "OverridablePropertiesEntry": {
     "App": {},
     "Button1": {},
+    "DatePicker1": {},
+    "DatePicker1_1": {},
     "Gallery3": {},
     "galleryTemplate3": {},
     "Host": {},
     "Label4": {},
     "Label5": {},
     "Label5_1": {},
+    "Label7": {},
+    "Label7_1": {},
     "Screen1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
@@ -73,12 +82,16 @@
   "PublishOrderIndices": {
     "App": 0,
     "Button1": 4,
+    "DatePicker1": 0,
+    "DatePicker1_1": 0,
     "Gallery3": 0,
     "galleryTemplate3": 1,
     "Host": 0,
     "Label4": 3,
     "Label5": 0,
     "Label5_1": 0,
+    "Label7": 0,
+    "Label7_1": 0,
     "Screen1": 0
   },
   "ResourcesJsonIndices": {
@@ -90,9 +103,10 @@
     "AnalysisLoadTime": 0.1153785,
     "ControlCount": {
       "button": 1,
+      "datepicker": 1,
       "gallery": 1,
       "galleryTemplate": 1,
-      "label": 3,
+      "label": 4,
       "screen": 1
     },
     "DeserializationLoadTime": 1.0439128
