@@ -7,17 +7,16 @@
     "Gallery2": 5,
     "galleryTemplate2": 6,
     "Host": 3,
-    "Label1": 9,
     "Label2": 7,
     "Label2_1": 8,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/18/2023 12:18:48",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 04:02:01",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
+    "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -61,7 +60,6 @@
     "Gallery2": {},
     "galleryTemplate2": {},
     "Host": {},
-    "Label1": {},
     "Label2": {},
     "Label2_1": {},
     "Screen1": {}
@@ -74,7 +72,6 @@
     "Gallery2": 0,
     "galleryTemplate2": 1,
     "Host": 0,
-    "Label1": 0,
     "Label2": 2,
     "Label2_1": 2,
     "Screen1": 0
@@ -83,7 +80,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1053865,
+    "AnalysisLoadTime": 0.0959704,
     "ControlCount": {
       "button": 1,
       "gallery": 1,
@@ -91,7 +88,7 @@
       "label": 3,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.0928339
+    "DeserializationLoadTime": 0.9387981
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
