@@ -14,24 +14,24 @@ Screen1 As screen:
             Height: =530
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
-            Text: =ThisItem.bankname
+            Text: =ThisItem.terminalid
             Width: =1027
             X: =329
             Y: =11
             ZIndex: =1
 
         Label2_1 As label:
-            Height: =152
+            Height: =202
             OnSelect: =Select(Parent)
-            Text: =ThisItem.terminalid
-            Width: =195
+            Text: =ThisItem.bankname
+            Width: =277
             X: =34
             Y: =200
             ZIndex: =2
 
     Button1 As button:
         OnSelect: |-
-            =UpdateContext({BankData: ParseJSON(BankWisePOSReportsFlow.Run())})
+            =UpdateContext({BankData: BankWisePOSReportsFlow.Run()})
         Text: ="Button"
         X: =682
         Y: =671
