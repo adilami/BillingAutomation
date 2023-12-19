@@ -7,13 +7,14 @@
     "Gallery3": 24,
     "galleryTemplate3": 25,
     "Host": 3,
-    "Label3": 14,
     "Label4": 15,
+    "Label5": 26,
+    "Label5_1": 27,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 08:41:26",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 09:05:15",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a134c393-a405-41de-945a-a46b7be1857d": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
@@ -26,8 +27,9 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "BankWisePOSReportsFlow": 1,
-    "colBankData": 20,
+    "colBankData": 21,
     "CustomGallerySample": 19,
+    "DropDownSample": 20,
     "RetriveTerminal": 0,
     "tbl_Banks": 16,
     "tbl_Banks\\cr69c_bank_statecode": 5,
@@ -61,8 +63,9 @@
     "Gallery3": {},
     "galleryTemplate3": {},
     "Host": {},
-    "Label3": {},
     "Label4": {},
+    "Label5": {},
+    "Label5_1": {},
     "Screen1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
@@ -73,8 +76,9 @@
     "Gallery3": 0,
     "galleryTemplate3": 1,
     "Host": 0,
-    "Label3": 2,
     "Label4": 3,
+    "Label5": 0,
+    "Label5_1": 0,
     "Screen1": 0
   },
   "ResourcesJsonIndices": {
@@ -88,7 +92,7 @@
       "button": 1,
       "gallery": 1,
       "galleryTemplate": 1,
-      "label": 2,
+      "label": 3,
       "screen": 1
     },
     "DeserializationLoadTime": 1.0439128

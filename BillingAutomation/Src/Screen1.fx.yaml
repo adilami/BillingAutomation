@@ -9,24 +9,15 @@ Screen1 As screen:
                 ForAll(
                     Table(parsedData),
                     {
-                        bankName: Value(Value.bankName),
+                        bankName: Text(Value.bankName),
                         idTerminal: Text(Value.idTerminal)
                     }
                 )
             )
         Text: ="Button"
-        X: =682
-        Y: =671
+        X: =868
+        Y: =672
         ZIndex: =2
-
-    Label3 As label:
-        Height: =108
-        Overflow: =Overflow.Scroll
-        Text: =BankData.output
-        Width: =922
-        X: =260
-        Y: =508
-        ZIndex: =4
 
     Label4 As label:
         Text: =
@@ -37,12 +28,26 @@ Screen1 As screen:
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =360
-        Items: =ParseJSON(parsedData.ou)
+        Items: =colBankData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        TemplateSize: =78
         Width: =991
         X: =140
         Y: =12
         ZIndex: =6
+
+        Label5 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.idTerminal
+            X: =752
+            Y: =20
+            ZIndex: =1
+
+        Label5_1 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.bankName
+            X: =40
+            Y: =40
+            ZIndex: =2
 
