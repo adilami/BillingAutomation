@@ -6,13 +6,14 @@ Screen1 As screen:
         Items: =BankData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =353
+        TemplateSize: =541
         Width: =1366
         ZIndex: =1
 
         Label2 As label:
-            Height: =342
+            Height: =530
             OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
             Text: =ThisItem.bankname
             Width: =1027
             X: =329
@@ -20,10 +21,12 @@ Screen1 As screen:
             ZIndex: =1
 
         Label2_1 As label:
+            Height: =152
             OnSelect: =Select(Parent)
             Text: =ThisItem.terminalid
-            X: =200
-            Y: =32
+            Width: =195
+            X: =34
+            Y: =200
             ZIndex: =2
 
     Button1 As button:
