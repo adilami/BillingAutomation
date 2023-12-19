@@ -4,19 +4,18 @@
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 9,
-    "Gallery2": 5,
-    "galleryTemplate2": 6,
+    "Gallery1": 10,
+    "galleryTemplate1": 11,
     "Host": 3,
-    "Label2": 7,
-    "Label2_1": 8,
+    "Label2": 13,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 08:05:27",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 08:12:37",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "57e5d9fb-68e0-402c-bb42-4bd4f9c7fae3": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
+    "5e252d3d-8e43-4cdd-86e8-73a83865701d": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -57,30 +56,28 @@
   "OverridablePropertiesEntry": {
     "App": {},
     "Button1": {},
-    "Gallery2": {},
-    "galleryTemplate2": {},
+    "Gallery1": {},
+    "galleryTemplate1": {},
     "Host": {},
     "Label2": {},
-    "Label2_1": {},
     "Screen1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 4,
-    "Gallery2": 0,
-    "galleryTemplate2": 1,
+    "Button1": 2,
+    "Gallery1": 0,
+    "galleryTemplate1": 1,
     "Host": 0,
-    "Label2": 2,
-    "Label2_1": 3,
+    "Label2": 0,
     "Screen1": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0816083,
+    "AnalysisLoadTime": 0.1153785,
     "ControlCount": {
       "button": 1,
       "gallery": 1,
@@ -88,7 +85,7 @@
       "label": 2,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.1678622
+    "DeserializationLoadTime": 1.0439128
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

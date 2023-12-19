@@ -1,39 +1,26 @@
 Screen1 As screen:
 
-    Gallery2 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Height: =546
-        Items: =BankData
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =541
-        Width: =1366
-        ZIndex: =1
-
-        Label2 As label:
-            Height: =530
-            OnSelect: =Select(Parent)
-            Overflow: =Overflow.Scroll
-            Text: =ThisItem.terminalid
-            Width: =1027
-            X: =329
-            Y: =11
-            ZIndex: =1
-
-        Label2_1 As label:
-            Height: =202
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.bankname
-            Width: =277
-            X: =34
-            Y: =200
-            ZIndex: =2
-
     Button1 As button:
-        OnSelect: |-
-            =UpdateContext({BankData: BankWisePOSReportsFlow.Run()})
+        OnSelect: =Set(BankData,BankWisePOSReportsFlow.Run())
         Text: ="Button"
         X: =682
         Y: =671
         ZIndex: =2
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =595
+        Items: =BankData
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Width: =1366
+        ZIndex: =3
+
+        Label2 As label:
+            Height: =239
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.output
+            Width: =1233
+            ZIndex: =1
 

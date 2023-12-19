@@ -3,11 +3,9 @@
   <grammars>
     <jsonTypes targetNamespace="https://asia-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <object name="ManualTriggerInput" />
-      <string name="ResponseActionOutput_bankname_def" />
-      <string name="ResponseActionOutput_terminalid_def" />
+      <string name="ResponseActionOutput_output_def" />
       <object name="ResponseActionOutput">
-        <property name="bankname" type="string" />
-        <property name="terminalid" type="string" />
+        <property name="output" type="string" />
       </object>
       <object name="Run_responses_default_def" />
     </jsonTypes>
