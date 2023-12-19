@@ -44,34 +44,37 @@ Screen1 As screen:
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =431
+        Height: =375
         Items: =tbl_BankWisePOSReports
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =73
-        Width: =1318
-        X: =48
-        Y: =40
+        TemplateSize: =76
+        Width: =1366
+        Y: =85
         ZIndex: =6
 
         Label5 As label:
+            Align: =Align.Center
             OnSelect: =Select(Parent)
             Text: =ThisItem.Id
-            X: =204
+            Width: =103
+            X: =409
             Y: =20
             ZIndex: =1
 
         Label5_1 As label:
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName
+            X: =18
             Y: =20
             ZIndex: =2
 
         Label8 As label:
+            Align: =Align.Center
             OnSelect: =Select(Parent)
             Text: =ThisItem.POSType
             Width: =125
-            X: =366
+            X: =217
             Y: =20
             ZIndex: =3
 
@@ -98,4 +101,30 @@ Screen1 As screen:
         X: =471
         Y: =532
         ZIndex: =10
+
+    Rectangle1 As rectangle:
+        Height: =85
+        Width: =1366
+        ZIndex: =11
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Bank Name"
+        X: =16
+        Y: =22
+        ZIndex: =12
+
+    Label2_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Terminal Type"
+        Width: =200
+        X: =196
+        Y: =22
+        ZIndex: =13
 
