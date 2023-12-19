@@ -1,9 +1,16 @@
 Screen1 As screen:
 
     Button1 As button:
-        OnSelect: |+
-            =Set(BankData,BankWisePOSReportsFlow.Run());
-            Set(parsedData, ParseJSON(BankData.output));
+        OnSelect: |
+            =RemoveIf(tbl_BankWisePOSReports,true);
+            Set(
+                BankData,
+                BankWisePOSReportsFlow.Run()
+            );
+            Set(
+                parsedData,
+                ParseJSON(BankData.output)
+            );
             ClearCollect(
                 colBankData,
                 ForAll(
@@ -11,11 +18,19 @@ Screen1 As screen:
                     {
                         bankName: Text(Value.bankName),
                         idTerminal: Text(Value.idTerminal),
-                        POSType:Text(Value.shortName)
+                        POSType: Text(Value.shortName)
                     }
                 )
             );
-            
+            ForAll(colBankData,
+            Patch(
+                tbl_BankWisePOSReports,
+                Defaults(tbl_BankWisePOSReports),
+                {
+                    BankName:Text(ThisRecord.bankName),
+                    POSType: Text(ThisRecord.POSType)
+                }
+            ));
         Text: ="Button"
         X: =868
         Y: =672
@@ -29,26 +44,26 @@ Screen1 As screen:
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =317
-        Items: =colBankData
+        Height: =431
+        Items: =tbl_BankWisePOSReports
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =95
-        Width: =1136
+        TemplateSize: =73
+        Width: =1318
         X: =48
         Y: =40
         ZIndex: =6
 
         Label5 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.idTerminal
+            Text: =ThisItem.Id
             X: =204
             Y: =20
             ZIndex: =1
 
         Label5_1 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.bankName
+            Text: =ThisItem.BankName
             Y: =20
             ZIndex: =2
 
