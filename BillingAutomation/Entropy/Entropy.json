@@ -4,18 +4,19 @@
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 9,
-    "Gallery1": 10,
-    "galleryTemplate1": 11,
+    "Gallery3": 24,
+    "galleryTemplate3": 25,
     "Host": 3,
-    "Label2": 13,
+    "Label3": 14,
+    "Label4": 15,
     "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 08:12:37",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 08:41:26",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "5e252d3d-8e43-4cdd-86e8-73a83865701d": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
+    "a134c393-a405-41de-945a-a46b7be1857d": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -25,6 +26,7 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "BankWisePOSReportsFlow": 1,
+    "colBankData": 20,
     "CustomGallerySample": 19,
     "RetriveTerminal": 0,
     "tbl_Banks": 16,
@@ -56,24 +58,28 @@
   "OverridablePropertiesEntry": {
     "App": {},
     "Button1": {},
-    "Gallery1": {},
-    "galleryTemplate1": {},
+    "Gallery3": {},
+    "galleryTemplate3": {},
     "Host": {},
-    "Label2": {},
+    "Label3": {},
+    "Label4": {},
     "Screen1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 2,
-    "Gallery1": 0,
-    "galleryTemplate1": 1,
+    "Button1": 4,
+    "Gallery3": 0,
+    "galleryTemplate3": 1,
     "Host": 0,
-    "Label2": 0,
+    "Label3": 2,
+    "Label4": 3,
     "Screen1": 0
   },
-  "ResourcesJsonIndices": {},
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {

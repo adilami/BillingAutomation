@@ -1,26 +1,48 @@
 Screen1 As screen:
 
     Button1 As button:
-        OnSelect: =Set(BankData,BankWisePOSReportsFlow.Run())
+        OnSelect: |
+            =Set(BankData,BankWisePOSReportsFlow.Run());
+            Set(parsedData, ParseJSON(BankData.output));
+            ClearCollect(
+                colBankData,
+                ForAll(
+                    Table(parsedData),
+                    {
+                        bankName: Value(Value.bankName),
+                        idTerminal: Text(Value.idTerminal)
+                    }
+                )
+            )
         Text: ="Button"
         X: =682
         Y: =671
         ZIndex: =2
 
-    Gallery1 As gallery.galleryVertical:
+    Label3 As label:
+        Height: =108
+        Overflow: =Overflow.Scroll
+        Text: =BankData.output
+        Width: =922
+        X: =260
+        Y: =508
+        ZIndex: =4
+
+    Label4 As label:
+        Text: =
+        X: =307
+        Y: =647
+        ZIndex: =5
+
+    Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =595
-        Items: =BankData
+        Height: =360
+        Items: =ParseJSON(parsedData.ou)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-        Width: =1366
-        ZIndex: =3
-
-        Label2 As label:
-            Height: =239
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.output
-            Width: =1233
-            ZIndex: =1
+        Width: =991
+        X: =140
+        Y: =12
+        ZIndex: =6
 
