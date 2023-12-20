@@ -9,7 +9,7 @@ BankWisePosReport As screen:
             );
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run()
+                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
             );
             Set(
                 parsedData,
@@ -228,7 +228,7 @@ BankWisePosReport As screen:
             =RemoveIf(tbl_RetrieveTerminals,true);
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run()
+                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
             );
             Set(
                 parsedRetrieveData,
