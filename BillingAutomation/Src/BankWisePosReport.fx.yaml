@@ -203,10 +203,12 @@ BankWisePosReport As screen:
             ZIndex: =1
 
         Label2 As label:
+            Height: =52
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankId
-            X: =36
-            Y: =20
+            Width: =190
+            X: =7
+            Y: =8
             ZIndex: =2
 
     btnSyncRetrieve As button:
