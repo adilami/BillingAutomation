@@ -215,7 +215,12 @@ BankWisePosReport As screen:
 
     btnSyncRetrieve As button:
         OnSelect: |-
-            =Set(
+            =RemoveIf(tbl_RetrieveTerminals,true);
+            Set(
+                BankData,
+                BankWisePOSReportsFlow.Run()
+            );
+            Set(
                 parsedRetrieveData,
                 ParseJSON(BankData.outputretrieveterminal)
             );
