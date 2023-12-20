@@ -1,11 +1,8 @@
 BankWisePosReport As screen:
 
     btnSync As button:
-        OnSelect: |
-            =RemoveIf(
-                tbl_RetrieveTerminals,
-                true
-            );
+        OnSelect: |+
+            =
             RemoveIf(
                 tbl_BankWisePOSReports,
                 true
@@ -33,16 +30,6 @@ BankWisePosReport As screen:
                     }
                 )
             );
-            ClearCollect(
-                colRetrieveData,
-                ForAll(
-                    Table(parsedRetrieveData),
-                    {
-                        bankID: Text(Value.bankId),
-                        updatedDate: Text(Value.updatedDate)
-                    }
-                )
-            );
             ForAll(
                 colBankData,
                 Patch(
@@ -51,24 +38,15 @@ BankWisePosReport As screen:
                     {
                         BankName: Text(ThisRecord.bankName),
                         POSType: Text(ThisRecord.POSType),
-                        DeployDate: Text(ThisRecord.deployDate)
+                        DeployDate: DateValue(ThisRecord.deployDate)
                     }
                 )
             );
-            ForAll(
-                colRetrieveData,
-                Patch(
-                    tbl_RetrieveTerminals,
-                    Defaults(tbl_RetrieveTerminals),
-                    {
-                        BankId: Text(ThisRecord.bankID),
-                        RetrieveDate: DateValue(ThisRecord.updatedDate)
-                    }
-                )
-            );
-        Text: ="Sync"
-        X: =603
-        Y: =683
+            Notify("Synced Successfully",NotificationType.Success);
+            
+        Text: ="Sync Deploy"
+        X: =416
+        Y: =646
         ZIndex: =2
 
     galBankWisePosReport As gallery.galleryVertical:
@@ -230,4 +208,40 @@ BankWisePosReport As screen:
             X: =36
             Y: =20
             ZIndex: =2
+
+    Button1 As button:
+        OnSelect: |-
+            =RemoveIf(
+                tbl_RetrieveTerminals,
+                true
+            );
+            Set(
+                parsedRetrieveData,
+                ParseJSON(BankData.outputretrieveterminal)
+            );
+            ClearCollect(
+                colRetrieveData,
+                ForAll(
+                    Table(parsedRetrieveData),
+                    {
+                        bankID: Text(Value.bankId),
+                        updatedDate: Text(Value.updatedDate)
+                    }
+                )
+            );
+            ForAll(
+                colRetrieveData,
+                Patch(
+                    tbl_RetrieveTerminals,
+                    Defaults(tbl_RetrieveTerminals),
+                    {
+                        BankId: Text(ThisRecord.bankID),
+                        RetrieveDate: DateValue(ThisRecord.updatedDate)
+                    }
+                )
+            );
+        Text: ="Button"
+        X: =912
+        Y: =652
+        ZIndex: =19
 
