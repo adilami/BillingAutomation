@@ -63,9 +63,11 @@ BankWisePosReport As screen:
         ZIndex: =6
 
         lblBankNameContent As label:
+            Align: =Align.Center
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName
-            X: =18
+            Width: =215
+            X: =2
             Y: =20
             ZIndex: =2
 
