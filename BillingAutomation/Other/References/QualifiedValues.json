@@ -36,6 +36,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_tbl_retrieveterminal_forms",
+      "Namespace": "tbl_RetrieveTerminals (Forms)",
+      "Values": {
+        "Information": "9b00d509-49df-4340-9604-b4e70d0e342b"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_master_forms",
       "Namespace": "Masters (Forms)",
       "Values": {
@@ -61,13 +68,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_retrieveterminal_forms",
-      "Namespace": "tbl_RetrieveTerminals (Forms)",
-      "Values": {
-        "Information": "9b00d509-49df-4340-9604-b4e70d0e342b"
       }
     }
   ]

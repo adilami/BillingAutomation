@@ -49,7 +49,7 @@ BankWisePosReport As screen:
                 tbl_RetrieveTerminals,
                 Defaults(tbl_RetrieveTerminals),
                 {
-                    
+                    BankId:Text(ThisRecord.bankID),
                     RetrieveDate:DateValue(ThisRecord.updatedDate)
                 }
             ));
