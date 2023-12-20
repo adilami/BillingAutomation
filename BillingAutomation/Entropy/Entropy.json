@@ -31,11 +31,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/20/2023 12:15:27",
+  "HeaderLastSavedDateTimeUTC": "12/20/2023 12:23:37",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\"",
-    "e9c4cd52-96da-4496-9dcb-649b4b67a713": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\""
+    "e9c4cd52-96da-4496-9dcb-649b4b67a713": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
