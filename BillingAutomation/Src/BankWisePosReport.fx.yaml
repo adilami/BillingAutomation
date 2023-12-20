@@ -187,11 +187,7 @@ BankWisePosReport As screen:
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =318
-        Items: |-
-            =Filter(
-                tbl_RetrieveTerminals,
-                RetrieveDate >= dteDateFrom.SelectedDate && RetrieveDate<= dteDateTo.SelectedDate
-            )
+        Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =72
@@ -211,7 +207,7 @@ BankWisePosReport As screen:
         Label2 As label:
             Height: =52
             OnSelect: =Select(Parent)
-            Text: =ThisItem.BankId
+            Text: =ThisItem.BankName
             Width: =190
             X: =7
             Y: =8
@@ -251,7 +247,7 @@ BankWisePosReport As screen:
                 )
             );
         Text: ="Sync Retrieve"
-        X: =912
-        Y: =652
+        X: =923
+        Y: =646
         ZIndex: =19
 
