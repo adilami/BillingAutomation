@@ -1,6 +1,6 @@
-Screen1 As screen:
+BankWisePosReport As screen:
 
-    Button1 As button:
+    btnSync As button:
         OnSelect: |
             =RemoveIf(tbl_BankWisePOSReports,true);
             Set(
@@ -31,18 +31,12 @@ Screen1 As screen:
                     POSType: Text(ThisRecord.POSType)
                 }
             ));
-        Text: ="Button"
+        Text: ="Sync"
         X: =868
         Y: =672
         ZIndex: =2
 
-    Label4 As label:
-        Text: =
-        X: =307
-        Y: =647
-        ZIndex: =5
-
-    Gallery3 As gallery.galleryVertical:
+    galBankWisePosReport As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =375
         Items: =tbl_BankWisePOSReports
@@ -53,14 +47,14 @@ Screen1 As screen:
         Y: =85
         ZIndex: =6
 
-        Label5_1 As label:
+        lblBankNameContent As label:
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName
             X: =18
             Y: =20
             ZIndex: =2
 
-        Label8 As label:
+        lblTerminalTypeContent As label:
             Align: =Align.Center
             OnSelect: =Select(Parent)
             Text: =ThisItem.POSType
@@ -69,23 +63,23 @@ Screen1 As screen:
             Y: =20
             ZIndex: =3
 
-    DatePicker1 As datepicker:
+    dteDateFrom As datepicker:
         X: =92
         Y: =572
         ZIndex: =7
 
-    DatePicker1_1 As datepicker:
+    dteDateTo As datepicker:
         X: =471
         Y: =572
         ZIndex: =8
 
-    Label7 As label:
+    lblDateFrom As label:
         Text: ="Date from"
         X: =92
         Y: =532
         ZIndex: =9
 
-    Label7_1 As label:
+    lblDateTo As label:
         Text: |-
             ="Date to
             "
@@ -93,12 +87,12 @@ Screen1 As screen:
         Y: =532
         ZIndex: =10
 
-    Rectangle1 As rectangle:
+    recHeader As rectangle:
         Height: =85
         Width: =1366
         ZIndex: =11
 
-    Label2 As label:
+    lblBankName As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
@@ -108,7 +102,7 @@ Screen1 As screen:
         Y: =22
         ZIndex: =12
 
-    Label2_1 As label:
+    lblTerminalType As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
