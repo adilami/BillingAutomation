@@ -29,6 +29,7 @@ BankWisePosReport As screen:
                 ForAll(
                     Table(parsedRetrieveData),
                     {
+                        bankID:Text(Value.bankId),
                        updatedDate: Text(Value.updatedDate)
                     }
                 )
@@ -48,6 +49,7 @@ BankWisePosReport As screen:
                 tbl_RetrieveTerminals,
                 Defaults(tbl_RetrieveTerminals),
                 {
+                    
                     RetrieveDate:DateValue(ThisRecord.updatedDate)
                 }
             ));
@@ -188,10 +190,14 @@ BankWisePosReport As screen:
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =318
-        Items: =tbl_RetrieveTerminals
+        Items: |-
+            =Filter(
+                tbl_RetrieveTerminals,
+                RetrieveDate >= dteDateFrom.SelectedDate && RetrieveDate<= dteDateTo.SelectedDate
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =387
+        TemplateSize: =72
         Width: =755
         X: =611
         Y: =84
@@ -204,4 +210,11 @@ BankWisePosReport As screen:
             Width: =212
             X: =532
             ZIndex: =1
+
+        Label2 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.BankId
+            X: =36
+            Y: =20
+            ZIndex: =2
 

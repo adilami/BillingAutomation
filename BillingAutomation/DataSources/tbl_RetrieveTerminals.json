@@ -64,6 +64,7 @@
     "Name": "tbl_RetrieveTerminals",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
+      "cr69c_bankid": "BankId",
       "cr69c_id": "Id",
       "cr69c_retrievedate": "RetrieveDate",
       "cr69c_tbl_retrieveterminal_AsyncOperations": "System Jobs",
