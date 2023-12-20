@@ -167,9 +167,9 @@ BankWisePosReport As screen:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
         Size: =18
-        Text: ="Terminal Type"
+        Text: ="Total Price"
         Width: =200
-        X: =859
+        X: =1119
         Y: =22
         ZIndex: =16
 
@@ -180,7 +180,7 @@ BankWisePosReport As screen:
         Size: =18
         Text: ="Retrieve Date"
         Width: =200
-        X: =1149
+        X: =859
         Y: =22
         ZIndex: =17
 
@@ -205,7 +205,7 @@ BankWisePosReport As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.RetrieveDate
             Width: =212
-            X: =532
+            X: =260
             ZIndex: =1
 
         Label2 As label:
@@ -232,7 +232,7 @@ BankWisePosReport As screen:
                 ForAll(
                     Table(parsedRetrieveData),
                     {
-                        bankID: Text(Value.bankId),
+                        bankName: Text(Value.bankName),
                         updatedDate: Text(Value.updatedDate)
                     }
                 )
@@ -243,7 +243,7 @@ BankWisePosReport As screen:
                     tbl_RetrieveTerminals,
                     Defaults(tbl_RetrieveTerminals),
                     {
-                        BankId: Text(ThisRecord.bankID),
+                        BankId: Text(ThisRecord.bankName),
                         RetrieveDate: DateValue(ThisRecord.updatedDate)
                     }
                 )
