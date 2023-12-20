@@ -232,7 +232,8 @@ BankWisePosReport As screen:
                 ForAll(
                     Table(parsedRetrieveData),
                     {
-                        bankName: Text(Value.bankName),
+                        bankId: Text(Value.bankId),
+                        bankName:Text(Value.bankName),
                         updatedDate: Text(Value.updatedDate)
                     }
                 )
@@ -243,7 +244,8 @@ BankWisePosReport As screen:
                     tbl_RetrieveTerminals,
                     Defaults(tbl_RetrieveTerminals),
                     {
-                        BankId: Text(ThisRecord.bankName),
+                        BankId: Text(ThisRecord.bankId),
+                        BankName:Text(ThisRecord.bankName),
                         RetrieveDate: DateValue(ThisRecord.updatedDate)
                     }
                 )
