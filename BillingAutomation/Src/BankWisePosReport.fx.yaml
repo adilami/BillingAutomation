@@ -235,7 +235,6 @@ BankWisePosReport As screen:
                     }
                 )
             );
-            
             ForAll(
                 colRetrieveData,
                 Patch(
