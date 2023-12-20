@@ -60,7 +60,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_tbl_retrieveterminal",
-    "MaxGetRowsCount": 500,
     "Name": "tbl_RetrieveTerminals",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

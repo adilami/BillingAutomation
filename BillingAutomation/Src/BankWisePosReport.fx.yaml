@@ -2,8 +2,14 @@ BankWisePosReport As screen:
 
     btnSync As button:
         OnSelect: |
-            =RemoveIf(tbl_BankWisePOSReports,true);
-            RemoveIf(tbl_RetrieveTerminals,true);
+            =RemoveIf(
+                tbl_RetrieveTerminals,
+                true
+            );
+            RemoveIf(
+                tbl_BankWisePOSReports,
+                true
+            );
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run()
@@ -12,7 +18,10 @@ BankWisePosReport As screen:
                 parsedData,
                 ParseJSON(BankData.output)
             );
-            Set(parsedRetrieveData, ParseJSON(BankData.outputretrieveterminal));
+            Set(
+                parsedRetrieveData,
+                ParseJSON(BankData.outputretrieveterminal)
+            );
             ClearCollect(
                 colBankData,
                 ForAll(
@@ -29,30 +38,34 @@ BankWisePosReport As screen:
                 ForAll(
                     Table(parsedRetrieveData),
                     {
-                        bankID:Text(Value.bankId),
-                       updatedDate: Text(Value.updatedDate)
+                        bankID: Text(Value.bankId),
+                        updatedDate: Text(Value.updatedDate)
                     }
                 )
             );
-            ForAll(colBankData,
-            Patch(
-                tbl_BankWisePOSReports,
-                Defaults(tbl_BankWisePOSReports),
-                {
-                    BankName:Text(ThisRecord.bankName),
-                    POSType: Text(ThisRecord.POSType),
-                    DeployDate:Text(ThisRecord.deployDate)
-                }
-            ));
-            ForAll(colRetrieveData,
-            Patch(
-                tbl_RetrieveTerminals,
-                Defaults(tbl_RetrieveTerminals),
-                {
-                    BankId:Text(ThisRecord.bankID),
-                    RetrieveDate:DateValue(ThisRecord.updatedDate)
-                }
-            ));
+            ForAll(
+                colBankData,
+                Patch(
+                    tbl_BankWisePOSReports,
+                    Defaults(tbl_BankWisePOSReports),
+                    {
+                        BankName: Text(ThisRecord.bankName),
+                        POSType: Text(ThisRecord.POSType),
+                        DeployDate: Text(ThisRecord.deployDate)
+                    }
+                )
+            );
+            ForAll(
+                colRetrieveData,
+                Patch(
+                    tbl_RetrieveTerminals,
+                    Defaults(tbl_RetrieveTerminals),
+                    {
+                        BankId: Text(ThisRecord.bankID),
+                        RetrieveDate: DateValue(ThisRecord.updatedDate)
+                    }
+                )
+            );
         Text: ="Sync"
         X: =603
         Y: =683
