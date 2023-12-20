@@ -215,10 +215,7 @@ BankWisePosReport As screen:
 
     btnSyncRetrieve As button:
         OnSelect: |-
-            =RemoveIf(
-                tbl_RetrieveTerminals,
-                true
-            );
+            =RemoveIf(tbl_RetrieveTerminals,CountRows(tbl_RetrieveTerminals)>0);
             Set(
                 parsedRetrieveData,
                 ParseJSON(BankData.outputretrieveterminal)
@@ -234,6 +231,7 @@ BankWisePosReport As screen:
                     }
                 )
             );
+            
             ForAll(
                 colRetrieveData,
                 Patch(
