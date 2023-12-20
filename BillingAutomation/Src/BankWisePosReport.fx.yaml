@@ -18,7 +18,7 @@ BankWisePosReport As screen:
                     {
                         bankName: Text(Value.bankName),
                         POSType: Text(Value.shortName),
-                        DeployDate: Text(Value.deployDate)
+                        deployDate: (Value.deployDate)
                     }
                 )
             );
@@ -29,7 +29,7 @@ BankWisePosReport As screen:
                 {
                     BankName:Text(ThisRecord.bankName),
                     POSType: Text(ThisRecord.POSType),
-                    DeployDate:Text(ThisRecord.DeployDate)
+                    DeployDate:Text(ThisRecord.deployDate)
                 }
             ));
         Text: ="Sync"
@@ -44,7 +44,7 @@ BankWisePosReport As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =76
-        Width: =1366
+        Width: =596
         Y: =85
         ZIndex: =6
 
@@ -63,6 +63,15 @@ BankWisePosReport As screen:
             X: =217
             Y: =20
             ZIndex: =3
+
+        lblTerminalTypeContent_1 As label:
+            Align: =Align.Center
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.DeployDate
+            Width: =125
+            X: =421
+            Y: =20
+            ZIndex: =4
 
     dteDateFrom As datepicker:
         X: =92
@@ -124,4 +133,55 @@ BankWisePosReport As screen:
         X: =396
         Y: =22
         ZIndex: =14
+
+    lblBankName_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Bank Name"
+        X: =649
+        Y: =22
+        ZIndex: =15
+
+    lblTerminalType_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Terminal Type"
+        Width: =200
+        X: =859
+        Y: =22
+        ZIndex: =16
+
+    lblTerminalType_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Retrieve Date"
+        Width: =200
+        X: =1149
+        Y: =22
+        ZIndex: =17
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =680
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =387
+        Width: =755
+        X: =611
+        Y: =84
+        ZIndex: =18
+
+        Label1 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.SampleHeading
+            X: =24
+            Y: =24
+            ZIndex: =1
 
