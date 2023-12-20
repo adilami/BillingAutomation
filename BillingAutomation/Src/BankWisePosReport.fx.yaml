@@ -17,8 +17,8 @@ BankWisePosReport As screen:
                     Table(parsedData),
                     {
                         bankName: Text(Value.bankName),
-                        idTerminal: Text(Value.idTerminal),
-                        POSType: Text(Value.shortName)
+                        POSType: Text(Value.shortName),
+                        deployDate: Text(Value.deployDate)
                     }
                 )
             );
@@ -32,8 +32,8 @@ BankWisePosReport As screen:
                 }
             ));
         Text: ="Sync"
-        X: =868
-        Y: =672
+        X: =603
+        Y: =683
         ZIndex: =2
 
     galBankWisePosReport As gallery.galleryVertical:
@@ -112,4 +112,15 @@ BankWisePosReport As screen:
         X: =196
         Y: =22
         ZIndex: =13
+
+    lblTerminalType_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Deploy Date"
+        Width: =200
+        X: =396
+        Y: =22
+        ZIndex: =14
 

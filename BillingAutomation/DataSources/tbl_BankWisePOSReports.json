@@ -65,6 +65,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr69c_bankname": "BankName",
+      "cr69c_deploydate": "DeployDate",
       "cr69c_id": "Id",
       "cr69c_postype": "POSType",
       "cr69c_tbl_bankwiseposreport_AsyncOperations": "System Jobs",

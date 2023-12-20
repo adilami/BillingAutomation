@@ -15,16 +15,17 @@
     "lblDateFrom": 13,
     "lblDateTo": 14,
     "lblTerminalType": 7,
+    "lblTerminalType_1": 20,
     "lblTerminalTypeContent": 11,
     "recHeader": 5
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/20/2023 04:03:34",
+  "HeaderLastSavedDateTimeUTC": "12/20/2023 06:04:32",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\"",
-    "edd3496c-7291-445c-bfb7-ff2ffb374b00": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\""
+    "2af134db-9493-4621-a257-1b742b50cd0e": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
+    "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -83,6 +84,7 @@
     "lblDateFrom": {},
     "lblDateTo": {},
     "lblTerminalType": {},
+    "lblTerminalType_1": {},
     "lblTerminalTypeContent": {},
     "recHeader": {}
   },
@@ -91,18 +93,19 @@
   "PublishOrderIndices": {
     "App": 0,
     "BankWisePosReport": 0,
-    "btnSync": 13,
+    "btnSync": 12,
     "dteDateFrom": 10,
     "dteDateTo": 11,
-    "galBankWisePosReport": 3,
-    "galleryTemplate3": 4,
+    "galBankWisePosReport": 4,
+    "galleryTemplate3": 5,
     "Host": 0,
     "lblBankName": 1,
-    "lblBankNameContent": 5,
+    "lblBankNameContent": 6,
     "lblDateFrom": 8,
     "lblDateTo": 9,
     "lblTerminalType": 2,
-    "lblTerminalTypeContent": 6,
+    "lblTerminalType_1": 3,
+    "lblTerminalTypeContent": 7,
     "recHeader": 0
   },
   "ResourcesJsonIndices": {
@@ -117,7 +120,7 @@
       "datepicker": 2,
       "gallery": 1,
       "galleryTemplate": 1,
-      "label": 9,
+      "label": 10,
       "rectangle": 1,
       "screen": 1
     },
