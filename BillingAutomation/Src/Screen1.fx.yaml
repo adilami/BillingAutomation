@@ -53,15 +53,6 @@ Screen1 As screen:
         Y: =85
         ZIndex: =6
 
-        Label5 As label:
-            Align: =Align.Center
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Id
-            Width: =103
-            X: =409
-            Y: =20
-            ZIndex: =1
-
         Label5_1 As label:
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName

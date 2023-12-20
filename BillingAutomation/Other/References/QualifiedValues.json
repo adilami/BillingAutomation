@@ -29,6 +29,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_tbl_bankwiseposreport_forms",
+      "Namespace": "tbl_BankWisePOSReports (Forms)",
+      "Values": {
+        "Information": "70c3255d-ca15-40c3-8783-cee5bbf85ac8"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_master_forms",
       "Namespace": "Masters (Forms)",
       "Values": {
@@ -54,13 +61,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_bankwiseposreport_forms",
-      "Namespace": "tbl_BankWisePOSReports (Forms)",
-      "Values": {
-        "Information": "70c3255d-ca15-40c3-8783-cee5bbf85ac8"
       }
     }
   ]
