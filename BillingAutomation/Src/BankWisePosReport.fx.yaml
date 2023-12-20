@@ -26,7 +26,7 @@ BankWisePosReport As screen:
                     {
                         bankName: Text(Value.bankName),
                         POSType: Text(Value.shortName),
-                        deployDate: (Value.deployDate)
+                        deployDate: Text(Value.deployDate)
                     }
                 )
             );
@@ -209,7 +209,7 @@ BankWisePosReport As screen:
             Y: =20
             ZIndex: =2
 
-    Button1 As button:
+    btnSyncRetrieve As button:
         OnSelect: |-
             =RemoveIf(
                 tbl_RetrieveTerminals,
@@ -240,7 +240,7 @@ BankWisePosReport As screen:
                     }
                 )
             );
-        Text: ="Button"
+        Text: ="Sync Retrieve"
         X: =912
         Y: =652
         ZIndex: =19
