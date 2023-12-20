@@ -18,7 +18,7 @@ BankWisePosReport As screen:
                     {
                         bankName: Text(Value.bankName),
                         POSType: Text(Value.shortName),
-                        deployDate: Text(Value.deployDate)
+                        DeployDate: Text(Value.deployDate)
                     }
                 )
             );
@@ -28,7 +28,8 @@ BankWisePosReport As screen:
                 Defaults(tbl_BankWisePOSReports),
                 {
                     BankName:Text(ThisRecord.bankName),
-                    POSType: Text(ThisRecord.POSType)
+                    POSType: Text(ThisRecord.POSType),
+                    DeployDate:Text(ThisRecord.DeployDate)
                 }
             ));
         Text: ="Sync"

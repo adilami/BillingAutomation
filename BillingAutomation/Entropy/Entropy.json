@@ -4,27 +4,27 @@
   "ControlUniqueIds": {
     "App": 1,
     "BankWisePosReport": 4,
-    "btnSync": 18,
+    "btnSync": 17,
     "dteDateFrom": 15,
     "dteDateTo": 16,
-    "galBankWisePosReport": 8,
-    "galleryTemplate3": 9,
+    "galBankWisePosReport": 9,
+    "galleryTemplate3": 10,
     "Host": 3,
     "lblBankName": 6,
-    "lblBankNameContent": 10,
+    "lblBankNameContent": 11,
     "lblDateFrom": 13,
     "lblDateTo": 14,
     "lblTerminalType": 7,
-    "lblTerminalType_1": 20,
-    "lblTerminalTypeContent": 11,
+    "lblTerminalType_1": 8,
+    "lblTerminalTypeContent": 12,
     "recHeader": 5
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/20/2023 06:04:41",
+  "HeaderLastSavedDateTimeUTC": "12/20/2023 06:08:17",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "2af134db-9493-4621-a257-1b742b50cd0e": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
+    "2af134db-9493-4621-a257-1b742b50cd0e": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -114,17 +114,17 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1480627,
+    "AnalysisLoadTime": 0.1395896,
     "ControlCount": {
       "button": 1,
       "datepicker": 2,
       "gallery": 1,
       "galleryTemplate": 1,
-      "label": 10,
+      "label": 7,
       "rectangle": 1,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.9614162
+    "DeserializationLoadTime": 1.0815664
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
