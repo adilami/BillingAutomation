@@ -48,7 +48,7 @@ BankWisePosReport As screen:
                 tbl_RetrieveTerminals,
                 Defaults(tbl_RetrieveTerminals),
                 {
-                    RetrieveDate:DateTimeValue(ThisRecord.updatedDate)
+                    RetrieveDate:DateValue(ThisRecord.updatedDate)
                 }
             ));
         Text: ="Sync"
@@ -198,9 +198,10 @@ BankWisePosReport As screen:
         ZIndex: =18
 
         Label1 As label:
+            Height: =60
             OnSelect: =Select(Parent)
             Text: =ThisItem.RetrieveDate
-            X: =595
-            Y: =20
+            Width: =212
+            X: =532
             ZIndex: =1
 
