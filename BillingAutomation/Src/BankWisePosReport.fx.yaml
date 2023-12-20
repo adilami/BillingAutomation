@@ -134,7 +134,7 @@ BankWisePosReport As screen:
         FontWeight: =FontWeight.Bold
         Size: =18
         Text: |-
-            ="Count
+            ="Total Terminals
             "
         Width: =200
         X: =196
