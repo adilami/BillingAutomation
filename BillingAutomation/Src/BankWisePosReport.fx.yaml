@@ -3,6 +3,7 @@ BankWisePosReport As screen:
     btnSync As button:
         OnSelect: |
             =RemoveIf(tbl_BankWisePOSReports,true);
+            RemoveIf(tbl_RetrieveTerminals,true);
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run()
@@ -11,6 +12,7 @@ BankWisePosReport As screen:
                 parsedData,
                 ParseJSON(BankData.output)
             );
+            Set(parsedRetrieveData, ParseJSON(BankData.outputretrieveterminal));
             ClearCollect(
                 colBankData,
                 ForAll(
@@ -22,6 +24,15 @@ BankWisePosReport As screen:
                     }
                 )
             );
+            ClearCollect(
+                colRetrieveData,
+                ForAll(
+                    Table(parsedRetrieveData),
+                    {
+                       updatedDate: Text(Value.updatedDate)
+                    }
+                )
+            );
             ForAll(colBankData,
             Patch(
                 tbl_BankWisePOSReports,
@@ -30,6 +41,14 @@ BankWisePosReport As screen:
                     BankName:Text(ThisRecord.bankName),
                     POSType: Text(ThisRecord.POSType),
                     DeployDate:Text(ThisRecord.deployDate)
+                }
+            ));
+            ForAll(colRetrieveData,
+            Patch(
+                tbl_RetrieveTerminals,
+                Defaults(tbl_RetrieveTerminals),
+                {
+                    RetrieveDate:DateTimeValue(ThisRecord.updatedDate)
                 }
             ));
         Text: ="Sync"
@@ -168,8 +187,8 @@ BankWisePosReport As screen:
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =680
-        Items: =CustomGallerySample
+        Height: =318
+        Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =387
@@ -180,8 +199,8 @@ BankWisePosReport As screen:
 
         Label1 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.SampleHeading
-            X: =24
-            Y: =24
+            Text: =ThisItem.RetrieveDate
+            X: =595
+            Y: =20
             ZIndex: =1
 
