@@ -181,14 +181,14 @@ BankWisePosReport As screen:
     Gallery1 As gallery.galleryVertical:
         BorderThickness: =2
         DelayItemLoading: =true
-        Height: =380
+        Height: =375
         Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =72
         Width: =733
         X: =633
-        Y: =150
+        Y: =155
         ZIndex: =18
 
         Label1 As label:
