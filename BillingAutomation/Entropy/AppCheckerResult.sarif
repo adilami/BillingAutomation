@@ -14,19 +14,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BankWisePosReport.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "BankWisePosReport.galRetrieveTerminal.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BankWisePosReport.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "BankWisePosReport.galRetrieveTerminal.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BankWisePosReport",
-                "type": "BankWisePosReport.Gallery1"
+                "type": "BankWisePosReport.galRetrieveTerminal"
               }
             }
           ],
@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BankWisePosReport.Gallery1.TabIndex"
+                  "fullyQualifiedName": "BankWisePosReport.galRetrieveTerminal.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BankWisePosReport.Gallery1.TabIndex",
+                  "fullyQualifiedName": "BankWisePosReport.galRetrieveTerminal.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BankWisePosReport",
-                "type": "BankWisePosReport.Gallery1"
+                "type": "BankWisePosReport.galRetrieveTerminal"
               }
             }
           ],
@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BankWisePosReport.galBankWisePosReport.AccessibleLabel"
+                  "fullyQualifiedName": "BankWisePosReport.galDeployedTerminal.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BankWisePosReport.galBankWisePosReport.AccessibleLabel",
+                  "fullyQualifiedName": "BankWisePosReport.galDeployedTerminal.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BankWisePosReport",
-                "type": "BankWisePosReport.galBankWisePosReport"
+                "type": "BankWisePosReport.galDeployedTerminal"
               }
             }
           ],
@@ -104,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BankWisePosReport.galBankWisePosReport.TabIndex"
+                  "fullyQualifiedName": "BankWisePosReport.galDeployedTerminal.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BankWisePosReport.galBankWisePosReport.TabIndex",
+                  "fullyQualifiedName": "BankWisePosReport.galDeployedTerminal.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BankWisePosReport",
-                "type": "BankWisePosReport.galBankWisePosReport"
+                "type": "BankWisePosReport.galDeployedTerminal"
               }
             }
           ],
