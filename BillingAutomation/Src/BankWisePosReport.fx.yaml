@@ -278,7 +278,8 @@ BankWisePosReport As screen:
                     }
                 )
             );
-            ClearCollect(colPrice, AddColumns(GroupBy(colRetrievePrice, "bankName", "Group"), "Price", (Group)));
+            ClearCollect(colPrice, AddColumns(GroupBy(colRetrievePrice, "bankName", "Group"), "Price", Sum(Group, Price)));
+            
             ForAll(
                 colPrice,
                 Patch(
