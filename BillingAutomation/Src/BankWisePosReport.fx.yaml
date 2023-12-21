@@ -90,13 +90,13 @@ BankWisePosReport As screen:
             ZIndex: =4
 
     dteDateFrom As datepicker:
-        DefaultDate: =DateValue(First(colDate).DateFrom)
+        DefaultDate: =First(tbl_Dates).DateFrom
         X: =92
         Y: =572
         ZIndex: =7
 
     dteDateTo As datepicker:
-        DefaultDate: =DateValue(First(colDate).DateTo)
+        DefaultDate: =DateValue(First(tbl_Dates).DateTo)
         X: =471
         Y: =572
         ZIndex: =8
@@ -229,15 +229,17 @@ BankWisePosReport As screen:
         OnSelect: |-
             =RemoveIf(tbl_RetrieveTerminals,true);
             RemoveIf(tbl_Dates,true);
+            
+            ClearCollect(colDate, tbl_Dates);
             Patch(tbl_Dates,Defaults(tbl_Dates),{
                 DateFrom:dteDateFrom.SelectedDate,
                 DateTo:dteDateTo.SelectedDate
             });
-            ClearCollect(colDate, tbl_Dates);
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run(DateValue(First(colDate).DateFrom),DateValue(First(colDate).DateTo))
             );
+            
             Set(
                 parsedRetrieveData,
                 ParseJSON(BankData.outputretrieveterminal)
