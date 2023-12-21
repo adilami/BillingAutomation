@@ -201,7 +201,7 @@ BankWisePosReport As screen:
         Label1 As label:
             Height: =60
             OnSelect: =Select(Parent)
-            Text: =ThisItem.RetrieveDate
+            Text: =ThisItem.Price
             Width: =212
             X: =260
             ZIndex: =1
@@ -252,17 +252,7 @@ BankWisePosReport As screen:
                     }
                 )
             );
-            ForAll(
-                colRetrieveData,
-                Patch(
-                    tbl_RetrieveTerminals,
-                    Defaults(tbl_RetrieveTerminals),
-                    {
-                        BankName: Text(ThisRecord.bankName),
-                        RetrieveDate: DateValue(ThisRecord.updatedDate)
-                    }
-                )
-            );
+            
             RemoveIf(
                 tbl_Dates,
                 true
@@ -285,6 +275,18 @@ BankWisePosReport As screen:
                         retrieveDate: ThisRecord.updatedDate,
                         Price: ((DateDiff(locDateFrom, DateValue(ThisRecord.updatedDate), TimeUnit.Days)+1)*900/30)
             
+                    }
+                )
+            );
+            ClearCollect(colPrice, AddColumns(GroupBy(colRetrievePrice, "bankName", "Group"), "Price", (Group)));
+            ForAll(
+                colPrice,
+                Patch(
+                    tbl_RetrieveTerminals,
+                    Defaults(tbl_RetrieveTerminals),
+                    {
+                        BankName: Text(ThisRecord.bankName),
+                        Price:ThisRecord.Price
                     }
                 )
             );
