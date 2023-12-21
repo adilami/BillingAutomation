@@ -381,7 +381,7 @@ BankWisePosReport As screen:
 
     "'Calculate Total' As button":
         OnSelect: |
-            =ClearCollect(colDeployPrice, tbl_BankWisePOSReports);
+            =ClearCollect(colDeployPrice, colCountedBank);
             Collect(colDeployPrice, colPrice);
             ClearCollect(TotalPrices, AddColumns(GroupBy(colDeployPrice, "bankName", "Grouped"), "TotalPrice", Sum(Grouped, Price)))
         Text: ="Calculate Total"
