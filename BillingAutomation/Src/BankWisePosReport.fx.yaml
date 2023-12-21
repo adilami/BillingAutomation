@@ -226,13 +226,18 @@ BankWisePosReport As screen:
             ZIndex: =3
 
     btnSyncRetrieve As button:
-        OnSelect: |-
-            =RemoveIf(tbl_RetrieveTerminals,true);
+        OnSelect: |
+            =RemoveIf(
+                tbl_RetrieveTerminals,
+                true
+            );
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
+                BankWisePOSReportsFlow.Run(
+                    dteDateFrom.SelectedDate,
+                    dteDateTo.SelectedDate
+                )
             );
-            
             Set(
                 parsedRetrieveData,
                 ParseJSON(BankData.outputretrieveterminal)
@@ -243,7 +248,7 @@ BankWisePosReport As screen:
                     Table(parsedRetrieveData),
                     {
                         bankId: Text(Value.bankId),
-                        bankName:Text(Value.bankName),
+                        bankName: Text(Value.bankName),
                         updatedDate: Text(Value.updatedDate)
                     }
                 )
@@ -254,16 +259,38 @@ BankWisePosReport As screen:
                     tbl_RetrieveTerminals,
                     Defaults(tbl_RetrieveTerminals),
                     {
-                        BankName:Text(ThisRecord.bankName),
+                        BankName: Text(ThisRecord.bankName),
                         RetrieveDate: DateValue(ThisRecord.updatedDate)
                     }
                 )
             );
-            RemoveIf(tbl_Dates,true);
-            Patch(tbl_Dates,Defaults(tbl_Dates),{
-                DateFrom:dteDateFrom.SelectedDate,
-                DateTo:dteDateTo.SelectedDate
-            });
+            RemoveIf(
+                tbl_Dates,
+                true
+            );
+            Patch(
+                tbl_Dates,
+                Defaults(tbl_Dates),
+                {
+                    DateFrom: dteDateFrom.SelectedDate,
+                    DateTo: dteDateTo.SelectedDate
+                }
+            );
+            ClearCollect(
+                colRetrievePrice,
+                ForAll(
+                    colRetrieveData,
+                    {
+                        bankName: ThisRecord.bankName,
+                        retrieveDate: ThisRecord.updatedDate,
+                        Price: ((DateDiff(
+                            dteDateFrom.SelectedDate,
+                            DateValue(ThisRecord.updatedDate),
+                            TimeUnit.Days
+                        ) + 1) * 900 / 30)
+                    }
+                )
+            );
         Text: ="Sync Retrieve"
         X: =923
         Y: =646

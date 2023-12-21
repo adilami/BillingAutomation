@@ -31,10 +31,10 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/21/2023 05:09:18",
+  "HeaderLastSavedDateTimeUTC": "12/21/2023 05:36:46",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/CAC5B76888FA470BA36D5F7052993062-5646D8AD365C4AA8\"",
+    "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
     "d5c4ed7c-16ea-4130-8103-e051ea9e738b": "\"/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce/connections/5ce6bdf142ed4e508b0fea670ab1ffcc\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -47,6 +47,7 @@
     "colBankData": 33,
     "colCountedBank": 35,
     "colRetrieveData": 34,
+    "colRetrievePrice": 36,
     "CustomGallerySample": 28,
     "DropDownSample": 29,
     "RetriveTerminal": 0,
@@ -154,7 +155,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1836255,
+    "AnalysisLoadTime": 0.1735952,
     "ControlCount": {
       "button": 2,
       "datepicker": 2,
@@ -164,7 +165,7 @@
       "rectangle": 1,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.1263956
+    "DeserializationLoadTime": 1.289906
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
