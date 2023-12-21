@@ -219,7 +219,8 @@ BankWisePosReport As screen:
             Height: =52
             OnSelect: =Select(Parent)
             Text: |
-                =((DateDiff(dteDateFrom.SelectedDate, DateTimeValue(ThisItem.RetrieveDate), TimeUnit.Days)+1)*900/30)
+                =
+                ((DateDiff(dteDateFrom.SelectedDate, DateTimeValue(ThisItem.RetrieveDate), TimeUnit.Days)+1)*900/30)
             Width: =195
             X: =525
             Y: =8
@@ -228,12 +229,6 @@ BankWisePosReport As screen:
     btnSyncRetrieve As button:
         OnSelect: |-
             =RemoveIf(tbl_RetrieveTerminals,true);
-            RemoveIf(tbl_Dates,true);
-            
-            Patch(tbl_Dates,Defaults(tbl_Dates),{
-                DateFrom:dteDateFrom.SelectedDate,
-                DateTo:dteDateTo.SelectedDate
-            });
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
@@ -265,6 +260,11 @@ BankWisePosReport As screen:
                     }
                 )
             );
+            RemoveIf(tbl_Dates,true);
+            Patch(tbl_Dates,Defaults(tbl_Dates),{
+                DateFrom:dteDateFrom.SelectedDate,
+                DateTo:dteDateTo.SelectedDate
+            });
         Text: ="Sync Retrieve"
         X: =923
         Y: =646

@@ -1,19 +1,5 @@
 {
-  "d5c4ed7c-16ea-4130-8103-e051ea9e738b": {
-    "connectionRef": {
-      "displayName": "RetrieveBankWiseReport",
-      "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce"
-    },
-    "datasets": {},
-    "dataSources": [
-      "RetriveTerminal"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "d5c4ed7c-16ea-4130-8103-e051ea9e738b"
-  },
-  "e9c4cd52-96da-4496-9dcb-649b4b67a713": {
+  "0dbf1667-e674-4c74-bd45-871465b8008a": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -37,6 +23,20 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "e9c4cd52-96da-4496-9dcb-649b4b67a713"
+    "id": "0dbf1667-e674-4c74-bd45-871465b8008a"
+  },
+  "d5c4ed7c-16ea-4130-8103-e051ea9e738b": {
+    "connectionRef": {
+      "displayName": "RetrieveBankWiseReport",
+      "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_retrievebankwisereport-5f33365b4e31e1d200-5f3fda4dc7e0db74ce"
+    },
+    "datasets": {},
+    "dataSources": [
+      "RetriveTerminal"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d5c4ed7c-16ea-4130-8103-e051ea9e738b"
   }
 }
