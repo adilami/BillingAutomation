@@ -9,7 +9,7 @@ BankWisePosReport As screen:
             );
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
+                BankWisePOSReportsFlow.Run(DateValue(First(colDate).DateFrom),DateValue(First(colDate).DateTo))
             );
             Set(
                 parsedData,
@@ -90,11 +90,13 @@ BankWisePosReport As screen:
             ZIndex: =4
 
     dteDateFrom As datepicker:
+        DefaultDate: =DateValue(First(colDate).DateFrom)
         X: =92
         Y: =572
         ZIndex: =7
 
     dteDateTo As datepicker:
+        DefaultDate: =DateValue(First(colDate).DateTo)
         X: =471
         Y: =572
         ZIndex: =8
