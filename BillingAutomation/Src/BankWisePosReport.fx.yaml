@@ -54,7 +54,7 @@ BankWisePosReport As screen:
     galBankWisePosReport As gallery.galleryVertical:
         BorderThickness: =2
         DelayItemLoading: =true
-        Height: =375
+        Height: =376
         Items: =tbl_BankWisePOSReports
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -181,14 +181,14 @@ BankWisePosReport As screen:
     Gallery1 As gallery.galleryVertical:
         BorderThickness: =2
         DelayItemLoading: =true
-        Height: =378
+        Height: =380
         Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =72
         Width: =733
-        X: =632
-        Y: =154
+        X: =633
+        Y: =150
         ZIndex: =18
 
         Label1 As label:
@@ -318,10 +318,4 @@ BankWisePosReport As screen:
         X: =603
         Y: =71
         ZIndex: =24
-
-    Icon3_2 As icon.VerticalLine:
-        Height: =70
-        Icon: =Icon.VerticalLine
-        X: =605
-        ZIndex: =26
 
