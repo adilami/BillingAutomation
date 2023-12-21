@@ -47,8 +47,8 @@ BankWisePosReport As screen:
             Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
             
         Text: ="Sync Deploy"
-        X: =1025
-        Y: =716
+        X: =945
+        Y: =612
         ZIndex: =2
 
     galDeployedTerminal As gallery.galleryVertical:
@@ -94,24 +94,24 @@ BankWisePosReport As screen:
         DefaultDate: =First(tbl_Dates).DateFrom
         Height: =38
         Width: =200
-        X: =952
-        Y: =604
+        X: =894
+        Y: =498
         ZIndex: =7
 
     dteDateTo As datepicker:
         DefaultDate: =DateValue(First(tbl_Dates).DateTo)
         Height: =38
         Width: =200
-        X: =1166
-        Y: =604
+        X: =1138
+        Y: =498
         ZIndex: =8
 
     lblDateFrom As label:
         Height: =38
         Text: ="Date from"
         Width: =126
-        X: =952
-        Y: =566
+        X: =894
+        Y: =460
         ZIndex: =9
 
     lblDateTo As label:
@@ -120,8 +120,8 @@ BankWisePosReport As screen:
             ="Date to
             "
         Width: =91
-        X: =1166
-        Y: =566
+        X: =1138
+        Y: =460
         ZIndex: =10
 
     recSubHeader As rectangle:
@@ -240,9 +240,20 @@ BankWisePosReport As screen:
                 ForAll(
                     Table(parsedRetrieveData),
                     {
-                        bankId: Text(Value.bankId),
                         bankName: Text(Value.bankName),
-                        updatedDate: Text(Value.updatedDate)
+                        updatedDate: Text(Value.updatedDate),
+                        MerchantName:Text(Value.merchant),
+                        Address:Text(Value.address),
+                        District:(Value.district),
+                        TID: Text(Value.idTerminal),
+                        MID:Text(Value.idMerchant),
+                        SerialNumber:Text(Value.idMerchant),
+                        TerminalType:Text(Value.terminalType),
+                        Ownership:Text(Value.idMerchant),
+                        Status: Text(Value.terminalType),
+                        DaysRun:Text(Value.terminalType),
+                        RentalFee:Text(Value.terminalType)
+            
                     }
                 )
             );
@@ -287,8 +298,8 @@ BankWisePosReport As screen:
             );
             Notify("Retrieved Terminal List Retrieved Successfully",NotificationType.Success);
         Text: ="Sync Retrieve"
-        X: =1206
-        Y: =716
+        X: =1126
+        Y: =612
         ZIndex: =19
 
     recHeaderMain As rectangle:
@@ -330,12 +341,12 @@ BankWisePosReport As screen:
 
     galTotalPrice As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =226
+        Height: =229
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =221
-        Width: =790
-        Y: =485
+        TemplateSize: =223
+        Width: =792
+        Y: =482
         ZIndex: =25
 
     Rectangle2 As rectangle:
@@ -365,7 +376,9 @@ BankWisePosReport As screen:
         ZIndex: =28
 
     "'Calculate Total' As button":
-        OnSelect: =
+        OnSelect: |
+            =ClearCollect(colDeployeTot, tbl_BankWisePOSReports);
+            ClearCollect(colRetTot, tbl_RetrieveTerminals);
         Text: ="Calculate Total"
         X: =254
         Y: =728

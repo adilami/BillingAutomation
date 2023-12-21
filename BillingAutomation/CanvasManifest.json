@@ -131,6 +131,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "BankWisePosReport"
+    "BankWisePosReport",
+    "Screen1"
   ]
 }
