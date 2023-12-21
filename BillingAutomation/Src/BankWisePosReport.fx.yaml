@@ -283,7 +283,8 @@ BankWisePosReport As screen:
                     {
                         bankName: ThisRecord.bankName,
                         retrieveDate: ThisRecord.updatedDate,
-                        Price: locDateFrom
+                        Price: ((DateDiff(locDateFrom, DateValue(ThisRecord.updatedDate), TimeUnit.Days)+1)*900/30)
+            
                     }
                 )
             );

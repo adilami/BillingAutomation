@@ -31,7 +31,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/21/2023 05:57:39",
+  "HeaderLastSavedDateTimeUTC": "12/21/2023 06:02:14",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -155,7 +155,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1735952,
+    "AnalysisLoadTime": 0.190849,
     "ControlCount": {
       "button": 2,
       "datepicker": 2,
@@ -165,7 +165,7 @@
       "rectangle": 1,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.289906
+    "DeserializationLoadTime": 1.2821864
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
