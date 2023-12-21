@@ -214,16 +214,6 @@ BankWisePosReport As screen:
             Y: =4
             ZIndex: =2
 
-        Label3 As label:
-            Height: =52
-            OnSelect: =Select(Parent)
-            Text: |
-                =((DateDiff(dteDateFrom.SelectedDate, DateTimeValue(ThisItem.RetrieveDate), TimeUnit.Days)+1)*900/30)
-            Width: =195
-            X: =525
-            Y: =8
-            ZIndex: =3
-
     btnSyncRetrieve As button:
         OnSelect: |
             =RemoveIf(
