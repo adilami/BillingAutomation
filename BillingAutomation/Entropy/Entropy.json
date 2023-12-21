@@ -17,8 +17,6 @@
     "galTotalPrice": 28,
     "Host": 3,
     "icoSeperator": 10,
-    "Label4": 29,
-    "Label4_1": 30,
     "lblBankName": 11,
     "lblBankName_1": 27,
     "lblBankName_2": 26,
@@ -41,7 +39,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/21/2023 07:58:16",
+  "HeaderLastSavedDateTimeUTC": "12/21/2023 08:01:10",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -56,7 +54,6 @@
     "BankWisePOSReportsFlow": 1,
     "colBankData": 33,
     "colCountedBank": 35,
-    "colDeployPrice": 38,
     "colPrice": 36,
     "colRetrieveData": 34,
     "colRetrievePrice": 37,
@@ -91,8 +88,7 @@
     "tbl_TerminalTypes": 27,
     "tbl_TerminalTypes\\cr69c_terminaltype_statecode": 9,
     "tbl_TerminalTypes\\cr69c_terminaltype_statuscode": 10,
-    "tbl_TerminalTypes\\default.cds_cr69c_terminaltype_views": 20,
-    "TotalPrices": 39
+    "tbl_TerminalTypes\\default.cds_cr69c_terminaltype_views": 20
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
@@ -121,8 +117,6 @@
     "galTotalPrice": {},
     "Host": {},
     "icoSeperator": {},
-    "Label4": {},
-    "Label4_1": {},
     "lblBankName": {},
     "lblBankName_1": {},
     "lblBankName_2": {},
@@ -161,8 +155,6 @@
     "galTotalPrice": 22,
     "Host": 0,
     "icoSeperator": 4,
-    "Label4": 0,
-    "Label4_1": 0,
     "lblBankName": 5,
     "lblBankName_1": 21,
     "lblBankName_2": 20,
@@ -189,7 +181,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.2850876,
+    "AnalysisLoadTime": 0.2696559,
     "ControlCount": {
       "button": 3,
       "datepicker": 2,
@@ -200,7 +192,7 @@
       "rectangle": 3,
       "screen": 1
     },
-    "DeserializationLoadTime": 1.6878605
+    "DeserializationLoadTime": 1.3295244
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

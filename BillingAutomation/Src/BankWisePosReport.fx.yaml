@@ -331,27 +331,12 @@ BankWisePosReport As screen:
     galTotalPrice As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =226
-        Items: =colDeployPrice
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =221
         Width: =790
         Y: =485
         ZIndex: =25
-
-        Label4 As label:
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.bankName
-            X: =40
-            Y: =40
-            ZIndex: =1
-
-        Label4_1 As label:
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Price
-            X: =350
-            Y: =40
-            ZIndex: =2
 
     Rectangle2 As rectangle:
         Height: =56
@@ -380,10 +365,7 @@ BankWisePosReport As screen:
         ZIndex: =28
 
     "'Calculate Total' As button":
-        OnSelect: |
-            =ClearCollect(colDeployPrice, colCountedBank);
-            Collect(colDeployPrice, colPrice);
-            ClearCollect(TotalPrices, AddColumns(GroupBy(colDeployPrice, "bankName", "Grouped"), "TotalPrice", Sum(Grouped, Price)))
+        OnSelect: =
         Text: ="Calculate Total"
         X: =254
         Y: =728
