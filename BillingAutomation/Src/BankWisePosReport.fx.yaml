@@ -47,8 +47,8 @@ BankWisePosReport As screen:
             Notify("Synced Successfully",NotificationType.Success);
             
         Text: ="Sync Deploy"
-        X: =416
-        Y: =646
+        X: =192
+        Y: =657
         ZIndex: =2
 
     galBankWisePosReport As gallery.galleryVertical:
@@ -59,7 +59,7 @@ BankWisePosReport As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =76
         Width: =596
-        Y: =85
+        Y: =155
         ZIndex: =6
 
         lblBankNameContent As label:
@@ -92,19 +92,19 @@ BankWisePosReport As screen:
     dteDateFrom As datepicker:
         DefaultDate: =First(tbl_Dates).DateFrom
         X: =92
-        Y: =572
+        Y: =593
         ZIndex: =7
 
     dteDateTo As datepicker:
         DefaultDate: =DateValue(First(tbl_Dates).DateTo)
         X: =471
-        Y: =572
+        Y: =593
         ZIndex: =8
 
     lblDateFrom As label:
         Text: ="Date from"
         X: =92
-        Y: =532
+        Y: =553
         ZIndex: =9
 
     lblDateTo As label:
@@ -112,12 +112,13 @@ BankWisePosReport As screen:
             ="Date to
             "
         X: =471
-        Y: =532
+        Y: =553
         ZIndex: =10
 
     recHeader As rectangle:
         Height: =85
         Width: =1366
+        Y: =70
         ZIndex: =11
 
     lblBankName As label:
@@ -127,7 +128,7 @@ BankWisePosReport As screen:
         Size: =18
         Text: ="Bank Name"
         X: =16
-        Y: =22
+        Y: =92
         ZIndex: =12
 
     lblTerminalType As label:
@@ -140,7 +141,7 @@ BankWisePosReport As screen:
             "
         Width: =200
         X: =196
-        Y: =22
+        Y: =92
         ZIndex: =13
 
     lblTerminalType_1 As label:
@@ -151,7 +152,7 @@ BankWisePosReport As screen:
         Text: ="Total Price"
         Width: =200
         X: =396
-        Y: =22
+        Y: =92
         ZIndex: =14
 
     lblBankName_1 As label:
@@ -160,8 +161,8 @@ BankWisePosReport As screen:
         FontWeight: =FontWeight.Bold
         Size: =18
         Text: ="Bank Name"
-        X: =649
-        Y: =22
+        X: =705
+        Y: =92
         ZIndex: =15
 
     lblTerminalType_2 As label:
@@ -171,31 +172,20 @@ BankWisePosReport As screen:
         Size: =18
         Text: ="Total Price"
         Width: =200
-        X: =1119
-        Y: =22
+        X: =985
+        Y: =92
         ZIndex: =16
-
-    lblTerminalType_3 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Size: =18
-        Text: ="Retrieve Date"
-        Width: =200
-        X: =859
-        Y: =22
-        ZIndex: =17
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =318
+        Height: =378
         Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =72
-        Width: =755
-        X: =611
-        Y: =84
+        Width: =745
+        X: =621
+        Y: =154
         ZIndex: =18
 
         Label1 As label:
@@ -203,7 +193,8 @@ BankWisePosReport As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.Price
             Width: =212
-            X: =260
+            X: =428
+            Y: =12
             ZIndex: =1
 
         Label2 As label:
@@ -211,7 +202,8 @@ BankWisePosReport As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName
             Width: =218
-            Y: =4
+            X: =78
+            Y: =12
             ZIndex: =2
 
     btnSyncRetrieve As button:
@@ -285,4 +277,33 @@ BankWisePosReport As screen:
         X: =923
         Y: =646
         ZIndex: =19
+
+    recHeader_1 As rectangle:
+        Height: =70
+        Width: =1366
+        ZIndex: =20
+
+    lblBankName_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        Size: =18
+        Text: ="Deployed Terminals List"
+        Width: =323
+        X: =111
+        Y: =15
+        ZIndex: =22
+
+    lblBankName_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        Size: =18
+        Text: ="Retrieved Terminal List"
+        Width: =323
+        X: =799
+        Y: =15
+        ZIndex: =23
 
