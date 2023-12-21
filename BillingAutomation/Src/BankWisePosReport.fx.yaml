@@ -237,7 +237,7 @@ BankWisePosReport As screen:
             });
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run(DateValue(First(colDate).DateFrom),DateValue(First(colDate).DateTo))
+                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
             );
             
             Set(
