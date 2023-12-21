@@ -52,13 +52,14 @@ BankWisePosReport As screen:
         ZIndex: =2
 
     galBankWisePosReport As gallery.galleryVertical:
+        BorderThickness: =2
         DelayItemLoading: =true
         Height: =375
         Items: =tbl_BankWisePOSReports
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =76
-        Width: =596
+        Width: =632
         Y: =155
         ZIndex: =6
 
@@ -116,6 +117,7 @@ BankWisePosReport As screen:
         ZIndex: =10
 
     recHeader As rectangle:
+        Fill: =RGBA(50, 86, 160, 1)
         Height: =85
         Width: =1366
         Y: =70
@@ -177,14 +179,15 @@ BankWisePosReport As screen:
         ZIndex: =16
 
     Gallery1 As gallery.galleryVertical:
+        BorderThickness: =2
         DelayItemLoading: =true
         Height: =378
         Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =72
-        Width: =745
-        X: =621
+        Width: =733
+        X: =632
         Y: =154
         ZIndex: =18
 
@@ -280,6 +283,7 @@ BankWisePosReport As screen:
         ZIndex: =19
 
     recHeader_1 As rectangle:
+        Fill: =RGBA(39, 67, 125, 1)
         Height: =70
         Width: =1366
         ZIndex: =20
@@ -307,4 +311,17 @@ BankWisePosReport As screen:
         X: =799
         Y: =15
         ZIndex: =23
+
+    Icon3 As icon.VerticalLine:
+        Height: =84
+        Icon: =Icon.VerticalLine
+        X: =603
+        Y: =71
+        ZIndex: =24
+
+    Icon3_2 As icon.VerticalLine:
+        Height: =70
+        Icon: =Icon.VerticalLine
+        X: =605
+        ZIndex: =26
 
