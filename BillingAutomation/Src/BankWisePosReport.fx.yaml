@@ -275,6 +275,7 @@ BankWisePosReport As screen:
                     DateTo: dteDateTo.SelectedDate
                 }
             );
+            UpdateContext({locDateFrom: DateValue(First(tbl_Dates).DateFrom)});
             ClearCollect(
                 colRetrievePrice,
                 ForAll(
@@ -282,11 +283,7 @@ BankWisePosReport As screen:
                     {
                         bankName: ThisRecord.bankName,
                         retrieveDate: ThisRecord.updatedDate,
-                        Price:(DateDiff(
-                            dteDateFrom.SelectedDate,
-                            DateValue(ThisRecord.updatedDate),
-                            TimeUnit.Days
-                        ) + 1)* 900 / 30
+                        Price: locDateFrom
                     }
                 )
             );
