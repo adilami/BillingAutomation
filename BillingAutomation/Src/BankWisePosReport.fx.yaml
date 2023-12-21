@@ -44,7 +44,7 @@ BankWisePosReport As screen:
                     }
                 )
             );
-            Notify("Synced Successfully",NotificationType.Success);
+            Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
             
         Text: ="Sync Deploy"
         X: =192
@@ -207,7 +207,7 @@ BankWisePosReport As screen:
             ZIndex: =2
 
     btnSyncRetrieve As button:
-        OnSelect: |
+        OnSelect: |-
             =RemoveIf(
                 tbl_RetrieveTerminals,
                 true
@@ -273,6 +273,7 @@ BankWisePosReport As screen:
                     }
                 )
             );
+            Notify("Retrieved Terminal List Retrieved Successfully",NotificationType.Success);
         Text: ="Sync Retrieve"
         X: =923
         Y: =646
