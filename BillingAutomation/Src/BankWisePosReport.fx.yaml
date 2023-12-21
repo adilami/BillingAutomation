@@ -192,12 +192,13 @@ BankWisePosReport As screen:
         ZIndex: =18
 
         lblTotalPriceContentRetrieved As label:
+            Align: =Align.Center
             Height: =60
             OnSelect: =Select(Parent)
             Text: =ThisItem.Price
             Width: =212
-            X: =428
-            Y: =12
+            X: =351
+            Y: =5
             ZIndex: =1
 
         lblBankNameContentRetrieved As label:
@@ -205,8 +206,8 @@ BankWisePosReport As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName
             Width: =218
-            X: =78
-            Y: =12
+            X: =62
+            Y: =9
             ZIndex: =2
 
     btnSyncRetrieve As button:
