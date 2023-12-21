@@ -47,14 +47,14 @@ BankWisePosReport As screen:
             Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
             
         Text: ="Sync Deploy"
-        X: =192
-        Y: =657
+        X: =1025
+        Y: =716
         ZIndex: =2
 
     galDeployedTerminal As gallery.galleryVertical:
         BorderThickness: =2
         DelayItemLoading: =true
-        Height: =376
+        Height: =276
         Items: =tbl_BankWisePOSReports
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -92,28 +92,36 @@ BankWisePosReport As screen:
 
     dteDateFrom As datepicker:
         DefaultDate: =First(tbl_Dates).DateFrom
-        X: =92
-        Y: =593
+        Height: =38
+        Width: =200
+        X: =952
+        Y: =604
         ZIndex: =7
 
     dteDateTo As datepicker:
         DefaultDate: =DateValue(First(tbl_Dates).DateTo)
-        X: =471
-        Y: =593
+        Height: =38
+        Width: =200
+        X: =1166
+        Y: =604
         ZIndex: =8
 
     lblDateFrom As label:
+        Height: =38
         Text: ="Date from"
-        X: =92
-        Y: =553
+        Width: =126
+        X: =952
+        Y: =566
         ZIndex: =9
 
     lblDateTo As label:
+        Height: =38
         Text: |-
             ="Date to
             "
-        X: =471
-        Y: =553
+        Width: =91
+        X: =1166
+        Y: =566
         ZIndex: =10
 
     recSubHeader As rectangle:
@@ -181,7 +189,7 @@ BankWisePosReport As screen:
     galRetrieveTerminal As gallery.galleryVertical:
         BorderThickness: =2
         DelayItemLoading: =true
-        Height: =375
+        Height: =276
         Items: =tbl_RetrieveTerminals
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -279,8 +287,8 @@ BankWisePosReport As screen:
             );
             Notify("Retrieved Terminal List Retrieved Successfully",NotificationType.Success);
         Text: ="Sync Retrieve"
-        X: =923
-        Y: =646
+        X: =1206
+        Y: =716
         ZIndex: =19
 
     recHeaderMain As rectangle:
@@ -319,4 +327,65 @@ BankWisePosReport As screen:
         X: =603
         Y: =71
         ZIndex: =24
+
+    galTotalPrice As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =226
+        Items: =colDeployPrice
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =221
+        Width: =790
+        Y: =485
+        ZIndex: =25
+
+        Label4 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.bankName
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+        Label4_1 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Price
+            X: =350
+            Y: =40
+            ZIndex: =2
+
+    Rectangle2 As rectangle:
+        Height: =56
+        Width: =782
+        Y: =431
+        ZIndex: =26
+
+    lblBankName_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Bank Name"
+        X: =16
+        Y: =439
+        ZIndex: =27
+
+    lblBankName_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =18
+        Text: ="Total Price"
+        X: =337
+        Y: =431
+        ZIndex: =28
+
+    "'Calculate Total' As button":
+        OnSelect: |
+            =ClearCollect(colDeployPrice, tbl_BankWisePOSReports);
+            Collect(colDeployPrice, colPrice);
+            ClearCollect(TotalPrices, AddColumns(GroupBy(colDeployPrice, "bankName", "Grouped"), "TotalPrice", Sum(Grouped, Price)))
+        Text: ="Calculate Total"
+        X: =254
+        Y: =728
+        ZIndex: =29
 
