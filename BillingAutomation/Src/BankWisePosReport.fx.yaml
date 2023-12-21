@@ -218,8 +218,7 @@ BankWisePosReport As screen:
             Height: =52
             OnSelect: =Select(Parent)
             Text: |
-                =
-                ((DateDiff(dteDateFrom.SelectedDate, DateTimeValue(ThisItem.RetrieveDate), TimeUnit.Days)+1)*900/30)
+                =((DateDiff(dteDateFrom.SelectedDate, DateTimeValue(ThisItem.RetrieveDate), TimeUnit.Days)+1)*900/30)
             Width: =195
             X: =525
             Y: =8
@@ -283,11 +282,11 @@ BankWisePosReport As screen:
                     {
                         bankName: ThisRecord.bankName,
                         retrieveDate: ThisRecord.updatedDate,
-                        Price: ((DateDiff(
+                        Price:(DateDiff(
                             dteDateFrom.SelectedDate,
                             DateValue(ThisRecord.updatedDate),
                             TimeUnit.Days
-                        ) + 1) * 900 / 30)
+                        ) + 1)* 900 / 30
                     }
                 )
             );
