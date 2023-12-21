@@ -226,6 +226,11 @@ BankWisePosReport As screen:
     btnSyncRetrieve As button:
         OnSelect: |-
             =RemoveIf(tbl_RetrieveTerminals,true);
+            RemoveIf(tbl_Dates,true);
+            Patch(tbl_Dates,Defaults(tbl_Dates),{
+                DateFrom:dteDateFrom.SelectedDate,
+                DateTo:dteDateTo.SelectedDate
+            });
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)

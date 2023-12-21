@@ -1,0 +1,98 @@
+[
+  {
+    "DisplayName": "tbl_Dates (Views)",
+    "Name": "_cr69c_tbl_date_views",
+    "RelatedEntityName": "tbl_Dates",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "30f88545-aab4-4ed2-86d6-5e62b0e372ac": "Inactive tbl_Dates",
+      "4bf58144-c498-47d1-819a-8c00d60da80e": "tbl_Date Advanced Find View",
+      "9de80fee-0416-42fd-baa0-c9ea5feb8f57": "tbl_Date Associated View",
+      "bc31b372-ebf8-4be5-b1f9-9b7720a6e06c": "Active tbl_Dates",
+      "d4bfe6f4-ade0-474b-bba2-0f1b2b7f2bf5": "tbl_Date Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (tbl_Dates)",
+    "Name": "cr69c_tbl_date_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tbl_Dates"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tbl_Dates",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tbl_Dates)",
+    "Name": "cr69c_tbl_date_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tbl_Dates"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tbl_Dates",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_tbl_dates",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_tbl_date",
+    "Name": "tbl_Dates",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_datefrom": "DateFrom",
+      "cr69c_dateto": "DateTo",
+      "cr69c_id": "Id",
+      "cr69c_tbl_date_AsyncOperations": "System Jobs",
+      "cr69c_tbl_date_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_tbl_date_DuplicateBaseRecord": "Duplicate Records (cr69c_tbl_date_DuplicateBaseRecord)",
+      "cr69c_tbl_date_DuplicateMatchingRecord": "Duplicate Records (cr69c_tbl_date_DuplicateMatchingRecord)",
+      "cr69c_tbl_date_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_tbl_date_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_tbl_date_ProcessSession": "Process Sessions",
+      "cr69c_tbl_date_SyncErrors": "Sync Errors",
+      "cr69c_tbl_dateid": "tbl_Date",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tbl_Dates",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]
