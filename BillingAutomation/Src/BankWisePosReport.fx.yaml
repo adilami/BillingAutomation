@@ -210,9 +210,8 @@ BankWisePosReport As screen:
             Height: =52
             OnSelect: =Select(Parent)
             Text: =ThisItem.BankName
-            Width: =190
-            X: =7
-            Y: =8
+            Width: =218
+            Y: =4
             ZIndex: =2
 
         Label3 As label:
