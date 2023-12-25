@@ -478,12 +478,11 @@ Screen1 As screen:
             );
             Set(glbToggleButton, true);
             Notify(
-                "Deployed Terminal List Synced Successfully",
+                "Both Deployed and Retrieved Terminal Synced Successfully",
                 NotificationType.Success
             );
         Text: ="Sync Deploy"
-        X: =168
-        Y: =640
+        Y: =631
         ZIndex: =4
 
     dteDateFrom_1 As datepicker:
@@ -526,7 +525,7 @@ Screen1 As screen:
             =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"cr69c_date","cr69c_bankname","cr69c_merchantname", "cr69c_address","cr69c_district","cr69c_tid","cr69c_mid","cr69c_serialno", "cr69c_terminaltype","cr69c_ownership","cr69c_status","cr69c_daysrun","cr69c_rentalfee","cr69c_finalamt"));
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
-        X: =383
-        Y: =640
+        X: =193
+        Y: =631
         ZIndex: =10
 
