@@ -4,6 +4,7 @@ Screen1 As screen:
         Fill: =RGBA(39, 67, 125, 1)
         Height: =100
         LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
         LayoutOverflowX: =LayoutOverflow.Scroll
         Width: =1366
