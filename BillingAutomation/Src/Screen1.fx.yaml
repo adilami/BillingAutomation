@@ -179,7 +179,7 @@ Screen1 As screen:
             DelayItemLoading: =true
             FillPortions: =0
             Height: =300
-            Items: =Filter(tbl_mst_Banks, BankName = drpBankName.SelectedText.Value)
+            Items: =Filter(colBankData, bankName = drpBankName.SelectedText.Value)
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320
@@ -191,11 +191,19 @@ Screen1 As screen:
             Label3 As label:
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.BankName
-                Width: =198
-                X: =128
-                Y: =36
+                Text: =ThisItem.bankName
+                Width: =151
+                X: =136
+                Y: =24
                 ZIndex: =1
+
+            Label3_1 As label:
+                Height: =46
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.deployDate
+                Width: =117
+                Y: =24
+                ZIndex: =2
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
@@ -207,7 +215,7 @@ Screen1 As screen:
             =
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
+                BankWisePOSReportsFlow.Run(dteDateFrom_1.SelectedDate,dteDateTo_1.SelectedDate)
             );
             Set(
                 parsedData,
@@ -243,4 +251,38 @@ Screen1 As screen:
         X: =168
         Y: =640
         ZIndex: =4
+
+    dteDateFrom_1 As datepicker:
+        DefaultDate: =First(tbl_Dates).DateFrom
+        Height: =38
+        Width: =200
+        X: =894
+        Y: =498
+        ZIndex: =5
+
+    dteDateTo_1 As datepicker:
+        DefaultDate: =DateValue(First(tbl_Dates).DateTo)
+        Height: =38
+        Width: =200
+        X: =1138
+        Y: =498
+        ZIndex: =6
+
+    lblDateFrom_1 As label:
+        Height: =38
+        Text: ="Date from"
+        Width: =126
+        X: =894
+        Y: =460
+        ZIndex: =7
+
+    lblDateTo_1 As label:
+        Height: =38
+        Text: |-
+            ="Date to
+            "
+        Width: =91
+        X: =1138
+        Y: =460
+        ZIndex: =8
 
