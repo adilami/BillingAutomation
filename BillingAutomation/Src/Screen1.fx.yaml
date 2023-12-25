@@ -177,7 +177,7 @@ Screen1 As screen:
             DelayItemLoading: =true
             FillPortions: =0
             Height: =300
-            Items: =Filter(tbl_mst_AllBankData, BankName = drpBankName.SelectedText.Value)
+            Items: =Filter(colAllData, BankName = drpBankName.SelectedText.Value)
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320
@@ -331,11 +331,7 @@ Screen1 As screen:
 
     Button1 As button:
         OnSelect: |
-            =RemoveIf(
-                tbl_mst_AllBankData,
-                true
-            );
-            Set(
+            =Set(
                 glbToggleButton,
                 false
             );
@@ -392,7 +388,7 @@ Screen1 As screen:
                     }
                 )
             );
-            ForAll(
+            /*ForAll(
                 colBankData,
                 Patch(
                     tbl_mst_AllBankData,
@@ -477,7 +473,90 @@ Screen1 As screen:
                         )
                     }
                 )
-            );
+            );*/
+            
+                ClearCollect(
+                    colALLRET,
+                    ForAll(colRetBankData,
+                    {
+                        Date: DateValue(ThisRecord.deployDate),
+                        BankName: Text(ThisRecord.bankName),
+                        MerchantName: Text(ThisRecord.MerchantName),
+                        Address: Text(ThisRecord.Address),
+                        District: Text(ThisRecord.District),
+                        TID: Text(ThisRecord.TID),
+                        MID: Text(ThisRecord.MID),
+                        SerialNo: Text(ThisRecord.SerialNumber),
+                        TerminalType: Text(ThisRecord.TerminalType),
+                        Ownership: Text(ThisRecord.Ownership),
+                        'Status (cr69c_status)': Text(ThisRecord.Status),
+                        DaysRun: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            )
+                        ),
+                        RentalFee: Text(900),
+                        FinalAmt: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            ) * 900
+                        )
+                    }
+            ));
+              ClearCollect(
+                    colALLDEP,
+                    ForAll(colBankData,
+                    {
+                        Date: DateValue(ThisRecord.deployDate),
+                        BankName: Text(ThisRecord.bankName),
+                        MerchantName: Text(ThisRecord.MerchantName),
+                        Address: Text(ThisRecord.Address),
+                        District: Text(ThisRecord.District),
+                        TID: Text(ThisRecord.TID),
+                        MID: Text(ThisRecord.MID),
+                        SerialNo: Text(ThisRecord.SerialNumber),
+                        TerminalType: Text(ThisRecord.TerminalType),
+                        Ownership: Text(ThisRecord.Ownership),
+                        'Status (cr69c_status)': Text(ThisRecord.Status),
+                        DaysRun: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            )
+                        ),
+                        RentalFee: Text(900),
+                        FinalAmt: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            ) * 900
+                        )
+                    }
+            ));
+            Collect(colAllData, colALLDEP);
+            Collect(colAllData, colALLRET);
             Set(
                 glbToggleButton,
                 true
@@ -542,7 +621,7 @@ Screen1 As screen:
         ZIndex: =11
 
     Label2 As label:
-        Text: =CountRows(colBankData)
+        Text: =CountRows(colAllData)
         X: =566
         Y: =540
         ZIndex: =12
