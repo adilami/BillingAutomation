@@ -8,6 +8,7 @@
     "btnSync": 73,
     "btnSyncRetrieve": 74,
     "Button1": 42,
+    "Button2": 76,
     "Calculate Total": 75,
     "con": 5,
     "Container1": 6,
@@ -40,6 +41,7 @@
     "Label1_7": 14,
     "Label1_8": 15,
     "Label1_9": 16,
+    "Label2": 77,
     "Label3": 24,
     "Label3_1": 23,
     "Label3_10": 33,
@@ -79,7 +81,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/25/2023 09:38:20",
+  "HeaderLastSavedDateTimeUTC": "12/25/2023 10:36:52",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -103,6 +105,7 @@
     "colRetrieveData": 39,
     "colRetrievePrice": 42,
     "colRetTot": 43,
+    "colTot": 47,
     "CustomGallerySample": 32,
     "DropDownSample": 33,
     "ExportToExcel": 2,
@@ -161,6 +164,7 @@
     "btnSync": {},
     "btnSyncRetrieve": {},
     "Button1": {},
+    "Button2": {},
     "Calculate Total": {},
     "con": {},
     "Container1": {},
@@ -193,6 +197,7 @@
     "Label1_7": {},
     "Label1_8": {},
     "Label1_9": {},
+    "Label2": {},
     "Label3": {},
     "Label3_1": {},
     "Label3_10": {},
@@ -235,10 +240,11 @@
   "PublishOrderIndices": {
     "App": 0,
     "BankWisePosReport": 0,
-    "btnExportToExcel": 69,
+    "btnExportToExcel": 70,
     "btnSync": 28,
     "btnSyncRetrieve": 29,
-    "Button1": 68,
+    "Button1": 69,
+    "Button2": 71,
     "Calculate Total": 30,
     "con": 31,
     "Container1": 32,
@@ -271,6 +277,7 @@
     "Label1_7": 40,
     "Label1_8": 41,
     "Label1_9": 42,
+    "Label2": 68,
     "Label3": 50,
     "Label3_1": 49,
     "Label3_10": 59,
@@ -314,7 +321,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.60321,
+    "AnalysisLoadTime": 0.4782642,
     "ControlCount": {
       "button": 5,
       "datepicker": 4,
@@ -327,7 +334,7 @@
       "rectangle": 3,
       "screen": 2
     },
-    "DeserializationLoadTime": 1.404293
+    "DeserializationLoadTime": 1.4865573
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
