@@ -529,7 +529,7 @@ Screen1 As screen:
 
     btnExportToExcel As button:
         OnSelect: |-
-            =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"cr69c_date","cr69c_bankname","cr69c_merchantname", "cr69c_address","cr69c_district","cr69c_tid","cr69c_mid","cr69c_serialno", "cr69c_terminaltype","cr69c_ownership","cr69c_daysrun","cr69c_rentalfee","cr69c_finalamt"));
+            =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"cr69c_date","cr69c_bankname","cr69c_merchantname", "cr69c_address","cr69c_district","cr69c_tid","cr69c_mid","cr69c_serialno", "cr69c_terminaltype","cr69c_ownership","cr69c_status","cr69c_daysrun","cr69c_rentalfee","cr69c_finalamt"));
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =821
