@@ -300,7 +300,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =30
+                Text: =If(ThisItem.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisItem.deployDate,TimeUnit.Days), 30 )
                 Width: =147
                 X: =1967
                 Y: =24
@@ -407,7 +407,7 @@ Screen1 As screen:
                     Table(parsedRetrieveData),
                     {
                         bankName: Text(Value.bankName),
-                        updatedDate: Text(Value.updatedDate),
+                        deployDate: Text(Value.updatedDate),
                         MerchantName:Text(Value.merchant),
                         Address:Text(Value.address),
                         District:(Value.district),
@@ -449,7 +449,7 @@ Screen1 As screen:
             
             Notify("Retrieved Terminal List Retrieved Successfully",NotificationType.Success);
         Text: ="Button"
-        X: =586
-        Y: =641
+        X: =389
+        Y: =640
         ZIndex: =9
 
