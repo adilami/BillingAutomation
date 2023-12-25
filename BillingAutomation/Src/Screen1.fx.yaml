@@ -335,6 +335,19 @@ Screen1 As screen:
                 glbToggleButton,
                 false
             );
+            RemoveIf(
+                tbl_Dates,
+                true
+            );
+            Patch(
+                tbl_Dates,
+                Defaults(tbl_Dates),
+                {
+                    DateFrom: dteDateFrom_1.SelectedDate,
+                    DateTo: dteDateTo_1.SelectedDate
+                }
+            );
+            UpdateContext({locDateFrom: DateValue(First(tbl_Dates).DateFrom)});
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run(
