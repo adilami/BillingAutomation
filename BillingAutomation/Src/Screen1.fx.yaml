@@ -330,11 +330,17 @@ Screen1 As screen:
         ZIndex: =3
 
     Button1 As button:
-        OnSelect: |+
-            =
+        OnSelect: |
+            =RemoveIf(
+                tbl_mst_AllBankData,
+                true
+            );
             Set(
                 BankData,
-                BankWisePOSReportsFlow.Run(dteDateFrom_1.SelectedDate,dteDateTo_1.SelectedDate)
+                BankWisePOSReportsFlow.Run(
+                    dteDateFrom_1.SelectedDate,
+                    dteDateTo_1.SelectedDate
+                )
             );
             Set(
                 parsedData,
@@ -351,14 +357,14 @@ Screen1 As screen:
                     {
                         deployDate: Text(Value.deployDate),
                         bankName: Text(Value.bankName),
-                        MerchantName:Text(Value.merchantName),
-                        Address:Text(Value.merchantAddress),
-                        District:(Value.merchantAddress),
+                        MerchantName: Text(Value.merchantName),
+                        Address: Text(Value.merchantAddress),
+                        District: (Value.merchantAddress),
                         TID: Text(Value.idTerminal),
-                        MID:Text(Value.idMerchant),
-                        SerialNumber:Text(Value.serialKey),
-                        TerminalType:Text(Value.merchantName),
-                        Ownership:Text(Value.ownership),
+                        MID: Text(Value.idMerchant),
+                        SerialNumber: Text(Value.serialKey),
+                        TerminalType: Text(Value.merchantName),
+                        Ownership: Text(Value.ownership),
                         Status: Text(Value.deploymentStatus)
                     }
                 )
@@ -370,57 +376,108 @@ Screen1 As screen:
                     {
                         deployDate: Text(Value.deployDate),
                         bankName: Text(Value.bankName),
-                        MerchantName:Text(Value.merchantName),
-                        Address:Text(Value.merchantAddress),
-                        District:(Value.merchantAddress),
+                        MerchantName: Text(Value.merchantName),
+                        Address: Text(Value.merchantAddress),
+                        District: (Value.merchantAddress),
                         TID: Text(Value.idTerminal),
-                        MID:Text(Value.idMerchant),
-                        SerialNumber:Text(Value.serialKey),
-                        TerminalType:Text(Value.merchantName),
-                        Ownership:Text(Value.ownership),
+                        MID: Text(Value.idMerchant),
+                        SerialNumber: Text(Value.serialKey),
+                        TerminalType: Text(Value.merchantName),
+                        Ownership: Text(Value.ownership),
                         Status: Text(Value.deploymentStatus)
                     }
                 )
             );
-            ForAll(colBankData,
-            Patch(tbl_mst_AllBankData,Defaults(tbl_mst_AllBankData),{
-                Date:DateValue(ThisRecord.deployDate),
-                BankName:Text(ThisRecord.bankName),
-                MerchantName:Text(ThisRecord.MerchantName),  
-                Address:Text(ThisRecord.Address),
-                District:Text(ThisRecord.District),
-                TID:Text(ThisRecord.TID),
-                MID:Text(ThisRecord.MID),
-                SerialNo:Text(ThisRecord.SerialNumber),
-                TerminalType:Text(ThisRecord.TerminalType),
-                Ownership:Text(ThisRecord.Ownership),
-                'Status (cr69c_status)':"Live",
-                DaysRun:Text(If(ThisRecord.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisRecord.deployDate,TimeUnit.Days)+1, 30 )),
-                RentalFee:Text(900),
-                FinalAmt:Text(If(ThisRecord.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisRecord.deployDate,TimeUnit.Days)+1, 30 )*900)
-                
-            }));
-            ForAll(colRetBankData,
-            Patch(tbl_mst_AllBankData,Defaults(tbl_mst_AllBankData),{
-                Date:DateValue(ThisRecord.deployDate),
-                BankName:Text(ThisRecord.bankName),
-                MerchantName:Text(ThisRecord.MerchantName),  
-                Address:Text(ThisRecord.Address),
-                District:Text(ThisRecord.District),
-                TID:Text(ThisRecord.TID),
-                MID:Text(ThisRecord.MID),
-                SerialNo:Text(ThisRecord.SerialNumber),
-                TerminalType:Text(ThisRecord.TerminalType),
-                Ownership:Text(ThisRecord.Ownership),
-                'Status (cr69c_status)':Text(ThisRecord.Status),
-                DaysRun:Text(If(ThisRecord.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisRecord.deployDate,TimeUnit.Days)+1, 30 )),
-                RentalFee:Text(900),
-                FinalAmt:Text(If(ThisRecord.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisRecord.deployDate,TimeUnit.Days)+1, 30 )*900)
-                
-            }));
-            
-            Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
-            
+            ForAll(
+                colBankData,
+                Patch(
+                    tbl_mst_AllBankData,
+                    Defaults(tbl_mst_AllBankData),
+                    {
+                        Date: DateValue(ThisRecord.deployDate),
+                        BankName: Text(ThisRecord.bankName),
+                        MerchantName: Text(ThisRecord.MerchantName),
+                        Address: Text(ThisRecord.Address),
+                        District: Text(ThisRecord.District),
+                        TID: Text(ThisRecord.TID),
+                        MID: Text(ThisRecord.MID),
+                        SerialNo: Text(ThisRecord.SerialNumber),
+                        TerminalType: Text(ThisRecord.TerminalType),
+                        Ownership: Text(ThisRecord.Ownership),
+                        'Status (cr69c_status)': "Live",
+                        DaysRun: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            )
+                        ),
+                        RentalFee: Text(900),
+                        FinalAmt: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            ) * 900
+                        )
+                    }
+                )
+            );
+            ForAll(
+                colRetBankData,
+                Patch(
+                    tbl_mst_AllBankData,
+                    Defaults(tbl_mst_AllBankData),
+                    {
+                        Date: DateValue(ThisRecord.deployDate),
+                        BankName: Text(ThisRecord.bankName),
+                        MerchantName: Text(ThisRecord.MerchantName),
+                        Address: Text(ThisRecord.Address),
+                        District: Text(ThisRecord.District),
+                        TID: Text(ThisRecord.TID),
+                        MID: Text(ThisRecord.MID),
+                        SerialNo: Text(ThisRecord.SerialNumber),
+                        TerminalType: Text(ThisRecord.TerminalType),
+                        Ownership: Text(ThisRecord.Ownership),
+                        'Status (cr69c_status)': Text(ThisRecord.Status),
+                        DaysRun: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            )
+                        ),
+                        RentalFee: Text(900),
+                        FinalAmt: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            ) * 900
+                        )
+                    }
+                )
+            );
+            Notify(
+                "Deployed Terminal List Synced Successfully",
+                NotificationType.Success
+            );
         Text: ="Sync Deploy"
         X: =168
         Y: =640
