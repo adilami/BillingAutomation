@@ -1,7 +1,7 @@
 Screen1 As screen:
 
     con As groupContainer.verticalAutoLayoutContainer:
-        Height: =768
+        Height: =476
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         LayoutOverflowX: =LayoutOverflow.Scroll
@@ -193,11 +193,54 @@ Screen1 As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.BankName
                 Width: =198
-                X: =40
-                Y: =40
+                X: =128
+                Y: =36
                 ZIndex: =1
 
-        drpBankName As dropdown:
-            Items: =tbl_mst_Banks
-            ZIndex: =3
+    drpBankName As dropdown:
+        Items: =tbl_mst_Banks
+        Y: =512
+        ZIndex: =3
+
+    Button1 As button:
+        OnSelect: |+
+            =
+            Set(
+                BankData,
+                BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)
+            );
+            Set(
+                parsedData,
+                ParseJSON(BankData.output)
+            );
+            Set(
+                parsedRetrieveData,
+                ParseJSON(BankData.outputretrieveterminal)
+            );
+            ClearCollect(
+                colBankData,
+                ForAll(
+                    Table(parsedData),
+                    {
+                        bankName: Text(Value.bankName),
+                        deployDate: Text(Value.deployDate),
+                        MerchantName:Text(Value.merchantName),
+                        Address:Text(Value.merchantAddress),
+                        District:(Value.merchantAddress),
+                        TID: Text(Value.idTerminal),
+                        MID:Text(Value.idMerchant),
+                        SerialNumber:Text(Value.serialKey),
+                        TerminalType:Text(Value.merchantName),
+                        Ownership:Text(Value.ownership),
+                        Status: Text(Value.deploymentStatus)
+                    }
+                )
+            );
+            
+            Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
+            
+        Text: ="Sync Deploy"
+        X: =168
+        Y: =640
+        ZIndex: =4
 

@@ -1,8 +1,8 @@
 [
   {
-    "DisplayName": "tbl_Properties (Views)",
+    "DisplayName": "tbl_mst_Properties (Views)",
     "Name": "_cr69c_property_views",
-    "RelatedEntityName": "tbl_Properties",
+    "RelatedEntityName": "tbl_mst_Properties",
     "TrimmedViewName": true,
     "Type": "ViewInfo",
     "ViewInfoNameMapping": {
@@ -14,7 +14,7 @@
     }
   },
   {
-    "DisplayName": "Status (tbl_Properties)",
+    "DisplayName": "Status (tbl_mst_Properties)",
     "Name": "cr69c_property_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
@@ -25,16 +25,16 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "tbl_Properties"
+        "OptionSetReferenceEntityName": "tbl_mst_Properties"
       }
     },
     "OptionSetTypeKey": "StateType",
     "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "tbl_Properties",
+    "RelatedEntityName": "tbl_mst_Properties",
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (tbl_Properties)",
+    "DisplayName": "Status Reason (tbl_mst_Properties)",
     "Name": "cr69c_property_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
@@ -45,12 +45,12 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "tbl_Properties"
+        "OptionSetReferenceEntityName": "tbl_mst_Properties"
       }
     },
     "OptionSetTypeKey": "StatusType",
     "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "tbl_Properties",
+    "RelatedEntityName": "tbl_mst_Properties",
     "Type": "OptionSetInfo"
   },
   {
@@ -60,8 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_property",
-    "MaxGetRowsCount": 500,
-    "Name": "tbl_Properties",
+    "Name": "tbl_mst_Properties",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr69c_id": "Id",
@@ -93,7 +92,7 @@
       "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
       "versionnumber": "Version Number"
     },
-    "PreferredName": "tbl_Properties",
+    "PreferredName": "tbl_mst_Properties",
     "Type": "NativeCDSDataSourceInfo"
   }
 ]

@@ -1,8 +1,8 @@
 [
   {
-    "DisplayName": "tbl_TerminalTypes (Views)",
+    "DisplayName": "tbl_mst_TerminalTypes (Views)",
     "Name": "_cr69c_terminaltype_views",
-    "RelatedEntityName": "tbl_TerminalTypes",
+    "RelatedEntityName": "tbl_mst_TerminalTypes",
     "TrimmedViewName": true,
     "Type": "ViewInfo",
     "ViewInfoNameMapping": {
@@ -14,7 +14,7 @@
     }
   },
   {
-    "DisplayName": "Status (tbl_TerminalTypes)",
+    "DisplayName": "Status (tbl_mst_TerminalTypes)",
     "Name": "cr69c_terminaltype_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
@@ -25,16 +25,16 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "tbl_TerminalTypes"
+        "OptionSetReferenceEntityName": "tbl_mst_TerminalTypes"
       }
     },
     "OptionSetTypeKey": "StateType",
     "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "tbl_TerminalTypes",
+    "RelatedEntityName": "tbl_mst_TerminalTypes",
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (tbl_TerminalTypes)",
+    "DisplayName": "Status Reason (tbl_mst_TerminalTypes)",
     "Name": "cr69c_terminaltype_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
@@ -45,12 +45,12 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "tbl_TerminalTypes"
+        "OptionSetReferenceEntityName": "tbl_mst_TerminalTypes"
       }
     },
     "OptionSetTypeKey": "StatusType",
     "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "tbl_TerminalTypes",
+    "RelatedEntityName": "tbl_mst_TerminalTypes",
     "Type": "OptionSetInfo"
   },
   {
@@ -60,8 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_terminaltype",
-    "MaxGetRowsCount": 500,
-    "Name": "tbl_TerminalTypes",
+    "Name": "tbl_mst_TerminalTypes",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr69c_id": "Id",
@@ -93,7 +92,7 @@
       "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
       "versionnumber": "Version Number"
     },
-    "PreferredName": "tbl_TerminalTypes",
+    "PreferredName": "tbl_mst_TerminalTypes",
     "Type": "NativeCDSDataSourceInfo"
   }
 ]
