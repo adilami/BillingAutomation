@@ -489,7 +489,7 @@ Screen1 As screen:
                         SerialNo: Text(ThisRecord.SerialNumber),
                         TerminalType: Text(ThisRecord.TerminalType),
                         Ownership: Text(ThisRecord.Ownership),
-                        'Status (cr69c_status)': Text(ThisRecord.Status),
+                        Status: Text(ThisRecord.Status),
                         DaysRun: Text(
                             If(
                                 ThisRecord.Status = "Retrieval",
@@ -529,7 +529,7 @@ Screen1 As screen:
                         SerialNo: Text(ThisRecord.SerialNumber),
                         TerminalType: Text(ThisRecord.TerminalType),
                         Ownership: Text(ThisRecord.Ownership),
-                        'Status (cr69c_status)': Text(ThisRecord.Status),
+                        Status: Text(ThisRecord.Status),
                         DaysRun: Text(
                             If(
                                 ThisRecord.Status = "Retrieval",

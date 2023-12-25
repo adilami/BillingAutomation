@@ -81,7 +81,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/25/2023 11:20:11",
+  "HeaderLastSavedDateTimeUTC": "12/25/2023 11:21:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -98,9 +98,9 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "BankWisePOSReportsFlow": 1,
-    "colAllData": 47,
+    "colAllData": 50,
     "colALLDEP": 49,
-    "colALLRET": 50,
+    "colALLRET": 47,
     "colBankData": 39,
     "colCountedBank": 41,
     "colDeployeTot": 45,
@@ -326,7 +326,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.6260031,
+    "AnalysisLoadTime": 0.5702607,
     "ControlCount": {
       "button": 6,
       "datepicker": 4,
@@ -339,7 +339,7 @@
       "rectangle": 3,
       "screen": 2
     },
-    "DeserializationLoadTime": 1.4046209
+    "DeserializationLoadTime": 1.3025615
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
