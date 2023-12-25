@@ -190,9 +190,3 @@ Screen1 As screen:
                 Y: =40
                 ZIndex: =1
 
-    Dropdown1 As dropdown:
-        Items: =tbl_Banks
-        X: =459
-        Y: =640
-        ZIndex: =3
-
