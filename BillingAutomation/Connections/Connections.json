@@ -25,6 +25,54 @@
     "dependents": [],
     "id": "0dbf1667-e674-4c74-bd45-871465b8008a"
   },
+  "2ae5e1c9-3ce7-4466-a574-abe7a0d17d6c": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "3e1d4eb3-bd94-4351-9773-1b91cc32356d"
+    ],
+    "id": "2ae5e1c9-3ce7-4466-a574-abe7a0d17d6c"
+  },
+  "3e1d4eb3-bd94-4351-9773-1b91cc32356d": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "2ae5e1c9-3ce7-4466-a574-abe7a0d17d6c": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "6607ae99-f61c-434b-b4f6-63e91309287f"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "2ae5e1c9-3ce7-4466-a574-abe7a0d17d6c"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "6607ae99-f61c-434b-b4f6-63e91309287f"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "ExportToExcel"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "2ae5e1c9-3ce7-4466-a574-abe7a0d17d6c"
+    },
+    "dependents": [],
+    "id": "3e1d4eb3-bd94-4351-9773-1b91cc32356d"
+  },
   "d5c4ed7c-16ea-4130-8103-e051ea9e738b": {
     "connectionRef": {
       "displayName": "RetrieveBankWiseReport",

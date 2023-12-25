@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_terminaltype",
+    "MaxGetRowsCount": 500,
     "Name": "tbl_mst_TerminalTypes",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

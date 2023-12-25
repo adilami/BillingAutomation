@@ -8,6 +8,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_terminaltype_forms",
+      "Namespace": "tbl_mst_TerminalTypes (Forms)",
+      "Values": {
+        "Information": "9ee73e08-c6a4-46d8-9cf5-7c104f1a7654"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_bank_forms",
       "Namespace": "tbl_mst_Banks (Forms)",
       "Values": {
@@ -16,16 +23,9 @@
     },
     {
       "Kind": "default.cds_cr69c_property_forms",
-      "Namespace": "tbl_Properties (Forms)",
+      "Namespace": "tbl_mst_Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_terminaltype_forms",
-      "Namespace": "tbl_TerminalTypes (Forms)",
-      "Values": {
-        "Information": "9ee73e08-c6a4-46d8-9cf5-7c104f1a7654"
       }
     },
     {
@@ -47,6 +47,20 @@
       "Namespace": "tbl_Dates (Forms)",
       "Values": {
         "Information": "f724c32a-e8f7-4326-a0ab-f8ab2f6ba196"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_property_forms",
+      "Namespace": "tbl_Properties (Forms)",
+      "Values": {
+        "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_terminaltype_forms",
+      "Namespace": "tbl_TerminalTypes (Forms)",
+      "Values": {
+        "Information": "9ee73e08-c6a4-46d8-9cf5-7c104f1a7654"
       }
     },
     {
@@ -82,20 +96,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_property_forms",
-      "Namespace": "tbl_mst_Properties (Forms)",
-      "Values": {
-        "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_terminaltype_forms",
-      "Namespace": "tbl_mst_TerminalTypes (Forms)",
-      "Values": {
-        "Information": "9ee73e08-c6a4-46d8-9cf5-7c104f1a7654"
       }
     }
   ]

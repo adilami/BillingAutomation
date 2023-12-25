@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_bank",
+    "MaxGetRowsCount": 500,
     "Name": "tbl_mst_Banks",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

@@ -168,9 +168,7 @@ Screen1 As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =20
-                Text: |-
-                    ="Final Amt
-                    "
+                Text: ="FinalAmt"
                 Width: =140
                 ZIndex: =14
 
@@ -430,13 +428,14 @@ Screen1 As screen:
                         deployDate: Text(Value.updatedDate),
                         MerchantName:Text(Value.merchant),
                         Address:Text(Value.address),
-                        District:(Value.district),
+                        dis:(Value.district),
                         TID: Text(Value.idTerminal),
                         MID:Text(Value.idMerchant),
                         SerialNumber:Text(Value.serialNumber),
                         TerminalType:Text(Value.terminalType),
                         Ownership:Text(Value.ownership),
-                        Status: Text(Value.teminalStatus)
+                        Status: Text(Value.teminalStatus),
+                        FinalAmt:950
             
                     }
                 )
@@ -474,8 +473,9 @@ Screen1 As screen:
         ZIndex: =9
 
     btnExportToExcel As button:
-        OnSelect: |
-            =ClearCollect(colExportToExcel,ShowColumns(Gallery1.AllItems,"Date", "BankName","MerchantName", "Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt"));
+        OnSelect: |-
+            =Collect(colExportToExcel,ShowColumns(Gallery1.AllItems,"deployDate","bankName","MerchantName","Address","TID","MID","SerialNumber","TerminalType","Ownership","Status","RentalFee","FinalAmt"));
+            ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =821
         Y: =677
