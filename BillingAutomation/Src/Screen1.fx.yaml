@@ -17,6 +17,7 @@ Screen1 As screen:
             Text: |-
                 ="Date
                 "
+            Width: =100
             ZIndex: =1
 
         Label1_1 As label:
@@ -49,7 +50,7 @@ Screen1 As screen:
             Text: |-
                 ="Address
                 "
-            Width: =160
+            Width: =120
             ZIndex: =4
 
         Label1_4 As label:
@@ -60,7 +61,7 @@ Screen1 As screen:
             Text: |-
                 ="District
                 "
-            Width: =160
+            Width: =120
             ZIndex: =5
 
         Label1_5 As label:
@@ -115,7 +116,7 @@ Screen1 As screen:
             Text: |-
                 ="Ownership
                 "
-            Width: =200
+            Width: =160
             ZIndex: =10
 
         Label1_10 As label:
@@ -126,7 +127,7 @@ Screen1 As screen:
             Text: |-
                 ="Status
                 "
-            Width: =160
+            Width: =120
             ZIndex: =11
 
         Label1_11 As label:
