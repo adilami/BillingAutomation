@@ -14,6 +14,611 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 28,
+                  "snippet": {
+                    "text": "bankName"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Screen1",
+                "type": "Screen1.con.galBankWisePOSDetail"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "bankName"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 37,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Screen1",
+                "type": "Screen1.con.galBankWisePOSDetail"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 67,
+                  "snippet": {
+                    "text": "\"deployDate\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "deployDate"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 80,
+                  "snippet": {
+                    "text": "\"bankName\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "bankName"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 91,
+                  "snippet": {
+                    "text": "\"MerchantName\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "MerchantName",
+              "cr69c_merchantname"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 106,
+                  "snippet": {
+                    "text": "\"Address\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Address"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 116,
+                  "snippet": {
+                    "text": "\"TID\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TID"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 122,
+                  "snippet": {
+                    "text": "\"MID\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "MID"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 128,
+                  "snippet": {
+                    "text": "\"SerialNumber\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SerialNumber",
+              "versionnumber"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 143,
+                  "snippet": {
+                    "text": "\"TerminalType\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TerminalType",
+              "cr69c_terminaltype"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 158,
+                  "snippet": {
+                    "text": "\"Ownership\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Ownership"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 170,
+                  "snippet": {
+                    "text": "\"Status\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Status",
+              "statuscode"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 179,
+                  "snippet": {
+                    "text": "\"RentalFee\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "RentalFee"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 191,
+                  "snippet": {
+                    "text": "\"FinalAmt\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "FinalAmt"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColDNE-Name",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 177,
+                  "charOffset": 25,
+                  "snippet": {
+                    "text": "ShowColumns(galBankWisePOSDetail.AllItems,\"deployDate\",\"bankName\",\"MerchantName\",\"Address\",\"TID\",\"MID\",\"SerialNumber\",\"TerminalType\",\"Ownership\",\"Status\",\"RentalFee\",\"FinalAmt\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Screen1",
+                "type": "Screen1.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ShowColumns"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Screen1"
                 }
               ],
@@ -36,26 +641,26 @@
             "level": "Low"
           },
           "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.con.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.con.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.con.Gallery1"
+                "type": "Screen1.con.galBankWisePOSDetail"
               }
             }
           ],
@@ -66,26 +671,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.con.Gallery1.TabIndex"
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.con.Gallery1.TabIndex",
+                  "fullyQualifiedName": "Screen1.con.galBankWisePOSDetail.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen1",
-                "type": "Screen1.con.Gallery1"
+                "type": "Screen1.con.galBankWisePOSDetail"
               }
             }
           ],
@@ -96,7 +701,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -126,7 +731,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -156,7 +761,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -186,7 +791,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -216,7 +821,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -246,7 +851,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -276,7 +881,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -306,7 +911,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -336,7 +941,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -366,7 +971,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -396,7 +1001,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -426,7 +1031,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -456,7 +1061,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 3
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -486,7 +1091,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 3
+          "ruleIndex": 8
         }
       ],
       "tool": {
@@ -494,6 +1099,83 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrColDNE-Name",
+              "messageStrings": {
+                "issue": {
+                  "text": "The specified column '{0}' does not exist."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrColumnDoesNotExist-Name-Similar",
+              "messageStrings": {
+                "issue": {
+                  "text": "The specified column '{0}' does not exist. The column with the most similar name is '{1}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-ReadableScreenNameNeeded",
               "messageStrings": {

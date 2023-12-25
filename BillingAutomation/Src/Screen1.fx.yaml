@@ -172,12 +172,12 @@ Screen1 As screen:
                 Width: =140
                 ZIndex: =14
 
-        "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "galBankWisePOSDetail As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             AlignInContainer: =AlignInContainer.SetByContainer
             DelayItemLoading: =true
             FillPortions: =0
             Height: =300
-            Items: =Filter(colRetrieveData, bankName = drpBankName.SelectedText.Value)
+            Items: =Filter(tbl_mst_AllBankData, bankName = drpBankName.SelectedText.Value)
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320
@@ -190,7 +190,7 @@ Screen1 As screen:
             Label3 As label:
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.bankName
+                Text: =ThisItem.BankName
                 Width: =151
                 X: =145
                 Y: =24
@@ -199,7 +199,7 @@ Screen1 As screen:
             Label3_1 As label:
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.deployDate
+                Text: =ThisItem.Date
                 Width: =117
                 X: =3
                 Y: =24
@@ -258,7 +258,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.SerialNumber
+                Text: =ThisItem.SerialNo
                 Width: =147
                 X: =1213
                 Y: =24
@@ -288,7 +288,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.Status
+                Text: =ThisItem.'Status (cr69c_status)'
                 Width: =147
                 X: =1806
                 Y: =24
@@ -298,7 +298,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =If(ThisItem.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisItem.deployDate,TimeUnit.Days)+1, 30 )
+                Text: =ThisItem.DaysRun
                 Width: =147
                 X: =1967
                 Y: =24
@@ -308,7 +308,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: ="950"
+                Text: =ThisItem.RentalFee
                 Width: =147
                 X: =2166
                 Y: =24
@@ -318,7 +318,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =If(ThisItem.Status="Retrieval",(DateDiff(dteDateFrom_1.SelectedDate,ThisItem.deployDate,TimeUnit.Days)+1)*950, 950*30 )
+                Text: =ThisItem.FinalAmt
                 Width: =147
                 X: =2345
                 Y: =24
@@ -529,7 +529,7 @@ Screen1 As screen:
 
     btnExportToExcel As button:
         OnSelect: |-
-            =Collect(colExportToExcel,ShowColumns(Gallery1.AllItems,"deployDate","bankName","MerchantName","Address","TID","MID","SerialNumber","TerminalType","Ownership","Status","RentalFee","FinalAmt"));
+            =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"deployDate","bankName","MerchantName","Address","TID","MID","SerialNumber","TerminalType","Ownership","Status","RentalFee","FinalAmt"));
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =821
