@@ -473,3 +473,11 @@ Screen1 As screen:
         Y: =640
         ZIndex: =9
 
+    btnExportToExcel As button:
+        OnSelect: |
+            =ClearCollect(colExportToExcel,ShowColumns(Gallery1.AllItems,"Date", "BankName","MerchantName", "Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt"));
+        Text: ="Export to Excel"
+        X: =821
+        Y: =677
+        ZIndex: =10
+
