@@ -349,8 +349,8 @@ Screen1 As screen:
                 ForAll(
                     Table(parsedData),
                     {
-                        bankName: Text(Value.bankName),
                         deployDate: Text(Value.deployDate),
+                        bankName: Text(Value.bankName),
                         MerchantName:Text(Value.merchantName),
                         Address:Text(Value.merchantAddress),
                         District:(Value.merchantAddress),
@@ -363,6 +363,26 @@ Screen1 As screen:
                     }
                 )
             );
+            ClearCollect(
+                colRetBankData,
+                ForAll(
+                    Table(parsedRetrieveData),
+                    {
+                        deployDate: Text(Value.deployDate),
+                        bankName: Text(Value.bankName),
+                        MerchantName:Text(Value.merchantName),
+                        Address:Text(Value.merchantAddress),
+                        District:(Value.merchantAddress),
+                        TID: Text(Value.idTerminal),
+                        MID:Text(Value.idMerchant),
+                        SerialNumber:Text(Value.serialKey),
+                        TerminalType:Text(Value.merchantName),
+                        Ownership:Text(Value.ownership),
+                        Status: Text(Value.deploymentStatus)
+                    }
+                )
+            );
+            
             
             Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
             
