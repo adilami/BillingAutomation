@@ -300,11 +300,31 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =If(ThisItem.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisItem.deployDate,TimeUnit.Days), 30 )
+                Text: =If(ThisItem.Status="Retrieval",DateDiff(dteDateFrom_1.SelectedDate,ThisItem.deployDate,TimeUnit.Days)+1, 30 )
                 Width: =147
                 X: =1967
                 Y: =24
                 ZIndex: =12
+
+            Label3_12 As label:
+                Align: =Align.Center
+                Height: =46
+                OnSelect: =Select(Parent)
+                Text: ="950"
+                Width: =147
+                X: =2166
+                Y: =24
+                ZIndex: =13
+
+            Label3_13 As label:
+                Align: =Align.Center
+                Height: =46
+                OnSelect: =Select(Parent)
+                Text: =If(ThisItem.Status="Retrieval",(DateDiff(dteDateFrom_1.SelectedDate,ThisItem.deployDate,TimeUnit.Days)+1)*950, 950*30 )
+                Width: =147
+                X: =2345
+                Y: =24
+                ZIndex: =14
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
