@@ -97,6 +97,11 @@
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
       }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_mst_allbankdata_forms",
+      "Namespace": "tbl_mst_AllBankData (Forms)",
+      "Values": {}
     }
   ]
 }
