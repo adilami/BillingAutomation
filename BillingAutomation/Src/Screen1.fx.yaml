@@ -166,7 +166,7 @@ Screen1 As screen:
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =398
-        Items: =tbl_Banks
+        Items: =tbl_TerminalTypes
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
@@ -183,7 +183,7 @@ Screen1 As screen:
 
         Label7 As label:
             OnSelect: =Select(Parent)
-            Text: =ThisItem.Id
+            Text: =ThisItem.'TerminalType (cr69c_terminaltype)'
             X: =466
             Y: =153
             ZIndex: =2
