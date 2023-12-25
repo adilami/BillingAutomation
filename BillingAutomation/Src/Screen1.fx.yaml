@@ -201,7 +201,7 @@ Screen1 As screen:
             Label3_1 As label:
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.updatedDate
+                Text: =ThisItem.deployDate
                 Width: =117
                 X: =3
                 Y: =24
