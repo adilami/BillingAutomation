@@ -9,7 +9,7 @@
     },
     {
       "Kind": "default.cds_cr69c_bank_forms",
-      "Namespace": "tbl_Banks (Forms)",
+      "Namespace": "tbl_mst_Banks (Forms)",
       "Values": {
         "Information": "9a0393e2-8aea-412f-9a0a-d2a1988ea085"
       }
@@ -50,6 +50,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_bank_forms",
+      "Namespace": "tbl_Banks (Forms)",
+      "Values": {
+        "Information": "9a0393e2-8aea-412f-9a0a-d2a1988ea085"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_master_forms",
       "Namespace": "Masters (Forms)",
       "Values": {
@@ -75,13 +82,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_bank_forms",
-      "Namespace": "tbl_mst_Banks (Forms)",
-      "Values": {
-        "Information": "9a0393e2-8aea-412f-9a0a-d2a1988ea085"
       }
     }
   ]
