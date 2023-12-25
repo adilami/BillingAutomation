@@ -555,7 +555,7 @@ Screen1 As screen:
                         )
                     }
             ));
-            Collect(colAllData, colALLDEP);
+            ClearCollect(colAllData, colALLDEP);
             Collect(colAllData, colALLRET);
             Set(
                 glbToggleButton,
