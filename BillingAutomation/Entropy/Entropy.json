@@ -75,12 +75,11 @@
     "recHeaderMain": 46,
     "recSubHeader": 49,
     "Rectangle2": 65,
-    "Screen1": 4,
-    "SyncRetrieve": 43
+    "Screen1": 4
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/25/2023 08:59:51",
+  "HeaderLastSavedDateTimeUTC": "12/25/2023 09:06:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -229,15 +228,14 @@
     "recHeaderMain": {},
     "recSubHeader": {},
     "Rectangle2": {},
-    "Screen1": {},
-    "SyncRetrieve": {}
+    "Screen1": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
     "BankWisePosReport": 0,
-    "btnExportToExcel": 70,
+    "btnExportToExcel": 69,
     "btnSync": 28,
     "btnSyncRetrieve": 29,
     "Button1": 68,
@@ -308,8 +306,7 @@
     "recHeaderMain": 0,
     "recSubHeader": 3,
     "Rectangle2": 19,
-    "Screen1": 0,
-    "SyncRetrieve": 69
+    "Screen1": 0
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
