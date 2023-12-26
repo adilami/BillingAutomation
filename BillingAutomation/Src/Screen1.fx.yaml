@@ -406,10 +406,52 @@ Screen1 As screen:
                     }
                 )
             );
-            
-                ClearCollect(
-                    colALLRET,
-                    ForAll(colRetBankData,
+            ClearCollect(
+                colALLRET,
+                ForAll(
+                    colRetBankData,
+                    {
+                        Date: DateValue(ThisRecord.deployDate),
+                        BankName: Text(ThisRecord.bankName),
+                        MerchantName: Text(ThisRecord.MerchantName),
+                        Address: Text(ThisRecord.Address),
+                        District: Text(ThisRecord.District),
+                        TID: Text(ThisRecord.TID),
+                        MID: Text(ThisRecord.MID),
+                        SerialNo: Text(ThisRecord.SerialNumber),
+                        TerminalType: Text(ThisRecord.TerminalType),
+                        Ownership: Text(ThisRecord.Ownership),
+                        Status: Text(ThisRecord.Status),
+                        DaysRun: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            )
+                        ),
+                        RentalFee: Text(900),
+                        FinalAmt: Text(
+                            If(
+                                ThisRecord.Status = "Retrieval",
+                                DateDiff(
+                                    dteDateFrom_1.SelectedDate,
+                                    ThisRecord.deployDate,
+                                    TimeUnit.Days
+                                ) + 1,
+                                30
+                            ) * 900 
+                        )
+                    }
+                )
+            );
+            ClearCollect(
+                colALLDEP,
+                ForAll(
+                    colBankData,
                     {
                         Date: DateValue(ThisRecord.deployDate),
                         BankName: Text(ThisRecord.bankName),
@@ -446,49 +488,16 @@ Screen1 As screen:
                             ) * 900
                         )
                     }
-            ));
-              ClearCollect(
-                    colALLDEP,
-                    ForAll(colBankData,
-                    {
-                        Date: DateValue(ThisRecord.deployDate),
-                        BankName: Text(ThisRecord.bankName),
-                        MerchantName: Text(ThisRecord.MerchantName),
-                        Address: Text(ThisRecord.Address),
-                        District: Text(ThisRecord.District),
-                        TID: Text(ThisRecord.TID),
-                        MID: Text(ThisRecord.MID),
-                        SerialNo: Text(ThisRecord.SerialNumber),
-                        TerminalType: Text(ThisRecord.TerminalType),
-                        Ownership: Text(ThisRecord.Ownership),
-                        Status: Text(ThisRecord.Status),
-                        DaysRun: Text(
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteDateFrom_1.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                30
-                            )
-                        ),
-                        RentalFee: Text(900),
-                        FinalAmt: Text(
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteDateFrom_1.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                30
-                            ) * 900
-                        )
-                    }
-            ));
-            ClearCollect(colAllData, colALLDEP);
-            Collect(colAllData, colALLRET);
+                )
+            );
+            ClearCollect(
+                colAllData,
+                colALLDEP
+            );
+            Collect(
+                colAllData,
+                colALLRET
+            );
             Set(
                 glbToggleButton,
                 true
