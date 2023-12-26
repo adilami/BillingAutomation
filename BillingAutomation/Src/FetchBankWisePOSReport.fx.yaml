@@ -550,8 +550,25 @@ FetchBankWisePOSReport As screen:
 
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
-        OnSelect: |-
-            =Collect(colExportToExcel,ShowColumns(Filter(galBankWisePOSDetail.AllItems, BankName = drpBankName.SelectedText.Value),"Date","BankName","MerchantName","Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt"));
+        OnSelect: |
+            =Collect(
+                colExportToExcel,
+                galBankWisePOSDetail.AllItems,
+                "Date",
+                "BankName",
+                "MerchantName",
+                "Address",
+                "District",
+                "TID",
+                "MID",
+                "SerialNo",
+                "TerminalType",
+                "Ownership",
+                "Status",
+                "DaysRun",
+                "RentalFee",
+                "FinalAmt"
+            );
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =347
