@@ -47,8 +47,8 @@ BankWisePosReport As screen:
             Notify("Deployed Terminal List Synced Successfully",NotificationType.Success);
             
         Text: ="Sync Deploy"
-        X: =945
-        Y: =612
+        X: =501
+        Y: =623
         ZIndex: =2
 
     galDeployedTerminal As gallery.galleryVertical:
@@ -94,24 +94,24 @@ BankWisePosReport As screen:
         DefaultDate: =First(tbl_Dates).DateFrom
         Height: =38
         Width: =200
-        X: =894
-        Y: =498
+        X: =450
+        Y: =509
         ZIndex: =7
 
     dteDateTo As datepicker:
         DefaultDate: =DateValue(First(tbl_Dates).DateTo)
         Height: =38
         Width: =200
-        X: =1138
-        Y: =498
+        X: =694
+        Y: =509
         ZIndex: =8
 
     lblDateFrom As label:
         Height: =38
         Text: ="Date from"
         Width: =126
-        X: =894
-        Y: =460
+        X: =450
+        Y: =471
         ZIndex: =9
 
     lblDateTo As label:
@@ -120,8 +120,8 @@ BankWisePosReport As screen:
             ="Date to
             "
         Width: =91
-        X: =1138
-        Y: =460
+        X: =694
+        Y: =471
         ZIndex: =10
 
     recSubHeader As rectangle:
@@ -298,8 +298,8 @@ BankWisePosReport As screen:
             );
             Notify("Retrieved Terminal List Retrieved Successfully",NotificationType.Success);
         Text: ="Sync Retrieve"
-        X: =1126
-        Y: =612
+        X: =682
+        Y: =623
         ZIndex: =19
 
     recHeaderMain As rectangle:
@@ -339,22 +339,6 @@ BankWisePosReport As screen:
         Y: =71
         ZIndex: =24
 
-    galTotalPrice As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Height: =229
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =223
-        Width: =792
-        Y: =482
-        ZIndex: =25
-
-    Rectangle2 As rectangle:
-        Height: =56
-        Width: =782
-        Y: =431
-        ZIndex: =26
-
     lblBankName_1 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
@@ -374,13 +358,4 @@ BankWisePosReport As screen:
         X: =337
         Y: =431
         ZIndex: =28
-
-    "'Calculate Total' As button":
-        OnSelect: |
-            =ClearCollect(colDeployeTot, tbl_BankWisePOSReports);
-            ClearCollect(colRetTot, tbl_RetrieveTerminals);
-        Text: ="Calculate Total"
-        X: =254
-        Y: =728
-        ZIndex: =29
 
