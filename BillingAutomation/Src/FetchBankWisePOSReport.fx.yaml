@@ -233,12 +233,12 @@ FetchBankWisePOSReport As screen:
 
             lblDistrictContent As label:
                 Align: =Align.Center
-                Height: =46
+                Height: =64
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.District
-                Width: =147
-                X: =744
-                Y: =24
+                Width: =154
+                X: =737
+                Y: =15
                 ZIndex: =5
 
             lblTIDContent As label:
@@ -567,6 +567,7 @@ FetchBankWisePOSReport As screen:
         ZIndex: =11
 
     Label3 As label:
+        Align: =Align.Center
         Text: =CountRows(colAllData)
         X: =1062
         Y: =577
