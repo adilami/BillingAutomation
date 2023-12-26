@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 16,
-                  "charOffset": 307,
+                  "charOffset": 226,
                   "snippet": {
                     "text": "colExportToExcel"
                   }
@@ -39,7 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "lblAddressContent",
+              "Label1",
               "Control"
             ],
             "id": "issue"
@@ -325,36 +325,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Invoice.AddMediaButton2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Invoice.AddMediaButton2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Invoice",
-                "type": "Invoice.AddMediaButton2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "BankWisePosReport.dteDateFrom.AccessibleLabel"
                 }
               ],
@@ -398,6 +368,36 @@
                 "member": "AccessibleLabel",
                 "module": "BankWisePosReport",
                 "type": "BankWisePosReport.dteDateTo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Invoice.AddMediaButton2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Invoice.AddMediaButton2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Invoice",
+                "type": "Invoice.AddMediaButton2"
               }
             }
           ],

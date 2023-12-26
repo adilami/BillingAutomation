@@ -221,16 +221,6 @@ FetchBankWisePOSReport As screen:
                 Y: =24
                 ZIndex: =3
 
-            lblAddressContent As label:
-                Align: =Align.Center
-                Height: =46
-                OnSelect: =Select(Parent)
-                Text: =ThisItem.Address
-                Width: =171
-                X: =566
-                Y: =24
-                ZIndex: =4
-
             lblDistrictContent As label:
                 Align: =Align.Center
                 Height: =64
@@ -330,6 +320,13 @@ FetchBankWisePOSReport As screen:
                 X: =2352
                 Y: =24
                 ZIndex: =14
+
+            Label1 As label:
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Address
+                X: =591
+                Y: =39
+                ZIndex: =15
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
@@ -550,25 +547,8 @@ FetchBankWisePOSReport As screen:
 
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
-        OnSelect: |
-            =Collect(
-                colExportToExcel,
-                galBankWisePOSDetail.AllItems,
-                "Date",
-                "BankName",
-                "MerchantName",
-                "Address",
-                "District",
-                "TID",
-                "MID",
-                "SerialNo",
-                "TerminalType",
-                "Ownership",
-                "Status",
-                "DaysRun",
-                "RentalFee",
-                "FinalAmt"
-            );
+        OnSelect: |-
+            =Collect(colExportToExcel,galBankWisePOSDetail.AllItems,"Date","BankName","MerchantName","Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt");
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =347
