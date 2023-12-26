@@ -12,13 +12,13 @@
         ZIndex: =1
 
     Label5 As label:
-        Height: =72
+        Height: =67
         Size: =10
         Text: |-
             ="Niketan Marg, Dillibazar-30, Kathmandu, 9802311273
             PAN: 302496459
             info@imark.com.np, www.imarkdigital.com"
-        Width: =446
+        Width: =347
         X: =18
         Y: =44
         ZIndex: =2
