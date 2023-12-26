@@ -293,7 +293,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.'Status (cr69c_status)'
+                Text: =ThisItem.Status
                 Width: =147
                 X: =1806
                 Y: =24
