@@ -384,7 +384,7 @@ FetchBankWisePOSReport As screen:
                         TID: Text(Value.idTerminal),
                         MID: Text(Value.idMerchant),
                         SerialNumber: Text(Value.serialKey),
-                        TerminalType: Text(Value.merchantName),
+                        TerminalType: Text(Value.terminalType),
                         Ownership: Text(Value.ownership),
                         Status: Text(Value.deploymentStatus)
                     }
