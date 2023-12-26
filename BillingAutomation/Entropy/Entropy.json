@@ -2,6 +2,8 @@
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
+    "AddMediaButton2": 90,
+    "AddMediaWithImage2": 91,
     "App": 1,
     "BankWisePosReport": 45,
     "btnExportToExcel": 44,
@@ -76,11 +78,12 @@
     "lblTotalPriceRetrieved": 55,
     "lblTotalTerminalContentDeployed": 59,
     "recHeaderMain": 46,
-    "recSubHeader": 49
+    "recSubHeader": 49,
+    "UploadedImage2": 89
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/26/2023 06:55:47",
+  "HeaderLastSavedDateTimeUTC": "12/26/2023 08:22:06",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -146,20 +149,29 @@
     "tbl_RetrieveTerminals\\cr69c_tbl_retrieveterminal_statuscode": 16,
     "tbl_RetrieveTerminals\\default.cds_cr69c_tbl_retrieveterminal_views": 26
   },
-  "OrderGroupControls": {},
+  "OrderGroupControls": {
+    "AddMediaWithImage2": {
+      "AddMediaButton2": 1,
+      "UploadedImage2": 0
+    }
+  },
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
+    "addMedia": 9,
     "button": 5,
     "datepicker": 4,
     "dropdown": 3,
     "gallery": 2,
     "groupContainer": 0,
     "icon": 7,
+    "image": 8,
     "label": 1,
     "rectangle": 6
   },
   "OverridablePropertiesEntry": {
+    "AddMediaButton2": {},
+    "AddMediaWithImage2": {},
     "App": {},
     "BankWisePosReport": {},
     "btnExportToExcel": {},
@@ -234,11 +246,14 @@
     "lblTotalPriceRetrieved": {},
     "lblTotalTerminalContentDeployed": {},
     "recHeaderMain": {},
-    "recSubHeader": {}
+    "recSubHeader": {},
+    "UploadedImage2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
+    "AddMediaButton2": 71,
+    "AddMediaWithImage2": 69,
     "App": 0,
     "BankWisePosReport": 0,
     "btnExportToExcel": 67,
@@ -264,7 +279,7 @@
     "Invoice": 0,
     "Label3": 65,
     "Label4": 68,
-    "Label5": 69,
+    "Label5": 72,
     "lblAddress": 32,
     "lblAddressContent": 49,
     "lblBankName": 5,
@@ -313,7 +328,8 @@
     "lblTotalPriceRetrieved": 9,
     "lblTotalTerminalContentDeployed": 13,
     "recHeaderMain": 0,
-    "recSubHeader": 3
+    "recSubHeader": 3,
+    "UploadedImage2": 70
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0

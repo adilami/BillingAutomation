@@ -307,7 +307,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.DaysRun
                 Width: =147
-                X: =1995
+                X: =2189
                 Y: =24
                 ZIndex: =12
 
@@ -317,7 +317,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.RentalFee
                 Width: =147
-                X: =2180
+                X: =2012
                 Y: =24
                 ZIndex: =13
 
