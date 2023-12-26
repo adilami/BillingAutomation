@@ -146,17 +146,6 @@ FetchBankWisePOSReport As screen:
                 Width: =120
                 ZIndex: =11
 
-            lblDaysRun As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Semibold
-                Size: =20
-                Text: |-
-                    ="Days Run
-                    "
-                Width: =160
-                ZIndex: =12
-
             lblRentalFee As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
@@ -164,6 +153,17 @@ FetchBankWisePOSReport As screen:
                 Size: =20
                 Text: |-
                     ="Rental Fee
+                    "
+                Width: =160
+                ZIndex: =12
+
+            lblDaysRun As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =20
+                Text: |-
+                    ="Days Run
                     "
                 Width: =160
                 ZIndex: =13
@@ -193,11 +193,12 @@ FetchBankWisePOSReport As screen:
             ZIndex: =2
 
             lblBankNameContent As label:
+                Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.BankName
-                Width: =151
-                X: =145
+                Width: =192
+                X: =120
                 Y: =24
                 ZIndex: =1
 
@@ -211,11 +212,12 @@ FetchBankWisePOSReport As screen:
                 ZIndex: =2
 
             lblMerchantNameContent As label:
+                Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MerchantName
-                Width: =237
-                X: =351
+                Width: =265
+                X: =312
                 Y: =24
                 ZIndex: =3
 
@@ -224,8 +226,8 @@ FetchBankWisePOSReport As screen:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Address
-                Width: =147
-                X: =577
+                Width: =171
+                X: =566
                 Y: =24
                 ZIndex: =4
 
@@ -235,7 +237,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.District
                 Width: =147
-                X: =724
+                X: =744
                 Y: =24
                 ZIndex: =5
 
@@ -245,7 +247,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.TID
                 Width: =147
-                X: =860
+                X: =881
                 Y: =24
                 ZIndex: =6
 
@@ -254,8 +256,8 @@ FetchBankWisePOSReport As screen:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MID
-                Width: =147
-                X: =1007
+                Width: =184
+                X: =1021
                 Y: =24
                 ZIndex: =7
 
@@ -265,7 +267,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.SerialNo
                 Width: =147
-                X: =1213
+                X: =1227
                 Y: =24
                 ZIndex: =8
 
@@ -274,8 +276,8 @@ FetchBankWisePOSReport As screen:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.TerminalType
-                Width: =147
-                X: =1420
+                Width: =223
+                X: =1400
                 Y: =24
                 ZIndex: =9
 
@@ -285,7 +287,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Ownership
                 Width: =147
-                X: =1643
+                X: =1650
                 Y: =24
                 ZIndex: =10
 
@@ -294,8 +296,8 @@ FetchBankWisePOSReport As screen:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Status
-                Width: =147
-                X: =1806
+                Width: =163
+                X: =1820
                 Y: =24
                 ZIndex: =11
 
@@ -305,7 +307,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.DaysRun
                 Width: =147
-                X: =1967
+                X: =1995
                 Y: =24
                 ZIndex: =12
 
@@ -315,7 +317,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.RentalFee
                 Width: =147
-                X: =2166
+                X: =2180
                 Y: =24
                 ZIndex: =13
 
@@ -325,7 +327,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.FinalAmt
                 Width: =147
-                X: =2345
+                X: =2352
                 Y: =24
                 ZIndex: =14
 
@@ -378,7 +380,7 @@ FetchBankWisePOSReport As screen:
                         bankName: Text(Value.bankName),
                         MerchantName: Text(Value.merchantName),
                         Address: Text(Value.merchantAddress),
-                        District: (Value.merchantAddress),
+                        District: (Value.district),
                         TID: Text(Value.idTerminal),
                         MID: Text(Value.idMerchant),
                         SerialNumber: Text(Value.serialKey),
