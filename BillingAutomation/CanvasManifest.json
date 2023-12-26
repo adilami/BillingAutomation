@@ -132,6 +132,6 @@
   },
   "ScreenOrder": [
     "BankWisePosReport",
-    "Screen1"
+    "FetchBankWisePOSReport"
   ]
 }

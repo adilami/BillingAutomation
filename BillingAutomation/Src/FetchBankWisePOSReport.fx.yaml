@@ -1,6 +1,6 @@
-Screen1 As screen:
+FetchBankWisePOSReport As screen:
 
-    con As groupContainer.verticalAutoLayoutContainer:
+    containerGalleryBankWisePOSDetail As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Bold
         Height: =476
         LayoutDirection: =LayoutDirection.Vertical
@@ -13,7 +13,7 @@ Screen1 As screen:
         Width: =1366
         ZIndex: =2
 
-        Container1 As groupContainer.horizontalAutoLayoutContainer:
+        conrainerHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             Fill: =RGBA(39, 67, 125, 1)
             FillPortions: =0
@@ -26,7 +26,7 @@ Screen1 As screen:
             Width: =2500
             ZIndex: =1
 
-            Label1 As label:
+            lblDate As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -37,7 +37,7 @@ Screen1 As screen:
                 Width: =100
                 ZIndex: =1
 
-            Label1_1 As label:
+            lblBanksName As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -48,7 +48,7 @@ Screen1 As screen:
                 Width: =180
                 ZIndex: =2
 
-            Label1_2 As label:
+            lblMerchantName As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -59,7 +59,7 @@ Screen1 As screen:
                 Width: =220
                 ZIndex: =3
 
-            Label1_3 As label:
+            lblAddress As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -70,7 +70,7 @@ Screen1 As screen:
                 Width: =120
                 ZIndex: =4
 
-            Label1_4 As label:
+            lblDistrict As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -81,7 +81,7 @@ Screen1 As screen:
                 Width: =110
                 ZIndex: =5
 
-            Label1_5 As label:
+            lblTID As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -92,7 +92,7 @@ Screen1 As screen:
                 Width: =80
                 ZIndex: =6
 
-            Label1_6 As label:
+            lblMID As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -102,7 +102,7 @@ Screen1 As screen:
                     "
                 ZIndex: =7
 
-            Label1_7 As label:
+            lblSerialNo As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -113,7 +113,7 @@ Screen1 As screen:
                 Width: =180
                 ZIndex: =8
 
-            Label1_8 As label:
+            lblTerminalTypes As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -124,7 +124,7 @@ Screen1 As screen:
                 Width: =200
                 ZIndex: =9
 
-            Label1_9 As label:
+            lblOwnership As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -135,7 +135,7 @@ Screen1 As screen:
                 Width: =160
                 ZIndex: =10
 
-            Label1_10 As label:
+            lblStatus As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -146,7 +146,7 @@ Screen1 As screen:
                 Width: =120
                 ZIndex: =11
 
-            Label1_11 As label:
+            lblDaysRun As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -157,7 +157,7 @@ Screen1 As screen:
                 Width: =160
                 ZIndex: =12
 
-            Label1_12 As label:
+            lblRentalFee As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -168,7 +168,7 @@ Screen1 As screen:
                 Width: =160
                 ZIndex: =13
 
-            Label1_13 As label:
+            lblFinalAmt As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -192,7 +192,7 @@ Screen1 As screen:
             Width: =2500
             ZIndex: =2
 
-            Label3 As label:
+            lblBankNameContent As label:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.BankName
@@ -201,7 +201,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =1
 
-            Label3_1 As label:
+            lblDateContent As label:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Date
@@ -210,7 +210,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =2
 
-            Label3_2 As label:
+            lblMerchantNameContent As label:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MerchantName
@@ -219,7 +219,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =3
 
-            Label3_3 As label:
+            lblAddressContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -229,7 +229,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =4
 
-            Label3_4 As label:
+            lblDistrictContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -239,7 +239,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =5
 
-            Label3_5 As label:
+            lblTIDContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -249,7 +249,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =6
 
-            Label3_6 As label:
+            lblMIDContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -259,7 +259,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =7
 
-            Label3_7 As label:
+            lblSerialNoContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -269,7 +269,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =8
 
-            Label3_8 As label:
+            lblTerminalTypeContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -279,7 +279,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =9
 
-            Label3_9 As label:
+            lblOwnershipContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -289,7 +289,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =10
 
-            Label3_10 As label:
+            lblStatusContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -299,7 +299,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =11
 
-            Label3_11 As label:
+            lblDaysRunContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -309,7 +309,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =12
 
-            Label3_12 As label:
+            lblRentalFeeContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -319,7 +319,7 @@ Screen1 As screen:
                 Y: =24
                 ZIndex: =13
 
-            Label3_13 As label:
+            lblFinalAmtContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -331,10 +331,11 @@ Screen1 As screen:
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
-        Y: =512
+        X: =7
+        Y: =533
         ZIndex: =3
 
-    Button1 As button:
+    btnFetchData As button:
         OnSelect: |
             =Set(
                 glbToggleButton,
@@ -348,16 +349,16 @@ Screen1 As screen:
                 tbl_Dates,
                 Defaults(tbl_Dates),
                 {
-                    DateFrom: dteDateFrom_1.SelectedDate,
-                    DateTo: dteDateTo_1.SelectedDate
+                    DateFrom: dteFromDate.SelectedDate,
+                    DateTo: dteToDate.SelectedDate
                 }
             );
             UpdateContext({locDateFrom: DateValue(First(tbl_Dates).DateFrom)});
             Set(
                 BankData,
                 BankWisePOSReportsFlow.Run(
-                    dteDateFrom_1.SelectedDate,
-                    dteDateTo_1.SelectedDate
+                    dteFromDate.SelectedDate,
+                    dteToDate.SelectedDate
                 )
             );
             Set(
@@ -426,7 +427,7 @@ Screen1 As screen:
                             If(
                                 ThisRecord.Status = "Retrieval",
                                 DateDiff(
-                                    dteDateFrom_1.SelectedDate,
+                                    dteFromDate.SelectedDate,
                                     ThisRecord.deployDate,
                                     TimeUnit.Days
                                 ) + 1,
@@ -438,7 +439,7 @@ Screen1 As screen:
                             If(
                                 ThisRecord.Status = "Retrieval",
                                 DateDiff(
-                                    dteDateFrom_1.SelectedDate,
+                                    dteFromDate.SelectedDate,
                                     ThisRecord.deployDate,
                                     TimeUnit.Days
                                 ) + 1,
@@ -468,7 +469,7 @@ Screen1 As screen:
                             If(
                                 ThisRecord.Status = "Retrieval",
                                 DateDiff(
-                                    dteDateFrom_1.SelectedDate,
+                                    dteFromDate.SelectedDate,
                                     ThisRecord.deployDate,
                                     TimeUnit.Days
                                 ) + 1,
@@ -480,7 +481,7 @@ Screen1 As screen:
                             If(
                                 ThisRecord.Status = "Retrieval",
                                 DateDiff(
-                                    dteDateFrom_1.SelectedDate,
+                                    dteFromDate.SelectedDate,
                                     ThisRecord.deployDate,
                                     TimeUnit.Days
                                 ) + 1,
@@ -506,42 +507,43 @@ Screen1 As screen:
                 "Both Deployed and Retrieved Terminal Synced Successfully",
                 NotificationType.Success
             );
-        Text: ="Sync Deploy"
-        Y: =631
+        Text: ="Fetch Data"
+        X: =140
+        Y: =622
         ZIndex: =4
 
-    dteDateFrom_1 As datepicker:
+    dteFromDate As datepicker:
         DefaultDate: =First(tbl_Dates).DateFrom
         Height: =38
         Width: =200
-        X: =905
-        Y: =514
+        X: =381
+        Y: =535
         ZIndex: =5
 
-    dteDateTo_1 As datepicker:
+    dteToDate As datepicker:
         DefaultDate: =DateValue(First(tbl_Dates).DateTo)
         Height: =38
         Width: =200
-        X: =1149
-        Y: =514
+        X: =625
+        Y: =535
         ZIndex: =6
 
-    lblDateFrom_1 As label:
+    lblFromDate As label:
         Height: =38
         Text: ="Date from"
         Width: =126
-        X: =905
-        Y: =476
+        X: =381
+        Y: =497
         ZIndex: =7
 
-    lblDateTo_1 As label:
+    lblToDate As label:
         Height: =38
         Text: |-
             ="Date to
             "
         Width: =91
-        X: =1149
-        Y: =476
+        X: =625
+        Y: =497
         ZIndex: =8
 
     btnExportToExcel As button:
@@ -550,13 +552,15 @@ Screen1 As screen:
             =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"Date","BankName","MerchantName","Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt"));
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
-        X: =193
-        Y: =631
+        X: =347
+        Y: =622
         ZIndex: =10
 
-    Label2 As label:
-        Text: =CountRows(colBankData)
-        X: =566
-        Y: =540
-        ZIndex: =12
+    lblSelectDate As label:
+        Text: |-
+            ="Select Bank
+            "
+        X: =7
+        Y: =493
+        ZIndex: =11
 
