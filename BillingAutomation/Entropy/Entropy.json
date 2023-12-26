@@ -21,7 +21,7 @@
     "galBankWisePOSDetail": 21,
     "galDeployedTerminal": 57,
     "galleryTemplate1": 63,
-    "galleryTemplate2": 23,
+    "galleryTemplate2": 22,
     "galleryTemplate3": 58,
     "galRetrieveTerminal": 62,
     "Host": 3,
@@ -31,7 +31,7 @@
     "Label4": 75,
     "Label5": 78,
     "lblAddress": 10,
-    "lblAddressContent": 22,
+    "lblAddressContent": 25,
     "lblBankName": 52,
     "lblBankName_1": 67,
     "lblBankName_2": 66,
@@ -48,7 +48,7 @@
     "lblDaysRunContent": 35,
     "lblDeployedTerminalsList": 48,
     "lblDistrict": 11,
-    "lblDistrictContent": 24,
+    "lblDistrictContent": 23,
     "lblFinalAmt": 20,
     "lblFinalAmtContent": 36,
     "lblFromDate": 38,
@@ -67,7 +67,7 @@
     "lblStatus": 17,
     "lblStatusContent": 33,
     "lblTerminalType": 53,
-    "lblTerminalTypeContent": 25,
+    "lblTerminalTypeContent": 24,
     "lblTerminalTypes": 15,
     "lblTID": 12,
     "lblTIDContent": 29,
@@ -83,7 +83,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/26/2023 10:16:07",
+  "HeaderLastSavedDateTimeUTC": "12/26/2023 10:42:04",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -337,7 +337,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.6459092,
+    "AnalysisLoadTime": 0.4740211,
     "ControlCount": {
       "addMedia": 1,
       "button": 4,
@@ -353,7 +353,7 @@
       "rectangle": 2,
       "screen": 3
     },
-    "DeserializationLoadTime": 1.5933743
+    "DeserializationLoadTime": 2.8271461
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
