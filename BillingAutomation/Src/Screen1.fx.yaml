@@ -1,10 +1,15 @@
 Screen1 As screen:
 
     con As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Bold
         Height: =476
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         LayoutOverflowX: =LayoutOverflow.Scroll
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
         Width: =1366
         ZIndex: =2
 
@@ -176,7 +181,7 @@ Screen1 As screen:
             AlignInContainer: =AlignInContainer.SetByContainer
             DelayItemLoading: =true
             FillPortions: =0
-            Height: =300
+            Height: =376
             Items: =Filter(colAllData, BankName = drpBankName.SelectedText.Value)
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
@@ -533,7 +538,7 @@ Screen1 As screen:
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
         OnSelect: |-
-            =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"cr69c_date","cr69c_bankname","cr69c_merchantname", "cr69c_address","cr69c_district","cr69c_tid","cr69c_mid","cr69c_serialno", "cr69c_terminaltype","cr69c_ownership","cr69c_status","cr69c_daysrun","cr69c_rentalfee","cr69c_finalamt"));
+            =Collect(colExportToExcel,ShowColumns(galBankWisePOSDetail.AllItems,"Date","BankName","MerchantName","Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt"));
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =193
