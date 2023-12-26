@@ -393,17 +393,17 @@ FetchBankWisePOSReport As screen:
                 ForAll(
                     Table(parsedRetrieveData),
                     {
-                        deployDate: Text(Value.deployDate),
+                        deployDate: Text(Value.updatedDate),
                         bankName: Text(Value.bankName),
-                        MerchantName: Text(Value.merchantName),
-                        Address: Text(Value.merchantAddress),
-                        District: (Value.merchantAddress),
+                        MerchantName: Text(Value.merchant),
+                        Address: Text(Value.address),
+                        District: (Value.district),
                         TID: Text(Value.idTerminal),
                         MID: Text(Value.idMerchant),
                         SerialNumber: Text(Value.serialKey),
-                        TerminalType: Text(Value.merchantName),
+                        TerminalType: Text(Value.terminalType),
                         Ownership: Text(Value.ownership),
-                        Status: Text(Value.deploymentStatus)
+                        Status: Text(Value.teminalStatus)
                     }
                 )
             );
@@ -563,4 +563,10 @@ FetchBankWisePOSReport As screen:
         X: =7
         Y: =493
         ZIndex: =11
+
+    Label3 As label:
+        Text: =CountRows(colAllData)
+        X: =1062
+        Y: =577
+        ZIndex: =12
 
