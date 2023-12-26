@@ -1,0 +1,25 @@
+"Invoice As screen.'printableLayout_A4Portrait_ver1.0'":
+    Height: =1123
+    Width: =794
+
+    Label4 As label:
+        Height: =35
+        Size: =14
+        Text: ="iMark Pvt. Ltd."
+        Width: =198
+        X: =18
+        Y: =21
+        ZIndex: =1
+
+    Label5 As label:
+        Height: =72
+        Size: =10
+        Text: |-
+            ="Niketan Marg, Dillibazar-30, Kathmandu, 9802311273
+            PAN: 302496459
+            info@imark.com.np, www.imarkdigital.com"
+        Width: =446
+        X: =18
+        Y: =44
+        ZIndex: =2
+

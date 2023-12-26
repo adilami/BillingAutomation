@@ -852,7 +852,7 @@
       "MetaDataIDKey": "",
       "Name": "containerGalleryBankWisePOSDetail",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1037,7 +1037,7 @@
       "MetaDataIDKey": "",
       "Name": "drpBankName",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1323,7 +1323,7 @@
       "MetaDataIDKey": "",
       "Name": "dteFromDate",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1623,7 +1623,7 @@
       "MetaDataIDKey": "",
       "Name": "dteToDate",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2261,7 +2261,7 @@
       "MetaDataIDKey": "",
       "Name": "Label3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2868,7 +2868,7 @@
       "MetaDataIDKey": "",
       "Name": "lblAddressContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3144,7 +3144,7 @@
       "MetaDataIDKey": "",
       "Name": "lblBankNameContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4085,7 +4085,7 @@
       "MetaDataIDKey": "",
       "Name": "lblDateContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4433,7 +4433,7 @@
       "MetaDataIDKey": "",
       "Name": "lblDaysRun",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5316,7 +5316,7 @@
       "MetaDataIDKey": "",
       "Name": "lblDistrictContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6203,7 +6203,7 @@
       "MetaDataIDKey": "",
       "Name": "lblFromDate",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6810,7 +6810,7 @@
       "MetaDataIDKey": "",
       "Name": "lblMerchantNameContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8389,7 +8389,7 @@
       "MetaDataIDKey": "",
       "Name": "lblRentalFee",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8928,7 +8928,7 @@
       "MetaDataIDKey": "",
       "Name": "lblSelectDate",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11653,7 +11653,7 @@
       "MetaDataIDKey": "",
       "Name": "lblToDate",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

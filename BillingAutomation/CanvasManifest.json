@@ -132,6 +132,7 @@
   },
   "ScreenOrder": [
     "BankWisePosReport",
-    "FetchBankWisePOSReport"
+    "FetchBankWisePOSReport",
+    "Invoice"
   ]
 }
