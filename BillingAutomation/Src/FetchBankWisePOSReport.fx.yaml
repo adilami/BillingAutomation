@@ -317,7 +317,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.FinalAmt
                 Width: =147
-                X: =2352
+                X: =2345
                 Y: =24
                 ZIndex: =14
 
@@ -549,7 +549,7 @@ FetchBankWisePOSReport As screen:
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
         OnSelect: |-
-            =Collect(colExportToExcel,galBankWisePOSDetail.AllItems,"Date","BankName","MerchantName","Address","District","TID","MID","SerialNo","TerminalType","Ownership","Status","DaysRun","RentalFee","FinalAmt");
+            =ClearCollect(colExportToExcel,Filter(colAllData,BankName=drpBankName.SelectedText.Value));
             ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
         Text: ="Export to Excel"
         X: =347
@@ -566,7 +566,7 @@ FetchBankWisePOSReport As screen:
 
     Label3 As label:
         Align: =Align.Center
-        Text: =CountRows(colAllData)
+        Text: =CountRows(colExportToExcel)
         X: =1062
         Y: =577
         ZIndex: =12
