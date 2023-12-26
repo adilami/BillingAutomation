@@ -321,11 +321,12 @@ FetchBankWisePOSReport As screen:
                 Y: =24
                 ZIndex: =14
 
-            Label1 As label:
+            lblAddressContent As label:
+                Height: =52
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Address
-                X: =591
-                Y: =39
+                X: =587
+                Y: =21
                 ZIndex: =15
 
     drpBankName As dropdown:

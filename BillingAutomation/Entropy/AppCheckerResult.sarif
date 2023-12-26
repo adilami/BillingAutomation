@@ -39,7 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "Label1",
+              "lblAddressContent",
               "Control"
             ],
             "id": "issue"
