@@ -374,6 +374,8 @@ FetchBankWisePOSReport As screen:
                 ParseJSON(BankData.outputretrieveterminal)
             );
             If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",
+            If(txtNumberOfDays.Text="",
+            Notify("Please Enter number of days",NotificationType.Error),
             ClearCollect(
                 colBankData,
                 ForAll(
@@ -557,7 +559,7 @@ FetchBankWisePOSReport As screen:
             Notify(
                 "Both Deployed and Retrieved Terminal Synced Successfully",
                 NotificationType.Success
-            ),ClearCollect(
+            )),ClearCollect(
                 colBankData,
                 ForAll(
                     Table(parsedData),
