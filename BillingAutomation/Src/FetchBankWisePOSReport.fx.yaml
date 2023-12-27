@@ -213,12 +213,12 @@ FetchBankWisePOSReport As screen:
 
             lblMerchantNameContent As label:
                 Align: =Align.Center
-                Height: =55
+                Height: =68
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MerchantName
-                Width: =272
+                Width: =286
                 X: =305
-                Y: =24
+                Y: =17
                 ZIndex: =3
 
             lblDistrictContent As label:
