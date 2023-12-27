@@ -333,14 +333,15 @@ FetchBankWisePOSReport As screen:
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
         OnChange: |-
-            =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:false}))
+            =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:false}));
+            Clear(colAllData);
         OnSelect: =
         X: =7
         Y: =603
         ZIndex: =3
 
     btnFetchData As button:
-        OnSelect: |+
+        OnSelect: |
             =Set(
                 glbToggleButton,
                 false
@@ -373,379 +374,531 @@ FetchBankWisePOSReport As screen:
                 parsedRetrieveData,
                 ParseJSON(BankData.outputretrieveterminal)
             );
-            If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",
-            If(txtNumberOfDays.Text="",
-            Notify("Please Enter number of days",NotificationType.Error),
-            ClearCollect(
-                colBankData,
-                ForAll(
-                    Table(parsedData),
-                    {
-                        deployDate: Text(Value.deployDate),
-                        bankName: Text(Value.bankName),
-                        MerchantName: Text(Value.merchantName),
-                        Address: Text(Value.merchantAddress),
-                        District: (Value.district),
-                        TID: Text(Value.idTerminal),
-                        MID: Text(Value.idMerchant),
-                        SerialNumber: Text(Value.serialKey),
-                        TerminalType: Text(Value.terminalType),
-                        Ownership: Text(Value.ownership),
-                        Status: Text(Value.deploymentStatus)
-                    }
-                )
-            );
-            ClearCollect(
-                colRetBankData,
-                ForAll(
-                    Table(parsedRetrieveData),
-                    {
-                        deployDate: Text(Value.updatedDate),
-                        bankName: Text(Value.bankName),
-                        MerchantName: Text(Value.merchant),
-                        Address: Text(Value.address),
-                        District: (Value.district),
-                        TID: Text(Value.idTerminal),
-                        MID: Text(Value.idMerchant),
-                        SerialNumber: Text(Value.serialNumber),
-                        TerminalType: Text(Value.terminalType),
-                        Ownership: Text(Value.ownership),
-                        Status: Text(Value.teminalStatus)
-                    }
-                )
-            );
-            ClearCollect(
-                colALLRET,
-                ForAll(
-                    colRetBankData,
-                    {
-                        Date: DateValue(ThisRecord.deployDate),
-                        BankName: Text(ThisRecord.bankName),
-                        MerchantName: Text(ThisRecord.MerchantName),
-                        Address: Text(ThisRecord.Address),
-                        District: Text(ThisRecord.District),
-                        TID: Text(ThisRecord.TID),
-                        MID: Text(ThisRecord.MID),
-                        SerialNo: Text(ThisRecord.SerialNumber),
-                        TerminalType: Text(ThisRecord.TerminalType),
-                        Ownership: Text(ThisRecord.Ownership),
-                        Status: Text(ThisRecord.Status),
-                        DaysRun: Text(
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                Value(txtNumberOfDays.Text)
-                            );
-                        ),
-                        RentalFee: Text(900),
-                        FinalAmt: Text((
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                Value(txtNumberOfDays.Text)
-                            )/Value(txtNumberOfDays.Text))*900
+            If(
+                drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
+                If(
+                    txtNumberOfDays.Text = "",
+                    Notify(
+                        "Please Enter number of days",
+                        NotificationType.Error
+                    ),
+                    ClearCollect(
+                        colBankData,
+                        ForAll(
+                            Table(parsedData),
+                            {
+                                deployDate: Text(Value.deployDate),
+                                bankName: Text(Value.bankName),
+                                MerchantName: Text(Value.merchantName),
+                                Address: Text(Value.merchantAddress),
+                                District: (Value.district),
+                                TID: Text(Value.idTerminal),
+                                MID: Text(Value.idMerchant),
+                                SerialNumber: Text(Value.serialKey),
+                                TerminalType: Text(Value.terminalType),
+                                Ownership: Text(Value.ownership),
+                                Status: Text(Value.deploymentStatus)
+                            }
                         )
-                    }
-                )
-            );
-            ClearCollect(
-                colALLDEP,
-                ForAll(
-                    colBankData,
-                    {
-                        Date: DateValue(ThisRecord.deployDate),
-                        BankName: Text(ThisRecord.bankName),
-                        MerchantName: Text(ThisRecord.MerchantName),
-                        Address: Text(ThisRecord.Address),
-                        District: Text(ThisRecord.District),
-                        TID: Text(ThisRecord.TID),
-                        MID: Text(ThisRecord.MID),
-                        SerialNo: Text(ThisRecord.SerialNumber),
-                        TerminalType: Text(ThisRecord.TerminalType),
-                        Ownership: Text(ThisRecord.Ownership),
-                        Status: Text(ThisRecord.Status),
-                        DaysRun: Text(
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                ThisRecord.Status = "NewDeployed",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    Value(txtNumberOfDays.Text),
-                                    DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1
-                                ),
-                                ThisRecord.Status = "RemovalRequest",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    Value(txtNumberOfDays.Text),
-                                    DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1
-                                ),
-                                If(
-                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status="ReplacementRequested",
-                                    Value(txtNumberOfDays.Text)
-                                )
-                            );
-                        ),
-                        RentalFee: Text(900),
-                        FinalAmt: Text(
-                             If(
-                                ThisRecord.Status = "Retrieval",
-                                ((DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1)/Value(txtNumberOfDays.Text))*900,
-                                ThisRecord.Status = "NewDeployed",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900,
-                                    ((DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1)/Value(txtNumberOfDays.Text))*900
-                                ),
-                                ThisRecord.Status = "RemovalRequest",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900,
-                                    ((DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1)/Value(txtNumberOfDays.Text))*900
-                                ),
-                                If(
-                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status="ReplacementRequested",
-                                    Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900
-                                )
-                            );
+                    );
+                    ClearCollect(
+                        colRetBankData,
+                        ForAll(
+                            Table(parsedRetrieveData),
+                            {
+                                deployDate: Text(Value.updatedDate),
+                                bankName: Text(Value.bankName),
+                                MerchantName: Text(Value.merchant),
+                                Address: Text(Value.address),
+                                District: (Value.district),
+                                TID: Text(Value.idTerminal),
+                                MID: Text(Value.idMerchant),
+                                SerialNumber: Text(Value.serialNumber),
+                                TerminalType: Text(Value.terminalType),
+                                Ownership: Text(Value.ownership),
+                                Status: Text(Value.teminalStatus)
+                            }
                         )
-                    }
-                )
-            );
-            ClearCollect(
-                colAllData,
-                colALLDEP
-            );
-            Collect(
-                colAllData,
-                colALLRET
-            );
-            Set(
-                glbToggleButton,
-                true
-            );
-            Notify(
-                "Both Deployed and Retrieved Terminal Synced Successfully",
-                NotificationType.Success
-            )),ClearCollect(
-                colBankData,
-                ForAll(
-                    Table(parsedData),
-                    {
-                        deployDate: Text(Value.deployDate),
-                        bankName: Text(Value.bankName),
-                        MerchantName: Text(Value.merchantName),
-                        Address: Text(Value.merchantAddress),
-                        District: (Value.district),
-                        TID: Text(Value.idTerminal),
-                        MID: Text(Value.idMerchant),
-                        SerialNumber: Text(Value.serialKey),
-                        TerminalType: Text(Value.terminalType),
-                        Ownership: Text(Value.ownership),
-                        Status: Text(Value.deploymentStatus)
-                    }
-                )
-            );
-            ClearCollect(
-                colRetBankData,
-                ForAll(
-                    Table(parsedRetrieveData),
-                    {
-                        deployDate: Text(Value.updatedDate),
-                        bankName: Text(Value.bankName),
-                        MerchantName: Text(Value.merchant),
-                        Address: Text(Value.address),
-                        District: (Value.district),
-                        TID: Text(Value.idTerminal),
-                        MID: Text(Value.idMerchant),
-                        SerialNumber: Text(Value.serialNumber),
-                        TerminalType: Text(Value.terminalType),
-                        Ownership: Text(Value.ownership),
-                        Status: Text(Value.teminalStatus)
-                    }
-                )
-            );
-            ClearCollect(
-                colALLRET,
-                ForAll(
-                    colRetBankData,
-                    {
-                        Date: DateValue(ThisRecord.deployDate),
-                        BankName: Text(ThisRecord.bankName),
-                        MerchantName: Text(ThisRecord.MerchantName),
-                        Address: Text(ThisRecord.Address),
-                        District: Text(ThisRecord.District),
-                        TID: Text(ThisRecord.TID),
-                        MID: Text(ThisRecord.MID),
-                        SerialNo: Text(ThisRecord.SerialNumber),
-                        TerminalType: Text(ThisRecord.TerminalType),
-                        Ownership: Text(ThisRecord.Ownership),
-                        Status: Text(ThisRecord.Status),
-                        DaysRun: Text(
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                30
-                            );
-                        ),
-                        RentalFee: Text(900),
-                        FinalAmt: Text((
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                30
-                            )/30)*900
-                        )
-                    }
-                )
-            );
-            ClearCollect(
-                colALLDEP,
-                ForAll(
-                    colBankData,
-                    {
-                        Date: DateValue(ThisRecord.deployDate),
-                        BankName: Text(ThisRecord.bankName),
-                        MerchantName: Text(ThisRecord.MerchantName),
-                        Address: Text(ThisRecord.Address),
-                        District: Text(ThisRecord.District),
-                        TID: Text(ThisRecord.TID),
-                        MID: Text(ThisRecord.MID),
-                        SerialNo: Text(ThisRecord.SerialNumber),
-                        TerminalType: Text(ThisRecord.TerminalType),
-                        Ownership: Text(ThisRecord.Ownership),
-                        Status: Text(ThisRecord.Status),
-                        DaysRun: Text(
-                            If(
-                                ThisRecord.Status = "Retrieval",
-                                DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1,
-                                ThisRecord.Status = "NewDeployed",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    30,
-                                    DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1
+                    );
+                    ClearCollect(
+                        colALLRET,
+                        ForAll(
+                            colRetBankData,
+                            {
+                                Date: DateValue(ThisRecord.deployDate),
+                                BankName: Text(ThisRecord.bankName),
+                                MerchantName: Text(ThisRecord.MerchantName),
+                                Address: Text(ThisRecord.Address),
+                                District: Text(ThisRecord.District),
+                                TID: Text(ThisRecord.TID),
+                                MID: Text(ThisRecord.MID),
+                                SerialNo: Text(ThisRecord.SerialNumber),
+                                TerminalType: Text(ThisRecord.TerminalType),
+                                Ownership: Text(ThisRecord.Ownership),
+                                Status: Text(ThisRecord.Status),
+                                DaysRun: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        Value(txtNumberOfDays.Text)
+                                    );
                                 ),
-                                ThisRecord.Status = "RemovalRequest",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    30,
-                                    DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1
-                                ),
-                                If(
-                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status="ReplacementRequested",
-                                    30
+                                RentalFee: Text(900),
+                                FinalAmt: Text(
+                                    (If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        Value(txtNumberOfDays.Text)
+                                    ) / Value(txtNumberOfDays.Text)) * 900
                                 )
-                            );
-                        ),
-                        RentalFee: Text(900),
-                        FinalAmt: Text(
-                             If(
-                                ThisRecord.Status = "Retrieval",
-                                ((DateDiff(
-                                    dteFromDate.SelectedDate,
-                                    ThisRecord.deployDate,
-                                    TimeUnit.Days
-                                ) + 1)/30)*900,
-                                ThisRecord.Status = "NewDeployed",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    30/30*900,
-                                    ((DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1)/30)*900
-                                ),
-                                ThisRecord.Status = "RemovalRequest",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    30/30*900,
-                                    ((DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1)/30)*900
-                                ),
-                                If(
-                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status="ReplacementRequested",
-                                    30/30*900
-                                )
-                            );
+                            }
                         )
-                    }
+                    );
+                    ClearCollect(
+                        colALLDEP,
+                        ForAll(
+                            colBankData,
+                            {
+                                Date: DateValue(ThisRecord.deployDate),
+                                BankName: Text(ThisRecord.bankName),
+                                MerchantName: Text(ThisRecord.MerchantName),
+                                Address: Text(ThisRecord.Address),
+                                District: Text(ThisRecord.District),
+                                TID: Text(ThisRecord.TID),
+                                MID: Text(ThisRecord.MID),
+                                SerialNo: Text(ThisRecord.SerialNumber),
+                                TerminalType: Text(ThisRecord.TerminalType),
+                                Ownership: Text(ThisRecord.Ownership),
+                                Status: Text(ThisRecord.Status),
+                                DaysRun: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        ThisRecord.Status = "NewDeployed",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            Value(txtNumberOfDays.Text),
+                                            DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1
+                                        ),
+                                        ThisRecord.Status = "RemovalRequest",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            Value(txtNumberOfDays.Text),
+                                            DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            Value(txtNumberOfDays.Text)
+                                        )
+                                    );
+                                ),
+                                RentalFee: Text(900),
+                                FinalAmt: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        ((DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1) / Value(txtNumberOfDays.Text)) * 900,
+                                        ThisRecord.Status = "NewDeployed",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
+                                            ((DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1) / Value(txtNumberOfDays.Text)) * 900
+                                        ),
+                                        ThisRecord.Status = "RemovalRequest",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
+                                            ((DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1) / Value(txtNumberOfDays.Text)) * 900
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900
+                                        )
+                                    );
+                                )
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colAllData,
+                        colALLDEP
+                    );
+                    Collect(
+                        colAllData,
+                        colALLRET
+                    );
+                    Set(
+                        glbToggleButton,
+                        true
+                    );
+                    Notify(
+                        "Both Deployed and Retrieved Terminal Synced Successfully",
+                        NotificationType.Success
+                    )
+                ),
+                If(
+                    drpBankName.SelectedText.Value = "NABIL BANK LTD." Or drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
+                    ClearCollect(
+                        colBankData,
+                        ForAll(
+                            Table(parsedData),
+                            {
+                                deployDate: Text(Value.deployDate),
+                                bankName: Text(Value.bankName),
+                                MerchantName: Text(Value.merchantName),
+                                Address: Text(Value.merchantAddress),
+                                District: (Value.district),
+                                TID: Text(Value.idTerminal),
+                                MID: Text(Value.idMerchant),
+                                SerialNumber: Text(Value.serialKey),
+                                TerminalType: Text(Value.terminalType),
+                                Ownership: Text(Value.ownership),
+                                Status: Text(Value.deploymentStatus)
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colRetBankData,
+                        ForAll(
+                            Table(parsedRetrieveData),
+                            {
+                                deployDate: Text(Value.updatedDate),
+                                bankName: Text(Value.bankName),
+                                MerchantName: Text(Value.merchant),
+                                Address: Text(Value.address),
+                                District: (Value.district),
+                                TID: Text(Value.idTerminal),
+                                MID: Text(Value.idMerchant),
+                                SerialNumber: Text(Value.serialNumber),
+                                TerminalType: Text(Value.terminalType),
+                                Ownership: Text(Value.ownership),
+                                Status: Text(Value.teminalStatus)
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colALLRET,
+                        ForAll(
+                            colRetBankData,
+                            {
+                                Date: DateValue(ThisRecord.deployDate),
+                                BankName: Text(ThisRecord.bankName),
+                                MerchantName: Text(ThisRecord.MerchantName),
+                                Address: Text(ThisRecord.Address),
+                                District: Text(ThisRecord.District),
+                                TID: Text(ThisRecord.TID),
+                                MID: Text(ThisRecord.MID),
+                                SerialNo: Text(ThisRecord.SerialNumber),
+                                TerminalType: Text(ThisRecord.TerminalType),
+                                Ownership: Text(ThisRecord.Ownership),
+                                Status: Text(ThisRecord.Status),
+                                DaysRun: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        30
+                                    );
+                                ),
+                                RentalFee: Text(900),
+                                FinalAmt: Text(0)
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colALLDEP,
+                        ForAll(
+                            colBankData,
+                            {
+                                Date: DateValue(ThisRecord.deployDate),
+                                BankName: Text(ThisRecord.bankName),
+                                MerchantName: Text(ThisRecord.MerchantName),
+                                Address: Text(ThisRecord.Address),
+                                District: Text(ThisRecord.District),
+                                TID: Text(ThisRecord.TID),
+                                MID: Text(ThisRecord.MID),
+                                SerialNo: Text(ThisRecord.SerialNumber),
+                                TerminalType: Text(ThisRecord.TerminalType),
+                                Ownership: Text(ThisRecord.Ownership),
+                                Status: Text(ThisRecord.Status),
+                                DaysRun: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        ThisRecord.Status = "NewDeployed",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            30,
+                                            DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1
+                                        ),
+                                        ThisRecord.Status = "RemovalRequest",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            30,
+                                            DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            30
+                                        )
+                                    );
+                                ),
+                                RentalFee: Text(900),
+                                FinalAmt: Text(900)
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colAllData,
+                        colALLDEP
+                    );
+                    Collect(
+                        colAllData,
+                        colALLRET
+                    );
+                    Set(
+                        glbToggleButton,
+                        true
+                    );
+                    Notify(
+                        "Both Deployed and Retrieved Terminal Synced Successfully",
+                        NotificationType.Success
+                    );
+                    ,
+                    ClearCollect(
+                        colBankData,
+                        ForAll(
+                            Table(parsedData),
+                            {
+                                deployDate: Text(Value.deployDate),
+                                bankName: Text(Value.bankName),
+                                MerchantName: Text(Value.merchantName),
+                                Address: Text(Value.merchantAddress),
+                                District: (Value.district),
+                                TID: Text(Value.idTerminal),
+                                MID: Text(Value.idMerchant),
+                                SerialNumber: Text(Value.serialKey),
+                                TerminalType: Text(Value.terminalType),
+                                Ownership: Text(Value.ownership),
+                                Status: Text(Value.deploymentStatus)
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colRetBankData,
+                        ForAll(
+                            Table(parsedRetrieveData),
+                            {
+                                deployDate: Text(Value.updatedDate),
+                                bankName: Text(Value.bankName),
+                                MerchantName: Text(Value.merchant),
+                                Address: Text(Value.address),
+                                District: (Value.district),
+                                TID: Text(Value.idTerminal),
+                                MID: Text(Value.idMerchant),
+                                SerialNumber: Text(Value.serialNumber),
+                                TerminalType: Text(Value.terminalType),
+                                Ownership: Text(Value.ownership),
+                                Status: Text(Value.teminalStatus)
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colALLRET,
+                        ForAll(
+                            colRetBankData,
+                            {
+                                Date: DateValue(ThisRecord.deployDate),
+                                BankName: Text(ThisRecord.bankName),
+                                MerchantName: Text(ThisRecord.MerchantName),
+                                Address: Text(ThisRecord.Address),
+                                District: Text(ThisRecord.District),
+                                TID: Text(ThisRecord.TID),
+                                MID: Text(ThisRecord.MID),
+                                SerialNo: Text(ThisRecord.SerialNumber),
+                                TerminalType: Text(ThisRecord.TerminalType),
+                                Ownership: Text(ThisRecord.Ownership),
+                                Status: Text(ThisRecord.Status),
+                                DaysRun: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        30
+                                    );
+                                ),
+                                RentalFee: Text(900),
+                                FinalAmt: Text(
+                                    (If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        30
+                                    ) / 30) * 900
+                                )
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colALLDEP,
+                        ForAll(
+                            colBankData,
+                            {
+                                Date: DateValue(ThisRecord.deployDate),
+                                BankName: Text(ThisRecord.bankName),
+                                MerchantName: Text(ThisRecord.MerchantName),
+                                Address: Text(ThisRecord.Address),
+                                District: Text(ThisRecord.District),
+                                TID: Text(ThisRecord.TID),
+                                MID: Text(ThisRecord.MID),
+                                SerialNo: Text(ThisRecord.SerialNumber),
+                                TerminalType: Text(ThisRecord.TerminalType),
+                                Ownership: Text(ThisRecord.Ownership),
+                                Status: Text(ThisRecord.Status),
+                                DaysRun: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        ThisRecord.Status = "NewDeployed",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            30,
+                                            DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1
+                                        ),
+                                        ThisRecord.Status = "RemovalRequest",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            30,
+                                            DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            30
+                                        )
+                                    );
+                                ),
+                                RentalFee: Text(900),
+                                FinalAmt: Text(
+                                    If(
+                                        ThisRecord.Status = "Retrieval",
+                                        ((DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1) / 30) * 900,
+                                        ThisRecord.Status = "NewDeployed",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            30 / 30 * 900,
+                                            ((DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1) / 30) * 900
+                                        ),
+                                        ThisRecord.Status = "RemovalRequest",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            30 / 30 * 900,
+                                            ((DateDiff(
+                                                ThisRecord.deployDate,
+                                                dteToDate.SelectedDate,
+                                                TimeUnit.Days
+                                            ) + 1) / 30) * 900
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            30 / 30 * 900
+                                        )
+                                    );
+                                )
+                            }
+                        )
+                    );
+                    ClearCollect(
+                        colAllData,
+                        colALLDEP
+                    );
+                    Collect(
+                        colAllData,
+                        colALLRET
+                    );
+                    Set(
+                        glbToggleButton,
+                        true
+                    );
+                    Notify(
+                        "Both Deployed and Retrieved Terminal Synced Successfully",
+                        NotificationType.Success
+                    );
                 )
             );
-            ClearCollect(
-                colAllData,
-                colALLDEP
-            );
-            Collect(
-                colAllData,
-                colALLRET
-            );
-            Set(
-                glbToggleButton,
-                true
-            );
-            Notify(
-                "Both Deployed and Retrieved Terminal Synced Successfully",
-                NotificationType.Success
-            ););
-            
         Text: ="Fetch Data"
-        X: =140
+        X: =137
         Y: =692
         ZIndex: =4
 
