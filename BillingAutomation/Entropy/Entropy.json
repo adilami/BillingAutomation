@@ -56,6 +56,7 @@
     "lblMerchantNameContent": 28,
     "lblMID": 13,
     "lblMIDContent": 30,
+    "lblNoOfDays": 82,
     "lblOwnership": 16,
     "lblOwnershipContent": 32,
     "lblRentalFee": 18,
@@ -79,11 +80,12 @@
     "lblTotalTerminalContentDeployed": 60,
     "recHeaderMain": 47,
     "recSubHeader": 50,
+    "txtNumberOfDays": 81,
     "UploadedImage2": 76
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/27/2023 07:39:21",
+  "HeaderLastSavedDateTimeUTC": "12/27/2023 07:45:23",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -158,16 +160,17 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "addMedia": 9,
-    "button": 5,
-    "datepicker": 4,
-    "dropdown": 3,
-    "gallery": 2,
-    "groupContainer": 0,
-    "icon": 7,
-    "image": 8,
+    "addMedia": 10,
+    "button": 6,
+    "datepicker": 5,
+    "dropdown": 4,
+    "gallery": 3,
+    "groupContainer": 2,
+    "icon": 8,
+    "image": 9,
     "label": 1,
-    "rectangle": 6
+    "rectangle": 7,
+    "text": 0
   },
   "OverridablePropertiesEntry": {
     "AddMediaButton2": {},
@@ -224,6 +227,7 @@
     "lblMerchantNameContent": {},
     "lblMID": {},
     "lblMIDContent": {},
+    "lblNoOfDays": {},
     "lblOwnership": {},
     "lblOwnershipContent": {},
     "lblRentalFee": {},
@@ -247,6 +251,7 @@
     "lblTotalTerminalContentDeployed": {},
     "recHeaderMain": {},
     "recSubHeader": {},
+    "txtNumberOfDays": {},
     "UploadedImage2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
@@ -306,6 +311,7 @@
     "lblMerchantNameContent": 48,
     "lblMID": 35,
     "lblMIDContent": 52,
+    "lblNoOfDays": 0,
     "lblOwnership": 38,
     "lblOwnershipContent": 54,
     "lblRentalFee": 40,
@@ -329,6 +335,7 @@
     "lblTotalTerminalContentDeployed": 13,
     "recHeaderMain": 0,
     "recSubHeader": 3,
+    "txtNumberOfDays": 0,
     "UploadedImage2": 69
   },
   "ResourcesJsonIndices": {

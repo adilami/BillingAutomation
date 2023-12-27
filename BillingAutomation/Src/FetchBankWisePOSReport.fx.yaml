@@ -332,6 +332,8 @@ FetchBankWisePOSReport As screen:
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
+        OnSelect: |-
+            =If(drpBankName.SelectedText.BankName="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:true}))
         X: =7
         Y: =603
         ZIndex: =3
@@ -617,4 +619,18 @@ FetchBankWisePOSReport As screen:
         X: =1062
         Y: =647
         ZIndex: =12
+
+    txtNumberOfDays As text:
+        Default: ="Text input"
+        Visible: =locTogText
+        X: =867
+        Y: =603
+        ZIndex: =13
+
+    lblNoOfDays As label:
+        Text: ="No of Days"
+        Visible: =locTogText
+        X: =868
+        Y: =563
+        ZIndex: =14
 
