@@ -807,7 +807,8 @@ FetchBankWisePOSReport As screen:
         ZIndex: =12
 
     txtNumberOfDays As text:
-        Default: ="Text input"
+        Default: =""
+        HintText: ="No Of Days"
         Visible: =locTogText
         X: =867
         Y: =603
