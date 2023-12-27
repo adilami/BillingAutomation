@@ -480,12 +480,27 @@ FetchBankWisePOSReport As screen:
                                 If(
                                     DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                     30,
+                                     DateDiff(
+                                        ThisRecord.deployDate,
+                                        dteToDate.SelectedDate,
+                                        TimeUnit.Days
+                                    ) + 1
+                                );
+                            );
+                            If(
+                                ThisRecord.Status = "RemoveRequest",
+                                If(
+                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                    30,
                                     DateDiff(
                                         ThisRecord.deployDate,
                                         dteToDate.SelectedDate,
                                         TimeUnit.Days
                                     ) + 1
                                 );
+                            );
+                            If(ThisRecord.Status="ReDeployed",
+                            30
                             );
                         ),
                         RentalFee: Text(900),
