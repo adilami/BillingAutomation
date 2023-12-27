@@ -436,7 +436,7 @@ FetchBankWisePOSReport As screen:
                             );
                         ),
                         RentalFee: Text(900),
-                        FinalAmt: Text(
+                        FinalAmt: Text((
                             If(
                                 ThisRecord.Status = "Retrieval",
                                 DateDiff(
@@ -445,7 +445,7 @@ FetchBankWisePOSReport As screen:
                                     TimeUnit.Days
                                 ) + 1,
                                 30
-                            ) * 900
+                            )/30)*900
                         )
                     }
                 )
@@ -473,22 +473,8 @@ FetchBankWisePOSReport As screen:
                                     dteFromDate.SelectedDate,
                                     ThisRecord.deployDate,
                                     TimeUnit.Days
-                                ) + 1
-                            );
-                            If(
+                                ) + 1,
                                 ThisRecord.Status = "NewDeployed",
-                                If(
-                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                    30,
-                                     DateDiff(
-                                        ThisRecord.deployDate,
-                                        dteToDate.SelectedDate,
-                                        TimeUnit.Days
-                                    ) + 1
-                                );
-                            );
-                            If(
-                                ThisRecord.Status = "RemoveRequest",
                                 If(
                                     DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                     30,
@@ -497,29 +483,56 @@ FetchBankWisePOSReport As screen:
                                         dteToDate.SelectedDate,
                                         TimeUnit.Days
                                     ) + 1
-                                );
-                            );
-                            If(ThisRecord.Status="ReDeployed",
-                            30
+                                ),
+                                ThisRecord.Status = "RemovalRequest",
+                                If(
+                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                    30,
+                                    DateDiff(
+                                        ThisRecord.deployDate,
+                                        dteToDate.SelectedDate,
+                                        TimeUnit.Days
+                                    ) + 1
+                                ),
+                                If(
+                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure",
+                                    30
+                                )
                             );
                         ),
                         RentalFee: Text(900),
                         FinalAmt: Text(
-                            If(
+                             If(
                                 ThisRecord.Status = "Retrieval",
-                                DateDiff(
+                                ((DateDiff(
                                     dteFromDate.SelectedDate,
                                     ThisRecord.deployDate,
                                     TimeUnit.Days
-                                ) + 1 * 900
-                            );
-                            If(
+                                ) + 1)/30)*900,
                                 ThisRecord.Status = "NewDeployed",
-                                DateDiff(
-                                    ThisRecord.deployDate,
-                                    dteToDate.SelectedDate,
-                                    TimeUnit.Days
-                                ) + 1 * 900
+                                If(
+                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                    30/30*900,
+                                    ((DateDiff(
+                                        ThisRecord.deployDate,
+                                        dteToDate.SelectedDate,
+                                        TimeUnit.Days
+                                    ) + 1)/30)*900
+                                ),
+                                ThisRecord.Status = "RemovalRequest",
+                                If(
+                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                    30/30*900,
+                                    ((DateDiff(
+                                        ThisRecord.deployDate,
+                                        dteToDate.SelectedDate,
+                                        TimeUnit.Days
+                                    ) + 1)/30)*900
+                                ),
+                                If(
+                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure",
+                                    30/30*900
+                                )
                             );
                         )
                     }
