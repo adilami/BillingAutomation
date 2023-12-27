@@ -401,7 +401,7 @@ FetchBankWisePOSReport As screen:
                         District: (Value.district),
                         TID: Text(Value.idTerminal),
                         MID: Text(Value.idMerchant),
-                        SerialNumber: Text(Value.serialKey),
+                        SerialNumber: Text(Value.serialNumber),
                         TerminalType: Text(Value.terminalType),
                         Ownership: Text(Value.ownership),
                         Status: Text(Value.teminalStatus)
