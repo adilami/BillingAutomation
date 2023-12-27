@@ -489,25 +489,25 @@ FetchBankWisePOSReport As screen:
                                                 dteToDate.SelectedDate,
                                                 TimeUnit.Days
                                             ) + 1,
-                                            30
+                                            txtNumberOfDays.Text,
+                                            If(
+                                                ThisRecord.Status = "RemovalRequest",
+                                                If(
+                                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                    Value(txtNumberOfDays.Text),
+                                                    DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1,
+                                                    txtNumberOfDays.Text
+                                                ),
+                                                If(
+                                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                                    Value(txtNumberOfDays.Text)
+                                                );
+                                            )
                                         )
-                                    );
-                                    If(
-                                        ThisRecord.Status = "RemovalRequest",
-                                        If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            Value(txtNumberOfDays.Text),
-                                            DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1
-                                        ),
-                                        30
-                                    );
-                                    If(
-                                        ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
-                                        Value(txtNumberOfDays.Text)
                                     );
                                 ),
                                 RentalFee: Text(900),
@@ -518,35 +518,35 @@ FetchBankWisePOSReport As screen:
                                             dteFromDate.SelectedDate,
                                             ThisRecord.deployDate,
                                             TimeUnit.Days
-                                        ) + 1) / Value(txtNumberOfDays.Text)) * 900
-                                    );
-                                    If(
-                                        ThisRecord.Status = "NewDeployed",
+                                        ) + 1) / Value(txtNumberOfDays.Text)) * 900,
                                         If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
-                                            ((DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1) / Value(txtNumberOfDays.Text)) * 900
+                                            ThisRecord.Status = "NewDeployed",
+                                            If(
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
+                                                ((DateDiff(
+                                                    ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
+                                                    TimeUnit.Days
+                                                ) + 1) / Value(txtNumberOfDays.Text)) * 900
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "RemovalRequest",
+                                                If(
+                                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                    Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
+                                                    ((DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) / Value(txtNumberOfDays.Text)) * 900,
+                                                    If(
+                                                        ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                                        Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900
+                                                    );
+                                                )
+                                            );
                                         )
-                                    );
-                                    If(
-                                        ThisRecord.Status = "RemovalRequest",
-                                        If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
-                                            ((DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1) / Value(txtNumberOfDays.Text)) * 900
-                                        )
-                                    );
-                                    If(
-                                        ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
-                                        Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900
                                     );
                                 )
                             }
