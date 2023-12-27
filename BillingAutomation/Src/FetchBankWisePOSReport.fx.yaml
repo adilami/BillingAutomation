@@ -495,7 +495,7 @@ FetchBankWisePOSReport As screen:
                                     ) + 1
                                 ),
                                 If(
-                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure",
+                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status="ReplacementRequested",
                                     30
                                 )
                             );
@@ -530,7 +530,7 @@ FetchBankWisePOSReport As screen:
                                     ) + 1)/30)*900
                                 ),
                                 If(
-                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure",
+                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status="ReplacementRequested",
                                     30/30*900
                                 )
                             );
