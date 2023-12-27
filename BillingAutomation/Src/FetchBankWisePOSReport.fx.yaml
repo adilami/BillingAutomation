@@ -333,7 +333,7 @@ FetchBankWisePOSReport As screen:
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
         OnSelect: |-
-            =If(drpBankName.SelectedText.BankName="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:true}))
+            =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:true}))
         X: =7
         Y: =603
         ZIndex: =3
