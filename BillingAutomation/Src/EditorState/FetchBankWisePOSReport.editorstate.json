@@ -3144,7 +3144,7 @@
       "MetaDataIDKey": "",
       "Name": "lblBankNameContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4085,7 +4085,7 @@
       "MetaDataIDKey": "",
       "Name": "lblDateContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6810,7 +6810,7 @@
       "MetaDataIDKey": "",
       "Name": "lblMerchantNameContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
