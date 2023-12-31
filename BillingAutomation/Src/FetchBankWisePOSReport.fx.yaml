@@ -479,7 +479,7 @@ FetchBankWisePOSReport As screen:
                                 Ownership: Text(ThisRecord.Ownership),
                                 Status: Text(ThisRecord.Status),
                                 DaysRun: Text(
-                                    If(
+                                   If(
                                         ThisRecord.Status = "Retrieval",
                                         DateDiff(
                                             dteFromDate.SelectedDate,
@@ -503,7 +503,12 @@ FetchBankWisePOSReport As screen:
                                                     TimeUnit.Days
                                                 ) + 1
                                             )
-                                        ))
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            Value(txtNumberOfDays.Text)
+                                        )
+                                    );
                                 ),
                                 RentalFee: Text(900),
                                 FinalAmt: Text(
@@ -517,7 +522,7 @@ FetchBankWisePOSReport As screen:
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900,
+                                            Value(txtNumberOfDays.Text),
                                             If(
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
@@ -531,7 +536,12 @@ FetchBankWisePOSReport As screen:
                                                     TimeUnit.Days
                                                 ) + 1)/Value(txtNumberOfDays.Text)*900
                                             )
-                                        ));
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900
+                                        )
+                                    );
                                 )
                             }
                         )
