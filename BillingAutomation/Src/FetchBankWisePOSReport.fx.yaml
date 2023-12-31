@@ -928,7 +928,7 @@ FetchBankWisePOSReport As screen:
 
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
-        OnSelect: |
+        OnSelect: |-
             =ClearCollect(
                 colExportToExcel,
                 Filter(
@@ -940,6 +940,7 @@ FetchBankWisePOSReport As screen:
                 JSON(colExportToExcel),
                 drpBankName.SelectedText.Value
             );
+            Notify("Exported to excel successfully!!!", NotificationType.Success);
         Text: ="Export to Excel"
         X: =347
         Y: =692
