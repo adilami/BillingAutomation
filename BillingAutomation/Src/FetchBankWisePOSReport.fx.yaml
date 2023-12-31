@@ -23,7 +23,7 @@ FetchBankWisePOSReport As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            Width: =2500
+            Width: =2700
             ZIndex: =1
 
             lblDate As label:
@@ -173,9 +173,18 @@ FetchBankWisePOSReport As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =20
-                Text: ="FinalAmt"
+                Text: ="Cash Adv"
                 Width: =140
                 ZIndex: =14
+
+            lblFinalAmt_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =20
+                Text: ="FinalAmt"
+                Width: =140
+                ZIndex: =15
 
         "galBankWisePOSDetail As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -189,7 +198,7 @@ FetchBankWisePOSReport As screen:
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =104
-            Width: =2500
+            Width: =2700
             ZIndex: =2
 
             lblBankNameContent As label:
@@ -317,8 +326,8 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.FinalAmt
                 Width: =147
-                X: =2352
-                Y: =24
+                X: =2553
+                Y: =33
                 ZIndex: =14
 
             lblAddressContent As label:
@@ -329,6 +338,16 @@ FetchBankWisePOSReport As screen:
                 X: =591
                 Y: =15
                 ZIndex: =15
+
+            lblDaysRunContent_1 As label:
+                Align: =Align.Center
+                Height: =46
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.
+                Width: =147
+                X: =2364
+                Y: =24
+                ZIndex: =16
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
@@ -397,7 +416,9 @@ FetchBankWisePOSReport As screen:
                                 SerialNumber: Text(Value.serialKey),
                                 TerminalType: Text(Value.terminalType),
                                 Ownership: Text(Value.ownership),
-                                Status: Text(Value.deploymentStatus)
+                                Status: Text(Value.deploymentStatus),
+                                CashAdvance:If(Value.cashAdvance=true, "True", "false"),
+                                PinChange: Text(Value.pinChange=true, "True", "False")
                             }
                         )
                     );
@@ -416,7 +437,9 @@ FetchBankWisePOSReport As screen:
                                 SerialNumber: Text(Value.serialNumber),
                                 TerminalType: Text(Value.terminalType),
                                 Ownership: Text(Value.ownership),
-                                Status: Text(Value.teminalStatus)
+                                Status: Text(Value.teminalStatus),
+                                CashAdvance:If(Value.cashAdvance=true, "True", "false"),
+                                PinChange: Text(Value.pinChange=true, "True", "False")
                             }
                         )
                     );
@@ -436,6 +459,8 @@ FetchBankWisePOSReport As screen:
                                 TerminalType: Text(ThisRecord.TerminalType),
                                 Ownership: Text(ThisRecord.Ownership),
                                 Status: Text(ThisRecord.Status),
+                                CashAdvance:Text(ThisRecord.CashAdvance),
+                                PinChange:Text(ThisRecord.PinChange),
                                 DaysRun: Text(
                                     If(
                                         ThisRecord.Status = "Retrieval",
@@ -478,6 +503,8 @@ FetchBankWisePOSReport As screen:
                                 TerminalType: Text(ThisRecord.TerminalType),
                                 Ownership: Text(ThisRecord.Ownership),
                                 Status: Text(ThisRecord.Status),
+                                CashAdvance:Text(ThisRecord.CashAdvance),
+                                PinChange:Text(ThisRecord.PinChange),
                                 DaysRun: Text(
                                    If(
                                         ThisRecord.Status = "Retrieval",
