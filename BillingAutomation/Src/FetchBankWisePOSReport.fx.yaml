@@ -362,10 +362,10 @@ FetchBankWisePOSReport As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =If(ThisItem.CashAdvance,"True", "False")
+                Text: =If(ThisItem.PinChange,"True", "False")
                 Width: =147
-                X: =974
-                Y: =58
+                X: =2537
+                Y: =25
                 ZIndex: =17
 
     drpBankName As dropdown:
