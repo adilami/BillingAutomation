@@ -824,8 +824,9 @@ FetchBankWisePOSReport As screen:
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             30,
                                             DateDiff(
+                                                dteFromDate.SelectedDate,
                                                 ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
+                                                
                                                 TimeUnit.Days
                                             ) + 1
                                         ),
@@ -849,8 +850,9 @@ FetchBankWisePOSReport As screen:
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             30 / 30 * 900,
                                             (DateDiff(
+                                                dteFromDate.SelectedDate,
                                                 ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
+                                                
                                                 TimeUnit.Days
                                             ) + 1) / 30 * 900
                                         ),
