@@ -933,7 +933,7 @@ FetchBankWisePOSReport As screen:
                 colExportToExcel,
                 Filter(
                     colAllData,
-                    BankName = drpBankName.SelectedText.Value
+                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate
                 )
             );
             ExportToExcel.Run(
