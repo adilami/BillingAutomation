@@ -522,7 +522,7 @@ FetchBankWisePOSReport As screen:
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            Value(txtNumberOfDays.Text),
+                                            Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900,
                                             If(
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
@@ -928,9 +928,18 @@ FetchBankWisePOSReport As screen:
 
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
-        OnSelect: |-
-            =ClearCollect(colExportToExcel,Filter(colAllData,BankName=drpBankName.SelectedText.Value));
-            ExportToExcel.Run(JSON(colExportToExcel),drpBankName.SelectedText.Value);
+        OnSelect: |
+            =ClearCollect(
+                colExportToExcel,
+                Filter(
+                    colAllData,
+                    BankName = drpBankName.SelectedText.Value
+                )
+            );
+            ExportToExcel.Run(
+                JSON(colExportToExcel),
+                drpBankName.SelectedText.Value
+            );
         Text: ="Export to Excel"
         X: =347
         Y: =692
