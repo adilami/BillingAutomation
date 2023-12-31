@@ -496,12 +496,12 @@ FetchBankWisePOSReport As screen:
                                                     dteToDate.SelectedDate,
                                                     TimeUnit.Days
                                                 ) + 1) > Value(txtNumberOfDays.Text),
-                                                Value(txtNumberOfDays.Text)/Value(txtNumberOfDays.Text)*900,
+                                                Value(txtNumberOfDays.Text),
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
                                                     dteToDate.SelectedDate,
                                                     TimeUnit.Days
-                                                ) + 1)/Value(txtNumberOfDays.Text)*900
+                                                ) + 1)
                                             )
                                         ),
                                         If(
