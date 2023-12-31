@@ -212,11 +212,11 @@ FetchBankWisePOSReport As screen:
 
             lblBankNameContent As label:
                 Align: =Align.Center
-                Height: =46
+                Height: =47
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.BankName
-                Width: =192
-                X: =120
+                Width: =206
+                X: =102
                 Y: =24
                 ZIndex: =1
 
@@ -246,7 +246,7 @@ FetchBankWisePOSReport As screen:
                 Text: =ThisItem.District
                 Width: =154
                 X: =737
-                Y: =15
+                Y: =21
                 ZIndex: =5
 
             lblTIDContent As label:
@@ -255,8 +255,8 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.TID
                 Width: =147
-                X: =881
-                Y: =24
+                X: =875
+                Y: =30
                 ZIndex: =6
 
             lblMIDContent As label:
@@ -265,8 +265,8 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MID
                 Width: =184
-                X: =1021
-                Y: =24
+                X: =1015
+                Y: =30
                 ZIndex: =7
 
             lblSerialNoContent As label:
@@ -276,7 +276,7 @@ FetchBankWisePOSReport As screen:
                 Text: =ThisItem.SerialNo
                 Width: =195
                 X: =1205
-                Y: =24
+                Y: =30
                 ZIndex: =8
 
             lblTerminalTypeContent As label:
@@ -345,8 +345,8 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Address
                 Width: =164
-                X: =576
-                Y: =15
+                X: =582
+                Y: =21
                 ZIndex: =15
 
             lblDaysRunContent_1 As label:
