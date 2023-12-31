@@ -364,7 +364,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =If(ThisItem.PinChange,"True", "False")
                 Width: =147
-                X: =2537
+                X: =2544
                 Y: =25
                 ZIndex: =17
 
