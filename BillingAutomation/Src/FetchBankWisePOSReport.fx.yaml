@@ -802,7 +802,7 @@ FetchBankWisePOSReport As screen:
                                 Ownership: Text(ThisRecord.Ownership),
                                 Status: Text(ThisRecord.Status),
                                 DaysRun: Text(
-                                    If(
+                                      If(
                                         ThisRecord.Status = "Retrieval",
                                         DateDiff(
                                             dteFromDate.SelectedDate,
@@ -815,14 +815,14 @@ FetchBankWisePOSReport As screen:
                                             30,
                                             If(
                                                 (DateDiff(
-                                                    dteFromDate.SelectedDate,
                                                     ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
                                                     TimeUnit.Days
                                                 ) + 1) > 30,
                                                 30,
                                                 DateDiff(
-                                                    dteFromDate.SelectedDate,
                                                     ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
                                                     TimeUnit.Days
                                                 ) + 1
                                             )
@@ -842,22 +842,22 @@ FetchBankWisePOSReport As screen:
                                             ThisRecord.deployDate,
                                             TimeUnit.Days
                                         ) + 1) / 30 * 900,
-                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30 / 30 * 900,
+                                            30/30*900,
                                             If(
                                                 (DateDiff(
-                                                    dteFromDate.SelectedDate,
                                                     ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
                                                     TimeUnit.Days
                                                 ) + 1) > 30,
-                                                30 / 30 * 900,
+                                                30/30*900,
                                                 (DateDiff(
-                                                    dteFromDate.SelectedDate,
                                                     ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
                                                     TimeUnit.Days
-                                                ) + 1) / 30 * 900
+                                                ) + 1)/30*900
                                             )
                                         ),
                                         If(
