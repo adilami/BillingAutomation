@@ -294,8 +294,8 @@ FetchBankWisePOSReport As screen:
                 Height: =46
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Ownership
-                Width: =147
-                X: =1650
+                Width: =167
+                X: =1630
                 Y: =24
                 ZIndex: =10
 
