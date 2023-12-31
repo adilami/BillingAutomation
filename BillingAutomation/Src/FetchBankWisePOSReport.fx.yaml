@@ -819,25 +819,19 @@ FetchBankWisePOSReport As screen:
                                             ThisRecord.deployDate,
                                             TimeUnit.Days
                                         ) + 1,
-                                        ThisRecord.Status = "NewDeployed",
+                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             30,
-                                            DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1
-                                        ),
-                                        ThisRecord.Status = "RemovalRequest",
-                                        If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30,
-                                            DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1
+                                            If(
+                                                DateValue(ThisRecord.deployDate) - dteToDate.SelectedDate > 30,
+                                                30,
+                                                DateDiff(
+                                                    ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
+                                                    TimeUnit.Days
+                                                ) + 1
+                                            )
                                         ),
                                         If(
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
