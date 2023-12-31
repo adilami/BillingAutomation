@@ -23,7 +23,7 @@ FetchBankWisePOSReport As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            Width: =2700
+            Width: =2900
             ZIndex: =1
 
             lblDate As label:
@@ -182,9 +182,18 @@ FetchBankWisePOSReport As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =20
+                Text: ="Pin Change"
+                Width: =160
+                ZIndex: =15
+
+            lblFinalAmt_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =20
                 Text: ="FinalAmt"
                 Width: =140
-                ZIndex: =15
+                ZIndex: =16
 
         "galBankWisePOSDetail As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -198,7 +207,7 @@ FetchBankWisePOSReport As screen:
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =104
-            Width: =2700
+            Width: =2900
             ZIndex: =2
 
             lblBankNameContent As label:
@@ -326,8 +335,8 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.FinalAmt
                 Width: =147
-                X: =2553
-                Y: =33
+                X: =2746
+                Y: =24
                 ZIndex: =14
 
             lblAddressContent As label:
@@ -343,11 +352,21 @@ FetchBankWisePOSReport As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.CashAdvance
+                Text: =If(ThisItem.CashAdvance,"True", "False")
                 Width: =147
                 X: =2364
                 Y: =24
                 ZIndex: =16
+
+            lblDaysRunContent_2 As label:
+                Align: =Align.Center
+                Height: =46
+                OnSelect: =Select(Parent)
+                Text: =If(ThisItem.CashAdvance,"True", "False")
+                Width: =147
+                X: =974
+                Y: =58
+                ZIndex: =17
 
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
@@ -559,32 +578,34 @@ FetchBankWisePOSReport As screen:
                                 ),
                                 RentalFee: Text(900),
                                 FinalAmt: Text(
-                                    If(ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
-                                    0,
                                     If(
-                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                        ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                        0,
                                         If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                             If(
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) > Value(txtNumberOfDays.Text),
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                                 Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) / Value(txtNumberOfDays.Text) * 900
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > Value(txtNumberOfDays.Text),
+                                                    Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900,
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) / Value(txtNumberOfDays.Text) * 900
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                                Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900
                                             )
-                                        ),
-                                        If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
-                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * 900
                                         )
-                                    ));
+                                    );
                                 )
                             }
                         )
@@ -623,7 +644,17 @@ FetchBankWisePOSReport As screen:
                                 SerialNumber: Text(Value.serialKey),
                                 TerminalType: Text(Value.terminalType),
                                 Ownership: Text(Value.ownership),
-                                Status: Text(Value.deploymentStatus)
+                                Status: Text(Value.deploymentStatus),
+                                CashAdvance: If(
+                                    Value.cashAdvance = true,
+                                    "True",
+                                    "false"
+                                ),
+                                PinChange: Text(
+                                    Value.pinChange = true,
+                                    "True",
+                                    "False"
+                                )
                             }
                         )
                     );
@@ -642,7 +673,17 @@ FetchBankWisePOSReport As screen:
                                 SerialNumber: Text(Value.serialNumber),
                                 TerminalType: Text(Value.terminalType),
                                 Ownership: Text(Value.ownership),
-                                Status: Text(Value.teminalStatus)
+                                Status: Text(Value.teminalStatus),
+                                CashAdvance: If(
+                                    Value.cashAdvance = true,
+                                    "True",
+                                    "false"
+                                ),
+                                PinChange: Text(
+                                    Value.pinChange = true,
+                                    "True",
+                                    "False"
+                                )
                             }
                         )
                     );
@@ -727,7 +768,13 @@ FetchBankWisePOSReport As screen:
                                     );
                                 ),
                                 RentalFee: Text(900),
-                                FinalAmt: Text(900)
+                                FinalAmt: Text(
+                                    If(
+                                        ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                        0,
+                                        900
+                                    )
+                                )
                             }
                         )
                     );
@@ -763,7 +810,17 @@ FetchBankWisePOSReport As screen:
                                 SerialNumber: Text(Value.serialKey),
                                 TerminalType: Text(Value.terminalType),
                                 Ownership: Text(Value.ownership),
-                                Status: Text(Value.deploymentStatus)
+                                Status: Text(Value.deploymentStatus),
+                                CashAdvance: If(
+                                    Value.cashAdvance = true,
+                                    "True",
+                                    "false"
+                                ),
+                                PinChange: Text(
+                                    Value.pinChange = true,
+                                    "True",
+                                    "False"
+                                )
                             }
                         )
                     );
@@ -782,7 +839,17 @@ FetchBankWisePOSReport As screen:
                                 SerialNumber: Text(Value.serialNumber),
                                 TerminalType: Text(Value.terminalType),
                                 Ownership: Text(Value.ownership),
-                                Status: Text(Value.teminalStatus)
+                                Status: Text(Value.teminalStatus),
+                                CashAdvance: If(
+                                    Value.cashAdvance = true,
+                                    "True",
+                                    "false"
+                                ),
+                                PinChange: Text(
+                                    Value.pinChange = true,
+                                    "True",
+                                    "False"
+                                )
                             }
                         )
                     );
@@ -815,15 +882,19 @@ FetchBankWisePOSReport As screen:
                                 ),
                                 RentalFee: Text(900),
                                 FinalAmt: Text(
-                                    (If(
-                                        ThisRecord.Status = "Retrieval",
-                                        DateDiff(
-                                            dteFromDate.SelectedDate,
-                                            ThisRecord.deployDate,
-                                            TimeUnit.Days
-                                        ) + 1,
-                                        30
-                                    ) / 30) * 900
+                                    If(
+                                        ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                        0,
+                                        (If(
+                                            ThisRecord.Status = "Retrieval",
+                                            DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1,
+                                            30
+                                        ) / 30) * 900
+                                    );
                                 )
                             }
                         )
@@ -879,33 +950,37 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(900),
                                 FinalAmt: Text(
                                     If(
-                                        ThisRecord.Status = "Retrieval",
-                                        (DateDiff(
-                                            dteFromDate.SelectedDate,
-                                            ThisRecord.deployDate,
-                                            TimeUnit.Days
-                                        ) + 1) / 30 * 900,
-                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                        ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                        0,
                                         If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30 / 30 * 900,
+                                            ThisRecord.Status = "Retrieval",
+                                            (DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1) / 30 * 900,
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                             If(
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) > 30,
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                                 30 / 30 * 900,
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) / 30 * 900
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > 30,
+                                                    30 / 30 * 900,
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) / 30 * 900
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                                30 / 30 * 900
                                             )
-                                        ),
-                                        If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
-                                            30 / 30 * 900
                                         )
                                     );
                                 )
