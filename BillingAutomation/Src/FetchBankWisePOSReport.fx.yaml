@@ -182,7 +182,7 @@ FetchBankWisePOSReport As screen:
             DelayItemLoading: =true
             FillPortions: =0
             Height: =400
-            Items: =Filter(colAllData, BankName = drpBankName.SelectedText.Value)
+            Items: =Filter(colAllData, BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate)
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320
@@ -823,15 +823,11 @@ FetchBankWisePOSReport As screen:
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             30,
-                                            If(
-                                                DateValue(ThisRecord.deployDate) - dteToDate.SelectedDate > 30,
-                                                30,
-                                                DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1
-                                            )
+                                            DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1
                                         ),
                                         If(
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
@@ -847,24 +843,24 @@ FetchBankWisePOSReport As screen:
                                             dteFromDate.SelectedDate,
                                             ThisRecord.deployDate,
                                             TimeUnit.Days
-                                        ) + 1)/30*900,
+                                        ) + 1) / 30 * 900,
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30/30*900,
+                                            30 / 30 * 900,
                                             If(
-                                                DateValue(ThisRecord.deployDate) - dteToDate.SelectedDate > 30,
-                                                30/30*900,
-                                                DateDiff(
-                                                    ThisRecord.deployDate,
+                                                DateValue(ThisRecord.deployDate) > dteToDate.SelectedDate,
+                                                0,
+                                                (DateDiff(
                                                     dteToDate.SelectedDate,
+                                                    ThisRecord.deployDate,
                                                     TimeUnit.Days
-                                                ) + 1
+                                                ) + 1) / 30 * 900
                                             )
                                         ),
                                         If(
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
-                                            30/30*900
+                                            30 / 30 * 900
                                         )
                                     );
                                 )
