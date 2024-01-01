@@ -950,36 +950,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.glbMatchedRetValue"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.glbMatchedRetValue",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "glbMatchedRetValue",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "FetchBankWisePOSReport.locDateFrom"
                 }
               ],
