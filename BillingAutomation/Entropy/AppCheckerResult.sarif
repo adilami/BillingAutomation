@@ -950,17 +950,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.glbMatchedValue"
+                  "fullyQualifiedName": "App.glbMatchedRetValue"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.glbMatchedValue",
+                  "fullyQualifiedName": "App.glbMatchedRetValue",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "glbMatchedValue",
+                "member": "glbMatchedRetValue",
                 "module": "App",
                 "type": "App"
               }

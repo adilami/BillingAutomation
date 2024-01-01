@@ -854,7 +854,15 @@ FetchBankWisePOSReport As screen:
                             }
                         )
                     );
-                    Set(glbMatchedValue,LookUp(tbl_mst_Rates,BankName=drpBankName.SelectedText.Value && First(colRetBankData).TerminalType='Terminal Type' &&  Property=First(colRetBankData).Ownership));
+                    Set(
+                        glbMatchedRetValue,
+                        ForAll(
+                            colRetBankData,
+                        LookUp(
+                            tbl_mst_Rates,
+                            BankName = drpBankName.SelectedText.Value && TerminalType = 'Terminal Type' && Property = Ownership
+                        ))
+                    );
                     ClearCollect(
                         colALLRET,
                         ForAll(
