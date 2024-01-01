@@ -856,7 +856,7 @@ FetchBankWisePOSReport As screen:
                     );
                     ClearCollect(
                         colMatchedRetValue,
-                        tbl_mst_Rates
+                        Filter(tbl_mst_Rates,BankName=drpBankName.SelectedText.Value)l
                     );
                     ClearCollect(
                         colALLRET,
