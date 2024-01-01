@@ -860,7 +860,8 @@ FetchBankWisePOSReport As screen:
                             colRetBankData,
                         LookUp(
                             tbl_mst_Rates,
-                            BankName = drpBankName.SelectedText.Value
+                            BankName = drpBankName.SelectedText.Value,
+                            Rate
                         ))
                     );
                     ClearCollect(
