@@ -1,0 +1,101 @@
+[
+  {
+    "DisplayName": "tbl_mst_Rates (Views)",
+    "Name": "_cr69c_tbl_mst_rate_views",
+    "RelatedEntityName": "tbl_mst_Rates",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "076df8c9-f4c7-426d-888c-1e11bc707c8f": "Active tbl_mst_Rates",
+      "304a1d36-b796-40d3-8110-de255dd855fc": "Inactive tbl_mst_Rates",
+      "54d72f3c-7d97-43f1-a0c7-cadf0e75fb05": "tbl_mst_Rate Advanced Find View",
+      "a8292963-cb31-44e6-9b40-20f3d0d027fb": "tbl_mst_Rate Lookup View",
+      "b92caf3b-55ed-4382-9911-692150180bff": "tbl_mst_Rate Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (tbl_mst_Rates)",
+    "Name": "cr69c_tbl_mst_rate_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tbl_mst_Rates"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tbl_mst_Rates",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tbl_mst_Rates)",
+    "Name": "cr69c_tbl_mst_rate_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tbl_mst_Rates"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tbl_mst_Rates",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_tbl_mst_rates",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_tbl_mst_rate",
+    "Name": "tbl_mst_Rates",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_bankname": "BankName",
+      "cr69c_cashadvance": "Cash Advance",
+      "cr69c_id": "Id",
+      "cr69c_property": "Property",
+      "cr69c_rate": "Rate",
+      "cr69c_tbl_mst_rate_AsyncOperations": "System Jobs",
+      "cr69c_tbl_mst_rate_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_tbl_mst_rate_DuplicateBaseRecord": "Duplicate Records (cr69c_tbl_mst_rate_DuplicateBaseRecord)",
+      "cr69c_tbl_mst_rate_DuplicateMatchingRecord": "Duplicate Records (cr69c_tbl_mst_rate_DuplicateMatchingRecord)",
+      "cr69c_tbl_mst_rate_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_tbl_mst_rate_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_tbl_mst_rate_ProcessSession": "Process Sessions",
+      "cr69c_tbl_mst_rate_SyncErrors": "Sync Errors",
+      "cr69c_tbl_mst_rateid": "tbl_mst_Rate",
+      "cr69c_terminaltype": "Terminal Type",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tbl_mst_Rates",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

@@ -102,6 +102,13 @@
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
       }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_mst_rate_forms",
+      "Namespace": "tbl_mst_Rates (Forms)",
+      "Values": {
+        "Information": "1b648a5b-6687-4b05-91af-13d9563285c1"
+      }
     }
   ]
 }
