@@ -857,11 +857,10 @@ FetchBankWisePOSReport As screen:
                     ClearCollect(
                         colMatchedRetValue,
                         ForAll(
-                            colRetBankData,
-                        LookUp(
                             tbl_mst_Rates,
-                            BankName = drpBankName.SelectedText.Value,
-                            Rate
+                        LookUp(
+                            colRetBankData,
+                            Property=ThisRecord.Ownership && BankName=drpBankName.SelectedText.Value && 'Terminal Type' = ThisRecord.TerminalType
                         ))
                     );
                     ClearCollect(
