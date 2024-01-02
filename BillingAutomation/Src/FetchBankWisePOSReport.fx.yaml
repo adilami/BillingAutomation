@@ -891,7 +891,7 @@ FetchBankWisePOSReport As screen:
                                         30
                                     );
                                 ),
-                                RentalFee: Text(LookUp(colMatchedRetValue)),
+                                RentalFee: Text(900),
                                 FinalAmt: Text(
                                     If(
                                         ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
