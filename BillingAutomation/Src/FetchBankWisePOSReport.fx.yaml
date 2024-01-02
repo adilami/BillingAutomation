@@ -1105,3 +1105,9 @@ FetchBankWisePOSReport As screen:
         Y: =563
         ZIndex: =14
 
+    "'Generate Invoice' As button":
+        Text: ="Button"
+        X: =647
+        Y: =725
+        ZIndex: =15
+

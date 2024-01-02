@@ -24,6 +24,7 @@
     "galleryTemplate2": 24,
     "galleryTemplate3": 64,
     "galRetrieveTerminal": 68,
+    "Generate Invoice": 86,
     "Host": 3,
     "icoSeperator": 57,
     "Invoice": 80,
@@ -89,7 +90,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/01/2024 11:47:39",
+  "HeaderLastSavedDateTimeUTC": "01/02/2024 05:13:58",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0dbf1667-e674-4c74-bd45-871465b8008a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -204,6 +205,7 @@
     "galleryTemplate2": {},
     "galleryTemplate3": {},
     "galRetrieveTerminal": {},
+    "Generate Invoice": {},
     "Host": {},
     "icoSeperator": {},
     "Invoice": {},
@@ -270,8 +272,8 @@
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
-    "AddMediaButton2": 76,
-    "AddMediaWithImage2": 77,
+    "AddMediaButton2": 77,
+    "AddMediaWithImage2": 78,
     "App": 0,
     "BankWisePosReport": 0,
     "btnExportToExcel": 73,
@@ -292,12 +294,13 @@
     "galleryTemplate2": 46,
     "galleryTemplate3": 11,
     "galRetrieveTerminal": 15,
+    "Generate Invoice": 74,
     "Host": 0,
     "icoSeperator": 4,
     "Invoice": 0,
     "Label3": 71,
-    "Label4": 74,
-    "Label5": 78,
+    "Label4": 75,
+    "Label5": 79,
     "lblAddress": 32,
     "lblAddressContent": 49,
     "lblBankName": 5,
@@ -353,7 +356,7 @@
     "recHeaderMain": 0,
     "recSubHeader": 3,
     "txtNumberOfDays": 68,
-    "UploadedImage2": 75
+    "UploadedImage2": 76
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
@@ -361,7 +364,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.7802844,
+    "AnalysisLoadTime": 0.5971522,
     "ControlCount": {
       "addMedia": 1,
       "button": 4,
@@ -378,7 +381,7 @@
       "screen": 3,
       "text": 1
     },
-    "DeserializationLoadTime": 1.9378729
+    "DeserializationLoadTime": 1.6899272
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
