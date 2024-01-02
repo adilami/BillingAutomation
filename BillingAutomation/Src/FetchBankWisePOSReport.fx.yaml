@@ -855,16 +855,6 @@ FetchBankWisePOSReport As screen:
                         )
                     );
                     ClearCollect(
-                        colMatchedRetValue,
-                        Filter(
-                            tbl_mst_Rates,
-                            BankName = drpBankName.SelectedText.Value,
-                            Rate,
-                            'Terminal Type',
-                            'Cash Advance'
-                        )
-                    );
-                    ClearCollect(
                         colALLRET,
                         ForAll(
                             colRetBankData,
