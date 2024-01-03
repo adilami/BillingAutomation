@@ -14,87 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FetchBankWisePOSReport.Label3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FetchBankWisePOSReport.Label3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 27,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "CountRows(colExportToExcel)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "FetchBankWisePOSReport",
-                "type": "FetchBankWisePOSReport.Label3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CountRows"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "FetchBankWisePOSReport.Label3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FetchBankWisePOSReport.Label3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 10,
-                  "snippet": {
-                    "text": "colExportToExcel"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "FetchBankWisePOSReport",
-                "type": "FetchBankWisePOSReport.Label3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Table",
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect"
                 }
               ],
@@ -104,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 168,
-                  "charOffset": 0,
+                  "charLength": 83,
+                  "charOffset": 170,
                   "snippet": {
-                    "text": "ClearCollect(\n    colExportToExcel,\n    Filter(\n        colAllData,\n        BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate\n    )\n)"
+                    "text": "ExportToExcel.Run(\n    JSON(colExportToExcel),\n    drpBankName.SelectedText.Value\n)"
                   }
                 }
               },
@@ -120,52 +39,16 @@
           ],
           "message": {
             "arguments": [
-              "ClearCollect"
+              "Run",
+              "ExportToExcel"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleId": "app-ErrUnknownNamespaceFunction",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 18,
-                  "snippet": {
-                    "text": "colExportToExcel"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "FetchBankWisePOSReport",
-                "type": "FetchBankWisePOSReport.btnExportToExcel"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadType",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -205,7 +88,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -319,7 +202,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -436,7 +319,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -553,7 +436,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -982,10 +865,10 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrInvalidArgs-Func",
+              "id": "app-ErrUnknownNamespaceFunction",
               "messageStrings": {
                 "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
+                  "text": "'{0}' is an unknown or unsupported function in namespace '{1}'."
                 }
               },
               "properties": {
@@ -996,10 +879,10 @@
               }
             },
             {
-              "id": "app-ErrBadType-ExpectedType-ProvidedType",
+              "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {
