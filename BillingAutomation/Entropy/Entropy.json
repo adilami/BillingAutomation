@@ -90,14 +90,14 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/03/2024 06:31:40",
+  "HeaderLastSavedDateTimeUTC": "01/03/2024 08:22:15",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "2ae5e1c9-3ce7-4466-a574-abe7a0d17d6c": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-7d57fa3d-af20-4420-a08b-460974730b58\"",
-    "3e1d4eb3-bd94-4351-9773-1b91cc32356d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99-f61c-434b-b4f6-63e91309287f\"",
     "7ab0a09c-7ab4-4adc-a26c-ea6c857786cb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/1ee7bf6102794f33bf1339e11838512b-5646d8ad365c4aa8\"",
+    "8c95be3b-4db7-489e-8233-023b2d03b1c9": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-7d57fa3d-af20-4420-a08b-460974730b58\"",
     "c3ecc312-2611-489f-b7e5-6e8a6172e695": "\"/providers/microsoft.powerapps/apis/shared_commondataserviceforapps/connections/shared-commondataser-2d3d7268-4cbb-4964-8fb9-98491c449b9c\"",
-    "db8e96d3-3fc7-4733-a62c-78a9e2226569": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\""
+    "db8e96d3-3fc7-4733-a62c-78a9e2226569": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
+    "faa53561-8b8a-4acc-8e08-8addf900805a": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/6607AE99F61C434BB4F663E91309287F-5646D8AD365C4AA8\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
