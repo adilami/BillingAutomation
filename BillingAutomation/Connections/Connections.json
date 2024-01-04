@@ -72,53 +72,5 @@
       "64b10010-afd3-4a03-aea5-bd819cc037d5"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
-  },
-  "7ab0a09c-7ab4-4adc-a26c-ea6c857786cb": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "c3ecc312-2611-489f-b7e5-6e8a6172e695": {
-          "value": "shared_commondataserviceforapps"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "1ee7bf61-0279-4f33-bf13-39e11838512b"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_commondataserviceforapps": {
-          "value": "c3ecc312-2611-489f-b7e5-6e8a6172e695"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "1ee7bf61-0279-4f33-bf13-39e11838512b"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "RemoveAllRecordDataverse"
-    ],
-    "dependencies": {
-      "shared_commondataserviceforapps": "c3ecc312-2611-489f-b7e5-6e8a6172e695"
-    },
-    "dependents": [],
-    "id": "7ab0a09c-7ab4-4adc-a26c-ea6c857786cb"
-  },
-  "c3ecc312-2611-489f-b7e5-6e8a6172e695": {
-    "connectionRef": {
-      "displayName": "Microsoft Dataverse",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1673/1.0.1673.3557/commondataserviceforapps/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "7ab0a09c-7ab4-4adc-a26c-ea6c857786cb"
-    ],
-    "id": "c3ecc312-2611-489f-b7e5-6e8a6172e695"
   }
 }
