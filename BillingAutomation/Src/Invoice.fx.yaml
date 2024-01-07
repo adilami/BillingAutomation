@@ -70,10 +70,15 @@
             );
             Invoice.Run(
                 JSON(colExportToExcel),
-                drpBankName.SelectedText.Value
+                drpBankName.SelectedText.Value,
+                Value(txtRate.Text),
+                Value(Value(txtRate.Text)*13%),
+                Value(txtRate.Text),
+                dteDueDate.SelectedDate,
+                txtInvoice.Text
             );
         Text: ="Button"
-        X: =427
-        Y: =834
+        X: =189
+        Y: =569
         ZIndex: =9
 
