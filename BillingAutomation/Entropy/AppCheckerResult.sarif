@@ -374,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Invoice.txtRate.AccessibleLabel"
+                  "fullyQualifiedName": "Invoice.txtInvoice.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Invoice.txtRate.AccessibleLabel",
+                  "fullyQualifiedName": "Invoice.txtInvoice.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Invoice",
-                "type": "Invoice.txtRate"
+                "type": "Invoice.txtInvoice"
               }
             }
           ],
@@ -404,19 +404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Invoice.txtInvoice.AccessibleLabel"
+                  "fullyQualifiedName": "Invoice.txtRate.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Invoice.txtInvoice.AccessibleLabel",
+                  "fullyQualifiedName": "Invoice.txtRate.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Invoice",
-                "type": "Invoice.txtInvoice"
+                "type": "Invoice.txtRate"
               }
             }
           ],

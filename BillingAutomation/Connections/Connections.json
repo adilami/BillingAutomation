@@ -70,25 +70,11 @@
     "dependencies": {},
     "dependents": [
       "64b10010-afd3-4a03-aea5-bd819cc037d5",
-      "de413180-d313-4652-9a81-0fb71b1c74a1"
+      "a9a814fe-1343-4df3-8329-d5d7c6ad50b8"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
   },
-  "c2cf3ee7-1372-4b8b-9a43-ae502dc2bee1": {
-    "connectionRef": {
-      "displayName": "Word Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "de413180-d313-4652-9a81-0fb71b1c74a1"
-    ],
-    "id": "c2cf3ee7-1372-4b8b-9a43-ae502dc2bee1"
-  },
-  "de413180-d313-4652-9a81-0fb71b1c74a1": {
+  "a9a814fe-1343-4df3-8329-d5d7c6ad50b8": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -116,9 +102,23 @@
     ],
     "dependencies": {
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044",
-      "shared_wordonlinebusiness": "c2cf3ee7-1372-4b8b-9a43-ae502dc2bee1"
+      "shared_wordonlinebusiness": "b7418996-c120-4a3f-b855-efd4bebd1683"
     },
     "dependents": [],
-    "id": "de413180-d313-4652-9a81-0fb71b1c74a1"
+    "id": "a9a814fe-1343-4df3-8329-d5d7c6ad50b8"
+  },
+  "b7418996-c120-4a3f-b855-efd4bebd1683": {
+    "connectionRef": {
+      "displayName": "Word Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "a9a814fe-1343-4df3-8329-d5d7c6ad50b8"
+    ],
+    "id": "b7418996-c120-4a3f-b855-efd4bebd1683"
   }
 }
