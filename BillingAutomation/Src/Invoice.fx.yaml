@@ -12,7 +12,8 @@
         ZIndex: =1
 
     txtInvoice As text:
-        Default: =Text(First(InvoiceNumbers).InvoiceNo)+1
+        Default: =Text(First(InvoiceNumbers).InvoiceNo)
+        DisplayMode: =DisplayMode.Disabled
         X: =39
         Y: =88
         ZIndex: =2
@@ -61,11 +62,12 @@
 
     Button1 As button:
         OnSelect: |
-            =RemoveIf(InvoiceNumbers,true);
+            =ClearCollect(colInvoiceNo, InvoiceNumbers);
+            RemoveIf(InvoiceNumbers,true);
             Patch(
                 InvoiceNumbers,
                 Defaults(InvoiceNumbers),
-                {InvoiceNo: txtInvoice.Text}
+                {InvoiceNo: Text(First(colInvoiceNo).InvoiceNo)+1}
             );
             ClearCollect(
                 colInvoice,

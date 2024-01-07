@@ -94,7 +94,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/07/2024 12:02:50",
+  "HeaderLastSavedDateTimeUTC": "01/07/2024 12:08:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0aef46ac-fe98-49a1-b743-1b2b9daf7994": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-5646d8ad365c4aa8\"",
@@ -117,6 +117,7 @@
     "colCountedBank": 48,
     "colExportToExcel": 51,
     "colInvoice": 56,
+    "colInvoiceNo": 57,
     "colPrice": 49,
     "colRetBankData": 55,
     "colRetrieveData": 47,
@@ -126,8 +127,8 @@
     "ExportToExcel": 1,
     "Invoice": 2,
     "InvoiceNumbers": 45,
-    "InvoiceNumbers\\cr69c_invoicenumber_statecode": 22,
-    "InvoiceNumbers\\cr69c_invoicenumber_statuscode": 23,
+    "InvoiceNumbers\\cr69c_invoicenumber_statecode": 23,
+    "InvoiceNumbers\\cr69c_invoicenumber_statuscode": 22,
     "InvoiceNumbers\\default.cds_cr69c_invoicenumber_views": 33,
     "tbl_BankWisePOSReports": 40,
     "tbl_BankWisePOSReports\\cr69c_tbl_bankwiseposreport_statecode": 12,
@@ -371,7 +372,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.7713684,
+    "AnalysisLoadTime": 0.8523338,
     "ControlCount": {
       "button": 6,
       "datepicker": 5,
@@ -385,7 +386,7 @@
       "screen": 3,
       "text": 4
     },
-    "DeserializationLoadTime": 1.4354107
+    "DeserializationLoadTime": 1.5423728
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

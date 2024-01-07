@@ -62,6 +62,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_invoicenumber_forms",
+      "Namespace": "InvoiceNumbers (Forms)",
+      "Values": {
+        "Information": "58338eb1-37fe-405a-b2cc-ffcda7e358ee"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_property_forms",
       "Namespace": "tbl_Properties (Forms)",
       "Values": {
@@ -108,13 +115,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_invoicenumber_forms",
-      "Namespace": "InvoiceNumbers (Forms)",
-      "Values": {
-        "Information": "58338eb1-37fe-405a-b2cc-ffcda7e358ee"
       }
     }
   ]
