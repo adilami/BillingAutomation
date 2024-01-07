@@ -78,6 +78,7 @@
                 dteDueDate.SelectedDate,
                 Text(Value(txtRate.Text)+Value(txtRate.Text)*13%)
             );
+            Notify("Successfull",NotificationType.Success);
         Text: ="Button"
         X: =189
         Y: =569
