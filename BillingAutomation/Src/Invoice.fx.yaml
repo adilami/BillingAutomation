@@ -82,7 +82,7 @@
                 Text(txtRate.Text),
                 Text(Value(txtRate.Text) * 13%),
                 Text(txtRate.Text),
-                txtInvoice.Text,
+                Text(First(colInvoiceNo).InvoiceNo),
                 dteDueDate.SelectedDate,
                 Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%)
             );
