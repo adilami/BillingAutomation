@@ -75,7 +75,8 @@
                 Text(Value(txtRate.Text)*13%),
                 Text(txtRate.Text),
                 txtInvoice.Text,
-                dteDueDate.SelectedDate
+                dteDueDate.SelectedDate,
+                Text(Value(txtRate.Text)+Value(txtRate.Text)*13%)
             );
         Text: ="Button"
         X: =189
