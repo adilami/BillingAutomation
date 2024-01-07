@@ -12,7 +12,7 @@
         ZIndex: =1
 
     txtInvoice As text:
-        Default: ="1"
+        Default: =Text(First(InvoiceNumbers).InvoiceNo)+1
         X: =39
         Y: =88
         ZIndex: =2
@@ -60,29 +60,34 @@
         ZIndex: =8
 
     Button1 As button:
-        OnSelect: |-
-            =Patch(InvoiceNumbers,Defaults(InvoiceNumbers),
-            {
-                InvoiceNo:txtInvoice.Text
-            });
+        OnSelect: |
+            =RemoveIf(InvoiceNumbers,true);
+            Patch(
+                InvoiceNumbers,
+                Defaults(InvoiceNumbers),
+                {InvoiceNo: txtInvoice.Text}
+            );
             ClearCollect(
                 colInvoice,
                 Filter(
                     colAllData,
-                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate
+                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate
                 )
             );
             Invoice.Run(
                 JSON(colInvoice),
                 drpBankName.SelectedText.Value,
                 Text(txtRate.Text),
-                Text(Value(txtRate.Text)*13%),
+                Text(Value(txtRate.Text) * 13%),
                 Text(txtRate.Text),
                 txtInvoice.Text,
                 dteDueDate.SelectedDate,
-                Text(Value(txtRate.Text)+Value(txtRate.Text)*13%)
+                Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%)
             );
-            Notify("Successfull",NotificationType.Success);
+            Notify(
+                "Successfull",
+                NotificationType.Success
+            );
         Text: ="Button"
         X: =189
         Y: =569
