@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_invoicenumbers",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_invoicenumber",
+    "Name": "InvoiceNumbers",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_id": "Id",
+      "cr69c_invoiceno": "InvoiceNo",
+      "cr69c_invoicenumber_AsyncOperations": "System Jobs",
+      "cr69c_invoicenumber_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_invoicenumber_DuplicateBaseRecord": "Duplicate Records (cr69c_invoicenumber_DuplicateBaseRecord)",
+      "cr69c_invoicenumber_DuplicateMatchingRecord": "Duplicate Records (cr69c_invoicenumber_DuplicateMatchingRecord)",
+      "cr69c_invoicenumber_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_invoicenumber_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_invoicenumber_ProcessSession": "Process Sessions",
+      "cr69c_invoicenumber_SyncErrors": "Sync Errors",
+      "cr69c_invoicenumberid": "InvoiceNumber",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "InvoiceNumbers",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "InvoiceNumbers (Views)",
+    "Name": "_cr69c_invoicenumber_views",
+    "RelatedEntityName": "InvoiceNumbers",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3ea5f86c-b3ac-437f-93b6-ab043eea28fa": "Active InvoiceNumbers",
+      "66855ba4-3d68-4a8a-b6ac-2e16d36e3dc2": "Inactive InvoiceNumbers",
+      "8a5ad203-f998-453b-b599-474fa03d2ad4": "InvoiceNumber Associated View",
+      "915f89e9-c1d8-4f76-a16c-86a562619d4c": "InvoiceNumber Advanced Find View",
+      "9dfe4792-019f-4e83-b695-c0efb6844112": "InvoiceNumber Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (InvoiceNumbers)",
+    "Name": "cr69c_invoicenumber_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "InvoiceNumbers"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "InvoiceNumbers",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (InvoiceNumbers)",
+    "Name": "cr69c_invoicenumber_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "InvoiceNumbers"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "InvoiceNumbers",
+    "Type": "OptionSetInfo"
+  }
+]

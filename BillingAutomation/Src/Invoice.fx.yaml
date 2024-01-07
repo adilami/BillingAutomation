@@ -61,7 +61,11 @@
 
     Button1 As button:
         OnSelect: |-
-            =ClearCollect(
+            =Patch(InvoiceNumbers,Defaults(InvoiceNumbers),
+            {
+                InvoiceNo:txtInvoice.Text
+            });
+            ClearCollect(
                 colInvoice,
                 Filter(
                     colAllData,
