@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_invoicenumber",
+    "MaxGetRowsCount": 500,
     "Name": "InvoiceNumbers",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
