@@ -2,8 +2,6 @@
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
-    "AddMediaButton2": 84,
-    "AddMediaWithImage2": 86,
     "App": 1,
     "BankWisePosReport": 53,
     "btnExportToExcel": 51,
@@ -15,6 +13,7 @@
     "drpBankName": 45,
     "dteDateFrom": 77,
     "dteDateTo": 78,
+    "dteDueDate": 96,
     "dteFromDate": 47,
     "dteToDate": 48,
     "FetchBankWisePOSReport": 4,
@@ -28,9 +27,11 @@
     "Host": 3,
     "icoSeperator": 58,
     "Invoice": 81,
+    "Label1": 87,
+    "Label1_1": 89,
+    "Label1_2": 91,
+    "Label1_3": 95,
     "Label3": 49,
-    "Label4": 82,
-    "Label5": 85,
     "lblAddress": 10,
     "lblAddressContent": 27,
     "lblBankName": 59,
@@ -85,15 +86,17 @@
     "lblTotalTerminalContentDeployed": 67,
     "recHeaderMain": 54,
     "recSubHeader": 57,
+    "txtAmount": 92,
+    "txtInvoice": 88,
     "txtNumberOfDays": 46,
-    "UploadedImage2": 83
+    "txtRate": 90
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/07/2024 07:05:38",
+  "HeaderLastSavedDateTimeUTC": "01/07/2024 11:24:23",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "1e28ed4c-2b43-4b8f-a4ea-6999eda201ed": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/C2167FFA27E23298C8E0AF5016098681-5646D8AD365C4AA8\"",
+    "1e28ed4c-2b43-4b8f-a4ea-6999eda201ed": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-5646d8ad365c4aa8\"",
     "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
     "64b10010-afd3-4a03-aea5-bd819cc037d5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-5646d8ad365c4aa8\"",
     "69761181-018b-486a-b010-03dd23560044": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-7d57fa3d-af20-4420-a08b-460974730b58\""
@@ -157,30 +160,21 @@
     "tbl_RetrieveTerminals\\cr69c_tbl_retrieveterminal_statuscode": 15,
     "tbl_RetrieveTerminals\\default.cds_cr69c_tbl_retrieveterminal_views": 27
   },
-  "OrderGroupControls": {
-    "AddMediaWithImage2": {
-      "AddMediaButton2": 1,
-      "UploadedImage2": 0
-    }
-  },
+  "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "addMedia": 10,
     "button": 6,
     "datepicker": 5,
     "dropdown": 3,
     "gallery": 2,
     "groupContainer": 0,
     "icon": 8,
-    "image": 9,
     "label": 1,
     "rectangle": 7,
     "text": 4
   },
   "OverridablePropertiesEntry": {
-    "AddMediaButton2": {},
-    "AddMediaWithImage2": {},
     "App": {},
     "BankWisePosReport": {},
     "btnExportToExcel": {},
@@ -192,6 +186,7 @@
     "drpBankName": {},
     "dteDateFrom": {},
     "dteDateTo": {},
+    "dteDueDate": {},
     "dteFromDate": {},
     "dteToDate": {},
     "FetchBankWisePOSReport": {},
@@ -205,9 +200,11 @@
     "Host": {},
     "icoSeperator": {},
     "Invoice": {},
+    "Label1": {},
+    "Label1_1": {},
+    "Label1_2": {},
+    "Label1_3": {},
     "Label3": {},
-    "Label4": {},
-    "Label5": {},
     "lblAddress": {},
     "lblAddressContent": {},
     "lblBankName": {},
@@ -262,14 +259,14 @@
     "lblTotalTerminalContentDeployed": {},
     "recHeaderMain": {},
     "recSubHeader": {},
+    "txtAmount": {},
+    "txtInvoice": {},
     "txtNumberOfDays": {},
-    "UploadedImage2": {}
+    "txtRate": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
-    "AddMediaButton2": 77,
-    "AddMediaWithImage2": 78,
     "App": 0,
     "BankWisePosReport": 0,
     "btnExportToExcel": 46,
@@ -281,6 +278,7 @@
     "drpBankName": 40,
     "dteDateFrom": 71,
     "dteDateTo": 72,
+    "dteDueDate": 0,
     "dteFromDate": 42,
     "dteToDate": 43,
     "FetchBankWisePOSReport": 0,
@@ -294,9 +292,11 @@
     "Host": 0,
     "icoSeperator": 52,
     "Invoice": 0,
+    "Label1": 0,
+    "Label1_1": 0,
+    "Label1_2": 0,
+    "Label1_3": 0,
     "Label3": 44,
-    "Label4": 75,
-    "Label5": 79,
     "lblAddress": 5,
     "lblAddressContent": 22,
     "lblBankName": 53,
@@ -351,8 +351,10 @@
     "lblTotalTerminalContentDeployed": 61,
     "recHeaderMain": 48,
     "recSubHeader": 51,
+    "txtAmount": 0,
+    "txtInvoice": 0,
     "txtNumberOfDays": 41,
-    "UploadedImage2": 76
+    "txtRate": 0
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
@@ -360,7 +362,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.5988644,
+    "AnalysisLoadTime": 0.5951729,
     "ControlCount": {
       "addMedia": 1,
       "button": 5,
@@ -372,12 +374,12 @@
       "groupContainer": 2,
       "icon": 1,
       "image": 1,
-      "label": 55,
+      "label": 59,
       "rectangle": 2,
       "screen": 3,
-      "text": 1
+      "text": 4
     },
-    "DeserializationLoadTime": 1.4213222
+    "DeserializationLoadTime": 2.7027618
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
