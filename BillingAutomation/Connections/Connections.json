@@ -1,5 +1,5 @@
 {
-  "0bc794fb-0f30-427b-9322-113fd2a90735": {
+  "0aef46ac-fe98-49a1-b743-1b2b9daf7994": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -27,10 +27,10 @@
     ],
     "dependencies": {
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044",
-      "shared_wordonlinebusiness": "53487620-00a3-4ce8-ac3e-941bf25cd853"
+      "shared_wordonlinebusiness": "5c29dc97-2ec8-44eb-846f-78ca1d2467c6"
     },
     "dependents": [],
-    "id": "0bc794fb-0f30-427b-9322-113fd2a90735"
+    "id": "0aef46ac-fe98-49a1-b743-1b2b9daf7994"
   },
   "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": {
     "connectionRef": {
@@ -58,7 +58,7 @@
     "dependents": [],
     "id": "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd"
   },
-  "53487620-00a3-4ce8-ac3e-941bf25cd853": {
+  "5c29dc97-2ec8-44eb-846f-78ca1d2467c6": {
     "connectionRef": {
       "displayName": "Word Online (Business)",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
@@ -68,9 +68,9 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "0bc794fb-0f30-427b-9322-113fd2a90735"
+      "0aef46ac-fe98-49a1-b743-1b2b9daf7994"
     ],
-    "id": "53487620-00a3-4ce8-ac3e-941bf25cd853"
+    "id": "5c29dc97-2ec8-44eb-846f-78ca1d2467c6"
   },
   "64b10010-afd3-4a03-aea5-bd819cc037d5": {
     "connectionRef": {
@@ -117,7 +117,7 @@
     "dependencies": {},
     "dependents": [
       "64b10010-afd3-4a03-aea5-bd819cc037d5",
-      "0bc794fb-0f30-427b-9322-113fd2a90735"
+      "0aef46ac-fe98-49a1-b743-1b2b9daf7994"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
   }
