@@ -1082,6 +1082,18 @@ FetchBankWisePOSReport As screen:
         ZIndex: =14
 
     "'Generate Invoice' As button":
+        OnSelect: |-
+            =ClearCollect(
+                colExportToExcel,
+                Filter(
+                    colAllData,
+                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate
+                )
+            );
+            Invoice.Run(
+                JSON(colExportToExcel),
+                drpBankName.SelectedText.Value
+            );
         Text: ="Button"
         X: =556
         Y: =692
