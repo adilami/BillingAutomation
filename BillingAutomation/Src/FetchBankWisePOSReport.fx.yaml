@@ -1044,61 +1044,65 @@ FetchBankWisePOSReport As screen:
             ExportToExcel.Run(
                 JSON(colExportToExcel),
                 If(
-                    Text(drpMonth.SelectedText.Value) = "CITIZENS BANK INTERNATIONAL LTD.",
-                    "Citizen",
+                drpBankName.SelectedText.Value = "NABIL BANK LTD.",
+                "Nabil",
+                If(
+                    drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
+                    "Nepal Bank",
                     If(
-                        Text(drpMonth.SelectedText.Value) = "BANK OF KATHMANDU LTD.",
+                        drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
                         "BOK",
                         If(
-                            Text(drpMonth.SelectedText.Value) = "JYOTI BIKASH BANK LTD.",
-                            "JBBL",
+                            drpBankName.SelectedText.Value = "GLOBAL IME BANK LTD.",
+                            "Global",
                             If(
-                                Text(drpMonth.SelectedText.Value) = "KUMARI BANK LTD.",
-                                "Kumari",
+                                drpBankName.SelectedText.Value = "JYOTI BIKASH BANK LTD.",
+                                "JBBL",
                                 If(
-                                    Text(drpMonth.SelectedText.Value) = "LAXMI SUNRISE BANK LTD.",
-                                    "Laxmi Sunrise",
+                                    drpBankName.SelectedText.Value = "KUMARI BANK LTD.",
+                                    "Kumari",
                                     If(
-                                        Text(drpMonth.SelectedText.Value) = "LUMBINI BIKAS BANK LTD.",
-                                        "LBBL",
+                                        drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
+                                        "Laxmi Sunrise",
                                         If(
-                                            Text(drpMonth.SelectedText.Value) = "MEGA BANK NEPAL LTD.",
-                                            "Mega",
+                                            drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
+                                            "LBBL",
                                             If(
-                                                Text(drpMonth.SelectedText.Value) = "NABIL BANK LTD.",
-                                                "Nabil",
+                                                drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
+                                                "Mega",
                                                 If(
-                                                    Text(drpMonth.SelectedText.Value) = "NEPAL BANK LTD.",
-                                                    "Nepal Bank",
+                                                    drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
+                                                    "NIBL",
                                                     If(
-                                                        Text(drpMonth.SelectedText.Value) = "NEPAL INVESTMENT BANK LTD.",
-                                                        "NIBL",
+                                                        drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
+                                                        "SBI",
                                                         If(
-                                                            Text(drpMonth.SelectedText.Value) = "NEPAL SBI BANK LTD.",
-                                                            "SBI",
+                                                            drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
+                                                            "Prabhu",
                                                             If(
-                                                                Text(drpMonth.SelectedText.Value) = "PRABHU BANK LTD.",
-                                                                "Prabhu",
+                                                                drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
+                                                                "Siddhartha",
                                                                 If(
-                                                                    Text(drpMonth.SelectedText.Value) = "SIDDHARTHA BANK LTD.",
-                                                                    "Siddhartha",
-                                                                    If(
-                                                                        Text(drpMonth.SelectedText.Value) = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                        "MBL"
-                                                                    );
-                                                                );
-                                                            );
-                                                        );
-                                                    );
-                                                );
-                                            );
-                                        );
-                                    );
-                                );
-                            );
-                        );
-                    );
+                                                                    drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
+                                                                    "MBL",
+                                                                     If(
+                                                                    drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
+                                                                    "Citizen")
+            
+                                                                )
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
                 )
+            )
             );
             Notify(
                 "Exported to excel successfully!!!",
@@ -1157,7 +1161,7 @@ FetchBankWisePOSReport As screen:
                 "Nabil",
                 If(
                     drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                    "Nepal",
+                    "Nepal Bank",
                     If(
                         drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
                         "BOK",
@@ -1172,7 +1176,7 @@ FetchBankWisePOSReport As screen:
                                     "Kumari",
                                     If(
                                         drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
-                                        "Laxmi",
+                                        "Laxmi Sunrise",
                                         If(
                                             drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
                                             "LBBL",
