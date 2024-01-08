@@ -69,12 +69,18 @@
     Button1 As button:
         Height: =60
         OnSelect: |
-            =ClearCollect(colInvoiceNo, InvoiceNumbers);
-            RemoveIf(InvoiceNumbers,true);
+            =ClearCollect(
+                colInvoiceNo,
+                InvoiceNumbers
+            );
+            RemoveIf(
+                InvoiceNumbers,
+                true
+            );
             Patch(
                 InvoiceNumbers,
                 Defaults(InvoiceNumbers),
-                {InvoiceNo: Text(First(colInvoiceNo).InvoiceNo)+1}
+                {InvoiceNo: Text(Value(First(colInvoiceNo).InvoiceNo + 1))}
             );
             ClearCollect(
                 colInvoice,
