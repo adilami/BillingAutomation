@@ -69,40 +69,48 @@
     Button1 As button:
         Height: =60
         OnSelect: |
-            =ClearCollect(
-                colInvoiceNo,
-                InvoiceNumbers
-            );
-            RemoveIf(
-                InvoiceNumbers,
-                true
-            );
-            Patch(
-                InvoiceNumbers,
-                Defaults(InvoiceNumbers),
-                {InvoiceNo: Text(Value(First(colInvoiceNo).InvoiceNo + 1))}
-            );
-            ClearCollect(
-                colInvoice,
-                Filter(
-                    colAllData,
-                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate
-                )
-            );
-            Invoice.Run(
-                JSON(colInvoice),
-                drpBankName.SelectedText.Value,
-                Text(txtRate.Text),
-                Text(Value(txtRate.Text) * 13%),
-                Text(txtRate.Text),
-                Text(First(colInvoiceNo).InvoiceNo),
-                dteDueDate.SelectedDate,
-                Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%),
-                Text(drpMonth.SelectedText.Value)
-            );
-            Notify(
-                "Successfull",
-                NotificationType.Success
+            =If(
+                Text(dteDueDate.SelectedDate) = "" || Text(drpMonth.SelectedText.Value) = "",
+                Notify(
+                    "Please select the value in drop down",
+                    NotificationType.Error
+                ),
+                ClearCollect(
+                    colInvoiceNo,
+                    InvoiceNumbers
+                );
+                RemoveIf(
+                    InvoiceNumbers,
+                    true
+                );
+                Patch(
+                    InvoiceNumbers,
+                    Defaults(InvoiceNumbers),
+                    {InvoiceNo: Text(Value(First(colInvoiceNo).InvoiceNo + 1))}
+                );
+                ClearCollect(
+                    colInvoice,
+                    Filter(
+                        colAllData,
+                        BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate
+                    )
+                );
+                Invoice.Run(
+                    JSON(colInvoice),
+                    drpBankName.SelectedText.Value,
+                    Text(txtRate.Text),
+                    Text(Value(txtRate.Text) * 13%),
+                    Text(txtRate.Text),
+                    Text(First(colInvoiceNo).InvoiceNo),
+                    dteDueDate.SelectedDate,
+                    Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%),
+                    Text(drpMonth.SelectedText.Value)
+                );
+                Notify(
+                    "Successfull",
+                    NotificationType.Success
+                );
+                
             );
         Text: ="Generate Invoice"
         Width: =248
