@@ -109,3 +109,15 @@
         Y: =569
         ZIndex: =9
 
+    Label2 As label:
+        Text: ="Select Month"
+        X: =39
+        Y: =438
+        ZIndex: =10
+
+    Dropdown1 As dropdown:
+        Items: =["Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
+        X: =55
+        Y: =483
+        ZIndex: =11
+
