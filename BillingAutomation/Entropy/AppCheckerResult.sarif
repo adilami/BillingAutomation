@@ -524,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Invoice.Button1.OnSelect"
+                  "fullyQualifiedName": "Invoice.btnGenerateInv.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Invoice.Button1.OnSelect",
+                  "fullyQualifiedName": "Invoice.btnGenerateInv.OnSelect",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "OnSelect",
                 "module": "Invoice",
-                "type": "Invoice.Button1"
+                "type": "Invoice.btnGenerateInv"
               }
             }
           ],

@@ -168,7 +168,7 @@ FetchBankWisePOSReport As screen:
                 Width: =160
                 ZIndex: =13
 
-            lblFinalAmt As label:
+            lblCashAdvance As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -177,7 +177,7 @@ FetchBankWisePOSReport As screen:
                 Width: =140
                 ZIndex: =14
 
-            lblFinalAmt_1 As label:
+            lblPinChange As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
@@ -349,7 +349,7 @@ FetchBankWisePOSReport As screen:
                 Y: =21
                 ZIndex: =15
 
-            lblDaysRunContent_1 As label:
+            lblCashAdvanceContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
@@ -359,7 +359,7 @@ FetchBankWisePOSReport As screen:
                 Y: =24
                 ZIndex: =16
 
-            lblDaysRunContent_2 As label:
+            lblPinChangeContent As label:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)

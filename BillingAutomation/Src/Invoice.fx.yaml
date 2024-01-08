@@ -2,7 +2,7 @@
     Height: =1123
     Width: =794
 
-    Label1 As label:
+    lblInvoice As label:
         Height: =32
         Text: |-
             ="Invoice
@@ -18,7 +18,7 @@
         Y: =88
         ZIndex: =2
 
-    Label1_1 As label:
+    lblRate As label:
         Height: =32
         Text: |-
             ="Rate
@@ -36,7 +36,7 @@
         Y: =160
         ZIndex: =4
 
-    Label1_2 As label:
+    lblAmount As label:
         Height: =32
         Text: ="Amount"
         X: =39
@@ -52,7 +52,7 @@
         Y: =253
         ZIndex: =6
 
-    Label1_3 As label:
+    lblDueDate As label:
         Height: =32
         Text: |-
             ="Due Date
@@ -66,7 +66,7 @@
         Y: =344
         ZIndex: =8
 
-    Button1 As button:
+    btnGenerateInv As button:
         FontWeight: =FontWeight.Bold
         Height: =60
         OnSelect: |
@@ -178,7 +178,7 @@
         Y: =570
         ZIndex: =9
 
-    Label2 As label:
+    lblSelectMonth As label:
         Text: ="Select Month"
         X: =39
         Y: =396
