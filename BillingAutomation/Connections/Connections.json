@@ -1,4 +1,18 @@
 {
+  "32e40bc8-2dc1-44bc-8c65-e365c75f1a96": {
+    "connectionRef": {
+      "displayName": "Word Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "b5f94ebb-4994-47b0-b41b-c6ff22e80c08"
+    ],
+    "id": "32e40bc8-2dc1-44bc-8c65-e365c75f1a96"
+  },
   "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -24,20 +38,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd"
-  },
-  "5915a601-fa2a-47a4-8b52-466a4118315b": {
-    "connectionRef": {
-      "displayName": "Word Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "f8c7f5f6-679d-4a00-a10d-6847a923267b"
-    ],
-    "id": "5915a601-fa2a-47a4-8b52-466a4118315b"
   },
   "64b10010-afd3-4a03-aea5-bd819cc037d5": {
     "connectionRef": {
@@ -84,11 +84,11 @@
     "dependencies": {},
     "dependents": [
       "64b10010-afd3-4a03-aea5-bd819cc037d5",
-      "f8c7f5f6-679d-4a00-a10d-6847a923267b"
+      "b5f94ebb-4994-47b0-b41b-c6ff22e80c08"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
   },
-  "f8c7f5f6-679d-4a00-a10d-6847a923267b": {
+  "b5f94ebb-4994-47b0-b41b-c6ff22e80c08": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -116,9 +116,9 @@
     ],
     "dependencies": {
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044",
-      "shared_wordonlinebusiness": "5915a601-fa2a-47a4-8b52-466a4118315b"
+      "shared_wordonlinebusiness": "32e40bc8-2dc1-44bc-8c65-e365c75f1a96"
     },
     "dependents": [],
-    "id": "f8c7f5f6-679d-4a00-a10d-6847a923267b"
+    "id": "b5f94ebb-4994-47b0-b41b-c6ff22e80c08"
   }
 }
