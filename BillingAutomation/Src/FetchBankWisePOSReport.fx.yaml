@@ -1033,19 +1033,78 @@ FetchBankWisePOSReport As screen:
 
     btnExportToExcel As button:
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
-        OnSelect: |-
+        OnSelect: |
             =ClearCollect(
                 colExportToExcel,
                 Filter(
                     colAllData,
-                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate
+                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate
                 )
             );
             ExportToExcel.Run(
                 JSON(colExportToExcel),
-                drpBankName.SelectedText.Value
+                If(
+                    Text(drpMonth.SelectedText.Value) = "CITIZENS BANK INTERNATIONAL LTD.",
+                    "Citizen"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "BANK OF KATHMANDU LTD.",
+                    "BOK"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "JYOTI BIKASH BANK LTD.",
+                    "JBBL"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "KUMARI BANK LTD.",
+                    "Kumari"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "LAXMI SUNRISE BANK LTD.",
+                    "Laxmi Sunrise"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "LUMBINI BIKAS BANK LTD.",
+                    "LBBL"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "MEGA BANK NEPAL LTD.",
+                    "Mega"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "NABIL BANK LTD.",
+                    "Nabil"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "NEPAL BANK LTD.",
+                    "Nepal Bank"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "NEPAL INVESTMENT BANK LTD.",
+                    "NIBL"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "NEPAL SBI BANK LTD.",
+                    "SBI"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "PRABHU BANK LTD.",
+                    "Prabhu"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "SIDDHARTHA BANK LTD.",
+                    "Siddhartha"
+                );
+                If(
+                    Text(drpMonth.SelectedText.Value) = "MACHHAPUCHCHHRE BANK LTD.",
+                    "MBL"
+                );
+                
             );
-            Notify("Exported to excel successfully!!!", NotificationType.Success);
+            Notify(
+                "Exported to excel successfully!!!",
+                NotificationType.Success
+            );
         Text: ="Export to Excel"
         X: =347
         Y: =692
