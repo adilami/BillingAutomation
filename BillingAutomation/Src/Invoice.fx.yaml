@@ -114,8 +114,8 @@
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =216
-        Y: =852
+        X: =234
+        Y: =624
         ZIndex: =9
 
     Label2 As label:
