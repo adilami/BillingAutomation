@@ -1,18 +1,4 @@
 {
-  "32e40bc8-2dc1-44bc-8c65-e365c75f1a96": {
-    "connectionRef": {
-      "displayName": "Word Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "b5f94ebb-4994-47b0-b41b-c6ff22e80c08"
-    ],
-    "id": "32e40bc8-2dc1-44bc-8c65-e365c75f1a96"
-  },
   "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -84,11 +70,11 @@
     "dependencies": {},
     "dependents": [
       "64b10010-afd3-4a03-aea5-bd819cc037d5",
-      "b5f94ebb-4994-47b0-b41b-c6ff22e80c08"
+      "cc1d2e42-b87a-42ef-adf7-898c7d73fc3c"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
   },
-  "b5f94ebb-4994-47b0-b41b-c6ff22e80c08": {
+  "cc1d2e42-b87a-42ef-adf7-898c7d73fc3c": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -116,9 +102,23 @@
     ],
     "dependencies": {
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044",
-      "shared_wordonlinebusiness": "32e40bc8-2dc1-44bc-8c65-e365c75f1a96"
+      "shared_wordonlinebusiness": "dcfb0fcc-0be1-41aa-9b62-9c984de978d8"
     },
     "dependents": [],
-    "id": "b5f94ebb-4994-47b0-b41b-c6ff22e80c08"
+    "id": "cc1d2e42-b87a-42ef-adf7-898c7d73fc3c"
+  },
+  "dcfb0fcc-0be1-41aa-9b62-9c984de978d8": {
+    "connectionRef": {
+      "displayName": "Word Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "cc1d2e42-b87a-42ef-adf7-898c7d73fc3c"
+    ],
+    "id": "dcfb0fcc-0be1-41aa-9b62-9c984de978d8"
   }
 }

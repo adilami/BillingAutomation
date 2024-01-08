@@ -63,7 +63,7 @@
 
     dteDueDate As datepicker:
         X: =39
-        Y: =398
+        Y: =386
         ZIndex: =8
 
     Button1 As button:
@@ -97,7 +97,8 @@
                 Text(txtRate.Text),
                 Text(First(colInvoiceNo).InvoiceNo),
                 dteDueDate.SelectedDate,
-                Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%)
+                Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%),
+                Text(drpMonth.SelectedText.Value)
             );
             Notify(
                 "Successfull",
@@ -105,8 +106,8 @@
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =189
-        Y: =569
+        X: =216
+        Y: =852
         ZIndex: =9
 
     Label2 As label:
@@ -115,9 +116,9 @@
         Y: =438
         ZIndex: =10
 
-    Dropdown1 As dropdown:
+    drpMonth As dropdown:
         Items: =["Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
-        X: =55
-        Y: =483
+        X: =39
+        Y: =486
         ZIndex: =11
 
