@@ -40,7 +40,7 @@
         Height: =32
         Text: ="Amount"
         X: =39
-        Y: =232
+        Y: =215
         ZIndex: =5
 
     txtAmount As text:
@@ -49,7 +49,7 @@
         FontWeight: =FontWeight.Bold
         Size: =16
         X: =39
-        Y: =286
+        Y: =253
         ZIndex: =6
 
     Label1_3 As label:
@@ -58,12 +58,12 @@
             ="Due Date
             "
         X: =39
-        Y: =342
+        Y: =307
         ZIndex: =7
 
     dteDueDate As datepicker:
-        X: =39
-        Y: =386
+        X: =45
+        Y: =344
         ZIndex: =8
 
     Button1 As button:
@@ -114,19 +114,19 @@
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =210
-        Y: =624
+        X: =264
+        Y: =570
         ZIndex: =9
 
     Label2 As label:
         Text: ="Select Month"
         X: =39
-        Y: =438
+        Y: =396
         ZIndex: =10
 
     drpMonth As dropdown:
         Items: =["Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
-        X: =39
-        Y: =486
+        X: =45
+        Y: =438
         ZIndex: =11
 
