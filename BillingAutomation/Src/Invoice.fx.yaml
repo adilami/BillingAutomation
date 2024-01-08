@@ -28,7 +28,10 @@
         ZIndex: =3
 
     txtRate As text:
-        Default: ="10000"
+        Default: =Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)
+        DisplayMode: =DisplayMode.Disabled
+        FontWeight: =FontWeight.Bold
+        Size: =16
         X: =39
         Y: =160
         ZIndex: =4
@@ -41,7 +44,10 @@
         ZIndex: =5
 
     txtAmount As text:
-        Default: ="10000"
+        Default: =Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)
+        DisplayMode: =DisplayMode.Disabled
+        FontWeight: =FontWeight.Bold
+        Size: =16
         X: =39
         Y: =286
         ZIndex: =6
@@ -61,6 +67,7 @@
         ZIndex: =8
 
     Button1 As button:
+        Height: =60
         OnSelect: |
             =ClearCollect(colInvoiceNo, InvoiceNumbers);
             RemoveIf(InvoiceNumbers,true);
@@ -90,7 +97,8 @@
                 "Successfull",
                 NotificationType.Success
             );
-        Text: ="Button"
+        Text: ="Generate Invoice"
+        Width: =248
         X: =189
         Y: =569
         ZIndex: =9

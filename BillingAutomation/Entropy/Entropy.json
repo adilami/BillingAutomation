@@ -94,14 +94,14 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/07/2024 13:47:33",
+  "HeaderLastSavedDateTimeUTC": "01/08/2024 03:38:17",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
+    "5915a601-fa2a-47a4-8b52-466a4118315b": "\"/providers/microsoft.powerapps/apis/shared_wordonlinebusiness/connections/shared-wordonlinebus-d3c57633-e8ab-4161-90aa-e6088eef8f26\"",
     "64b10010-afd3-4a03-aea5-bd819cc037d5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-5646d8ad365c4aa8\"",
     "69761181-018b-486a-b010-03dd23560044": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-7d57fa3d-af20-4420-a08b-460974730b58\"",
-    "f360d187-b0ad-4510-aa92-26b672bc043b": "\"/providers/microsoft.powerapps/apis/shared_wordonlinebusiness/connections/shared-wordonlinebus-d3c57633-e8ab-4161-90aa-e6088eef8f26\"",
-    "fadbbdd6-0fef-479a-8655-5e1a21a402b0": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-5646d8ad365c4aa8\""
+    "f8c7f5f6-679d-4a00-a10d-6847a923267b": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/C2167FFA27E23298C8E0AF5016098681-5646D8AD365C4AA8\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -372,7 +372,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.7824408,
+    "AnalysisLoadTime": 0.9313577,
     "ControlCount": {
       "button": 6,
       "datepicker": 5,
@@ -386,7 +386,7 @@
       "screen": 3,
       "text": 4
     },
-    "DeserializationLoadTime": 3.9137392
+    "DeserializationLoadTime": 3.0740289
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
