@@ -1153,8 +1153,9 @@ FetchBankWisePOSReport As screen:
         ZIndex: =15
 
     Label4 As label:
+        Align: =Align.Center
         FontWeight: =FontWeight.Semibold
-        Height: =80
+        Height: =45
         Text: |-
             =If(
                 drpBankName.SelectedText.Value = "NABIL BANK LTD.",
@@ -1216,8 +1217,8 @@ FetchBankWisePOSReport As screen:
                     )
                 )
             )
-        Width: =201
-        X: =886
-        Y: =652
+        Width: =72
+        X: =1007
+        Y: =644
         ZIndex: =16
 
