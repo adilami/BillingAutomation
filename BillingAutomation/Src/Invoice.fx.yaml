@@ -71,7 +71,7 @@
         Height: =60
         OnSelect: |
             =If(
-                Text(dteDueDate.SelectedDate) = "" || Text(drpMonth.SelectedText.Value) = "" ||txtRate.Text="" || txtInvoice.Text,
+                Text(dteDueDate.SelectedDate) = "" || Text(drpMonth.SelectedText.Value) = "" || txtRate.Text = "" || txtInvoice.Text,
                 Notify(
                     "Please select the value in drop down",
                     NotificationType.Error
