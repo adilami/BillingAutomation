@@ -170,7 +170,7 @@
                     "saroj.bhandari@danphecare.com",
                     If(
                         drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                        "nirmal.adhikari@imark.com.np",
+                        "praful.tamrakar@imark.com.np",
                         If(
                             drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
                             "BOK",
