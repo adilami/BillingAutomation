@@ -50,11 +50,11 @@
     "dependencies": {},
     "dependents": [
       "b9f5e91e-d8b4-4bdb-9426-8c87986778a6",
-      "b7642bf1-e2de-4baf-9289-4de3537331c3"
+      "730af6e8-f91c-4f22-93a1-fc4a6a349975"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
   },
-  "b7642bf1-e2de-4baf-9289-4de3537331c3": {
+  "730af6e8-f91c-4f22-93a1-fc4a6a349975": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -63,7 +63,7 @@
         "69761181-018b-486a-b010-03dd23560044": {
           "value": "shared_sharepointonline"
         },
-        "d8f7ebfc-508e-4da5-a973-310fb0d3b0c1": {
+        "ce088da4-3547-430e-b213-dde156be5666": {
           "value": "shared_office365"
         },
         "workflowEntityId": {
@@ -75,7 +75,7 @@
       },
       "parameterHintsV2": {
         "shared_office365": {
-          "value": "d8f7ebfc-508e-4da5-a973-310fb0d3b0c1"
+          "value": "ce088da4-3547-430e-b213-dde156be5666"
         },
         "shared_sharepointonline": {
           "value": "69761181-018b-486a-b010-03dd23560044"
@@ -93,11 +93,11 @@
       "ExportToExcel"
     ],
     "dependencies": {
-      "shared_office365": "d8f7ebfc-508e-4da5-a973-310fb0d3b0c1",
+      "shared_office365": "ce088da4-3547-430e-b213-dde156be5666",
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044"
     },
     "dependents": [],
-    "id": "b7642bf1-e2de-4baf-9289-4de3537331c3"
+    "id": "730af6e8-f91c-4f22-93a1-fc4a6a349975"
   },
   "b9f5e91e-d8b4-4bdb-9426-8c87986778a6": {
     "connectionRef": {
@@ -144,7 +144,7 @@
     "dependents": [],
     "id": "b9f5e91e-d8b4-4bdb-9426-8c87986778a6"
   },
-  "d8f7ebfc-508e-4da5-a973-310fb0d3b0c1": {
+  "ce088da4-3547-430e-b213-dde156be5666": {
     "connectionRef": {
       "displayName": "Office 365 Outlook",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1669/1.0.1669.3520/office365/icon.png",
@@ -154,8 +154,8 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "b7642bf1-e2de-4baf-9289-4de3537331c3"
+      "730af6e8-f91c-4f22-93a1-fc4a6a349975"
     ],
-    "id": "d8f7ebfc-508e-4da5-a973-310fb0d3b0c1"
+    "id": "ce088da4-3547-430e-b213-dde156be5666"
   }
 }
