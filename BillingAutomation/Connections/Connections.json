@@ -1,4 +1,18 @@
 {
+  "27d7ec01-44d1-485d-a2ca-6d9f5cc3b8c6": {
+    "connectionRef": {
+      "displayName": "Word Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "764508d6-a521-4443-a1b0-f79e0f61adec"
+    ],
+    "id": "27d7ec01-44d1-485d-a2ca-6d9f5cc3b8c6"
+  },
   "356bcf4b-44b0-4801-a27c-57f72011443e": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -70,17 +84,32 @@
     "dependents": [],
     "id": "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd"
   },
-  "654dc033-0f20-4f6a-87c3-61b829d1d11e": {
+  "69761181-018b-486a-b010-03dd23560044": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "356bcf4b-44b0-4801-a27c-57f72011443e",
+      "764508d6-a521-4443-a1b0-f79e0f61adec"
+    ],
+    "id": "69761181-018b-486a-b010-03dd23560044"
+  },
+  "764508d6-a521-4443-a1b0-f79e0f61adec": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "27d7ec01-44d1-485d-a2ca-6d9f5cc3b8c6": {
+          "value": "shared_wordonlinebusiness"
+        },
         "69761181-018b-486a-b010-03dd23560044": {
           "value": "shared_sharepointonline"
-        },
-        "82afaef5-913f-47cd-a659-e73ecc4e9411": {
-          "value": "shared_wordonlinebusiness"
         },
         "c649c704-cae0-4f6b-bb10-e2fb17703c59": {
           "value": "shared_office365"
@@ -100,7 +129,7 @@
           "value": "69761181-018b-486a-b010-03dd23560044"
         },
         "shared_wordonlinebusiness": {
-          "value": "82afaef5-913f-47cd-a659-e73ecc4e9411"
+          "value": "27d7ec01-44d1-485d-a2ca-6d9f5cc3b8c6"
         },
         "workflowEntityId": {
           "value": "649c77e2-1ead-ee11-a569-6045bd1eb5a7"
@@ -117,39 +146,10 @@
     "dependencies": {
       "shared_office365": "c649c704-cae0-4f6b-bb10-e2fb17703c59",
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044",
-      "shared_wordonlinebusiness": "82afaef5-913f-47cd-a659-e73ecc4e9411"
+      "shared_wordonlinebusiness": "27d7ec01-44d1-485d-a2ca-6d9f5cc3b8c6"
     },
     "dependents": [],
-    "id": "654dc033-0f20-4f6a-87c3-61b829d1d11e"
-  },
-  "69761181-018b-486a-b010-03dd23560044": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "654dc033-0f20-4f6a-87c3-61b829d1d11e",
-      "356bcf4b-44b0-4801-a27c-57f72011443e"
-    ],
-    "id": "69761181-018b-486a-b010-03dd23560044"
-  },
-  "82afaef5-913f-47cd-a659-e73ecc4e9411": {
-    "connectionRef": {
-      "displayName": "Word Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/wordonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_wordonlinebusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "654dc033-0f20-4f6a-87c3-61b829d1d11e"
-    ],
-    "id": "82afaef5-913f-47cd-a659-e73ecc4e9411"
+    "id": "764508d6-a521-4443-a1b0-f79e0f61adec"
   },
   "c649c704-cae0-4f6b-bb10-e2fb17703c59": {
     "connectionRef": {
@@ -161,8 +161,8 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "654dc033-0f20-4f6a-87c3-61b829d1d11e",
-      "356bcf4b-44b0-4801-a27c-57f72011443e"
+      "356bcf4b-44b0-4801-a27c-57f72011443e",
+      "764508d6-a521-4443-a1b0-f79e0f61adec"
     ],
     "id": "c649c704-cae0-4f6b-bb10-e2fb17703c59"
   }
