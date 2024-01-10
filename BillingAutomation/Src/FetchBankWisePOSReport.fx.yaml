@@ -281,7 +281,7 @@ FetchBankWisePOSReport As screen:
 
             lblTerminalTypeContent As label:
                 Align: =Align.Center
-                Height: =64
+                Height: =70
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.TerminalType
                 Width: =223
