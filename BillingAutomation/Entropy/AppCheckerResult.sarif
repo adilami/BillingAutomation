@@ -14,6 +14,47 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6375,
+                  "charOffset": 172,
+                  "snippet": {
+                    "text": "ExportToExcel.Run(\n    JSON(colExportToExcel),\n    If(\n        drpBankName.SelectedText.Value = \"NABIL BANK LTD.\",\n        \"Nabil\",\n        If(\n            drpBankName.SelectedText.Value = \"NEPAL BANK LTD.\",\n            \"Nepal Bank\",\n            If(\n                drpBankName.SelectedText.Value = \"BANK OF KATHMANDU LTD.\",\n                \"BOK\",\n                If(\n                    drpBankName.SelectedText.Value = \"GLOBAL IME BANK LTD.\",\n                    \"Global\",\n                    If(\n                        drpBankName.SelectedText.Value = \"JYOTI BIKASH BANK LTD.\",\n                        \"JBBL\",\n                        If(\n                            drpBankName.SelectedText.Value = \"KUMARI BANK LTD.\",\n                            \"Kumari\",\n                            If(\n                                drpBankName.SelectedText.Value = \"LAXMI SUNRISE BANK LTD.\",\n                                \"Laxmi Sunrise\",\n                                If(\n                                    drpBankName.SelectedText.Value = \"LUMBINI BIKAS BANK LTD.\",\n                                    \"LBBL\",\n                                    If(\n                                        drpBankName.SelectedText.Value = \"MEGA BANK NEPAL LTD.\",\n                                        \"Mega\",\n                                        If(\n                                            drpBankName.SelectedText.Value = \"NEPAL INVESTMENT BANK LTD.\",\n                                            \"NIBL\",\n                                            If(\n                                                drpBankName.SelectedText.Value = \"NEPAL SBI BANK LTD.\",\n                                                \"SBI\",\n                                                If(\n                                                    drpBankName.SelectedText.Value = \"PRABHU BANK LTD.\",\n                                                    \"Prabhu\",\n                                                    If(\n                                                        drpBankName.SelectedText.Value = \"SIDDHARTHA BANK LTD.\",\n                                                        \"Siddhartha\",\n                                                        If(\n                                                            drpBankName.SelectedText.Value = \"MACHHAPUCHCHHRE BANK LTD.\",\n                                                            \"MBL\",\n                                                            If(\n                                                                drpBankName.SelectedText.Value = \"CITIZENS BANK INTERNATIONAL LTD.\",\n                                                                \"Citizen\"\n                                                            )\n                                                        )\n                                                    )\n                                                )\n                                            )\n                                        )\n                                    )\n                                )\n                            )\n                        )\n                    )\n                )\n            )\n        )\n    ),\n    If(\n        drpBankName.SelectedText.Value = \"NABIL BANK LTD.\",\n        \"bhagbat.kc@imark.com.np\",\n        If(\n            drpBankName.SelectedText.Value = \"NEPAL BANK LTD.\",\n            \"sagar.khattri@imark.com.np\",\n            If(\n                drpBankName.SelectedText.Value = \"BANK OF KATHMANDU LTD.\",\n                \"BOK\",\n                If(\n                    drpBankName.SelectedText.Value = \"GLOBAL IME BANK LTD.\",\n                    \"Global\",\n                    If(\n                        drpBankName.SelectedText.Value = \"JYOTI BIKASH BANK LTD.\",\n                        \"JBBL\",\n                        If(\n                            drpBankName.SelectedText.Value = \"KUMARI BANK LTD.\",\n                            \"Kumari\",\n                            If(\n                                drpBankName.SelectedText.Value = \"LAXMI SUNRISE BANK LTD.\",\n                                \"Laxmi Sunrise\",\n                                If(\n                                    drpBankName.SelectedText.Value = \"LUMBINI BIKAS BANK LTD.\",\n                                    \"LBBL\",\n                                    If(\n                                        drpBankName.SelectedText.Value = \"MEGA BANK NEPAL LTD.\",\n                                        \"Mega\",\n                                        If(\n                                            drpBankName.SelectedText.Value = \"NEPAL INVESTMENT BANK LTD.\",\n                                            \"NIBL\",\n                                            If(\n                                                drpBankName.SelectedText.Value = \"NEPAL SBI BANK LTD.\",\n                                                \"SBI\",\n                                                If(\n                                                    drpBankName.SelectedText.Value = \"PRABHU BANK LTD.\",\n                                                    \"Prabhu\",\n                                                    If(\n                                                        drpBankName.SelectedText.Value = \"SIDDHARTHA BANK LTD.\",\n                                                        \"Siddhartha\",\n                                                        If(\n                                                            drpBankName.SelectedText.Value = \"MACHHAPUCHCHHRE BANK LTD.\",\n                                                            \"MBL\",\n                                                            If(\n                                                                drpBankName.SelectedText.Value = \"CITIZENS BANK INTERNATIONAL LTD.\",\n                                                                \"Citizen\"\n                                                            )\n                                                        )\n                                                    )\n                                                )\n                                            )\n                                        )\n                                    )\n                                )\n                            )\n                        )\n                    )\n                )\n            )\n        )\n    )\n)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "3",
+              "2"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadArity",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "FetchBankWisePOSReport.containerGalleryBankWisePOSDetail.galBankWisePOSDetail.AccessibleLabel"
                 }
               ],
@@ -37,7 +78,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -67,7 +108,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -97,7 +138,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -127,7 +168,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -157,7 +198,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -187,7 +228,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -217,7 +258,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -247,7 +288,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -277,7 +318,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -307,7 +348,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -337,7 +378,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -367,7 +408,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -397,7 +438,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -427,7 +468,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -457,7 +498,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -487,7 +528,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -517,7 +558,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -547,7 +588,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -577,7 +618,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 4
         }
       ],
       "tool": {
@@ -585,6 +626,20 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-ErrBadArity",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid number of arguments: received {0}, expected {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {
