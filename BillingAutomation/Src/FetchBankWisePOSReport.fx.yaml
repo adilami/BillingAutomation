@@ -1185,7 +1185,7 @@ FetchBankWisePOSReport As screen:
 
     Label3 As label:
         Align: =Align.Center
-        Text: =CountRows(colExportToExcel)
+        Text: =CountRows(colInvoice)
         X: =1062
         Y: =647
         ZIndex: =12

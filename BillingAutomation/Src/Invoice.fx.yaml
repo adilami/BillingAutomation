@@ -234,8 +234,8 @@
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =264
-        Y: =570
+        X: =111
+        Y: =598
         ZIndex: =9
 
     lblSelectMonth As label:
