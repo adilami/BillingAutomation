@@ -164,7 +164,67 @@
                     Text(First(colInvoiceNo).InvoiceNo),
                     dteDueDate.SelectedDate,
                     Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%),
-                    Text(drpMonth.SelectedText.Value)
+                    Text(drpMonth.SelectedText.Value),
+                    If(
+                    drpBankName.SelectedText.Value = "NABIL BANK LTD.",
+                    "nirmal.adhikari@imark.com.np",
+                    If(
+                        drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
+                        "sagar.khattri@imark.com.np",
+                        If(
+                            drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
+                            "BOK",
+                            If(
+                                drpBankName.SelectedText.Value = "GLOBAL IME BANK LTD.",
+                                "Global",
+                                If(
+                                    drpBankName.SelectedText.Value = "JYOTI BIKASH BANK LTD.",
+                                    "JBBL",
+                                    If(
+                                        drpBankName.SelectedText.Value = "KUMARI BANK LTD.",
+                                        "Kumari",
+                                        If(
+                                            drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
+                                            "Laxmi Sunrise",
+                                            If(
+                                                drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
+                                                "LBBL",
+                                                If(
+                                                    drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
+                                                    "Mega",
+                                                    If(
+                                                        drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
+                                                        "NIBL",
+                                                        If(
+                                                            drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
+                                                            "SBI",
+                                                            If(
+                                                                drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
+                                                                "Prabhu",
+                                                                If(
+                                                                    drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
+                                                                    "Siddhartha",
+                                                                    If(
+                                                                        drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
+                                                                        "MBL",
+                                                                        If(
+                                                                            drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
+                                                                            "Citizen"
+                                                                        )
+                                                                    )
+                                                                )
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
                 );
                 Notify(
                     "Successfull",

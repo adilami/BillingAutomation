@@ -1032,7 +1032,9 @@ FetchBankWisePOSReport As screen:
         ZIndex: =8
 
     btnExportToExcel As button:
-        DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
+        DisplayMode: |-
+            =//If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
+            DisplayMode.Disabled
         OnSelect: |
             =ClearCollect(
                 colExportToExcel,
