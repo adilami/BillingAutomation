@@ -252,7 +252,7 @@
 
     btnBack As button:
         Height: =60
-        OnSelect: =Navigate('FetchBankWisePOSReport',ScreenTransition.Fade);
+        OnSelect: =Navigate(FetchBankWisePOSReport,ScreenTransition.Fade);
         Text: ="Main Page"
         Width: =244
         X: =425
