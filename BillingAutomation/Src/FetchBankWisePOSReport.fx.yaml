@@ -908,12 +908,6 @@ FetchBankWisePOSReport As screen:
                                 Status: Text(ThisRecord.Status),
                                 DaysRun: Text(
                                     If(
-                                        ThisRecord.Status = "Retrieval",
-                                        DateDiff(
-                                            dteFromDate.SelectedDate,
-                                            ThisRecord.deployDate,
-                                            TimeUnit.Days
-                                        ) + 1,
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
@@ -941,12 +935,6 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(900),
                                 FinalAmt: Text(
                                     If(
-                                        ThisRecord.Status = "Retrieval",
-                                        (DateDiff(
-                                            dteFromDate.SelectedDate,
-                                            ThisRecord.deployDate,
-                                            TimeUnit.Days
-                                        ) + 1) / 30 * 900,
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
