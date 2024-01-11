@@ -170,7 +170,7 @@
                     "saroj.bhandari@danphecare.com",
                     If(
                         drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                        "praful.tamrakar@imark.com.np",
+                        "hari.bhatta@imark.com.np",
                         If(
                             drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
                             "BOK",
@@ -206,7 +206,7 @@
                                                                     "Siddhartha",
                                                                     If(
                                                                         drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                        "MBL",
+                                                                        "hari.bhatta@imark.com.np",
                                                                         If(
                                                                             drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
                                                                             "Citizen"
