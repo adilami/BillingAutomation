@@ -191,7 +191,7 @@
                                                 "LBBL",
                                                 If(
                                                     drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
-                                                    "Mega",
+                                                    "praful.tamrakar@imark.com.np",
                                                     If(
                                                         drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
                                                         "NIBL",
@@ -234,8 +234,8 @@
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =111
-        Y: =598
+        X: =56
+        Y: =568
         ZIndex: =9
 
     lblSelectMonth As label:
@@ -249,4 +249,13 @@
         X: =45
         Y: =438
         ZIndex: =11
+
+    btnBack As button:
+        Height: =60
+        OnSelect: =Navigate('FetchBankWisePOSReport',ScreenTransition.Fade);
+        Text: ="Main Page"
+        Width: =244
+        X: =425
+        Y: =568
+        ZIndex: =12
 

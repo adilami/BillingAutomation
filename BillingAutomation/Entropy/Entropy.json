@@ -4,6 +4,7 @@
   "ControlUniqueIds": {
     "App": 1,
     "BankWisePosReport": 54,
+    "btnBack": 94,
     "btnExportToExcel": 52,
     "btnFetchData": 51,
     "btnGenerateInv": 93,
@@ -97,7 +98,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/11/2024 07:09:39",
+  "HeaderLastSavedDateTimeUTC": "01/11/2024 07:12:58",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "356bcf4b-44b0-4801-a27c-57f72011443e": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-5646d8ad365c4aa8\"",
@@ -189,6 +190,7 @@
   "OverridablePropertiesEntry": {
     "App": {},
     "BankWisePosReport": {},
+    "btnBack": {},
     "btnExportToExcel": {},
     "btnFetchData": {},
     "btnGenerateInv": {},
@@ -285,6 +287,7 @@
   "PublishOrderIndices": {
     "App": 0,
     "BankWisePosReport": 0,
+    "btnBack": 0,
     "btnExportToExcel": 47,
     "btnFetchData": 46,
     "btnGenerateInv": 86,
