@@ -625,7 +625,7 @@ FetchBankWisePOSReport As screen:
                     )
                 ),
                 If(
-                    drpBankName.SelectedText.Value = "NABIL BANK LTD." Or drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
+                    drpBankName.SelectedText.Value = "NABIL BANK LTD." Or drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
                     ClearCollect(
                         colBankData,
                         ForAll(

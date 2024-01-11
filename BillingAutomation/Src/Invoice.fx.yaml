@@ -167,7 +167,7 @@
                     Text(drpMonth.SelectedText.Value),
                     If(
                     drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                    "saroj.bhandari@danphecare.com",
+                    "hari.bhatta@imark.com.np",
                     If(
                         drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
                         "hari.bhatta@imark.com.np",
