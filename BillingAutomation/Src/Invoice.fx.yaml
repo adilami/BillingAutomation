@@ -45,7 +45,8 @@
         ZIndex: =5
 
     txtAmount As text:
-        Default: =Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)
+        Default: |
+            =If(drpBankName.SelectedText.Value="SBI BANK LTD.",Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)*7%/12,Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text))
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
