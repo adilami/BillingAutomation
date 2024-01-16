@@ -29,7 +29,7 @@
 
     txtRate As text:
         Default: |
-            =If(drpBankName.SelectedText.Value="SBI BANK LTD.",Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)*7%/12,Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text))
+            =If(drpBankName.SelectedText.Value="NEPAL SBI BANK LTD.",Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)*7%/12,Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text))
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
@@ -46,7 +46,7 @@
 
     txtAmount As text:
         Default: |
-            =If(drpBankName.SelectedText.Value="SBI BANK LTD.",Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)*7%/12,Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text))
+            =If(drpBankName.SelectedText.Value="NEPAL SBI BANK LTD.",Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text)*7%/12,Sum(galBankWisePOSDetail.AllItems,lblFinalAmtContent.Text))
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
@@ -169,7 +169,7 @@
                     Text(drpMonth.SelectedText.Value),
                     If(
                     drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                    "hari.bhatta@imark.com.np",
+                    "pramila.koirala@imark.com.np",
                     If(
                         drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
                         "hari.bhatta@imark.com.np",
