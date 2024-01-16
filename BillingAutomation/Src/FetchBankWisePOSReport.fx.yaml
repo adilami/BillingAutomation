@@ -1366,7 +1366,7 @@ FetchBankWisePOSReport As screen:
     Label3 As label:
         Align: =Align.Center
         Text: =CountRows(colInvoice)
-        X: =1079
+        X: =1086
         Y: =646
         ZIndex: =12
 
