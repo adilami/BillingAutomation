@@ -684,6 +684,7 @@ FetchBankWisePOSReport As screen:
                             }
                         )
                     );
+                    
                     ClearCollect(
                         colALLRET,
                         ForAll(
