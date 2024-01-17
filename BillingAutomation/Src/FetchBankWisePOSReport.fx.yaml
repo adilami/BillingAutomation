@@ -684,7 +684,6 @@ FetchBankWisePOSReport As screen:
                             }
                         )
                     );
-                    
                     ClearCollect(
                         colALLRET,
                         ForAll(
@@ -765,7 +764,12 @@ FetchBankWisePOSReport As screen:
                                         )
                                     );
                                 ),
-                                RentalFee: Text(900),
+                                RentalFee: Text(
+                                    LookUp(
+                                        tbl_mst_Rates,
+                                        BankName = drpBankName.SelectedText.Value && Ownership = ThisRecord.Property && TerminalType = ThisRecord.'Terminal Type'
+                                    ).Rate
+                                ),
                                 FinalAmt: Text(900)
                             }
                         )
