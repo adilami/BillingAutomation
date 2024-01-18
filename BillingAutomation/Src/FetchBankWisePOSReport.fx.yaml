@@ -10,7 +10,8 @@ FetchBankWisePOSReport As screen:
         RadiusBottomRight: =12
         RadiusTopLeft: =12
         RadiusTopRight: =12
-        Width: =1366
+        Width: =1358
+        X: =7
         ZIndex: =2
 
         conrainerHeader As groupContainer.horizontalAutoLayoutContainer:
