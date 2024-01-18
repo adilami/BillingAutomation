@@ -69,6 +69,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_tbl_rate_forms",
+      "Namespace": "tbl_Rates (Forms)",
+      "Values": {
+        "Information": "1a408d2b-5ed9-45c2-a482-e0ff122ad36e"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_property_forms",
       "Namespace": "tbl_Properties (Forms)",
       "Values": {
@@ -115,13 +122,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_rate_forms",
-      "Namespace": "tbl_Rates (Forms)",
-      "Values": {
-        "Information": "1a408d2b-5ed9-45c2-a482-e0ff122ad36e"
       }
     }
   ]
