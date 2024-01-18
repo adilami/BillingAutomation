@@ -910,7 +910,10 @@ FetchBankWisePOSReport As screen:
                                     );
                                 ),
                                 RentalFee: Text(
-                                   900
+                                    LookUp(
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                    ).Rate
                                 ),
                                 FinalAmt: Text(
                                     If(
@@ -924,7 +927,10 @@ FetchBankWisePOSReport As screen:
                                                 TimeUnit.Days
                                             ) + 1,
                                             30
-                                        ) / 30) *900
+                                        ) / 30) * LookUp(
+                                            tbl_mst_Rates,
+                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ).Rate
                                     );
                                 )
                             }
@@ -973,31 +979,46 @@ FetchBankWisePOSReport As screen:
                                     );
                                 ),
                                 RentalFee: Text(
-                                   900
+                                    LookUp(
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                    ).Rate
                                 ),
                                 FinalAmt: Text(
                                     If(
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30 / 30 *900,
+                                            30 / 30 * LookUp(
+                                                tbl_mst_Rates,
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                            ).Rate,
                                             If(
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
                                                     dteToDate.SelectedDate,
                                                     TimeUnit.Days
                                                 ) + 1) > 30,
-                                                30 / 30 * 900,
+                                                30 / 30 * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                ).Rate,
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
                                                     dteToDate.SelectedDate,
                                                     TimeUnit.Days
-                                                ) + 1) / 30 *900
+                                                ) + 1) / 30 * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                ).Rate
                                             )
                                         ),
                                         If(
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
-                                            30 / 30 *900
+                                            30 / 30 * LookUp(
+                                                tbl_mst_Rates,
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                            ).Rate
                                         )
                                     );
                                 )
