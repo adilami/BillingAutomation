@@ -711,9 +711,9 @@ FetchBankWisePOSReport As screen:
                                 ),
                                 RentalFee: Text(
                                     LookUp(
-                                        tbl_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes=TerminalType And ThisRecord.Property=Ownership
-                                    ).Rates
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                    ).Rate
                                 ),
                                 FinalAmt: Text(0)
                             }
@@ -767,10 +767,12 @@ FetchBankWisePOSReport As screen:
                                         )
                                     );
                                 ),
-                                RentalFee: LookUp(
-                                    tbl_Rates,
-                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes=TerminalType And ThisRecord.Property=Ownership
-                                ).Rates,
+                                RentalFee: Text(
+                                    LookUp(
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                    ).Rate
+                                ),
                                 FinalAmt: Text(900)
                             }
                         )

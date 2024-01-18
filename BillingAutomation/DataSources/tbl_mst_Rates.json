@@ -64,7 +64,7 @@
     "Name": "tbl_mst_Rates",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
-      "cr69c_bankname": "BankName",
+      "cr69c_bankname": "Bank Names",
       "cr69c_cashadvance": "Cash Advance",
       "cr69c_id": "Id",
       "cr69c_property": "Property",
@@ -78,7 +78,7 @@
       "cr69c_tbl_mst_rate_ProcessSession": "Process Sessions",
       "cr69c_tbl_mst_rate_SyncErrors": "Sync Errors",
       "cr69c_tbl_mst_rateid": "tbl_mst_Rate",
-      "cr69c_terminaltype": "Terminal Type",
+      "cr69c_terminaltype": "TerminalTypes",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
