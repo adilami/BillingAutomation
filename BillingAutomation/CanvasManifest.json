@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 1,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -133,6 +133,6 @@
   "ScreenOrder": [
     "FetchBankWisePOSReport",
     "BankWisePosReport",
-    "Invoice"
+    "Inovice"
   ]
 }

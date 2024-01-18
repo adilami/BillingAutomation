@@ -1,6 +1,4 @@
-"Invoice As screen.'printableLayout_A4Portrait_ver1.0'":
-    Height: =1123
-    Width: =794
+Inovice As screen:
 
     lblInvoice As label:
         Height: =32
@@ -40,8 +38,8 @@
     lblAmount As label:
         Height: =32
         Text: ="Amount"
-        X: =39
-        Y: =215
+        X: =425
+        Y: =45
         ZIndex: =5
 
     txtAmount As text:
@@ -50,8 +48,8 @@
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
-        X: =39
-        Y: =253
+        X: =425
+        Y: =83
         ZIndex: =6
 
     lblDueDate As label:
@@ -59,13 +57,13 @@
         Text: |-
             ="Due Date
             "
-        X: =39
-        Y: =307
+        X: =425
+        Y: =137
         ZIndex: =7
 
     dteDueDate As datepicker:
-        X: =45
-        Y: =344
+        X: =431
+        Y: =174
         ZIndex: =8
 
     btnGenerateInv As button:
@@ -243,13 +241,13 @@
     lblSelectMonth As label:
         Text: ="Select Month"
         X: =39
-        Y: =396
+        Y: =239
         ZIndex: =10
 
     drpMonth As dropdown:
         Items: =["Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
-        X: =45
-        Y: =438
+        X: =36
+        Y: =281
         ZIndex: =11
 
     btnBack As button:

@@ -1073,7 +1073,7 @@
       "StyleName": "defaultDatePickerStyle",
       "Type": "ControlInfo"
     },
-    "Invoice": {
+    "Inovice": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -1093,7 +1093,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Invoice",
+      "Name": "Inovice",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -3278,5 +3278,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Invoice"
+  "TopParentName": "Inovice"
 }
