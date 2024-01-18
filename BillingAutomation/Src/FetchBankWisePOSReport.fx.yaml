@@ -1259,7 +1259,7 @@ FetchBankWisePOSReport As screen:
 
     "'Generate Invoice' As button":
         DisplayMode: =If(glbToggleButton,DisplayMode.Edit,DisplayMode.Disabled)
-        OnSelect: =Navigate(Invoice,ScreenTransition.Fade);
+        OnSelect: =Navigate(InoviceScreen,ScreenTransition.Fade);
         Text: ="Generate Invoice"
         Width: =193
         X: =556

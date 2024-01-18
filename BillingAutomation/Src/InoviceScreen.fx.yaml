@@ -1,4 +1,4 @@
-Inovice As screen:
+InoviceScreen As screen:
 
     lblInvoice As label:
         Height: =32
