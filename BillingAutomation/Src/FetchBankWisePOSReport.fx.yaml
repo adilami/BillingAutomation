@@ -773,7 +773,10 @@ FetchBankWisePOSReport As screen:
                                         ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
-                                FinalAmt: Text(900)
+                                FinalAmt: Text( LookUp(
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                    ).Rate)
                             }
                         )
                     );
