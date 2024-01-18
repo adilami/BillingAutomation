@@ -97,9 +97,7 @@ FetchBankWisePOSReport As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =20
-                Text: |-
-                    ="MID
-                    "
+                Text: ="MID"
                 ZIndex: =7
 
             lblSerialNo As label:
@@ -714,7 +712,7 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_Rates,
-                                        drpBankName.SelectedText.Value=ThisRecord.'Bank Names'
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes=TerminalType
                                     ).Rates
                                 ),
                                 FinalAmt: Text(0)
@@ -770,9 +768,9 @@ FetchBankWisePOSReport As screen:
                                     );
                                 ),
                                 RentalFee: LookUp(
-                                        tbl_Rates,
-                                        drpBankName.SelectedText.Value=ThisRecord.'Bank Names'
-                                    ).Rates,
+                                    tbl_Rates,
+                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes=TerminalType
+                                ).Rates,
                                 FinalAmt: Text(900)
                             }
                         )
