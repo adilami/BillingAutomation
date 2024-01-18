@@ -323,7 +323,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.RentalFee
                 Width: =147
-                X: =1991
+                X: =2000
                 Y: =24
                 ZIndex: =13
 
@@ -333,7 +333,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.FinalAmt
                 Width: =147
-                X: =2746
+                X: =2737
                 Y: =24
                 ZIndex: =14
 
