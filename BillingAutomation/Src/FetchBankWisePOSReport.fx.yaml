@@ -578,7 +578,7 @@ FetchBankWisePOSReport As screen:
                                             )
                                         ),
                                         If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             Value(txtNumberOfDays.Text)
                                         )
                                     );
@@ -619,7 +619,7 @@ FetchBankWisePOSReport As screen:
                                             )
                                         ),
                                         If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                 tbl_mst_Rates,
                                                 ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
@@ -787,7 +787,7 @@ FetchBankWisePOSReport As screen:
                                             )
                                         ),
                                         If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             30
                                         )
                                     );
@@ -973,7 +973,7 @@ FetchBankWisePOSReport As screen:
                                             )
                                         ),
                                         If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             30
                                         )
                                     );
@@ -1014,7 +1014,7 @@ FetchBankWisePOSReport As screen:
                                             )
                                         ),
                                         If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested",
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             30 / 30 * LookUp(
                                                 tbl_mst_Rates,
                                                 ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
