@@ -10,8 +10,7 @@ FetchBankWisePOSReport As screen:
         RadiusBottomRight: =12
         RadiusTopLeft: =12
         RadiusTopRight: =12
-        Width: =1358
-        X: =7
+        Width: =1365
         ZIndex: =2
 
         conrainerHeader As groupContainer.horizontalAutoLayoutContainer:
@@ -374,7 +373,7 @@ FetchBankWisePOSReport As screen:
             =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:false}));
             Clear(colAllData);
         OnSelect: =
-        X: =7
+        X: =14
         Y: =603
         ZIndex: =3
 
@@ -1231,7 +1230,7 @@ FetchBankWisePOSReport As screen:
         Text: |-
             ="Select Bank
             "
-        X: =7
+        X: =14
         Y: =563
         ZIndex: =11
 

@@ -374,66 +374,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "InoviceScreen.drpMonth.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "InoviceScreen.drpMonth.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "InoviceScreen",
-                "type": "InoviceScreen.drpMonth"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "InoviceScreen.dteDueDate.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "InoviceScreen.dteDueDate.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "InoviceScreen",
-                "type": "InoviceScreen.dteDueDate"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "InoviceScreen.txtAmount.AccessibleLabel"
                 }
               ],
@@ -447,6 +387,36 @@
                 "member": "AccessibleLabel",
                 "module": "InoviceScreen",
                 "type": "InoviceScreen.txtAmount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InoviceScreen.txtInvoice.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.txtInvoice.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.txtInvoice"
               }
             }
           ],
@@ -494,19 +464,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "InoviceScreen.txtInvoice.AccessibleLabel"
+                  "fullyQualifiedName": "InoviceScreen.dteDueDate.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "InoviceScreen.txtInvoice.AccessibleLabel",
+                  "fullyQualifiedName": "InoviceScreen.dteDueDate.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "InoviceScreen",
-                "type": "InoviceScreen.txtInvoice"
+                "type": "InoviceScreen.dteDueDate"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InoviceScreen.drpMonth.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.drpMonth.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.drpMonth"
               }
             }
           ],
