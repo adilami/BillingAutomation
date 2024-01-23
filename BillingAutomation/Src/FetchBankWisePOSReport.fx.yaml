@@ -283,7 +283,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.TerminalType
                 Width: =223
-                X: =1407
+                X: =1417
                 Y: =15
                 ZIndex: =9
 

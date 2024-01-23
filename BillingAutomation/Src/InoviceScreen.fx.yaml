@@ -5,15 +5,15 @@ InoviceScreen As screen:
         Text: |-
             ="Invoice
             "
-        X: =39
-        Y: =45
+        X: =79
+        Y: =95
         ZIndex: =1
 
     txtInvoice As text:
         Default: =Text(First(InvoiceNumbers).InvoiceNo)
         DisplayMode: =DisplayMode.Disabled
-        X: =39
-        Y: =88
+        X: =79
+        Y: =138
         ZIndex: =2
 
     lblRate As label:
@@ -21,8 +21,8 @@ InoviceScreen As screen:
         Text: |-
             ="Rate
             "
-        X: =39
-        Y: =128
+        X: =79
+        Y: =178
         ZIndex: =3
 
     txtRate As text:
@@ -31,15 +31,15 @@ InoviceScreen As screen:
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
-        X: =39
-        Y: =160
+        X: =79
+        Y: =210
         ZIndex: =4
 
     lblAmount As label:
         Height: =32
         Text: ="Amount"
-        X: =425
-        Y: =45
+        X: =465
+        Y: =95
         ZIndex: =5
 
     txtAmount As text:
@@ -48,8 +48,8 @@ InoviceScreen As screen:
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
-        X: =425
-        Y: =83
+        X: =465
+        Y: =133
         ZIndex: =6
 
     lblDueDate As label:
@@ -57,13 +57,15 @@ InoviceScreen As screen:
         Text: |-
             ="Due Date
             "
-        X: =425
-        Y: =137
+        X: =465
+        Y: =173
         ZIndex: =7
 
     dteDueDate As datepicker:
-        X: =431
-        Y: =174
+        Height: =45
+        Width: =314
+        X: =471
+        Y: =205
         ZIndex: =8
 
     btnGenerateInv As button:
@@ -71,9 +73,9 @@ InoviceScreen As screen:
         Height: =60
         OnSelect: |
             =If(
-                Text(dteDueDate.SelectedDate) = "" || Text(drpMonth.SelectedText.Value) = "" || txtRate.Text = "" || txtInvoice.Text,
+                DateValue(dteDueDate.SelectedDate) < Today() || Text(drpMonth.SelectedText.Value) = "Select Month" || txtRate.Text = "" || txtInvoice.Text,
                 Notify(
-                    "Please select the value in drop down",
+                    "Please select the value in drop down or valid date",
                     NotificationType.Error
                 ),
                 ClearCollect(
@@ -167,7 +169,7 @@ InoviceScreen As screen:
                     Text(drpMonth.SelectedText.Value),
                     If(
                     drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                    "bhagbat.kc@imark.com.np",
+                    "praful.tamrakar@imark.com.np",
                     If(
                         drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
                         "hari.bhatta@imark.com.np",
@@ -234,28 +236,43 @@ InoviceScreen As screen:
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =56
-        Y: =568
+        X: =79
+        Y: =431
         ZIndex: =9
 
     lblSelectMonth As label:
         Text: ="Select Month"
-        X: =39
-        Y: =239
+        X: =79
+        Y: =265
         ZIndex: =10
 
     drpMonth As dropdown:
-        Items: =["Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
-        X: =36
-        Y: =281
+        Items: =["Select Month","Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
+        X: =79
+        Y: =305
         ZIndex: =11
 
     btnBack As button:
+        BorderThickness: =8
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =60
         OnSelect: =Navigate(FetchBankWisePOSReport,ScreenTransition.Fade);
-        Text: ="Main Page"
-        Width: =244
-        X: =425
-        Y: =568
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
+        Text: =""
+        Width: =60
+        X: =12
+        Y: =12
         ZIndex: =12
+
+    Icon1 As icon.ArrowLeft:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =40
+        Icon: =Icon.ArrowLeft
+        Width: =40
+        X: =22
+        Y: =22
+        ZIndex: =13
 
