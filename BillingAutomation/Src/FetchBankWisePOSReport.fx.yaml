@@ -509,7 +509,7 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
                                 FinalAmt: Text(
@@ -527,7 +527,7 @@ FetchBankWisePOSReport As screen:
                                         ) / Value(txtNumberOfDays.Text)
                                     ) * LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate);
                                 )
                             }
@@ -586,7 +586,7 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
                                 FinalAmt: Text(
@@ -596,7 +596,7 @@ FetchBankWisePOSReport As screen:
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                             ).Rate,
                                             If(
                                                 (DateDiff(
@@ -606,7 +606,7 @@ FetchBankWisePOSReport As screen:
                                                 ) + 1) > Value(txtNumberOfDays.Text),
                                                 Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                                 ).Rate,
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
@@ -614,7 +614,7 @@ FetchBankWisePOSReport As screen:
                                                     TimeUnit.Days
                                                 ) + 1) / Value(txtNumberOfDays.Text) * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                                 ).Rate
                                             )
                                         ),
@@ -622,7 +622,7 @@ FetchBankWisePOSReport As screen:
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                             ).Rate
                                         )
                                     )
@@ -737,7 +737,7 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
                                 FinalAmt: Text(0)
@@ -795,13 +795,13 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
                                 FinalAmt: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 )
                             }
@@ -912,7 +912,7 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
                                 FinalAmt: Text(
@@ -929,7 +929,7 @@ FetchBankWisePOSReport As screen:
                                             30
                                         ) / 30) * LookUp(
                                             tbl_mst_Rates,
-                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                         ).Rate
                                     );
                                 )
@@ -981,7 +981,7 @@ FetchBankWisePOSReport As screen:
                                 RentalFee: Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
                                 ),
                                 FinalAmt: Text(
@@ -991,7 +991,7 @@ FetchBankWisePOSReport As screen:
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             30 / 30 * LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                             ).Rate,
                                             If(
                                                 (DateDiff(
@@ -1001,7 +1001,7 @@ FetchBankWisePOSReport As screen:
                                                 ) + 1) > 30,
                                                 30 / 30 * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                                 ).Rate,
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
@@ -1009,7 +1009,7 @@ FetchBankWisePOSReport As screen:
                                                     TimeUnit.Days
                                                 ) + 1) / 30 * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                                 ).Rate
                                             )
                                         ),
@@ -1017,7 +1017,7 @@ FetchBankWisePOSReport As screen:
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             30 / 30 * LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) And ThisRecord.TerminalTypes = TerminalType And ThisRecord.Property = Ownership
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                             ).Rate
                                         )
                                     );
