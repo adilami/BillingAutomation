@@ -1222,8 +1222,8 @@ FetchBankWisePOSReport As screen:
                 NotificationType.Success
             );
         Text: ="Export to Excel"
-        X: =347
-        Y: =692
+        X: =821
+        Y: =716
         ZIndex: =10
 
     lblSelectDate As label:
@@ -1261,7 +1261,7 @@ FetchBankWisePOSReport As screen:
         OnSelect: =Navigate(InoviceScreen,ScreenTransition.Fade);
         Text: ="Generate Invoice"
         Width: =193
-        X: =556
+        X: =330
         Y: =692
         ZIndex: =15
 
