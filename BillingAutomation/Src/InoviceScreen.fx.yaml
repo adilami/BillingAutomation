@@ -169,7 +169,7 @@ InoviceScreen As screen:
                     Text(drpMonth.SelectedText.Value),
                     If(
                     drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                    "praful.tamrakar@imark.com.np",
+                    "hari.bhatta@imark.com.np",
                     If(
                         drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
                         "hari.bhatta@imark.com.np",
