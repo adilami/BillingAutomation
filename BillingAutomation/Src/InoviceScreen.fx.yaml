@@ -5,15 +5,15 @@ InoviceScreen As screen:
         Text: |-
             ="Invoice
             "
-        X: =79
-        Y: =95
+        X: =109
+        Y: =105
         ZIndex: =1
 
     txtInvoice As text:
         Default: =Text(First(InvoiceNumbers).InvoiceNo)
         DisplayMode: =DisplayMode.Disabled
-        X: =79
-        Y: =138
+        X: =109
+        Y: =148
         ZIndex: =2
 
     lblRate As label:
@@ -21,8 +21,8 @@ InoviceScreen As screen:
         Text: |-
             ="Rate
             "
-        X: =79
-        Y: =178
+        X: =109
+        Y: =188
         ZIndex: =3
 
     txtRate As text:
@@ -31,15 +31,15 @@ InoviceScreen As screen:
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
-        X: =79
-        Y: =210
+        X: =109
+        Y: =220
         ZIndex: =4
 
     lblAmount As label:
         Height: =32
         Text: ="Amount"
-        X: =465
-        Y: =95
+        X: =495
+        Y: =105
         ZIndex: =5
 
     txtAmount As text:
@@ -48,8 +48,8 @@ InoviceScreen As screen:
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
-        X: =465
-        Y: =133
+        X: =495
+        Y: =143
         ZIndex: =6
 
     lblDueDate As label:
@@ -57,15 +57,15 @@ InoviceScreen As screen:
         Text: |-
             ="Due Date
             "
-        X: =465
-        Y: =173
+        X: =495
+        Y: =183
         ZIndex: =7
 
     dteDueDate As datepicker:
         Height: =45
         Width: =314
-        X: =471
-        Y: =205
+        X: =501
+        Y: =215
         ZIndex: =8
 
     btnGenerateInv As button:
@@ -236,43 +236,43 @@ InoviceScreen As screen:
             );
         Text: ="Generate Invoice"
         Width: =248
-        X: =79
-        Y: =431
+        X: =109
+        Y: =419
         ZIndex: =9
 
     lblSelectMonth As label:
         Text: ="Select Month"
-        X: =79
-        Y: =265
+        X: =109
+        Y: =275
         ZIndex: =10
 
     drpMonth As dropdown:
         Items: =["Select Month","Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
-        X: =79
-        Y: =305
+        X: =109
+        Y: =315
         ZIndex: =11
-
-    btnBack As button:
-        BorderThickness: =8
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =60
-        OnSelect: =Navigate(FetchBankWisePOSReport,ScreenTransition.Fade);
-        RadiusBottomLeft: =100
-        RadiusBottomRight: =100
-        RadiusTopLeft: =100
-        RadiusTopRight: =100
-        Text: =""
-        Width: =60
-        X: =12
-        Y: =12
-        ZIndex: =12
 
     Icon1 As icon.ArrowLeft:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =40
         Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(FetchBankWisePOSReport,ScreenTransition.Fade)
         Width: =40
-        X: =22
-        Y: =22
+        X: =32
+        Y: =32
         ZIndex: =13
+
+    Button1 As button:
+        BorderColor: =RGBA(50, 86, 160, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =80
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
+        Text: =""
+        Width: =80
+        X: =12
+        Y: =12
+        ZIndex: =14
 
