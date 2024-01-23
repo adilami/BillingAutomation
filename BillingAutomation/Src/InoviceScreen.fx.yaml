@@ -266,6 +266,10 @@ InoviceScreen As screen:
         BorderColor: =RGBA(50, 86, 160, 1)
         Fill: =RGBA(0, 0, 0, 0)
         Height: =80
+        HoverBorderColor: =RGBA(0,0,0,0)
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        OnSelect: =Navigate(FetchBankWisePOSReport,ScreenTransition.Fade)
         RadiusBottomLeft: =100
         RadiusBottomRight: =100
         RadiusTopLeft: =100

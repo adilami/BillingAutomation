@@ -99,7 +99,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/23/2024 05:18:55",
+  "HeaderLastSavedDateTimeUTC": "01/23/2024 05:41:24",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "356bcf4b-44b0-4801-a27c-57f72011443e": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-5646d8ad365c4aa8\"",
@@ -298,7 +298,7 @@
     "btnGenerateInv": 88,
     "btnSync": 74,
     "btnSyncRetrieve": 75,
-    "Button1": 0,
+    "Button1": 76,
     "conrainerHeader": 1,
     "containerGalleryBankWisePOSDetail": 0,
     "drpBankName": 40,
