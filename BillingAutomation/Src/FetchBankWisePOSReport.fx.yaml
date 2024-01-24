@@ -1641,7 +1641,7 @@ FetchBankWisePOSReport As screen:
         Text: ="Generate Invoice"
         Width: =193
         X: =321
-        Y: =692
+        Y: =701
         ZIndex: =15
 
     Label4 As label:
