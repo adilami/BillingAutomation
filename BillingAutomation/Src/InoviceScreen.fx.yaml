@@ -97,64 +97,8 @@ InoviceScreen As screen:
                 ExportToExcel.Run(
                     JSON(colInvoice),
                     If(
-                        drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                        "Nabil",
-                        If(
-                            drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                            "Nepal Bank",
-                            If(
-                                drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
-                                "BOK",
-                                If(
-                                    drpBankName.SelectedText.Value = "GLOBAL IME BANK LTD.",
-                                    "Global",
-                                    If(
-                                        drpBankName.SelectedText.Value = "JYOTI BIKASH BANK LTD.",
-                                        "JBBL",
-                                        If(
-                                            drpBankName.SelectedText.Value = "KUMARI BANK LTD.",
-                                            "Kumari",
-                                            If(
-                                                drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
-                                                "Laxmi Sunrise",
-                                                If(
-                                                    drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
-                                                    "LBBL",
-                                                    If(
-                                                        drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
-                                                        "Mega",
-                                                        If(
-                                                            drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
-                                                            "NIBL",
-                                                            If(
-                                                                drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
-                                                                "SBI",
-                                                                If(
-                                                                    drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
-                                                                    "Prabhu",
-                                                                    If(
-                                                                        drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
-                                                                        "Siddhartha",
-                                                                        If(
-                                                                            drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                            "MBL",
-                                                                            If(
-                                                                                drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
-                                                                                "Citizen"
-                                                                            )
-                                                                        )
-                                                                    )
-                                                                )
-                                                            )
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
+                        drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
+                        "SBI"
                     ),
                     If(
                         drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
@@ -225,21 +169,17 @@ InoviceScreen As screen:
                                                                 drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
                                                                 "NIBL",
                                                                 If(
-                                                                    drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
-                                                                    "SBI",
+                                                                    drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
+                                                                    "Prabhu",
                                                                     If(
-                                                                        drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
-                                                                        "Prabhu",
+                                                                        drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
+                                                                        "Siddhartha",
                                                                         If(
-                                                                            drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
-                                                                            "Siddhartha",
+                                                                            drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
+                                                                            "MBL",
                                                                             If(
-                                                                                drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                                "MBL",
-                                                                                If(
-                                                                                    drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
-                                                                                    "Citizen"
-                                                                                )
+                                                                                drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
+                                                                                "Citizen"
                                                                             )
                                                                         )
                                                                     )
