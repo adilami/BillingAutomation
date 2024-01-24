@@ -912,28 +912,10 @@ FetchBankWisePOSReport As screen:
                                         );
                                     ),
                                     RentalFee: Text(
-                                        LookUp(
-                                            tbl_mst_Rates,
-                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                        ).Rate
+                                       "-"
                                     ),
                                     FinalAmt: Text(
-                                        If(
-                                            ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
-                                            0,
-                                            (If(
-                                                ThisRecord.Status = "Retrieval",
-                                                DateDiff(
-                                                    dteFromDate.SelectedDate,
-                                                    ThisRecord.deployDate,
-                                                    TimeUnit.Days
-                                                ) + 1,
-                                                30
-                                            ) / 30) * LookUp(
-                                                tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                            ).Rate
-                                        );
+                                    "-"
                                     )
                                 }
                             )
@@ -981,47 +963,10 @@ FetchBankWisePOSReport As screen:
                                         );
                                     ),
                                     RentalFee: Text(
-                                        LookUp(
-                                            tbl_mst_Rates,
-                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                        ).Rate
+                                       "-"
                                     ),
                                     FinalAmt: Text(
-                                        If(
-                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
-                                            If(
-                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                                30 / 30 * LookUp(
-                                                    tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                                ).Rate,
-                                                If(
-                                                    (DateDiff(
-                                                        ThisRecord.deployDate,
-                                                        dteToDate.SelectedDate,
-                                                        TimeUnit.Days
-                                                    ) + 1) > 30,
-                                                    30 / 30 * LookUp(
-                                                        tbl_mst_Rates,
-                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                                    ).Rate,
-                                                    (DateDiff(
-                                                        ThisRecord.deployDate,
-                                                        dteToDate.SelectedDate,
-                                                        TimeUnit.Days
-                                                    ) + 1) / 30 * LookUp(
-                                                        tbl_mst_Rates,
-                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                                    ).Rate
-                                                )
-                                            ),
-                                            If(
-                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
-                                                30 / 30 * LookUp(
-                                                    tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                                ).Rate
-                                            )
+                                        "-"
                                         );
                                     )
                                 }
