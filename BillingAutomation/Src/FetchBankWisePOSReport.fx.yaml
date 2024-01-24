@@ -1422,8 +1422,9 @@ FetchBankWisePOSReport As screen:
                 )
             );
         Text: ="Fetch Data"
-        X: =137
-        Y: =692
+        Width: =171
+        X: =101
+        Y: =696
         ZIndex: =4
 
     dteFromDate As datepicker:
@@ -1639,7 +1640,7 @@ FetchBankWisePOSReport As screen:
         OnSelect: =Navigate(InoviceScreen,ScreenTransition.Fade);
         Text: ="Generate Invoice"
         Width: =193
-        X: =330
+        X: =321
         Y: =692
         ZIndex: =15
 
