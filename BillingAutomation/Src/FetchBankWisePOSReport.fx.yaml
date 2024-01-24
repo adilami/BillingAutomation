@@ -824,102 +824,84 @@ FetchBankWisePOSReport As screen:
                         NotificationType.Success
                     );
                     ,
-                    ClearCollect(
-                        colBankData,
-                        ForAll(
-                            Table(parsedData),
-                            {
-                                deployDate: Text(Value.deployDate),
-                                bankName: Text(Value.bankName),
-                                MerchantName: Text(Value.merchantName),
-                                Address: Text(Value.merchantAddress),
-                                District: (Value.district),
-                                TID: Text(Value.idTerminal),
-                                MID: Text(Value.idMerchant),
-                                SerialNumber: Text(Value.serialKey),
-                                TerminalType: Text(Value.terminalType),
-                                Ownership: Text(Value.ownership),
-                                Status: Text(Value.deploymentStatus),
-                                CashAdvance: If(
-                                    Value.cashAdvance = true,
-                                    "True",
-                                    "false"
-                                ),
-                                PinChange: Text(
-                                    Value.pinChange = true,
-                                    "True",
-                                    "False"
-                                )
-                            }
-                        )
-                    );
-                    ClearCollect(
-                        colRetBankData,
-                        ForAll(
-                            Table(parsedRetrieveData),
-                            {
-                                deployDate: Text(Value.updatedDate),
-                                bankName: Text(Value.bankName),
-                                MerchantName: Text(Value.merchant),
-                                Address: Text(Value.address),
-                                District: (Value.district),
-                                TID: Text(Value.idTerminal),
-                                MID: Text(Value.idMerchant),
-                                SerialNumber: Text(Value.serialNumber),
-                                TerminalType: Text(Value.terminalType),
-                                Ownership: Text(Value.ownership),
-                                Status: Text(Value.teminalStatus),
-                                CashAdvance: If(
-                                    Value.cashAdvance = true,
-                                    "True",
-                                    "false"
-                                ),
-                                PinChange: Text(
-                                    Value.pinChange = true,
-                                    "True",
-                                    "False"
-                                )
-                            }
-                        )
-                    );
-                    ClearCollect(
-                        colALLRET,
-                        ForAll(
+                    If(
+                        drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
+                        ClearCollect(
+                            colBankData,
+                            ForAll(
+                                Table(parsedData),
+                                {
+                                    deployDate: Text(Value.deployDate),
+                                    bankName: Text(Value.bankName),
+                                    MerchantName: Text(Value.merchantName),
+                                    Address: Text(Value.merchantAddress),
+                                    District: (Value.district),
+                                    TID: Text(Value.idTerminal),
+                                    MID: Text(Value.idMerchant),
+                                    SerialNumber: Text(Value.serialKey),
+                                    TerminalType: Text(Value.terminalType),
+                                    Ownership: Text(Value.ownership),
+                                    Status: Text(Value.deploymentStatus),
+                                    CashAdvance: If(
+                                        Value.cashAdvance = true,
+                                        "True",
+                                        "false"
+                                    ),
+                                    PinChange: Text(
+                                        Value.pinChange = true,
+                                        "True",
+                                        "False"
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
                             colRetBankData,
-                            {
-                                Date: DateValue(ThisRecord.deployDate),
-                                BankName: Text(ThisRecord.bankName),
-                                MerchantName: Text(ThisRecord.MerchantName),
-                                Address: Text(ThisRecord.Address),
-                                District: Text(ThisRecord.District),
-                                TID: Text("'" & ThisRecord.TID & "'"),
-                                MID: Text("'" & ThisRecord.MID & "'"),
-                                SerialNo: Text("'" & ThisRecord.SerialNumber & "'"),
-                                TerminalType: Text(ThisRecord.TerminalType),
-                                Ownership: Text(ThisRecord.Ownership),
-                                Status: Text(ThisRecord.Status),
-                                DaysRun: Text(
-                                    If(
-                                        ThisRecord.Status = "Retrieval",
-                                        DateDiff(
-                                            dteFromDate.SelectedDate,
-                                            ThisRecord.deployDate,
-                                            TimeUnit.Days
-                                        ) + 1,
-                                        30
-                                    );
-                                ),
-                                RentalFee: Text(
-                                    LookUp(
-                                        tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                    ).Rate
-                                ),
-                                FinalAmt: Text(
-                                    If(
-                                        ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
-                                        0,
-                                        (If(
+                            ForAll(
+                                Table(parsedRetrieveData),
+                                {
+                                    deployDate: Text(Value.updatedDate),
+                                    bankName: Text(Value.bankName),
+                                    MerchantName: Text(Value.merchant),
+                                    Address: Text(Value.address),
+                                    District: (Value.district),
+                                    TID: Text(Value.idTerminal),
+                                    MID: Text(Value.idMerchant),
+                                    SerialNumber: Text(Value.serialNumber),
+                                    TerminalType: Text(Value.terminalType),
+                                    Ownership: Text(Value.ownership),
+                                    Status: Text(Value.teminalStatus),
+                                    CashAdvance: If(
+                                        Value.cashAdvance = true,
+                                        "True",
+                                        "false"
+                                    ),
+                                    PinChange: Text(
+                                        Value.pinChange = true,
+                                        "True",
+                                        "False"
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colALLRET,
+                            ForAll(
+                                colRetBankData,
+                                {
+                                    Date: DateValue(ThisRecord.deployDate),
+                                    BankName: Text(ThisRecord.bankName),
+                                    MerchantName: Text(ThisRecord.MerchantName),
+                                    Address: Text(ThisRecord.Address),
+                                    District: Text(ThisRecord.District),
+                                    TID: Text("'" & ThisRecord.TID & "'"),
+                                    MID: Text("'" & ThisRecord.MID & "'"),
+                                    SerialNo: Text("'" & ThisRecord.SerialNumber & "'"),
+                                    TerminalType: Text(ThisRecord.TerminalType),
+                                    Ownership: Text(ThisRecord.Ownership),
+                                    Status: Text(ThisRecord.Status),
+                                    DaysRun: Text(
+                                        If(
                                             ThisRecord.Status = "Retrieval",
                                             DateDiff(
                                                 dteFromDate.SelectedDate,
@@ -927,120 +909,359 @@ FetchBankWisePOSReport As screen:
                                                 TimeUnit.Days
                                             ) + 1,
                                             30
-                                        ) / 30) * LookUp(
+                                        );
+                                    ),
+                                    RentalFee: Text(
+                                        LookUp(
                                             tbl_mst_Rates,
                                             ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                         ).Rate
-                                    );
-                                )
-                            }
-                        )
-                    );
-                    ClearCollect(
-                        colALLDEP,
-                        ForAll(
-                            colBankData,
-                            {
-                                Date: DateValue(ThisRecord.deployDate),
-                                BankName: Text(ThisRecord.bankName),
-                                MerchantName: Text(ThisRecord.MerchantName),
-                                Address: Text(ThisRecord.Address),
-                                District: Text(ThisRecord.District),
-                                TID: Text("'" & ThisRecord.TID & "'"),
-                                MID: Text("'" & ThisRecord.MID & "'"),
-                                SerialNo: Text("'" & ThisRecord.SerialNumber & "'"),
-                                TerminalType: Text(ThisRecord.TerminalType),
-                                Ownership: Text(ThisRecord.Ownership),
-                                Status: Text(ThisRecord.Status),
-                                DaysRun: Text(
-                                    If(
-                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                    ),
+                                    FinalAmt: Text(
                                         If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30,
-                                            If(
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) > 30,
-                                                30,
+                                            ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                            0,
+                                            (If(
+                                                ThisRecord.Status = "Retrieval",
                                                 DateDiff(
+                                                    dteFromDate.SelectedDate,
                                                     ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
                                                     TimeUnit.Days
-                                                ) + 1
-                                            )
-                                        ),
-                                        If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
-                                            30
-                                        )
-                                    );
-                                ),
-                                RentalFee: Text(
-                                    LookUp(
-                                        tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                    ).Rate
-                                ),
-                                FinalAmt: Text(
-                                    If(
-                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
-                                        If(
-                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                            30 / 30 * LookUp(
+                                                ) + 1,
+                                                30
+                                            ) / 30) * LookUp(
                                                 tbl_mst_Rates,
                                                 ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                            ).Rate,
+                                            ).Rate
+                                        );
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colALLDEP,
+                            ForAll(
+                                colBankData,
+                                {
+                                    Date: DateValue(ThisRecord.deployDate),
+                                    BankName: Text(ThisRecord.bankName),
+                                    MerchantName: Text(ThisRecord.MerchantName),
+                                    Address: Text(ThisRecord.Address),
+                                    District: Text(ThisRecord.District),
+                                    TID: Text("'" & ThisRecord.TID & "'"),
+                                    MID: Text("'" & ThisRecord.MID & "'"),
+                                    SerialNo: Text("'" & ThisRecord.SerialNumber & "'"),
+                                    TerminalType: Text(ThisRecord.TerminalType),
+                                    Ownership: Text(ThisRecord.Ownership),
+                                    Status: Text(ThisRecord.Status),
+                                    DaysRun: Text(
+                                        If(
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                             If(
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) > 30,
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                30,
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > 30,
+                                                    30,
+                                                    DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                30
+                                            )
+                                        );
+                                    ),
+                                    RentalFee: Text(
+                                        LookUp(
+                                            tbl_mst_Rates,
+                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                        ).Rate
+                                    ),
+                                    FinalAmt: Text(
+                                        If(
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                            If(
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                                 30 / 30 * LookUp(
                                                     tbl_mst_Rates,
                                                     ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                                 ).Rate,
-                                                (DateDiff(
-                                                    ThisRecord.deployDate,
-                                                    dteToDate.SelectedDate,
-                                                    TimeUnit.Days
-                                                ) + 1) / 30 * LookUp(
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > 30,
+                                                    30 / 30 * LookUp(
+                                                        tbl_mst_Rates,
+                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                                    ).Rate,
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) / 30 * LookUp(
+                                                        tbl_mst_Rates,
+                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                                    ).Rate
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                30 / 30 * LookUp(
                                                     tbl_mst_Rates,
                                                     ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                                 ).Rate
                                             )
-                                        ),
+                                        );
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colAllData,
+                            colALLDEP
+                        );
+                        Collect(
+                            colAllData,
+                            colALLRET
+                        );
+                        Set(
+                            glbToggleButton,
+                            true
+                        );
+                        Notify(
+                            "Both Deployed and Retrieved Terminal Synced Successfully",
+                            NotificationType.Success
+                        );
+                        ,
+                        ClearCollect(
+                            colBankData,
+                            ForAll(
+                                Table(parsedData),
+                                {
+                                    deployDate: Text(Value.deployDate),
+                                    bankName: Text(Value.bankName),
+                                    MerchantName: Text(Value.merchantName),
+                                    Address: Text(Value.merchantAddress),
+                                    District: (Value.district),
+                                    TID: Text(Value.idTerminal),
+                                    MID: Text(Value.idMerchant),
+                                    SerialNumber: Text(Value.serialKey),
+                                    TerminalType: Text(Value.terminalType),
+                                    Ownership: Text(Value.ownership),
+                                    Status: Text(Value.deploymentStatus),
+                                    CashAdvance: If(
+                                        Value.cashAdvance = true,
+                                        "True",
+                                        "false"
+                                    ),
+                                    PinChange: Text(
+                                        Value.pinChange = true,
+                                        "True",
+                                        "False"
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colRetBankData,
+                            ForAll(
+                                Table(parsedRetrieveData),
+                                {
+                                    deployDate: Text(Value.updatedDate),
+                                    bankName: Text(Value.bankName),
+                                    MerchantName: Text(Value.merchant),
+                                    Address: Text(Value.address),
+                                    District: (Value.district),
+                                    TID: Text(Value.idTerminal),
+                                    MID: Text(Value.idMerchant),
+                                    SerialNumber: Text(Value.serialNumber),
+                                    TerminalType: Text(Value.terminalType),
+                                    Ownership: Text(Value.ownership),
+                                    Status: Text(Value.teminalStatus),
+                                    CashAdvance: If(
+                                        Value.cashAdvance = true,
+                                        "True",
+                                        "false"
+                                    ),
+                                    PinChange: Text(
+                                        Value.pinChange = true,
+                                        "True",
+                                        "False"
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colALLRET,
+                            ForAll(
+                                colRetBankData,
+                                {
+                                    Date: DateValue(ThisRecord.deployDate),
+                                    BankName: Text(ThisRecord.bankName),
+                                    MerchantName: Text(ThisRecord.MerchantName),
+                                    Address: Text(ThisRecord.Address),
+                                    District: Text(ThisRecord.District),
+                                    TID: Text("'" & ThisRecord.TID & "'"),
+                                    MID: Text("'" & ThisRecord.MID & "'"),
+                                    SerialNo: Text("'" & ThisRecord.SerialNumber & "'"),
+                                    TerminalType: Text(ThisRecord.TerminalType),
+                                    Ownership: Text(ThisRecord.Ownership),
+                                    Status: Text(ThisRecord.Status),
+                                    DaysRun: Text(
                                         If(
-                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
-                                            30 / 30 * LookUp(
+                                            ThisRecord.Status = "Retrieval",
+                                            DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1,
+                                            30
+                                        );
+                                    ),
+                                    RentalFee: Text(
+                                        LookUp(
+                                            tbl_mst_Rates,
+                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                        ).Rate
+                                    ),
+                                    FinalAmt: Text(
+                                        If(
+                                            ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                            0,
+                                            (If(
+                                                ThisRecord.Status = "Retrieval",
+                                                DateDiff(
+                                                    dteFromDate.SelectedDate,
+                                                    ThisRecord.deployDate,
+                                                    TimeUnit.Days
+                                                ) + 1,
+                                                30
+                                            ) / 30) * LookUp(
                                                 tbl_mst_Rates,
                                                 ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                             ).Rate
-                                        )
-                                    );
-                                )
-                            }
-                        )
-                    );
-                    ClearCollect(
-                        colAllData,
-                        colALLDEP
-                    );
-                    Collect(
-                        colAllData,
-                        colALLRET
-                    );
-                    Set(
-                        glbToggleButton,
-                        true
-                    );
-                    Notify(
-                        "Both Deployed and Retrieved Terminal Synced Successfully",
-                        NotificationType.Success
-                    );
+                                        );
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colALLDEP,
+                            ForAll(
+                                colBankData,
+                                {
+                                    Date: DateValue(ThisRecord.deployDate),
+                                    BankName: Text(ThisRecord.bankName),
+                                    MerchantName: Text(ThisRecord.MerchantName),
+                                    Address: Text(ThisRecord.Address),
+                                    District: Text(ThisRecord.District),
+                                    TID: Text("'" & ThisRecord.TID & "'"),
+                                    MID: Text("'" & ThisRecord.MID & "'"),
+                                    SerialNo: Text("'" & ThisRecord.SerialNumber & "'"),
+                                    TerminalType: Text(ThisRecord.TerminalType),
+                                    Ownership: Text(ThisRecord.Ownership),
+                                    Status: Text(ThisRecord.Status),
+                                    DaysRun: Text(
+                                        If(
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                            If(
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                30,
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > 30,
+                                                    30,
+                                                    DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                30
+                                            )
+                                        );
+                                    ),
+                                    RentalFee: Text(
+                                        LookUp(
+                                            tbl_mst_Rates,
+                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                        ).Rate
+                                    ),
+                                    FinalAmt: Text(
+                                        If(
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                            If(
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                30 / 30 * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                                ).Rate,
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > 30,
+                                                    30 / 30 * LookUp(
+                                                        tbl_mst_Rates,
+                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                                    ).Rate,
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) / 30 * LookUp(
+                                                        tbl_mst_Rates,
+                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                                    ).Rate
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                30 / 30 * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                                ).Rate
+                                            )
+                                        );
+                                    )
+                                }
+                            )
+                        );
+                        ClearCollect(
+                            colAllData,
+                            colALLDEP
+                        );
+                        Collect(
+                            colAllData,
+                            colALLRET
+                        );
+                        Set(
+                            glbToggleButton,
+                            true
+                        );
+                        Notify(
+                            "Both Deployed and Retrieved Terminal Synced Successfully",
+                            NotificationType.Success
+                        );
+                    )
                 )
             );
         Text: ="Fetch Data"

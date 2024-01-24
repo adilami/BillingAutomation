@@ -614,6 +614,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.btnGenerateInv"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "FetchBankWisePOSReport.locDateFrom"
                 }
               ],
