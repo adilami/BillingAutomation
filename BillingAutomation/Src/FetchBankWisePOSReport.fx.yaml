@@ -214,7 +214,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.BankName
                 Width: =206
-                X: =109
+                X: =118
                 Y: =24
                 ZIndex: =1
 
@@ -223,7 +223,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Date
                 Width: =117
-                X: =3
+                X: =12
                 Y: =24
                 ZIndex: =2
 
@@ -233,7 +233,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MerchantName
                 Width: =261
-                X: =298
+                X: =316
                 Y: =17
                 ZIndex: =3
 
@@ -243,7 +243,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.District
                 Width: =154
-                X: =747
+                X: =756
                 Y: =21
                 ZIndex: =5
 
@@ -253,7 +253,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.TID
                 Width: =147
-                X: =875
+                X: =884
                 Y: =30
                 ZIndex: =6
 
@@ -263,7 +263,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MID
                 Width: =184
-                X: =1015
+                X: =1024
                 Y: =30
                 ZIndex: =7
 
@@ -273,7 +273,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.SerialNo
                 Width: =195
-                X: =1205
+                X: =1214
                 Y: =30
                 ZIndex: =8
 
@@ -343,7 +343,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Address
                 Width: =186
-                X: =569
+                X: =587
                 Y: =17
                 ZIndex: =15
 
