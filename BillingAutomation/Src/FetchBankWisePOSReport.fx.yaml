@@ -232,8 +232,8 @@ FetchBankWisePOSReport As screen:
                 Height: =68
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.MerchantName
-                Width: =283
-                X: =308
+                Width: =261
+                X: =298
                 Y: =17
                 ZIndex: =3
 
@@ -243,7 +243,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.District
                 Width: =154
-                X: =737
+                X: =747
                 Y: =21
                 ZIndex: =5
 
@@ -343,7 +343,7 @@ FetchBankWisePOSReport As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Address
                 Width: =186
-                X: =559
+                X: =569
                 Y: =17
                 ZIndex: =15
 
