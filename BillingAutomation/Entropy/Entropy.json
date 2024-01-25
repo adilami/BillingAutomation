@@ -4,7 +4,7 @@
   "ControlUniqueIds": {
     "App": 1,
     "BankWisePosReport": 54,
-    "btnExportToExcel": 52,
+    "btnExportToExcel": 53,
     "btnFetchData": 51,
     "btnGenerateInv": 95,
     "btnSync": 80,
@@ -26,7 +26,7 @@
     "galleryTemplate2": 24,
     "galleryTemplate3": 66,
     "galRetrieveTerminal": 70,
-    "Generate Invoice": 53,
+    "Generate Invoice": 52,
     "Host": 3,
     "Icon1": 84,
     "icoSeperator": 59,
@@ -34,7 +34,7 @@
     "Label3": 50,
     "Label4": 49,
     "lblAddress": 10,
-    "lblAddressContent": 27,
+    "lblAddressContent": 26,
     "lblAmount": 86,
     "lblBankName": 60,
     "lblBankName_1": 75,
@@ -54,14 +54,14 @@
     "lblDaysRunContent": 34,
     "lblDeployedTerminalsList": 56,
     "lblDistrict": 11,
-    "lblDistrictContent": 28,
+    "lblDistrictContent": 27,
     "lblDueDate": 89,
     "lblFinalAmt_2": 22,
     "lblFinalAmtContent": 36,
     "lblFromDate": 43,
     "lblInvoice": 85,
     "lblMerchantName": 9,
-    "lblMerchantNameContent": 26,
+    "lblMerchantNameContent": 25,
     "lblMID": 13,
     "lblMIDContent": 39,
     "lblNoOfDays": 42,
@@ -80,7 +80,7 @@
     "lblStatus": 17,
     "lblStatusContent": 32,
     "lblTerminalType": 61,
-    "lblTerminalTypeContent": 25,
+    "lblTerminalTypeContent": 28,
     "lblTerminalTypes": 15,
     "lblTID": 12,
     "lblTIDContent": 38,
@@ -99,7 +99,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/24/2024 11:30:03",
+  "HeaderLastSavedDateTimeUTC": "01/25/2024 04:40:53",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
@@ -392,7 +392,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.9645522,
+    "AnalysisLoadTime": 0.8182689,
     "ControlCount": {
       "button": 7,
       "datepicker": 5,
@@ -406,7 +406,7 @@
       "screen": 3,
       "text": 4
     },
-    "DeserializationLoadTime": 2.4697998
+    "DeserializationLoadTime": 3.0926036
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
