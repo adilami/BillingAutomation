@@ -97,7 +97,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/28/2024 10:42:36",
+  "HeaderLastSavedDateTimeUTC": "01/28/2024 10:45:06",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1d5e8b1f-bae0-47d8-a2d7-6fbf97b0a52c": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-5646d8ad365c4aa8\"",
@@ -289,7 +289,7 @@
   "PublishOrderIndices": {
     "App": 0,
     "BankWisePosReport": 0,
-    "btnExportToExcel": 46,
+    "btnExportToExcel": 45,
     "btnFetchData": 44,
     "btnGenerateInv": 86,
     "btnSync": 72,
@@ -311,7 +311,7 @@
     "galleryTemplate2": 19,
     "galleryTemplate3": 58,
     "galRetrieveTerminal": 62,
-    "Generate Invoice": 45,
+    "Generate Invoice": 46,
     "Host": 0,
     "Icon1": 75,
     "icoSeperator": 51,
