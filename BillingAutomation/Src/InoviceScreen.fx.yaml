@@ -69,7 +69,7 @@ InoviceScreen As screen:
         ZIndex: =8
 
     btnGenerateInv As button:
-        FontWeight: =FontWeight.Bold
+        FontWeight: =FontWeight.Lighter
         Height: =60
         OnSelect: |-
             =If(
@@ -102,7 +102,7 @@ InoviceScreen As screen:
                     ),
                     If(
                         drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
-                        "hari.bhatta@imark.com.np"
+                        "bhagbat.kc@imark.com.np"
                     )
                 );
                 Notify(
@@ -203,46 +203,46 @@ InoviceScreen As screen:
                         Text(drpMonth.SelectedText.Value),
                         If(
                             drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                            "hari.bhatta@imark.com.np",
+                            "bhagbat.kc@imark.com.np",
                             If(
                                 drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                                "hari.bhatta@imark.com.np",
+                                "bhagbat.kc@imark.com.np",
                                 If(
                                     drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
-                                    "BOK",
+                                    "bhagbat.kc@imark.com.np",
                                     If(
                                         drpBankName.SelectedText.Value = "GLOBAL IME BANK LTD.",
-                                        "Global",
+                                        "bhagbat.kc@imark.com.np",
                                         If(
                                             drpBankName.SelectedText.Value = "JYOTI BIKASH BANK LTD.",
-                                            "JBBL",
+                                            "bhagbat.kc@imark.com.np",
                                             If(
                                                 drpBankName.SelectedText.Value = "KUMARI BANK LTD.",
-                                                "hari.bhatta@imark.com.np",
+                                                "bhagbat.kc@imark.com.np",
                                                 If(
                                                     drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
-                                                    "Laxmi Sunrise",
+                                                    "bhagbat.kc@imark.com.np",
                                                     If(
                                                         drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
-                                                        "LBBL",
+                                                        "bhagbat.kc@imark.com.np",
                                                         If(
                                                             drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
-                                                            "praful.tamrakar@imark.com.np",
+                                                            "bhagbat.kc@imark.com.np",
                                                             If(
                                                                 drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
-                                                                "NIBL",
+                                                                "bhagbat.kc@imark.com.np",
                                                                 If(
                                                                     drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
-                                                                    "Prabhu",
+                                                                    "bhagbat.kc@imark.com.np",
                                                                     If(
                                                                         drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
-                                                                        "Siddhartha",
+                                                                        "bhagbat.kc@imark.com.np",
                                                                         If(
                                                                             drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                            "hari.bhatta@imark.com.np",
+                                                                            "bhagbat.kc@imark.com.np",
                                                                             If(
                                                                                 drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
-                                                                                "Citizen"
+                                                                                "bhagbat.kc@imark.com.np"
                                                                             )
                                                                         )
                                                                     )
