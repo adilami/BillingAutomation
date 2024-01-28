@@ -324,7 +324,7 @@
       "MetaDataIDKey": "",
       "Name": "btnFetchData",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2298,7 +2298,7 @@
       "MetaDataIDKey": "",
       "Name": "Generate Invoice",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3430,7 +3430,7 @@
       "MetaDataIDKey": "",
       "Name": "lblAddressContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6497,7 +6497,7 @@
       "MetaDataIDKey": "",
       "Name": "lblDistrictContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7991,7 +7991,7 @@
       "MetaDataIDKey": "",
       "Name": "lblMerchantNameContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12506,7 +12506,7 @@
       "MetaDataIDKey": "",
       "Name": "lblTerminalTypeContent",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
