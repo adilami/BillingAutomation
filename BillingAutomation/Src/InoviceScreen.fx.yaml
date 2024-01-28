@@ -296,7 +296,7 @@ InoviceScreen As screen:
     Button1 As button:
         BorderColor: =RGBA(50, 86, 160, 1)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =80
+        Height: =60
         HoverBorderColor: =RGBA(0,0,0,0)
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
@@ -306,8 +306,8 @@ InoviceScreen As screen:
         RadiusTopLeft: =100
         RadiusTopRight: =100
         Text: =""
-        Width: =80
-        X: =12
-        Y: =12
+        Width: =60
+        X: =22
+        Y: =22
         ZIndex: =14
 
