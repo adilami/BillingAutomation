@@ -31,8 +31,8 @@ InoviceScreen As screen:
         DisplayMode: =DisplayMode.Disabled
         FontWeight: =FontWeight.Bold
         Size: =16
-        X: =117
-        Y: =217
+        X: =110
+        Y: =224
         ZIndex: =4
 
     lblAmount As label:
