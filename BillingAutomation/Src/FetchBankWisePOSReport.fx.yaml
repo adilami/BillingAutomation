@@ -373,8 +373,8 @@ FetchBankWisePOSReport As screen:
             =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:false}));
             Clear(colAllData);
         OnSelect: =
-        X: =14
-        Y: =603
+        X: =49
+        Y: =582
         ZIndex: =3
 
     btnFetchData As button:
@@ -1423,32 +1423,32 @@ FetchBankWisePOSReport As screen:
             );
         Text: ="Fetch Data"
         Width: =171
-        X: =101
-        Y: =696
+        X: =45
+        Y: =682
         ZIndex: =4
 
     dteFromDate As datepicker:
         DefaultDate: =First(tbl_Dates).DateFrom
         Height: =38
         Width: =200
-        X: =381
-        Y: =605
+        X: =416
+        Y: =584
         ZIndex: =5
 
     dteToDate As datepicker:
         DefaultDate: =DateValue(First(tbl_Dates).DateTo)
         Height: =38
         Width: =200
-        X: =625
-        Y: =605
+        X: =660
+        Y: =584
         ZIndex: =6
 
     lblFromDate As label:
         Height: =38
         Text: ="Date from"
         Width: =126
-        X: =381
-        Y: =567
+        X: =416
+        Y: =546
         ZIndex: =7
 
     lblToDate As label:
@@ -1457,8 +1457,8 @@ FetchBankWisePOSReport As screen:
             ="Date to
             "
         Width: =91
-        X: =625
-        Y: =567
+        X: =660
+        Y: =546
         ZIndex: =8
 
     btnExportToExcel As button:
@@ -1610,23 +1610,23 @@ FetchBankWisePOSReport As screen:
         Text: |-
             ="Select Bank
             "
-        X: =14
-        Y: =563
+        X: =49
+        Y: =542
         ZIndex: =11
 
     txtNumberOfDays As text:
         Default: =""
         HintText: ="No Of Days"
         Visible: =locTogText
-        X: =867
-        Y: =603
+        X: =902
+        Y: =582
         ZIndex: =13
 
     lblNoOfDays As label:
         Text: ="No of Days"
         Visible: =locTogText
-        X: =868
-        Y: =563
+        X: =903
+        Y: =542
         ZIndex: =14
 
     "'Generate Invoice' As button":
@@ -1634,7 +1634,7 @@ FetchBankWisePOSReport As screen:
         OnSelect: =Navigate(InoviceScreen,ScreenTransition.Fade);
         Text: ="Generate Invoice"
         Width: =193
-        X: =284
-        Y: =696
+        X: =228
+        Y: =682
         ZIndex: =15
 
