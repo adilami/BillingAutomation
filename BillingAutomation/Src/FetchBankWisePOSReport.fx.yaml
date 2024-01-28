@@ -370,7 +370,7 @@ FetchBankWisePOSReport As screen:
     drpBankName As dropdown:
         Items: =tbl_mst_Banks
         OnChange: |-
-            =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD.",UpdateContext({locTogText:true}),UpdateContext({locTogText:false}));
+            =If(drpBankName.SelectedText.Value="MACHHAPUCHCHHRE BANK LTD." Or drpBankName.SelectedText.Value="All Bank",UpdateContext({locTogText:true}),UpdateContext({locTogText:false}));
             Clear(colAllData);
         OnSelect: =
         X: =49
