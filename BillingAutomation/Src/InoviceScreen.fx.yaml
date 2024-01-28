@@ -102,7 +102,7 @@ InoviceScreen As screen:
                     ),
                     If(
                         drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
-                        "praful.tamrakar@imark.com.np"
+                        "hari.bhatta@imark.com.np"
                     )
                 );
                 Notify(
