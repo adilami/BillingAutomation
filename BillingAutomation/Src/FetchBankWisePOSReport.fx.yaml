@@ -1634,7 +1634,7 @@ FetchBankWisePOSReport As screen:
         OnSelect: =Navigate(InoviceScreen,ScreenTransition.Fade);
         Text: ="Generate Invoice"
         Width: =193
-        X: =228
+        X: =235
         Y: =682
         ZIndex: =15
 
