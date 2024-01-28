@@ -1602,8 +1602,8 @@ FetchBankWisePOSReport As screen:
             );
         Text: ="Export to Excel"
         Visible: =false
-        X: =821
-        Y: =716
+        X: =464
+        Y: =682
         ZIndex: =10
 
     lblSelectDate As label:
