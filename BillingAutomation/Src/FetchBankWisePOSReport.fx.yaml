@@ -1601,6 +1601,7 @@ FetchBankWisePOSReport As screen:
                 NotificationType.Success
             );
         Text: ="Export to Excel"
+        Visible: =false
         X: =821
         Y: =716
         ZIndex: =10
@@ -1612,13 +1613,6 @@ FetchBankWisePOSReport As screen:
         X: =14
         Y: =563
         ZIndex: =11
-
-    Label3 As label:
-        Align: =Align.Center
-        Text: =CountRows(colInvoice)
-        X: =1086
-        Y: =646
-        ZIndex: =12
 
     txtNumberOfDays As text:
         Default: =""
@@ -1640,77 +1634,7 @@ FetchBankWisePOSReport As screen:
         OnSelect: =Navigate(InoviceScreen,ScreenTransition.Fade);
         Text: ="Generate Invoice"
         Width: =193
-        X: =293
-        Y: =694
+        X: =284
+        Y: =696
         ZIndex: =15
-
-    Label4 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =45
-        Text: |-
-            =If(
-                drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                "Nabil",
-                If(
-                    drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                    "Nepal Bank",
-                    If(
-                        drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
-                        "BOK",
-                        If(
-                            drpBankName.SelectedText.Value = "GLOBAL IME BANK LTD.",
-                            "Global",
-                            If(
-                                drpBankName.SelectedText.Value = "JYOTI BIKASH BANK LTD.",
-                                "JBBL",
-                                If(
-                                    drpBankName.SelectedText.Value = "KUMARI BANK LTD.",
-                                    "Kumari",
-                                    If(
-                                        drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
-                                        "Laxmi Sunrise",
-                                        If(
-                                            drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
-                                            "LBBL",
-                                            If(
-                                                drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
-                                                "Mega",
-                                                If(
-                                                    drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
-                                                    "NIBL",
-                                                    If(
-                                                        drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
-                                                        "SBI",
-                                                        If(
-                                                            drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
-                                                            "Prabhu",
-                                                            If(
-                                                                drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
-                                                                "Siddhartha",
-                                                                If(
-                                                                    drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                    "MBL",
-                                                                     If(
-                                                                    drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
-                                                                    "Citizen")
-            
-                                                                )
-                                                            )
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            )
-        Width: =72
-        X: =1007
-        Y: =644
-        ZIndex: =16
 
