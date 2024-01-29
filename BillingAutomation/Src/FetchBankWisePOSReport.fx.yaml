@@ -378,7 +378,7 @@ FetchBankWisePOSReport As screen:
         ZIndex: =3
 
     btnFetchData As button:
-        OnSelect: |-
+        OnSelect: |
             =Set(
                 glbToggleButton,
                 false
@@ -487,40 +487,133 @@ FetchBankWisePOSReport As screen:
                             TerminalType: Text(ThisRecord.TerminalType),
                             Ownership: Text(ThisRecord.Ownership),
                             Status: Text(ThisRecord.Status),
-                            DaysRun: Text(
-                                If(
-                                    ThisRecord.Status = "Retrieval",
-                                    DateDiff(
-                                        dteFromDate.SelectedDate,
-                                        ThisRecord.deployDate,
-                                        TimeUnit.Days
-                                    ) + 1,
-                                    30
-                                );
-                            ),
-                            RentalFee: Text(
-                                LookUp(
-                                    tbl_mst_Rates,
-                                    ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
-                                ).Rate
-                            ),
-                            FinalAmt: Text(
-                                If(
-                                    ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
-                                    0,
-                                    (If(
+                            DaysRun: If(
+                                ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
+                                Text(
+                                    If(
                                         ThisRecord.Status = "Retrieval",
                                         DateDiff(
                                             dteFromDate.SelectedDate,
                                             ThisRecord.deployDate,
                                             TimeUnit.Days
                                         ) + 1,
-                                        30
-                                    ) / 30) * LookUp(
+                                        Value(txtNumberOfDays.Text)
+                                    );
+                                ),
+                                If(
+                                    ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
+                                    Text(
+                                        If(
+                                            ThisRecord.Status = "Retrieval",
+                                            DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1,
+                                            30
+                                        );
+                                    ),
+                                    If(
+                                        ThisRecord.bankName = "NEPAL SBI BANK LTD.",
+                                        Text(
+                                            If(
+                                                ThisRecord.Status = "Retrieval",
+                                                DateDiff(
+                                                    dteFromDate.SelectedDate,
+                                                    ThisRecord.deployDate,
+                                                    TimeUnit.Days
+                                                ) + 1,
+                                                30
+                                            );
+                                        ),
+                                        Text(
+                                            If(
+                                                ThisRecord.Status = "Retrieval",
+                                                DateDiff(
+                                                    dteFromDate.SelectedDate,
+                                                    ThisRecord.deployDate,
+                                                    TimeUnit.Days
+                                                ) + 1,
+                                                30
+                                            );
+                                        )
+                                    )
+                                )
+                            ),
+                            RentalFee: If(
+                                ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
+                                Text(
+                                    LookUp(
                                         tbl_mst_Rates,
                                         ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
                                     ).Rate
-                                );
+                                ),
+                                If(
+                                    ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
+                                    Text("0"),
+                                    If(
+                                        ThisRecord.bankName = "NEPAL SBI BANK LTD.",
+                                        Text("-"),
+                                        Text(
+                                            LookUp(
+                                                tbl_mst_Rates,
+                                                ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                            ).Rate
+                                        )
+                                    )
+                                )
+                            ),
+                            FinalAmt: If(
+                                ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
+                                Text(
+                                    (If(
+                                        ThisRecord.Status = "Retrieval",
+                                        If(
+                                            ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                            0,
+                                            DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1,
+                                            Value(txtNumberOfDays.Text)
+                                        ) / Value(txtNumberOfDays.Text)
+                                    ) * LookUp(
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                    ).Rate);
+                                ),
+                                If(
+                                    ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
+                                    Text(
+                                        LookUp(
+                                            tbl_mst_Rates,
+                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership
+                                        ).Rate
+                                    ),
+                                    If(
+                                        ThisRecord.bankName = "NEPAL SBI BANK LTD.",
+                                        Text("-"),
+                                        Text(
+                                            If(
+                                                ThisRecord.CashAdvance = "True" Or ThisRecord.PinChange = "True",
+                                                0,
+                                                (If(
+                                                    ThisRecord.Status = "Retrieval",
+                                                    DateDiff(
+                                                        dteFromDate.SelectedDate,
+                                                        ThisRecord.deployDate,
+                                                        TimeUnit.Days
+                                                    ) + 1,
+                                                    30
+                                                ) / 30) * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                ).Rate
+                                            );
+                                        )
+                                    )
+                                )
                             )
                         }
                     )
@@ -541,75 +634,250 @@ FetchBankWisePOSReport As screen:
                             TerminalType: Text(ThisRecord.TerminalType),
                             Ownership: Text(ThisRecord.Ownership),
                             Status: Text(ThisRecord.Status),
-                            DaysRun: Text(
-                                If(
-                                    ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                            DaysRun: If(
+                                ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
+                                Text(
                                     If(
-                                        DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                        30,
+                                        ThisRecord.Status = "Retrieval",
+                                        DateDiff(
+                                            dteFromDate.SelectedDate,
+                                            ThisRecord.deployDate,
+                                            TimeUnit.Days
+                                        ) + 1,
+                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
-                                            (DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1) > 30,
-                                            30,
-                                            DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            Value(txtNumberOfDays.Text),
+                                            If(
+                                                (DateDiff(
+                                                    ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
+                                                    TimeUnit.Days
+                                                ) + 1) > Value(txtNumberOfDays.Text),
+                                                Value(txtNumberOfDays.Text),
+                                                (DateDiff(
+                                                    ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
+                                                    TimeUnit.Days
+                                                ) + 1)
+                                            )
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                            Value(txtNumberOfDays.Text)
                                         )
+                                    );
+                                ),
+                                If(
+                                    ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
+                                    Text(
+                                        If(
+                                            ThisRecord.Status = "Retrieval",
+                                            DateDiff(
+                                                dteFromDate.SelectedDate,
+                                                ThisRecord.deployDate,
+                                                TimeUnit.Days
+                                            ) + 1,
+                                            ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                            If(
+                                                DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                30,
+                                                If(
+                                                    (DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1) > 30,
+                                                    30,
+                                                    DateDiff(
+                                                        ThisRecord.deployDate,
+                                                        dteToDate.SelectedDate,
+                                                        TimeUnit.Days
+                                                    ) + 1
+                                                )
+                                            ),
+                                            If(
+                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                30
+                                            )
+                                        );
                                     ),
                                     If(
-                                        ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
-                                        30
+                                        ThisRecord.bankName = "NEPAL SBI BANK LTD.",
+                                        Text(
+                                            If(
+                                                ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                                If(
+                                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                    30,
+                                                    If(
+                                                        (DateDiff(
+                                                            ThisRecord.deployDate,
+                                                            dteToDate.SelectedDate,
+                                                            TimeUnit.Days
+                                                        ) + 1) > 30,
+                                                        30,
+                                                        DateDiff(
+                                                            ThisRecord.deployDate,
+                                                            dteToDate.SelectedDate,
+                                                            TimeUnit.Days
+                                                        ) + 1
+                                                    )
+                                                ),
+                                                If(
+                                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                    30
+                                                )
+                                            );
+                                        ),
+                                        Text(
+                                            If(
+                                                ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                                If(
+                                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                    30,
+                                                    If(
+                                                        (DateDiff(
+                                                            ThisRecord.deployDate,
+                                                            dteToDate.SelectedDate,
+                                                            TimeUnit.Days
+                                                        ) + 1) > 30,
+                                                        30,
+                                                        DateDiff(
+                                                            ThisRecord.deployDate,
+                                                            dteToDate.SelectedDate,
+                                                            TimeUnit.Days
+                                                        ) + 1
+                                                    )
+                                                ),
+                                                If(
+                                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                    30
+                                                )
+                                            );
+                                        )
                                     )
-                                );
+                                )
                             ),
-                            RentalFee: Text(
-                                LookUp(
-                                    tbl_mst_Rates,
-                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
-                                ).Rate
-                            ),
-                            FinalAmt: Text(
+                            RentalFee: If(
+                                ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
+                                Text(
+                                    LookUp(
+                                        tbl_mst_Rates,
+                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                    ).Rate
+                                ),
                                 If(
-                                    ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
-                                    If(
-                                        DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
-                                        30 / 30 * LookUp(
+                                    ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
+                                    Text(
+                                        LookUp(
                                             tbl_mst_Rates,
                                             ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
-                                        ).Rate,
-                                        If(
-                                            (DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1) > 30,
-                                            30 / 30 * LookUp(
-                                                tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
-                                            ).Rate,
-                                            (DateDiff(
-                                                ThisRecord.deployDate,
-                                                dteToDate.SelectedDate,
-                                                TimeUnit.Days
-                                            ) + 1) / 30 * LookUp(
+                                        ).Rate
+                                    ),
+                                    If(
+                                        ThisRecord.bankName = "NEPAL SBI BANK LTD.",
+                                        Text("-"),
+                                        Text(
+                                            LookUp(
                                                 tbl_mst_Rates,
                                                 ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
                                             ).Rate
                                         )
-                                    ),
+                                    )
+                                )
+                            ),
+                            FinalAmt: If(
+                                ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
+                                Text(
                                     If(
-                                        ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
-                                        30 / 30 * LookUp(
+                                        ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                        If(
+                                            DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
+                                                tbl_mst_Rates,
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                            ).Rate,
+                                            If(
+                                                (DateDiff(
+                                                    ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
+                                                    TimeUnit.Days
+                                                ) + 1) > Value(txtNumberOfDays.Text),
+                                                Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                ).Rate,
+                                                (DateDiff(
+                                                    ThisRecord.deployDate,
+                                                    dteToDate.SelectedDate,
+                                                    TimeUnit.Days
+                                                ) + 1) / Value(txtNumberOfDays.Text) * LookUp(
+                                                    tbl_mst_Rates,
+                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                ).Rate
+                                            )
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                            Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
+                                                tbl_mst_Rates,
+                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                            ).Rate
+                                        )
+                                    )
+                                ),
+                                If(
+                                    ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
+                                    Text(
+                                        LookUp(
                                             tbl_mst_Rates,
                                             ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
                                         ).Rate
+                                    ),
+                                    If(
+                                        ThisRecord.bankName = "NEPAL SBI BANK LTD.",
+                                        Text("-"),
+                                        Text(
+                                            If(
+                                                ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
+                                                If(
+                                                    DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
+                                                    30 / 30 * LookUp(
+                                                        tbl_mst_Rates,
+                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                    ).Rate,
+                                                    If(
+                                                        (DateDiff(
+                                                            ThisRecord.deployDate,
+                                                            dteToDate.SelectedDate,
+                                                            TimeUnit.Days
+                                                        ) + 1) > 30,
+                                                        30 / 30 * LookUp(
+                                                            tbl_mst_Rates,
+                                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                        ).Rate,
+                                                        (DateDiff(
+                                                            ThisRecord.deployDate,
+                                                            dteToDate.SelectedDate,
+                                                            TimeUnit.Days
+                                                        ) + 1) / 30 * LookUp(
+                                                            tbl_mst_Rates,
+                                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                        ).Rate
+                                                    )
+                                                ),
+                                                If(
+                                                    ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                                    30 / 30 * LookUp(
+                                                        tbl_mst_Rates,
+                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance && ThisRecord.PinChange = PinChange
+                                                    ).Rate
+                                                )
+                                            );
+                                        )
                                     )
-                                );
+                                )
                             )
                         }
                     )
@@ -917,7 +1185,7 @@ FetchBankWisePOSReport As screen:
                                     CashAdvance: If(
                                         Value.cashAdvance = true,
                                         "True",
-                                        "false"
+                                        "False"
                                     ),
                                     PinChange: Text(
                                         Value.pinChange = true,
@@ -1420,7 +1688,7 @@ FetchBankWisePOSReport As screen:
                         )
                     )
                 )
-            )
+            );
         Text: ="Fetch Data"
         Width: =171
         X: =45
@@ -1470,7 +1738,7 @@ FetchBankWisePOSReport As screen:
                 colExportToExcel,
                 Filter(
                     colAllData,
-                    BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate
+                    ThisRecord.Date < dteToDate.SelectedDate
                 )
             );
             ExportToExcel.Run(

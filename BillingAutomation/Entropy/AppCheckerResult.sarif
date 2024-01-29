@@ -14,6 +14,83 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 124,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ClearCollect(\n    colExportToExcel,\n    Filter(\n        colAllData,\n        ThisRecord.Date < dteToDate.SelectedDate\n    )\n)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ClearCollect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnExportToExcel.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 18,
+                  "snippet": {
+                    "text": "colExportToExcel"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnExportToExcel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect"
                 }
               ],
@@ -396,6 +473,160 @@
           },
           "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 340,
+                  "snippet": {
+                    "text": "ClearCollect(\n        colInvoice,\n        Filter(\n            colAllData,\n            BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate\n        )\n    )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.btnGenerateInv"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ClearCollect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 362,
+                  "snippet": {
+                    "text": "colInvoice"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.btnGenerateInv"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 212,
+                  "charOffset": 1542,
+                  "snippet": {
+                    "text": "ClearCollect(\n            colInvoice,\n            Filter(\n                colAllData,\n                BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate\n            )\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.btnGenerateInv"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ClearCollect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "InoviceScreen.btnGenerateInv.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 1568,
+                  "snippet": {
+                    "text": "colInvoice"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "InoviceScreen",
+                "type": "InoviceScreen.btnGenerateInv"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType",
+          "ruleIndex": 1
         },
         {
           "locations": [
