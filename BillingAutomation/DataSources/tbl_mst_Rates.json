@@ -67,6 +67,7 @@
       "cr69c_bankname": "Bank Names",
       "cr69c_cashadvance": "Cash Advance",
       "cr69c_id": "Id",
+      "cr69c_pinchange": "PinChange",
       "cr69c_property": "Property",
       "cr69c_rate": "Rate",
       "cr69c_tbl_mst_rate_AsyncOperations": "System Jobs",
