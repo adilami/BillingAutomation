@@ -12,6 +12,7 @@
       <string name="ManualTriggerInput_text_7_def" />
       <string name="ManualTriggerInput_text_8_def" />
       <string name="ManualTriggerInput_text_9_def" />
+      <string name="ManualTriggerInput_text_10_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
         <property name="text_1" type="string" />
@@ -23,6 +24,7 @@
         <property name="text_7" type="string" />
         <property name="text_8" type="string" />
         <property name="text_9" type="string" />
+        <property name="text_10" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -65,6 +67,9 @@
             </param>
             <param style="plain" name="text_9" path="/text_9" type="xs:string" required="true">
               <doc title="Email" />
+            </param>
+            <param style="plain" name="text_10" path="/text_10" type="xs:string" required="true">
+              <doc title="CCMail" />
             </param>
           </representation>
         </request>

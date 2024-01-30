@@ -1,0 +1,99 @@
+[
+  {
+    "DisplayName": "tbl_mst_Emails (Views)",
+    "Name": "_cr69c_tbl_mst_email_views",
+    "RelatedEntityName": "tbl_mst_Emails",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "056abfbc-75ad-439a-835b-c440a3547b78": "tbl_mst_Email Associated View",
+      "24990f06-1f41-4798-974b-8f4dac180536": "tbl_mst_Email Lookup View",
+      "4964076b-4120-454e-a7f9-0f40895b3fcd": "Inactive tbl_mst_Emails",
+      "8283b754-0c9b-461b-8c47-9ba37cce1c87": "tbl_mst_Email Advanced Find View",
+      "dde56c25-1059-4602-8aaa-b4a3b6568705": "Active tbl_mst_Emails"
+    }
+  },
+  {
+    "DisplayName": "Status (tbl_mst_Emails)",
+    "Name": "cr69c_tbl_mst_email_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tbl_mst_Emails"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tbl_mst_Emails",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tbl_mst_Emails)",
+    "Name": "cr69c_tbl_mst_email_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tbl_mst_Emails"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tbl_mst_Emails",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_tbl_mst_emails",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_tbl_mst_email",
+    "Name": "tbl_mst_Emails",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_bankname": "BankName",
+      "cr69c_id": "Id",
+      "cr69c_primaryemail": "PrimaryEmail",
+      "cr69c_secondaryemail": "SecondaryEmail",
+      "cr69c_tbl_mst_email_AsyncOperations": "System Jobs",
+      "cr69c_tbl_mst_email_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_tbl_mst_email_DuplicateBaseRecord": "Duplicate Records (cr69c_tbl_mst_email_DuplicateBaseRecord)",
+      "cr69c_tbl_mst_email_DuplicateMatchingRecord": "Duplicate Records (cr69c_tbl_mst_email_DuplicateMatchingRecord)",
+      "cr69c_tbl_mst_email_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_tbl_mst_email_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_tbl_mst_email_ProcessSession": "Process Sessions",
+      "cr69c_tbl_mst_email_SyncErrors": "Sync Errors",
+      "cr69c_tbl_mst_emailid": "tbl_mst_Email",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tbl_mst_Emails",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

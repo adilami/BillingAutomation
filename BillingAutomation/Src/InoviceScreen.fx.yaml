@@ -203,62 +203,8 @@ InoviceScreen As screen:
                         dteDueDate.SelectedDate,
                         Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%),
                         Text(drpMonth.SelectedText.Value),
-                        If(
-                            drpBankName.SelectedText.Value = "NABIL BANK LTD.",
-                            "bhagbat.kc@imark.com.np",
-                            If(
-                                drpBankName.SelectedText.Value = "NEPAL BANK LTD.",
-                                "bhagbat.kc@imark.com.np",
-                                If(
-                                    drpBankName.SelectedText.Value = "BANK OF KATHMANDU LTD.",
-                                    "bhagbat.kc@imark.com.np",
-                                    If(
-                                        drpBankName.SelectedText.Value = "GLOBAL IME BANK LTD.",
-                                        "bhagbat.kc@imark.com.np",
-                                        If(
-                                            drpBankName.SelectedText.Value = "JYOTI BIKASH BANK LTD.",
-                                            "bhagbat.kc@imark.com.np",
-                                            If(
-                                                drpBankName.SelectedText.Value = "KUMARI BANK LTD.",
-                                                "bhagbat.kc@imark.com.np",
-                                                If(
-                                                    drpBankName.SelectedText.Value = "LAXMI SUNRISE BANK LTD.",
-                                                    "bhagbat.kc@imark.com.np",
-                                                    If(
-                                                        drpBankName.SelectedText.Value = "LUMBINI BIKAS BANK LTD.",
-                                                        "bhagbat.kc@imark.com.np",
-                                                        If(
-                                                            drpBankName.SelectedText.Value = "MEGA BANK NEPAL LTD.",
-                                                            "bhagbat.kc@imark.com.np",
-                                                            If(
-                                                                drpBankName.SelectedText.Value = "NEPAL INVESTMENT BANK LTD.",
-                                                                "bhagbat.kc@imark.com.np",
-                                                                If(
-                                                                    drpBankName.SelectedText.Value = "PRABHU BANK LTD.",
-                                                                    "bhagbat.kc@imark.com.np",
-                                                                    If(
-                                                                        drpBankName.SelectedText.Value = "SIDDHARTHA BANK LTD.",
-                                                                        "bhagbat.kc@imark.com.np",
-                                                                        If(
-                                                                            drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
-                                                                            "bhagbat.kc@imark.com.np",
-                                                                            If(
-                                                                                drpBankName.SelectedText.Value = "CITIZENS BANK INTERNATIONAL LTD.",
-                                                                                "bhagbat.kc@imark.com.np"
-                                                                            )
-                                                                        )
-                                                                    )
-                                                                )
-                                                            )
-                                                        )
-                                                    )
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
+                        LookUp(tbl_mst_Emails, drpBankName.SelectedText.Value=BankName).PrimaryEmail,
+                        LookUp(tbl_mst_Emails, drpBankName.SelectedText.Value=BankName).SecondaryEmail
                     );
                     Notify(
                         "Successfull",
