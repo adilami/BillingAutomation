@@ -62,6 +62,8 @@ InoviceScreen As screen:
         ZIndex: =7
 
     dteDueDate As datepicker:
+        DefaultDate: =Today()+7
+        DisplayMode: =DisplayMode.Disabled
         Height: =45
         Width: =314
         X: =501
