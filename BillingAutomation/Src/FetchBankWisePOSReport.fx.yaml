@@ -1711,18 +1711,18 @@ FetchBankWisePOSReport As screen:
         Y: =584
         ZIndex: =6
 
-    lblFromDate As label:
+    lblStartDate As label:
         Height: =38
-        Text: ="Date from"
+        Text: ="Start Date"
         Width: =126
         X: =416
         Y: =546
         ZIndex: =7
 
-    lblToDate As label:
+    lblEndDate As label:
         Height: =38
         Text: |-
-            ="Date to
+            ="EndDate
             "
         Width: =91
         X: =660
@@ -1766,16 +1766,17 @@ FetchBankWisePOSReport As screen:
 
     txtNumberOfDays As text:
         Default: =""
-        HintText: ="No Of Days"
+        HintText: ="Actual No Of Days"
         Visible: =locTogText
         X: =902
         Y: =582
         ZIndex: =13
 
     lblNoOfDays As label:
-        Text: ="No of Days"
+        Text: ="Actual No of Days"
         Visible: =locTogText
-        X: =903
+        Width: =168
+        X: =902
         Y: =542
         ZIndex: =14
 
