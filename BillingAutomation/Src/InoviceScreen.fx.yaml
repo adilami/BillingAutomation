@@ -278,7 +278,7 @@ InoviceScreen As screen:
         ZIndex: =10
 
     drpMonth As dropdown:
-        Items: =["Select Month","Baisakh","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
+        Items: =["Select Month","Baishakh ","Jestha","Asadh","Shrawan","Bhadra","Ashoj","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"]
         X: =109
         Y: =315
         ZIndex: =11
