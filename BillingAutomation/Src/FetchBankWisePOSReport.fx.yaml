@@ -351,7 +351,7 @@ FetchBankWisePOSReport As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =If(ThisItem.CashAdvance,"True", "False")
+                Text: =ThisItem.CashAdvance
                 Width: =147
                 X: =2364
                 Y: =24
@@ -361,7 +361,7 @@ FetchBankWisePOSReport As screen:
                 Align: =Align.Center
                 Height: =46
                 OnSelect: =Select(Parent)
-                Text: =If(ThisItem.PinChange,"True", "False")
+                Text: =ThisItem.PinChange
                 Width: =147
                 X: =2544
                 Y: =25
@@ -430,14 +430,14 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
-                                Value.cashAdvance = true,
-                                "True",
-                                "False"
+                                Value.cashAdvance = false,
+                                "False",
+                                "True"
                             ),
                             PinChange: Text(
-                                Value.pinChange = true,
-                                "True",
-                                "False"
+                                Value.pinChange = false,
+                                "False",
+                                "True"
                             )
                         }
                     )
@@ -459,14 +459,14 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
-                                Value.cashAdvance = true,
-                                "True",
-                                "False"
+                                Value.cashAdvance = false,
+                                "False",
+                                "True"
                             ),
                             PinChange: Text(
-                                Value.pinChange = true,
-                                "True",
-                                "False"
+                                Value.pinChange = false,
+                                "False",
+                                "True"
                             )
                         }
                     )
@@ -487,6 +487,8 @@ FetchBankWisePOSReport As screen:
                             TerminalType: Text(ThisRecord.TerminalType),
                             Ownership: Text(ThisRecord.Ownership),
                             Status: Text(ThisRecord.Status),
+                            CashAdvance: Text(ThisRecord.CashAdvance),
+                            PinChange: Text(ThisRecord.PinChange),
                             DaysRun: If(
                                 ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
                                 Text(
@@ -634,6 +636,8 @@ FetchBankWisePOSReport As screen:
                             TerminalType: Text(ThisRecord.TerminalType),
                             Ownership: Text(ThisRecord.Ownership),
                             Status: Text(ThisRecord.Status),
+                            CashAdvance: Text(ThisRecord.CashAdvance),
+                            PinChange: Text(ThisRecord.PinChange),
                             DaysRun: If(
                                 ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
                                 Text(
@@ -899,7 +903,7 @@ FetchBankWisePOSReport As screen:
                     NotificationType.Success
                 );
                 ,
-                /*ClearCollect(
+                ClearCollect(
                     colBankData,
                     ForAll(
                         Table(parsedData),
@@ -916,14 +920,14 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
-                                Value.cashAdvance = true,
-                                "True",
-                                "False"
+                                Value.cashAdvance = false,
+                                "False",
+                                "True"
                             ),
                             PinChange: Text(
-                                Value.pinChange = true,
-                                "True",
-                                "False"
+                                Value.pinChange = false,
+                                "False",
+                                "True"
                             )
                         }
                     )
@@ -945,14 +949,14 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
-                                Value.cashAdvance = true,
-                                "True",
-                                "False"
+                                Value.cashAdvance = false,
+                                "False",
+                                "True"
                             ),
                             PinChange: Text(
-                                Value.pinChange = true,
-                                "True",
-                                "False"
+                                Value.pinChange = false,
+                                "False",
+                                "True"
                             )
                         }
                     )
@@ -973,6 +977,8 @@ FetchBankWisePOSReport As screen:
                             TerminalType: Text(ThisRecord.TerminalType),
                             Ownership: Text(ThisRecord.Ownership),
                             Status: Text(ThisRecord.Status),
+                            CashAdvance: Text(ThisRecord.CashAdvance),
+                            PinChange: Text(ThisRecord.PinChange),
                             DaysRun: If(
                                 ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
                                 Text(
@@ -1120,6 +1126,8 @@ FetchBankWisePOSReport As screen:
                             TerminalType: Text(ThisRecord.TerminalType),
                             Ownership: Text(ThisRecord.Ownership),
                             Status: Text(ThisRecord.Status),
+                            CashAdvance: Text(ThisRecord.CashAdvance),
+                            PinChange: Text(ThisRecord.PinChange),
                             DaysRun: If(
                                 ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
                                 Text(
@@ -1383,8 +1391,8 @@ FetchBankWisePOSReport As screen:
                 Notify(
                     "Both Deployed and Retrieved Terminal Synced Successfully",
                     NotificationType.Success
-                );*/
-                If(
+                );
+                /*If(
                     drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD.",
                     If(
                         txtNumberOfDays.Text = "",
@@ -2172,7 +2180,7 @@ FetchBankWisePOSReport As screen:
                             );
                         )
                     )
-                )
+                )*/
             );
         Text: ="Fetch Data"
         Width: =171
