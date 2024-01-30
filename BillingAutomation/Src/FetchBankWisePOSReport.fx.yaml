@@ -1766,14 +1766,14 @@ FetchBankWisePOSReport As screen:
 
     txtNumberOfDays As text:
         Default: =""
-        HintText: ="Actual No Of Days"
+        HintText: ="Actual No. Of Days"
         Visible: =locTogText
         X: =902
         Y: =582
         ZIndex: =13
 
     lblNoOfDays As label:
-        Text: ="Actual No of Days"
+        Text: ="Actual No. of Days"
         Visible: =locTogText
         Width: =168
         X: =902
