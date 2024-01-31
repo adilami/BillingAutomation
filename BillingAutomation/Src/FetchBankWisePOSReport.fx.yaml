@@ -2235,10 +2235,20 @@ FetchBankWisePOSReport As screen:
                     ThisRecord.Date < dteToDate.SelectedDate
                 )
             );
+            
+            // Define the specific column order you want
+            ClearCollect(
+                colExportToExcelOrdered,
+                AddColumns(
+                    colExportToExcel,
+                    "ColumnOrder", ["Address", "BankName", "Date", "District", "MID", "MerchantName", "Ownership", "RentalFee", "SerialNo", "Status", "TID", "TerminalType", "DaysRun", "FinalAmt"] // Add other columns as needed
+                )
+            );
+            
             ExportToExcel.Run(
                 JSON(colExportToExcel),
                 "All Bank",
-                "bhagbat.kc@imark.com.np"
+                "hari.bhatta@imark.com.np"
             );
             Notify(
                 "Exported to excel successfully!!!",

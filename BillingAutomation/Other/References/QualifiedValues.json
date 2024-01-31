@@ -76,6 +76,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr69c_tbl_mst_email_forms",
+      "Namespace": "tbl_mst_Emails (Forms)",
+      "Values": {
+        "Information": "9d4349f5-aae9-4faa-818f-f3af6cce6a35"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_property_forms",
       "Namespace": "tbl_Properties (Forms)",
       "Values": {
@@ -122,13 +129,6 @@
       "Namespace": "Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_mst_email_forms",
-      "Namespace": "tbl_mst_Emails (Forms)",
-      "Values": {
-        "Information": "9d4349f5-aae9-4faa-818f-f3af6cce6a35"
       }
     }
   ]
