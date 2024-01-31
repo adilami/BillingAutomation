@@ -2246,7 +2246,7 @@ FetchBankWisePOSReport As screen:
             );
             
             ExportToExcel.Run(
-                JSON(colExportToExcel),
+                JSON(colExportToExcelOrdered),
                 "All Bank",
                 "hari.bhatta@imark.com.np"
             );
