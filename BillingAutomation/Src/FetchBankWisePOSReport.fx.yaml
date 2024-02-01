@@ -2211,7 +2211,7 @@ FetchBankWisePOSReport As screen:
                 )
             );
             // Define the specific column order you want
-            ClearCollect(
+            /*ClearCollect(
                 colExportToExcelOrdered,
                 AddColumns(
                     colExportToExcel,
@@ -2233,9 +2233,9 @@ FetchBankWisePOSReport As screen:
                         "FinalAmt"
                     ]// Add other columns as needed
                 )
-            );
+            );*/
             ExportToExcel.Run(
-                JSON(colExportToExcelOrdered),
+                JSON(colExportToExcel),
                 "All Bank",
                 LookUp(
                     tbl_mst_Emails,

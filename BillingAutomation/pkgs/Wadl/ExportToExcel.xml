@@ -34,7 +34,7 @@
               <doc title="Email" />
             </param>
             <param style="plain" name="text_3" path="/text_3" type="xs:string" required="true">
-              <doc title="CC Email" />
+              <doc title="CCEmail" />
             </param>
           </representation>
         </request>
