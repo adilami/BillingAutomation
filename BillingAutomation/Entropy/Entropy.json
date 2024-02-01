@@ -97,15 +97,15 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/31/2024 07:42:00",
+  "HeaderLastSavedDateTimeUTC": "02/01/2024 03:28:53",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-e0ca4bb530604232\"",
-    "69761181-018b-486a-b010-03dd23560044": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/ca5f809b590d4569ab85003ec53f9537\"",
-    "6ec9f34d-095c-442b-84b8-d86fed2bb5b0": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-e0ca4bb530604232\"",
-    "c649c704-cae0-4f6b-bb10-e2fb17703c59": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/de57a7401d42417f8823a603c0848c26\"",
-    "d90d9989-2372-44b1-8043-88cc84a80f7c": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-e0ca4bb530604232\"",
-    "ff657350-37fa-416e-923d-d89fe77f6f99": "\"/providers/microsoft.powerapps/apis/shared_wordonlinebusiness/connections/bef6135fe23c46e2a5c9a9075536baeb\""
+    "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
+    "69761181-018b-486a-b010-03dd23560044": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-7d57fa3d-af20-4420-a08b-460974730b58\"",
+    "6ec9f34d-095c-442b-84b8-d86fed2bb5b0": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/6607AE99F61C434BB4F663E91309287F-5646D8AD365C4AA8\"",
+    "c649c704-cae0-4f6b-bb10-e2fb17703c59": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/605a4f97f9ad452b9bd64edcafe0d106\"",
+    "d90d9989-2372-44b1-8043-88cc84a80f7c": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/C2167FFA27E23298C8E0AF5016098681-5646D8AD365C4AA8\"",
+    "ff657350-37fa-416e-923d-d89fe77f6f99": "\"/providers/microsoft.powerapps/apis/shared_wordonlinebusiness/connections/shared-wordonlinebus-4c5c4a88-d6f7-43eb-86cb-3816c2fc8662\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -391,7 +391,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 1.1422592,
+    "AnalysisLoadTime": 1.1287098,
     "ControlCount": {
       "button": 7,
       "datepicker": 5,
@@ -405,7 +405,7 @@
       "screen": 3,
       "text": 4
     },
-    "DeserializationLoadTime": 2.3221035
+    "DeserializationLoadTime": 2.8808278
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
