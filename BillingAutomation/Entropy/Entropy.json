@@ -97,15 +97,15 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "02/01/2024 04:59:16",
+  "HeaderLastSavedDateTimeUTC": "02/01/2024 05:09:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
+    "0393fdfa-40f9-4885-b757-f25413ae1cdd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-5646d8ad365c4aa8\"",
     "4314dbd2-cc0b-4ff6-acab-3b6f617cffbd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cac5b76888fa470ba36d5f7052993062-5646d8ad365c4aa8\"",
+    "65aa57aa-70d5-427c-8490-c1c9dca18c5e": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-5646d8ad365c4aa8\"",
     "69761181-018b-486a-b010-03dd23560044": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-7d57fa3d-af20-4420-a08b-460974730b58\"",
-    "6ec9f34d-095c-442b-84b8-d86fed2bb5b0": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/6607ae99f61c434bb4f663e91309287f-5646d8ad365c4aa8\"",
-    "c649c704-cae0-4f6b-bb10-e2fb17703c59": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/605a4f97f9ad452b9bd64edcafe0d106\"",
-    "d90d9989-2372-44b1-8043-88cc84a80f7c": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c2167ffa27e23298c8e0af5016098681-5646d8ad365c4aa8\"",
-    "ff657350-37fa-416e-923d-d89fe77f6f99": "\"/providers/microsoft.powerapps/apis/shared_wordonlinebusiness/connections/shared-wordonlinebus-4c5c4a88-d6f7-43eb-86cb-3816c2fc8662\""
+    "6d284586-4cd9-4777-820b-62252c015dab": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/shared-office365-6a15b703-4a50-4c65-acd2-540c301ea5f9\"",
+    "922d8eca-8147-4460-b610-6eff7d443b88": "\"/providers/microsoft.powerapps/apis/shared_wordonlinebusiness/connections/shared-wordonlinebus-d3c57633-e8ab-4161-90aa-e6088eef8f26\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},

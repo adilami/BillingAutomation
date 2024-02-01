@@ -642,12 +642,6 @@ FetchBankWisePOSReport As screen:
                                 ThisRecord.bankName = "MACHHAPUCHCHHRE BANK LTD.",
                                 Text(
                                     If(
-                                        ThisRecord.Status = "Retrieval",
-                                        DateDiff(
-                                            dteFromDate.SelectedDate,
-                                            ThisRecord.deployDate,
-                                            TimeUnit.Days
-                                        ) + 1,
                                         ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                         If(
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
@@ -664,11 +658,11 @@ FetchBankWisePOSReport As screen:
                                                     dteToDate.SelectedDate,
                                                     TimeUnit.Days
                                                 ) + 1)
-                                            ),
-                                            If(
-                                                ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
-                                                Value(txtNumberOfDays.Text)
                                             )
+                                        ),
+                                        If(
+                                            ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
+                                            Value(txtNumberOfDays.Text)
                                         )
                                     );
                                 ),
@@ -676,12 +670,6 @@ FetchBankWisePOSReport As screen:
                                     ThisRecord.bankName = "NABIL BANK LTD." Or ThisRecord.bankName = "NEPAL BANK LTD.",
                                     Text(
                                         If(
-                                            ThisRecord.Status = "Retrieval",
-                                            DateDiff(
-                                                dteFromDate.SelectedDate,
-                                                ThisRecord.deployDate,
-                                                TimeUnit.Days
-                                            ) + 1,
                                             ThisRecord.Status = "NewDeployed" Or ThisRecord.Status = "RemovalRequest",
                                             If(
                                                 DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
@@ -2222,20 +2210,41 @@ FetchBankWisePOSReport As screen:
                     ThisRecord.Date < dteToDate.SelectedDate
                 )
             );
-            
             // Define the specific column order you want
             ClearCollect(
                 colExportToExcelOrdered,
                 AddColumns(
                     colExportToExcel,
-                    "ColumnOrder", ["Address", "BankName", "Date", "District", "MID", "MerchantName", "Ownership", "RentalFee", "SerialNo", "Status", "TID", "TerminalType", "DaysRun", "FinalAmt"] // Add other columns as needed
+                    "ColumnOrder",
+                    [
+                        "Address",
+                        "BankName",
+                        "Date",
+                        "District",
+                        "MID",
+                        "MerchantName",
+                        "Ownership",
+                        "RentalFee",
+                        "SerialNo",
+                        "Status",
+                        "TID",
+                        "TerminalType",
+                        "DaysRun",
+                        "FinalAmt"
+                    ]// Add other columns as needed
                 )
             );
-            
             ExportToExcel.Run(
                 JSON(colExportToExcelOrdered),
                 "All Bank",
-                "hari.bhatta@imark.com.np"
+                LookUp(
+                    tbl_mst_Emails,
+                    drpBankName.SelectedText.Value = BankName
+                ).PrimaryEmail,
+                LookUp(
+                    tbl_mst_Emails,
+                    drpBankName.SelectedText.Value = BankName
+                ).SecondaryEmail
             );
             Notify(
                 "Exported to excel successfully!!!",

@@ -102,10 +102,14 @@ InoviceScreen As screen:
                         drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
                         "SBI"
                     ),
-                    If(
-                        drpBankName.SelectedText.Value = "NEPAL SBI BANK LTD.",
-                        "bhagbat.kc@imark.com.np"
-                    )
+                    LookUp(
+                        tbl_mst_Emails,
+                        drpBankName.SelectedText.Value = BankName
+                    ).PrimaryEmail,
+                    LookUp(
+                        tbl_mst_Emails,
+                        drpBankName.SelectedText.Value = BankName
+                    ).SecondaryEmail
                 );
                 Notify(
                     "Exported to excel successfully!!!",
@@ -203,8 +207,14 @@ InoviceScreen As screen:
                         dteDueDate.SelectedDate,
                         Text(Value(txtRate.Text) + Value(txtRate.Text) * 13%),
                         Text(drpMonth.SelectedText.Value),
-                        LookUp(tbl_mst_Emails, drpBankName.SelectedText.Value=BankName).PrimaryEmail,
-                        LookUp(tbl_mst_Emails, drpBankName.SelectedText.Value=BankName).SecondaryEmail
+                        LookUp(
+                            tbl_mst_Emails,
+                            drpBankName.SelectedText.Value = BankName
+                        ).PrimaryEmail,
+                        LookUp(
+                            tbl_mst_Emails,
+                            drpBankName.SelectedText.Value = BankName
+                        ).SecondaryEmail
                     );
                     Notify(
                         "Successfull",
