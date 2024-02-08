@@ -431,13 +431,13 @@ FetchBankWisePOSReport As screen:
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
                                 Value.cashAdvance = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             ),
                             PinChange: If(
                                 Value.pinChange = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             )
                         }
                     )
@@ -460,13 +460,13 @@ FetchBankWisePOSReport As screen:
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
                                 Value.cashAdvance = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             ),
                             PinChange: If(
                                 Value.pinChange = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             )
                         }
                     )
@@ -909,13 +909,13 @@ FetchBankWisePOSReport As screen:
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
                                 Value.cashAdvance = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             ),
                             PinChange: If(
                                 Value.pinChange = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             )
                         }
                     )
@@ -938,13 +938,13 @@ FetchBankWisePOSReport As screen:
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
                                 Value.cashAdvance = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             ),
                             PinChange: If(
                                 Value.pinChange = false,
-                                "False",
-                                "True"
+                                "false",
+                                "true"
                             )
                         }
                     )
