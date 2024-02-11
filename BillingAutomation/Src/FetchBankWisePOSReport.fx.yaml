@@ -411,7 +411,7 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = false,
+                                Value.cashAdvance || Value.pinChange = "false",
                                 "false",
                                 "true"
                             )
@@ -435,7 +435,7 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = false,
+                                Value.cashAdvance || Value.pinChange = "false",
                                 "false",
                                 "true"
                             )
@@ -877,7 +877,7 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = false,
+                                Value.cashAdvance || Value.pinChange = "false",
                                 "false",
                                 "true"
                             )
@@ -901,7 +901,7 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = false,
+                                Value.cashAdvance || Value.pinChange = "false",
                                 "false",
                                 "true"
                             )
