@@ -517,7 +517,7 @@ FetchBankWisePOSReport As screen:
                                 Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                        ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                     ).Rate
                                 ),
                                 If(
@@ -529,7 +529,7 @@ FetchBankWisePOSReport As screen:
                                         Text(
                                             LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                             ).Rate
                                         )
                                     )
@@ -552,7 +552,7 @@ FetchBankWisePOSReport As screen:
                                         ) / Value(txtNumberOfDays.Text)
                                     ) * LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                        ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                     ).Rate);
                                 ),
                                 If(
@@ -560,7 +560,7 @@ FetchBankWisePOSReport As screen:
                                     Text(
                                         LookUp(
                                             tbl_mst_Rates,
-                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                            ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                         ).Rate
                                     ),
                                     If(
@@ -580,7 +580,7 @@ FetchBankWisePOSReport As screen:
                                                     30
                                                 ) / 30) * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                    ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                 ).Rate
                                             );
                                         )
@@ -725,7 +725,7 @@ FetchBankWisePOSReport As screen:
                                 Text(
                                     LookUp(
                                         tbl_mst_Rates,
-                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                        ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                     ).Rate
                                 ),
                                 If(
@@ -733,7 +733,7 @@ FetchBankWisePOSReport As screen:
                                     Text(
                                         LookUp(
                                             tbl_mst_Rates,
-                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                            ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                         ).Rate
                                     ),
                                     If(
@@ -742,7 +742,7 @@ FetchBankWisePOSReport As screen:
                                         Text(
                                             LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                             ).Rate
                                         )
                                     )
@@ -757,7 +757,7 @@ FetchBankWisePOSReport As screen:
                                             DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                             Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                             ).Rate,
                                             If(
                                                 (DateDiff(
@@ -767,7 +767,7 @@ FetchBankWisePOSReport As screen:
                                                 ) + 1) > Value(txtNumberOfDays.Text),
                                                 Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                    ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                 ).Rate,
                                                 (DateDiff(
                                                     ThisRecord.deployDate,
@@ -775,7 +775,7 @@ FetchBankWisePOSReport As screen:
                                                     TimeUnit.Days
                                                 ) + 1) / Value(txtNumberOfDays.Text) * LookUp(
                                                     tbl_mst_Rates,
-                                                    ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                    ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                 ).Rate
                                             )
                                         ),
@@ -783,7 +783,7 @@ FetchBankWisePOSReport As screen:
                                             ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                             Value(txtNumberOfDays.Text) / Value(txtNumberOfDays.Text) * LookUp(
                                                 tbl_mst_Rates,
-                                                ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                             ).Rate
                                         )
                                     )
@@ -793,7 +793,7 @@ FetchBankWisePOSReport As screen:
                                     Text(
                                         LookUp(
                                             tbl_mst_Rates,
-                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                            ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                         ).Rate
                                     ),
                                     If(
@@ -806,7 +806,7 @@ FetchBankWisePOSReport As screen:
                                                     DateValue(ThisRecord.deployDate) < dteFromDate.SelectedDate,
                                                     30 / 30 * LookUp(
                                                         tbl_mst_Rates,
-                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                        ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                     ).Rate,
                                                     If(
                                                         (DateDiff(
@@ -816,7 +816,7 @@ FetchBankWisePOSReport As screen:
                                                         ) + 1) > 30,
                                                         30 / 30 * LookUp(
                                                             tbl_mst_Rates,
-                                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                            ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                         ).Rate,
                                                         (DateDiff(
                                                             ThisRecord.deployDate,
@@ -824,7 +824,7 @@ FetchBankWisePOSReport As screen:
                                                             TimeUnit.Days
                                                         ) + 1) / 30 * LookUp(
                                                             tbl_mst_Rates,
-                                                            ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                            ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                         ).Rate
                                                     )
                                                 ),
@@ -832,7 +832,7 @@ FetchBankWisePOSReport As screen:
                                                     ThisRecord.Status = "ReDeployed" Or ThisRecord.Status = "Reconfigure" Or ThisRecord.Status = "ReplacementRequested" Or ThisRecord.Status = "ReplacementConfigured",
                                                     30 / 30 * LookUp(
                                                         tbl_mst_Rates,
-                                                        ThisRecord.'Bank Names' = Text(drpBankName.SelectedText.Value) && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
+                                                        ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
                                                     ).Rate
                                                 )
                                             );
