@@ -135,7 +135,6 @@
   "ScreenOrder": [
     "FetchBankWisePOSReport",
     "BankWisePosReport",
-    "InoviceScreen",
-    "Screen1"
+    "InoviceScreen"
   ]
 }
