@@ -1,4 +1,40 @@
 {
+  "5dd970b2-c49c-4dae-ba45-3b9ab30b0321": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1678/1.0.1678.3636/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "BankWisePOSReportsFlow"
+        },
+        "workflowEntityId": {
+          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
+        },
+        "workflowName": {
+          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "BankWisePOSReportsFlow"
+        },
+        "workflowEntityId": {
+          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
+        },
+        "workflowName": {
+          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "BankWisePOSReportsFlow"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5dd970b2-c49c-4dae-ba45-3b9ab30b0321"
+  },
   "65aa57aa-70d5-427c-8490-c1c9dca18c5e": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -94,42 +130,6 @@
       "65aa57aa-70d5-427c-8490-c1c9dca18c5e"
     ],
     "id": "922d8eca-8147-4460-b610-6eff7d443b88"
-  },
-  "a964ee92-e5e2-44d8-8d3d-8ef95be3ac90": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1678/1.0.1678.3636/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowDisplayName": {
-          "value": "BankWisePOSReportsFlow"
-        },
-        "workflowEntityId": {
-          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
-        },
-        "workflowName": {
-          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowDisplayName": {
-          "value": "BankWisePOSReportsFlow"
-        },
-        "workflowEntityId": {
-          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
-        },
-        "workflowName": {
-          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "BankWisePOSReportsFlow"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "a964ee92-e5e2-44d8-8d3d-8ef95be3ac90"
   },
   "f7b270a7-e848-4ec6-a13d-4cc6612e6cb7": {
     "connectionRef": {
