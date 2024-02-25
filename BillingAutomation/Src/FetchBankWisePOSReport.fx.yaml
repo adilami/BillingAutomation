@@ -189,7 +189,7 @@ FetchBankWisePOSReport As screen:
             DelayItemLoading: =true
             FillPortions: =0
             Height: =400
-            Items: =If(drpBankName.SelectedText.Value="All Bank", Filter(colAllData, ThisRecord.Date<dteToDate.SelectedDate), Filter(colAllData, BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate))
+            Items: =If(drpBankName.SelectedText.Value="All Bank", Filter(colAllData, ThisRecord.Date<dteToDate.SelectedDate),Filter(colALLDEP, ThisRecord.BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate))
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320
@@ -2246,4 +2246,10 @@ FetchBankWisePOSReport As screen:
         X: =236
         Y: =682
         ZIndex: =15
+
+    Label1 As label:
+        Text: =drpBankName.SelectedText.Value 
+        X: =1006
+        Y: =665
+        ZIndex: =16
 
