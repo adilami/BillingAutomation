@@ -1605,10 +1605,7 @@ FetchBankWisePOSReport As screen:
                                             If(
                                                 ThisRecord.bankName = "BANK OF KATHMANDU LTD.",
                                                 Text(
-                                                    LookUp(
-                                                        tbl_mst_Rates,
-                                                        ThisRecord.'Bank Names' = bankName && ThisRecord.TerminalTypes = TerminalType && ThisRecord.Property = Ownership && ThisRecord.'Cash Advance' = CashAdvance
-                                                    ).Rate
+                                                   "-"
                                                 ),
                                                 Text(
                                                     LookUp(
