@@ -1,6 +1,55 @@
 {
   "QualifiedValues": [
     {
+      "Kind": "default.cds_cr69c_invoicenumber_forms",
+      "Namespace": "InvoiceNumbers (Forms)",
+      "Values": {
+        "Information": "58338eb1-37fe-405a-b2cc-ffcda7e358ee"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_bankwiseposreport_forms",
+      "Namespace": "tbl_BankWisePOSReports (Forms)",
+      "Values": {
+        "Information": "70c3255d-ca15-40c3-8783-cee5bbf85ac8"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_date_forms",
+      "Namespace": "tbl_Dates (Forms)",
+      "Values": {
+        "Information": "f724c32a-e8f7-4326-a0ab-f8ab2f6ba196"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_bank_forms",
+      "Namespace": "tbl_mst_Banks (Forms)",
+      "Values": {
+        "Information": "9a0393e2-8aea-412f-9a0a-d2a1988ea085"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_mst_email_forms",
+      "Namespace": "tbl_mst_Emails (Forms)",
+      "Values": {
+        "Information": "9d4349f5-aae9-4faa-818f-f3af6cce6a35"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_mst_rate_forms",
+      "Namespace": "tbl_mst_Rates (Forms)",
+      "Values": {
+        "Information": "1b648a5b-6687-4b05-91af-13d9563285c1"
+      }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_retrieveterminal_forms",
+      "Namespace": "tbl_RetrieveTerminals (Forms)",
+      "Values": {
+        "Information": "851fdde1-f401-45e5-bc0f-89dccb2364cc"
+      }
+    },
+    {
       "Kind": "default.cds_cr69c_master_forms",
       "Namespace": "tbl_Masters (Forms)",
       "Values": {
@@ -15,38 +64,10 @@
       }
     },
     {
-      "Kind": "default.cds_cr69c_bank_forms",
-      "Namespace": "tbl_mst_Banks (Forms)",
-      "Values": {
-        "Information": "9a0393e2-8aea-412f-9a0a-d2a1988ea085"
-      }
-    },
-    {
       "Kind": "default.cds_cr69c_property_forms",
       "Namespace": "tbl_mst_Properties (Forms)",
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_bankwiseposreport_forms",
-      "Namespace": "tbl_BankWisePOSReports (Forms)",
-      "Values": {
-        "Information": "70c3255d-ca15-40c3-8783-cee5bbf85ac8"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_retrieveterminal_forms",
-      "Namespace": "tbl_RetrieveTerminals (Forms)",
-      "Values": {
-        "Information": "851fdde1-f401-45e5-bc0f-89dccb2364cc"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_date_forms",
-      "Namespace": "tbl_Dates (Forms)",
-      "Values": {
-        "Information": "f724c32a-e8f7-4326-a0ab-f8ab2f6ba196"
       }
     },
     {
@@ -55,31 +76,10 @@
       "Values": {}
     },
     {
-      "Kind": "default.cds_cr69c_tbl_mst_rate_forms",
-      "Namespace": "tbl_mst_Rates (Forms)",
-      "Values": {
-        "Information": "1b648a5b-6687-4b05-91af-13d9563285c1"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_invoicenumber_forms",
-      "Namespace": "InvoiceNumbers (Forms)",
-      "Values": {
-        "Information": "58338eb1-37fe-405a-b2cc-ffcda7e358ee"
-      }
-    },
-    {
       "Kind": "default.cds_cr69c_tbl_rate_forms",
       "Namespace": "tbl_Rates (Forms)",
       "Values": {
         "Information": "1a408d2b-5ed9-45c2-a482-e0ff122ad36e"
-      }
-    },
-    {
-      "Kind": "default.cds_cr69c_tbl_mst_email_forms",
-      "Namespace": "tbl_mst_Emails (Forms)",
-      "Values": {
-        "Information": "9d4349f5-aae9-4faa-818f-f3af6cce6a35"
       }
     },
     {
