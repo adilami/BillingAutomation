@@ -214,7 +214,13 @@ InoviceScreen As screen:
                         LookUp(
                             tbl_mst_Emails,
                             drpBankName.SelectedText.Value = BankName
-                        ).SecondaryEmail
+                        ).SecondaryEmail,
+                        "Imark Digital Pvt Ltd.",
+                        "Dillibazar, Kathmandu",
+                        "+977014544217",
+                        "604272476",
+                        "info@imark.com.np"
+                    
                     );
                     Notify(
                         "Successfull",
