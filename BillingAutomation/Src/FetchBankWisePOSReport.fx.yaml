@@ -189,7 +189,18 @@ FetchBankWisePOSReport As screen:
             DelayItemLoading: =true
             FillPortions: =0
             Height: =400
-            Items: =If(drpBankName.SelectedText.Value="All Bank", Filter(colAllData, ThisRecord.Date<dteToDate.SelectedDate),Filter(colAllData, ThisRecord.BankName = drpBankName.SelectedText.Value And ThisRecord.Date<dteToDate.SelectedDate))
+            Items: |-
+                =If(
+                    drpBankName.SelectedText.Value = "All Bank",
+                    Filter(
+                        colAllData,
+                        ThisRecord.Date < dteToDate.SelectedDate
+                    ),
+                    Filter(
+                        colAllData,
+                        ThisRecord.BankName = drpBankName.SelectedText.Value && ThisRecord.Date < dteToDate.SelectedDate
+                    )
+                )
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320
@@ -201,12 +212,12 @@ FetchBankWisePOSReport As screen:
 
             lblBankNameContent As label:
                 Align: =Align.Center
-                Height: =47
+                Height: =74
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.BankName
-                Width: =206
-                X: =118
-                Y: =24
+                Width: =218
+                X: =111
+                Y: =16
                 ZIndex: =1
 
             lblDateContent As label:
@@ -2653,30 +2664,6 @@ FetchBankWisePOSReport As screen:
                     ThisRecord.Date < dteToDate.SelectedDate
                 )
             );
-            // Define the specific column order you want
-            /*ClearCollect(
-                colExportToExcelOrdered,
-                AddColumns(
-                    colExportToExcel,
-                    "ColumnOrder",
-                    [
-                        "Address",
-                        "BankName",
-                        "Date",
-                        "District",
-                        "MID",
-                        "MerchantName",
-                        "Ownership",
-                        "RentalFee",
-                        "SerialNo",
-                        "Status",
-                        "TID",
-                        "TerminalType",
-                        "DaysRun",
-                        "FinalAmt"
-                    ]// Add other columns as needed
-                )
-            );*/
             ExportToExcel.Run(
                 JSON(colExportToExcel),
                 "All Bank",
@@ -2735,9 +2722,9 @@ FetchBankWisePOSReport As screen:
 
     Label1 As label:
         Align: =Align.Center
-        Height: =62
+        Height: =74
         Text: =drpBankName.SelectedText.Value 
-        Width: =147
+        Width: =250
         X: =972
         Y: =648
         ZIndex: =16
