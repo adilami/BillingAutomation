@@ -2734,8 +2734,11 @@ FetchBankWisePOSReport As screen:
         ZIndex: =15
 
     Label1 As label:
+        Align: =Align.Center
+        Height: =62
         Text: =drpBankName.SelectedText.Value 
-        X: =1006
-        Y: =665
+        Width: =147
+        X: =972
+        Y: =648
         ZIndex: =16
 
