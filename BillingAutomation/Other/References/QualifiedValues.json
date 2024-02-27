@@ -130,6 +130,13 @@
       "Values": {
         "Information": "14fdd5fa-9d8d-48ab-a982-a9083daf0e58"
       }
+    },
+    {
+      "Kind": "default.cds_cr69c_tbl_mst_customerdetail_forms",
+      "Namespace": "tbl_mst_CustomerDetails (Forms)",
+      "Values": {
+        "Information": "a0d62e02-96a3-4718-b157-aef9d8c22195"
+      }
     }
   ]
 }

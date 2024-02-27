@@ -1,0 +1,101 @@
+[
+  {
+    "DisplayName": "tbl_mst_CustomerDetails (Views)",
+    "Name": "_cr69c_tbl_mst_customerdetail_views",
+    "RelatedEntityName": "tbl_mst_CustomerDetails",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2b2ad4e3-62ca-4a7c-a803-c9fcb47ad319": "tbl_mst_CustomerDetail Advanced Find View",
+      "7754e804-72b5-44bc-bb59-439bdb0895aa": "Inactive tbl_mst_CustomerDetails",
+      "a21d02c5-e056-47ad-8851-ee07cad98b52": "tbl_mst_CustomerDetail Associated View",
+      "bbcb4344-ed9b-469e-af49-27c64e7dcf35": "tbl_mst_CustomerDetail Lookup View",
+      "f50d006c-dd4e-4bbd-adf4-753ad9ce5a60": "Active tbl_mst_CustomerDetails"
+    }
+  },
+  {
+    "DisplayName": "Status (tbl_mst_CustomerDetails)",
+    "Name": "cr69c_tbl_mst_customerdetail_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "tbl_mst_CustomerDetails"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "tbl_mst_CustomerDetails",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (tbl_mst_CustomerDetails)",
+    "Name": "cr69c_tbl_mst_customerdetail_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "tbl_mst_CustomerDetails"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "tbl_mst_CustomerDetails",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr69c_tbl_mst_customerdetails",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr69c_tbl_mst_customerdetail",
+    "Name": "tbl_mst_CustomerDetails",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr69c_address": "Address",
+      "cr69c_bankname": "BankName",
+      "cr69c_email": "Email",
+      "cr69c_id": "Id",
+      "cr69c_pan": "PAN",
+      "cr69c_phone": "Phone",
+      "cr69c_tbl_mst_customerdetail_AsyncOperations": "System Jobs",
+      "cr69c_tbl_mst_customerdetail_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr69c_tbl_mst_customerdetail_DuplicateBaseRecord": "Duplicate Records (cr69c_tbl_mst_customerdetail_DuplicateBaseRecord)",
+      "cr69c_tbl_mst_customerdetail_DuplicateMatchingRecord": "Duplicate Records (cr69c_tbl_mst_customerdetail_DuplicateMatchingRecord)",
+      "cr69c_tbl_mst_customerdetail_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr69c_tbl_mst_customerdetail_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr69c_tbl_mst_customerdetail_ProcessSession": "Process Sessions",
+      "cr69c_tbl_mst_customerdetail_SyncErrors": "Sync Errors",
+      "cr69c_tbl_mst_customerdetailid": "tbl_mst_CustomerDetail",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "tbl_mst_CustomerDetails",
+    "Type": "NativeCDSDataSourceInfo"
+  }
+]

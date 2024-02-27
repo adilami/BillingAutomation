@@ -215,11 +215,26 @@ InoviceScreen As screen:
                             tbl_mst_Emails,
                             drpBankName.SelectedText.Value = BankName
                         ).SecondaryEmail,
-                        "Imark Digital Pvt Ltd.",
-                        "Dillibazar, Kathmandu",
-                        "+977014544217",
-                        "604272476",
-                        "info@imark.com.np"
+                        LookUp(
+                            tbl_mst_CustomerDetails,
+                            drpBankName.SelectedText.Value =BankName
+                        ).BankName,
+                        LookUp(
+                            tbl_mst_CustomerDetails,
+                            drpBankName.SelectedText.Value =BankName
+                        ).Address,
+                        LookUp(
+                            tbl_mst_CustomerDetails,
+                            drpBankName.SelectedText.Value =BankName
+                        ).Phone,
+                        LookUp(
+                            tbl_mst_CustomerDetails,
+                            drpBankName.SelectedText.Value =BankName
+                        ).PAN,
+                        LookUp(
+                            tbl_mst_CustomerDetails,
+                            drpBankName.SelectedText.Value =BankName
+                        ).Email
                     
                     );
                     Notify(
