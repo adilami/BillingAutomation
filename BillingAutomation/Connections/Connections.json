@@ -5,6 +5,15 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1678/1.0.1678.3636/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "22a6bad1-b736-4b4e-ba05-495acaba0499": {
+          "value": "shared_wordonlinebusiness"
+        },
+        "69761181-018b-486a-b010-03dd23560044": {
+          "value": "shared_sharepointonline"
+        },
+        "83d8cc2a-1882-4f5d-b01a-75278073a808": {
+          "value": "shared_office365"
+        },
         "workflowDisplayName": {
           "value": "Invoice"
         },
@@ -16,6 +25,15 @@
         }
       },
       "parameterHintsV2": {
+        "shared_office365": {
+          "value": "83d8cc2a-1882-4f5d-b01a-75278073a808"
+        },
+        "shared_sharepointonline": {
+          "value": "69761181-018b-486a-b010-03dd23560044"
+        },
+        "shared_wordonlinebusiness": {
+          "value": "22a6bad1-b736-4b4e-ba05-495acaba0499"
+        },
         "workflowDisplayName": {
           "value": "Invoice"
         },

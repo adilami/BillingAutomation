@@ -60,6 +60,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr69c_tbl_mst_customerdetail",
+    "MaxGetRowsCount": 500,
     "Name": "tbl_mst_CustomerDetails",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
