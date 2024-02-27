@@ -1,19 +1,10 @@
 {
-  "1426fe83-b1af-437e-8c93-4b49aaf9da63": {
+  "0504fe36-8199-4d78-9265-0a732c21ad9e": {
     "connectionRef": {
       "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1678/1.0.1678.3636/logicflows/icon.png",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "22a6bad1-b736-4b4e-ba05-495acaba0499": {
-          "value": "shared_wordonlinebusiness"
-        },
-        "69761181-018b-486a-b010-03dd23560044": {
-          "value": "shared_sharepointonline"
-        },
-        "83d8cc2a-1882-4f5d-b01a-75278073a808": {
-          "value": "shared_office365"
-        },
         "workflowDisplayName": {
           "value": "Invoice"
         },
@@ -25,15 +16,6 @@
         }
       },
       "parameterHintsV2": {
-        "shared_office365": {
-          "value": "83d8cc2a-1882-4f5d-b01a-75278073a808"
-        },
-        "shared_sharepointonline": {
-          "value": "69761181-018b-486a-b010-03dd23560044"
-        },
-        "shared_wordonlinebusiness": {
-          "value": "22a6bad1-b736-4b4e-ba05-495acaba0499"
-        },
         "workflowDisplayName": {
           "value": "Invoice"
         },
@@ -50,14 +32,28 @@
       "Invoice"
     ],
     "dependencies": {
-      "shared_office365": "83d8cc2a-1882-4f5d-b01a-75278073a808",
+      "shared_office365": "09687c15-33a9-4bad-9823-40cb2e57d552",
       "shared_sharepointonline": "69761181-018b-486a-b010-03dd23560044",
-      "shared_wordonlinebusiness": "22a6bad1-b736-4b4e-ba05-495acaba0499"
+      "shared_wordonlinebusiness": "5e034581-0b2d-45c2-9d86-f830cd3be907"
     },
     "dependents": [],
-    "id": "1426fe83-b1af-437e-8c93-4b49aaf9da63"
+    "id": "0504fe36-8199-4d78-9265-0a732c21ad9e"
   },
-  "22a6bad1-b736-4b4e-ba05-495acaba0499": {
+  "09687c15-33a9-4bad-9823-40cb2e57d552": {
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "0504fe36-8199-4d78-9265-0a732c21ad9e"
+    ],
+    "id": "09687c15-33a9-4bad-9823-40cb2e57d552"
+  },
+  "5e034581-0b2d-45c2-9d86-f830cd3be907": {
     "connectionRef": {
       "displayName": "Word Online (Business)",
       "iconUri": "https://connectoricons-prod.azureedge.net/master/1.0.1678.3629/wordonlinebusiness/icon.png",
@@ -67,9 +63,9 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "1426fe83-b1af-437e-8c93-4b49aaf9da63"
+      "0504fe36-8199-4d78-9265-0a732c21ad9e"
     ],
-    "id": "22a6bad1-b736-4b4e-ba05-495acaba0499"
+    "id": "5e034581-0b2d-45c2-9d86-f830cd3be907"
   },
   "5faf3c65-555f-45b8-ae7b-6244e8418fa9": {
     "connectionRef": {
@@ -118,7 +114,7 @@
     "dependencies": {},
     "dependents": [
       "f7b270a7-e848-4ec6-a13d-4cc6612e6cb7",
-      "1426fe83-b1af-437e-8c93-4b49aaf9da63"
+      "0504fe36-8199-4d78-9265-0a732c21ad9e"
     ],
     "id": "69761181-018b-486a-b010-03dd23560044"
   },
@@ -135,20 +131,6 @@
       "f7b270a7-e848-4ec6-a13d-4cc6612e6cb7"
     ],
     "id": "6d284586-4cd9-4777-820b-62252c015dab"
-  },
-  "83d8cc2a-1882-4f5d-b01a-75278073a808": {
-    "connectionRef": {
-      "displayName": "Office 365 Outlook",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "1426fe83-b1af-437e-8c93-4b49aaf9da63"
-    ],
-    "id": "83d8cc2a-1882-4f5d-b01a-75278073a808"
   },
   "f7b270a7-e848-4ec6-a13d-4cc6612e6cb7": {
     "connectionRef": {

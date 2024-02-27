@@ -18,6 +18,10 @@
       <string name="ManualTriggerInput_text_13_def" />
       <string name="ManualTriggerInput_text_14_def" />
       <string name="ManualTriggerInput_text_15_def" />
+      <string name="ManualTriggerInput_text_16_def" />
+      <string name="ManualTriggerInput_text_17_def" />
+      <string name="ManualTriggerInput_text_18_def" />
+      <string name="ManualTriggerInput_text_19_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
         <property name="text_1" type="string" />
@@ -35,6 +39,10 @@
         <property name="text_13" type="string" />
         <property name="text_14" type="string" />
         <property name="text_15" type="string" />
+        <property name="text_16" type="string" />
+        <property name="text_17" type="string" />
+        <property name="text_18" type="string" />
+        <property name="text_19" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -79,7 +87,7 @@
               <doc title="Email" />
             </param>
             <param style="plain" name="text_10" path="/text_10" type="xs:string" required="true">
-              <doc title="CCMail" />
+              <doc title="CC1" />
             </param>
             <param style="plain" name="text_11" path="/text_11" type="xs:string" required="true">
               <doc title="CustomerName" />
@@ -95,6 +103,18 @@
             </param>
             <param style="plain" name="text_15" path="/text_15" type="xs:string" required="true">
               <doc title="CustomerEmail" />
+            </param>
+            <param style="plain" name="text_16" path="/text_16" type="xs:string" required="true">
+              <doc title="CC2" />
+            </param>
+            <param style="plain" name="text_17" path="/text_17" type="xs:string" required="true">
+              <doc title="CC3" />
+            </param>
+            <param style="plain" name="text_18" path="/text_18" type="xs:string" required="true">
+              <doc title="CC4" />
+            </param>
+            <param style="plain" name="text_19" path="/text_19" type="xs:string" required="true">
+              <doc title="CC5" />
             </param>
           </representation>
         </request>

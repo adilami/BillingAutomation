@@ -2639,7 +2639,7 @@ FetchBankWisePOSReport As screen:
                 LookUp(
                     tbl_mst_Emails,
                     drpBankName.SelectedText.Value = BankName
-                ).SecondaryEmail
+                ).CC1
             );
             Notify(
                 "Exported to excel successfully!!!",

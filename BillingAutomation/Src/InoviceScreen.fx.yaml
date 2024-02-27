@@ -109,7 +109,7 @@ InoviceScreen As screen:
                     LookUp(
                         tbl_mst_Emails,
                         drpBankName.SelectedText.Value = BankName
-                    ).SecondaryEmail
+                    ).CC1
                 );
                 Notify(
                     "Exported to excel successfully!!!",
@@ -214,7 +214,7 @@ InoviceScreen As screen:
                         LookUp(
                             tbl_mst_Emails,
                             drpBankName.SelectedText.Value = BankName
-                        ).SecondaryEmail,
+                        ).CC1,
                         LookUp(
                             tbl_mst_CustomerDetails,
                             drpBankName.SelectedText.Value =BankName
@@ -234,8 +234,23 @@ InoviceScreen As screen:
                         LookUp(
                             tbl_mst_CustomerDetails,
                             drpBankName.SelectedText.Value =BankName
-                        ).Email
-                    
+                        ).Email,
+                        LookUp(
+                            tbl_mst_Emails,
+                            drpBankName.SelectedText.Value = BankName
+                        ).CC2,
+                        LookUp(
+                            tbl_mst_Emails,
+                            drpBankName.SelectedText.Value = BankName
+                        ).CC3,
+                        LookUp(
+                            tbl_mst_Emails,
+                            drpBankName.SelectedText.Value = BankName
+                        ).CC4,
+                        LookUp(
+                            tbl_mst_Emails,
+                            drpBankName.SelectedText.Value = BankName
+                        ).CC5        
                     );
                     Notify(
                         "Successfull",
