@@ -1,4 +1,40 @@
 {
+  "271d159b-7848-4e19-a2ad-3d0567a4ab6b": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "BankWisePOSReportsFlow"
+        },
+        "workflowEntityId": {
+          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
+        },
+        "workflowName": {
+          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "BankWisePOSReportsFlow"
+        },
+        "workflowEntityId": {
+          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
+        },
+        "workflowName": {
+          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "BankWisePOSReportsFlow"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "271d159b-7848-4e19-a2ad-3d0567a4ab6b"
+  },
   "59faf665-66ff-4d52-85f4-0383ceac6fd7": {
     "connectionRef": {
       "displayName": "Word Online (Business)",

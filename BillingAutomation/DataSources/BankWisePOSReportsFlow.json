@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "9467e81b-0729-4a61-99ba-092611228ae2",
+    "Name": "BankWisePOSReportsFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
+  }
+]
