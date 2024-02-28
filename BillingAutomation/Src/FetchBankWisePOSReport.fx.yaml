@@ -1125,7 +1125,7 @@ FetchBankWisePOSReport As screen:
                 ),
                 If(
                     drpBankName.SelectedText.Value = "MACHHAPUCHCHHRE BANK LTD." And txtNumberOfDays.Text = "",
-                    Notify("Please enter number of days"),
+                    Notify("Please enter number of days",NotificationType.Error),
                     ClearCollect(
                         colBankData,
                         ForAll(
