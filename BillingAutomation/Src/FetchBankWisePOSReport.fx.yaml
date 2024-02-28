@@ -422,9 +422,9 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = "false",
-                                "false",
-                                "true"
+                                Value.cashAdvance || Value.pinChange = "true",
+                                "true",
+                                "false"
                             )
                         }
                     )
@@ -446,9 +446,9 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = "false",
-                                "false",
-                                "true"
+                                Value.cashAdvance || Value.pinChange = "true",
+                                "true",
+                                "false"
                             )
                         }
                     )
@@ -1134,9 +1134,9 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.deploymentStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = "false",
-                                "false",
-                                "true"
+                                Value.cashAdvance || Value.pinChange = "true",
+                                "true",
+                                "false"
                             )
                         }
                     )
@@ -1158,9 +1158,9 @@ FetchBankWisePOSReport As screen:
                             Ownership: Text(Value.ownership),
                             Status: Text(Value.teminalStatus),
                             CashAdvance: If(
-                                Value.cashAdvance || Value.pinChange = "false",
-                                "false",
-                                "true"
+                                Value.cashAdvance || Value.pinChange = "true",
+                                "true",
+                                "false"
                             )
                         }
                     )
