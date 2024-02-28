@@ -14,6 +14,514 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 98,
+                  "charOffset": 312,
+                  "snippet": {
+                    "text": "BankWisePOSReportsFlow.Run(\n        dteFromDate.SelectedDate,\n        dteToDate.SelectedDate\n    )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnFetchData"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Run",
+              "BankWisePOSReportsFlow"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrUnknownNamespaceFunction",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 457,
+                  "snippet": {
+                    "text": ".output"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnFetchData"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 26,
+                  "charOffset": 439,
+                  "snippet": {
+                    "text": "ParseJSON(BankData.output)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnFetchData"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParseJSON"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 520,
+                  "snippet": {
+                    "text": ".outputretrieveterminal"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnFetchData"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FetchBankWisePOSReport.btnFetchData.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 42,
+                  "charOffset": 502,
+                  "snippet": {
+                    "text": "ParseJSON(BankData.outputretrieveterminal)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "FetchBankWisePOSReport",
+                "type": "FetchBankWisePOSReport.btnFetchData"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParseJSON"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 75,
+                  "charOffset": 74,
+                  "snippet": {
+                    "text": "BankWisePOSReportsFlow.Run(dteDateFrom.SelectedDate,dteDateTo.SelectedDate)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSync"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Run",
+              "BankWisePOSReportsFlow"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrUnknownNamespaceFunction",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 196,
+                  "snippet": {
+                    "text": ".output"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSync"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 26,
+                  "charOffset": 178,
+                  "snippet": {
+                    "text": "ParseJSON(BankData.output)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSync"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParseJSON"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 259,
+                  "snippet": {
+                    "text": ".outputretrieveterminal"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSync"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSync.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 42,
+                  "charOffset": 241,
+                  "snippet": {
+                    "text": "ParseJSON(BankData.outputretrieveterminal)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSync"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParseJSON"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSyncRetrieve.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSyncRetrieve.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 98,
+                  "charOffset": 72,
+                  "snippet": {
+                    "text": "BankWisePOSReportsFlow.Run(\n        dteDateFrom.SelectedDate,\n        dteDateTo.SelectedDate\n    )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSyncRetrieve"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Run",
+              "BankWisePOSReportsFlow"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrUnknownNamespaceFunction",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSyncRetrieve.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSyncRetrieve.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 225,
+                  "snippet": {
+                    "text": ".outputretrieveterminal"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSyncRetrieve"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BankWisePosReport.btnSyncRetrieve.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BankWisePosReport.btnSyncRetrieve.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 42,
+                  "charOffset": 207,
+                  "snippet": {
+                    "text": "ParseJSON(BankData.outputretrieveterminal)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "BankWisePosReport",
+                "type": "BankWisePosReport.btnSyncRetrieve"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParseJSON"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "FetchBankWisePOSReport.containerGalleryBankWisePOSDetail.galBankWisePOSDetail.AccessibleLabel"
                 }
               ],
@@ -37,7 +545,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -67,7 +575,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -97,7 +605,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -127,7 +635,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -157,7 +665,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -187,7 +695,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -217,7 +725,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -247,7 +755,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -277,7 +785,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -307,7 +815,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -337,7 +845,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -367,7 +875,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -397,7 +905,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -427,7 +935,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -457,7 +965,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -487,7 +995,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -517,7 +1025,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -547,7 +1055,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -577,7 +1085,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -607,7 +1115,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -637,7 +1145,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 2
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -667,7 +1175,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 6
         }
       ],
       "tool": {
@@ -675,6 +1183,48 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-ErrUnknownNamespaceFunction",
+              "messageStrings": {
+                "issue": {
+                  "text": "'{0}' is an unknown or unsupported function in namespace '{1}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {

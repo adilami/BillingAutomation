@@ -13,42 +13,6 @@
     ],
     "id": "59faf665-66ff-4d52-85f4-0383ceac6fd7"
   },
-  "5faf3c65-555f-45b8-ae7b-6244e8418fa9": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1678/1.0.1678.3636/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowDisplayName": {
-          "value": "BankWisePOSReportsFlow"
-        },
-        "workflowEntityId": {
-          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
-        },
-        "workflowName": {
-          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowDisplayName": {
-          "value": "BankWisePOSReportsFlow"
-        },
-        "workflowEntityId": {
-          "value": "3ce44ea5-c1aa-ee11-be37-6045bd1eb5a7"
-        },
-        "workflowName": {
-          "value": "cac5b768-88fa-470b-a36d-5f7052993062"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "BankWisePOSReportsFlow"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "5faf3c65-555f-45b8-ae7b-6244e8418fa9"
-  },
   "69761181-018b-486a-b010-03dd23560044": {
     "connectionRef": {
       "displayName": "SharePoint",
