@@ -250,7 +250,7 @@ InoviceScreen As screen:
                         LookUp(
                             tbl_mst_Emails,
                             drpBankName.SelectedText.Value = BankName
-                        ).CC5        
+                        ).CC5
                     );
                     Notify(
                         "Successfull",
