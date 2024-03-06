@@ -20,8 +20,6 @@
       <string name="ManualTriggerInput_text_15_def" />
       <string name="ManualTriggerInput_text_16_def" />
       <string name="ManualTriggerInput_text_17_def" />
-      <string name="ManualTriggerInput_text_18_def" />
-      <string name="ManualTriggerInput_text_19_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
         <property name="text_1" type="string" />
@@ -41,8 +39,6 @@
         <property name="text_15" type="string" />
         <property name="text_16" type="string" />
         <property name="text_17" type="string" />
-        <property name="text_18" type="string" />
-        <property name="text_19" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -109,12 +105,6 @@
             </param>
             <param style="plain" name="text_17" path="/text_17" type="xs:string" required="true">
               <doc title="CC3" />
-            </param>
-            <param style="plain" name="text_18" path="/text_18" type="xs:string" required="true">
-              <doc title="CC4" />
-            </param>
-            <param style="plain" name="text_19" path="/text_19" type="xs:string" required="true">
-              <doc title="CC5" />
             </param>
           </representation>
         </request>
