@@ -194,11 +194,11 @@ FetchBankWisePOSReport As screen:
                     drpBankName.SelectedText.Value = "All Bank",
                     Filter(
                         colAllData,
-                        ThisRecord.Date < dteToDate.SelectedDate
+                        ThisRecord.Date <= dteToDate.SelectedDate
                     ),
                     Filter(
                         colAllData,
-                        ThisRecord.BankName = drpBankName.SelectedText.Value And ThisRecord.Date < dteToDate.SelectedDate
+                        ThisRecord.BankName = drpBankName.SelectedText.Value And ThisRecord.Date <= dteToDate.SelectedDate
                     )
                 )
             Layout: =Layout.Vertical
